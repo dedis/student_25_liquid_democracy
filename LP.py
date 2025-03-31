@@ -1,7 +1,33 @@
 import numpy as np
-from scipy.optimize import linprog
+from pulp import *
 
 THIRD = 1/3
+
+def resolve_delegations_LP(delegations: dict, nodes: list):
+    # Initialize LP model
+    model = LpProblem("DelegationResolution", LpMinimize)
+    
+    # Initialize LP variables
+    lp_vars = {node: LpVariable(node) for node in nodes}
+    
+    # Add constraints for each node
+    for node in nodes:
+        incomings = delegations.get(node, {})
+        model += (lp_vars[node] == 1 + sum(weight * lp_vars[src] for src, weight in incomings.items())), f"Constraint_{node}"
+    
+    # Identify sink nodes
+    outgoing_nodes = {src for node in delegations for src, weight in delegations[node].items() if weight > 0}
+    sink_nodes = [node for node in nodes if node not in outgoing_nodes]
+    
+    # Ensure no power is lost (the power of sink nodes has to equal the input power)
+    model += sum(lp_vars[node] for node in sink_nodes) == len(nodes), "SinkNodesConstraint"
+
+    print(model.constraints)
+    
+    model.solve()
+    
+    # Return the computed values
+    return {node: value(var) for node, var in lp_vars.items()}, sink_nodes
 
 def invert_graph(graph):
     """
