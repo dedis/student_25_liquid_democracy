@@ -12,3 +12,5 @@ for i in range(20):
     c = 0.5 * temp_a + temp_c
 
     print(f"i: {i}, a: {a}, b: {b}, c: {c}, sum: {a + b + c}")
+
+    
