@@ -21,12 +21,13 @@ def visualize_delegation_graph(delegations: dict, powers: dict):
         - The graph is directed, with nodes colored based on whether they are sinks (blue) or not (gray).
 
     """
+
     node_df = pd.DataFrame({
         "id": powers.keys(),
          "power": powers.values()
     })
 
-    node_df["sink?"] = node_df["power"].astype(float) > 0
+    node_df["sink?"] = node_df["power"].astype(float) > 0.0
     node_df["color"] = node_df["sink?"].map({True: "blue", False: "gray"})
 
     
@@ -57,6 +58,7 @@ def visualize_delegation_graph(delegations: dict, powers: dict):
 
 def clean_powers(powers, sinks):
     """
+    NO LONGER NECESSARY
     Cleans the powers dictionary so that non-sink nodes have a power of 0.
     
     Args:

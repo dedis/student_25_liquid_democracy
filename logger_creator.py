@@ -1,10 +1,18 @@
 import logging
 from datetime import datetime
 import os
+from typing import Tuple
 
-def create_logger(name_prefix="log", level=logging.INFO, folder="logs"):
+def create_logger(name_prefix="log", level=logging.INFO, folder="logs") -> Tuple[logging.Logger, logging.Handler]:
     """
     Creates a logger that writes to a uniquely named file in a specified folder.
+
+    Examlple usage:
+        
+        logger, handler = logger_creator.create_logger(name_prefix="iterative")
+        logger.info(f"Iterated {count} times ({len(nodes)} nodes)")
+        logger.removeHandler(handler)
+        handler.close()
     
     Args:
         name_prefix (str): Prefix for the filename.

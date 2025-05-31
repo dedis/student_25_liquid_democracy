@@ -1,14 +1,15 @@
 
 import networkx as nx
 import random
+from typing import Union
 
-def prepare_graph(vertices, edges):
+def prepare_graph(vertices, edges, sink_frac=0.2):
     """
     Transforms a graph into a valid Liquid Democracy Delegation Graph by performing the following operations:
     
     - Merges multiple (parallel) edges between the same nodes into a single edge, eliminating duplicates.
         Of the duplicate edges only one, random edge is kept.
-    - Ensures that at least 20% of nodes are sinks (outdegree 0)
+    - Ensures that at least sinks % (default 20%) of nodes are sinks (outdegree 0)
         Edges are removed randomely until this condition is met
     - Normalizes the edge weights for each node such that the sum of outgoing edge weights equals 1.
     - Removes delegation cycles (terminal strongly connected components (SCCs))
@@ -24,6 +25,8 @@ def prepare_graph(vertices, edges):
         A list of edges where each edge is a tuple:
         - (u, v, weight) 
         - (u, v) 
+    sink_frac: float
+        The percentage of nodes that should be sinks (outdegree 0). Default is 0.2 (20%).
 
     Returns
     -------
@@ -49,10 +52,10 @@ def prepare_graph(vertices, edges):
             DG.add_edge(u, v, weight=w)
 
     # 3. If there are not a lot of sinks (less than 20% of nodes with outdegree 0), remove some edges
-    if sum(DG.out_degree(n) == 0 for n in DG.nodes()) < 0.2 * len(DG.nodes):
-        node = random.choice(DG.nodes())
-        if len(DG.out_degree(node)) > 0:
-            DG.remove_edge(*list(DG.out_edges(node)))
+    while sum(DG.out_degree(n) == 0 for n in DG.nodes()) < sink_frac * len(DG.nodes):
+        node = random.choice(list(DG.nodes()))
+        if DG.out_degree(node) > 0:
+            DG.remove_edges_from(list(DG.out_edges(node)))
 
     # 4. Normalize edge weights
     for node in DG.nodes():
@@ -98,3 +101,74 @@ def prepare_graph(vertices, edges):
         pass
 
     return DG
+
+def nx_graph_to_dict(G: nx.DiGraph) -> dict:
+    """
+    Converts a NetworkX DiGraph to a dictionary representation like {src: {dst: weight, ...}, ...}.
+    
+    Parameters
+    ----------
+    G : networkx.DiGraph
+        The directed graph to convert.
+
+    Returns
+    -------
+    dict
+        A dictionary where keys are nodes and values are dictionaries of neighbors and their weights.
+    """
+    return {src: {dst: data['weight'] for dst, data in G[src].items()} for src in G.nodes()}
+
+def invert_graph(graph):
+    """
+    Inverts a directed weighted graph by reversing the direction of all edges.
+
+    Parameters:
+    - graph (dict): A dictionary representing the original graph, where keys are nodes 
+      and values are dictionaries mapping neighboring nodes to edge weights.
+
+    Returns:
+    - dict: A new dictionary representing the inverted graph, where all edges 
+      have been reversed but retain their original weights.
+    """
+    inverted_graph = {}
+
+    for node, neighbors in graph.items():
+        for neighbor, weight in neighbors.items():
+            if neighbor not in inverted_graph:
+                inverted_graph[neighbor] = {}
+            inverted_graph[neighbor][node] = weight  
+
+    return inverted_graph
+
+
+def nx_graph_nodes_to_str(graph: Union[nx.Graph, nx.DiGraph]) -> Union[nx.Graph, nx.DiGraph]:
+    """
+    Converts the labels of nodes of a graph to strings by casting (str(node)).
+
+    Parameters:
+    - graph (networkx.Graph): The input graph with nodes to be converted.
+
+    Returns:
+    - networkx.Graph: A new graph with string labels for the nodes.
+    """
+    return nx.relabel_nodes(graph, {node: str(node) for node in graph.nodes()})
+
+def dict_to_nx_graph(graph_dict: dict) -> nx.DiGraph:
+    """
+    Converts a dictionary representation of a graph to a NetworkX DiGraph.
+
+    Parameters:
+    - graph_dict (dict): A dictionary where keys are nodes and values are dictionaries 
+      of neighboring nodes and their weights.
+
+    Returns:
+    - networkx.DiGraph: A directed graph constructed from the input dictionary.
+    """
+
+    G = nx.DiGraph()
+
+    for node, neighbors in graph_dict.items():
+        for neighbor, weight in neighbors.items():
+            G.add_edge(node, neighbor, weight=weight)
+
+    return G

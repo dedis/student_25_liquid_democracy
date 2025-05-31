@@ -3,7 +3,7 @@ sys.path.append(os.path.abspath("/Users/DavidHolzwarth/Uni/EPFL/bachelors-thesis
 
 import logger_creator
 
-def iterate_delegations(delegations: dict, nodes: list, cutoff: float = 0.001):
+def iterate_delegations(delegations: dict, nodes: list, cutoff: float = 0.001) -> dict:
     """
     Iteratively updates node values based on incoming delegations.
 
@@ -19,7 +19,7 @@ def iterate_delegations(delegations: dict, nodes: list, cutoff: float = 0.001):
         cutoff (float): The threshold for stopping early if total change is strictly below this value.
 
     Returns:
-        list: The power of each node after the iterations.
+        - dict: A mapping of nodes to their resolved voting power after solving the LP.
     
     Notes:
         - If the delegations are not resolvable because there is a clique with no sink, the function will not terminate.
@@ -46,8 +46,10 @@ def iterate_delegations(delegations: dict, nodes: list, cutoff: float = 0.001):
         if max_change < cutoff:
 
             logger, handler = logger_creator.create_logger(name_prefix="iterative")
-            logger.info(f"Iterated {count} times")
+            logger.info(f"Iterated {count} times ({len(nodes)} nodes)")
             logger.removeHandler(handler)
             handler.close()
+
+
             
             return values

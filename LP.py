@@ -6,12 +6,16 @@ from pulp import *
 
 THIRD = 1/3
 
-def set_up_LP(delegations: dict, nodes: list):
+def set_up(delegations: dict, nodes: list):
+    """
+    nodes need to be strings
+    """
+
     # Initialize LP model
     model = LpProblem("DelegationResolution", LpMinimize)
     
     # Initialize LP variables
-    lp_vars = {node: LpVariable(node) for node in nodes}
+    lp_vars = {node: LpVariable(str(node)) for node in nodes}
 
     # Identify sink and non-sink nodes. Outgoing nodes are those that have delegations going out of them
     outgoing_nodes = {src for node in delegations for src, weight in delegations[node].items() if weight > 0}
@@ -28,14 +32,14 @@ def set_up_LP(delegations: dict, nodes: list):
     return model, sink_nodes
 
 
-def solve_LP(model):
+def solve(model, sink_nodes=None):
 
     model.solve(PULP_CBC_CMD(msg=0, options=["primalT=1e-2", "dualT=1e-2"]))
 
 
 
 
-def resolve_delegations_LP(delegations: dict, nodes: list):
+def resolve_delegations(delegations: dict, nodes: List[str]) -> Tuple[dict, list]:
     """
     Resolves delegations in a weighted delegation graph using a LP model.
 
@@ -51,7 +55,7 @@ def resolve_delegations_LP(delegations: dict, nodes: list):
                                 "A": {"B": 0.5},
                                 "C": {"A": 1.0, "B": 0.5}
                             }
-        nodes (list): A list of all nodes in the delegation graph.
+        nodes (list): A list of all nodes in the delegation graph. Nodes must be strings.
 
     Returns:
        tuple:
@@ -90,36 +94,13 @@ def resolve_delegations_LP(delegations: dict, nodes: list):
     #     return {node: value(var) for node, var in lp_vars.items()}, sink_nodes
     # else:
     #     raise Exception(f"LP model is {constants.LpStatus[model.status]}. {model}")
-    model, sink_nodes = set_up_LP(delegations, nodes)
+    model, sink_nodes = set_up(delegations, nodes)
 
 
-    solve_LP(model)
+    solve(model)
 
     # Return the computed values
     if (model.status == 1):
-        return {var.name: value(var) for var in model.variables()}, sink_nodes
+        return {var.name: (value(var) if var.name in sink_nodes else 0.0) for var in model.variables()}, sink_nodes
     else:
         raise Exception(f"LP model is {constants.LpStatus[model.status]}. {model}")
-
-
-def invert_graph(graph):
-    """
-    Inverts a directed weighted graph by reversing the direction of all edges.
-
-    Parameters:
-    - graph (dict): A dictionary representing the original graph, where keys are nodes 
-      and values are dictionaries mapping neighboring nodes to edge weights.
-
-    Returns:
-    - dict: A new dictionary representing the inverted graph, where all edges 
-      have been reversed but retain their original weights.
-    """
-    inverted_graph = {}
-
-    for node, neighbors in graph.items():
-        for neighbor, weight in neighbors.items():
-            if neighbor not in inverted_graph:
-                inverted_graph[neighbor] = {}
-            inverted_graph[neighbor][node] = weight  
-
-    return inverted_graph
