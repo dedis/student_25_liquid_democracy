@@ -2,6 +2,7 @@ import numpy as np
 from typing import List, Tuple
 from scipy.sparse import csc_array
 from scipy.sparse.linalg import spsolve
+import scipy 
 
 
 
@@ -10,26 +11,35 @@ def get_node_to_int_map(nodes: list) -> dict:
 
 def set_up(delegations: dict, nodes: list):
 
-    # Map each node to a int key
-    node_to_int_map = get_node_to_int_map(nodes)
+    n = len(nodes)
+    node_to_int = get_node_to_int_map(nodes)
 
     # Finds sink nodes, since they get treated different when building the matrix
     outgoing_nodes = {src for node in delegations for src, weight in delegations[node].items() if weight > 0}
     sink_nodes = [node for node in nodes if node not in outgoing_nodes]
 
+    # We will assemble A in coordinate format: lists of (row, col, data)
     rows = []
+    cols = []
+    data = []
 
-    for node in nodes:
-        row = [0] * len(nodes)
+    for v in nodes:
+        v_int = node_to_int[v]
+        # Diagonal entry: 1 * p_v
+        rows.append(v_int)
+        cols.append(v_int)
+        data.append(1.0)
 
-        row[node_to_int_map[node]] = 1
+        # Subtract incoming weights:  -w_{uv} * p_u
+        for u, w in delegations.get(v, {}).items():
+            u_int = node_to_int[u]
+            rows.append(v_int)
+            cols.append(u_int)
+            data.append(-w)
 
-        for incoming in delegations.get(node, {}):
-            row[node_to_int_map[incoming]] = (-1 * delegations[node][incoming]) + row[node_to_int_map[incoming]]
+    # Create sparse matrix A in CSC format:
+    A = csc_array((data, (rows, cols)), shape=(n, n))
 
-        rows.append(row)
-
-    A = np.array(rows)
     b = np.array([1] * len(nodes))
 
     return A, b, sink_nodes
@@ -48,7 +58,7 @@ def solve(A, b, sinks=None):
     
     return x
 
-def resolve_delegations(delegations: dict, nodes: List[str]) -> Tuple[dict, list]:
+def resolve_delegations(delegations: dict, nodes: List[str]) -> Tuple[dict, list]:  
 
     A, b, sink_nodes = set_up(delegations, nodes)
     x = solve(A, b)

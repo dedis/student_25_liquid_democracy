@@ -25,19 +25,13 @@ def set_up(delegations: dict, nodes: list):
     for node in nodes:
         incomings = delegations.get(node, {})
         model += (lp_vars[node] == 1 + sum(weight * lp_vars[src] for src, weight in incomings.items())), f"Constraint_{node}"
-    
-    # Ensure no power is lost (the power of sink nodes has to equal the input power)
-    model += sum(lp_vars[node] for node in sink_nodes) == len(nodes), "SinkNodesConstraint"
 
     return model, sink_nodes
 
 
 def solve(model, sink_nodes=None):
 
-    model.solve(PULP_CBC_CMD(msg=0, options=["primalT=1e-2", "dualT=1e-2"]))
-
-
-
+    model.solve(PULP_CBC_CMD(msg=0, options=["primalT=5e-3", "dualT=5e-3"]))
 
 def resolve_delegations(delegations: dict, nodes: List[str]) -> Tuple[dict, list]:
     """
@@ -95,7 +89,6 @@ def resolve_delegations(delegations: dict, nodes: List[str]) -> Tuple[dict, list
     # else:
     #     raise Exception(f"LP model is {constants.LpStatus[model.status]}. {model}")
     model, sink_nodes = set_up(delegations, nodes)
-
 
     solve(model)
 

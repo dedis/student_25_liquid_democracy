@@ -17,10 +17,15 @@ def visualize_delegation_graph(delegations: dict, powers: dict):
     Notes:
         - The powers return from an LP model need to be cleaned, so that non-sink nodes have a power of 0, otherwise
             they will be visualized as if held power (blue instead of gray node color).
-        - The function will attempt to find an available port starting from 8050.
+        - The function will attempt to find an available port starting from 8050 until 8055.
         - The graph is directed, with nodes colored based on whether they are sinks (blue) or not (gray).
-
+        - The function assumes all nodes in the graph are present in the powers dict. If a node is missing from this dict, it will not be visualized.
+        - {node: 0.0 for node in delegations.keys()} can be used to generate the powers dict if powers are not available.
     """
+
+    if not delegations: 
+        print("No delegations to visualize.")
+        return
 
     node_df = pd.DataFrame({
         "id": powers.keys(),
@@ -40,7 +45,7 @@ def visualize_delegation_graph(delegations: dict, powers: dict):
     edge_df["label"] = edge_df["label"].astype(str)
 
     port = 8050
-    while True:
+    while port < 8055:
         try:
             Jaal(edge_df, node_df).plot(directed=True,
                                         port=port,
@@ -55,6 +60,8 @@ def visualize_delegation_graph(delegations: dict, powers: dict):
             break
         except:
             port += 1
+
+    print("Graph visualization failed because no ports were found or there was another error.")
 
 def clean_powers(powers, sinks):
     """

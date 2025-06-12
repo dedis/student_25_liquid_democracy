@@ -27,8 +27,6 @@ def iterate_delegations(delegations: dict, nodes: list, cutoff: float = 0.001) -
     # Initialize node values
     values = {node: 1.0 for node in nodes}
 
-    max_change = len(nodes)
-
     count = 0
     while True:
         temp_values = values.copy()  # Store previous iteration values
@@ -49,7 +47,5 @@ def iterate_delegations(delegations: dict, nodes: list, cutoff: float = 0.001) -
             logger.info(f"Iterated {count} times ({len(nodes)} nodes)")
             logger.removeHandler(handler)
             handler.close()
-
-
             
             return values

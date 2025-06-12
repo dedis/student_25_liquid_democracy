@@ -14,9 +14,8 @@ def get_random_delegation_weights(n: int) -> list:
 
     Notes:
         - If `n == 0`, an empty list is returned.
-        - The algorithm may find less than 'n' weights, if e.g. n = 2, but the first weight is 1.0, then it will only return [1.0]
-        - The last weight is explicitly adjusted to correct any rounding errors.
-        - The algorithm ensures no negative values by rejecting choices that exceed the remaining sum.
+        - The algorithm may find less than 'n' weights, if e.g. n = 2, the algorithm may choose 1.0 as weight and only return [1.0]
+        - The algorithm ensures no negative values
     """
     if n == 0: return []
 
@@ -56,6 +55,32 @@ def is_connected_to_sink(delegations, start_node):
     return dfs(start_node)
 
 def create_delegation_graph(num_nodes: int, num_loops: int, seed: int = None):
+    """
+    Generates a random delegation graph with a specified number of nodes and loops.
+
+    Parameters
+    ----------
+    num_nodes : int
+        Number of nodes (voters) in the graph.
+    num_loops : int
+        Number of loops (cyclical delegations) to add after initial graph construction.
+    seed : int, optional
+        Random seed for reproducibility.
+
+    Returns
+    -------
+    delegations : dict
+        A dictionary representing the delegation graph. Keys are node identifiers (str),
+        and values are dictionaries mapping delegate nodes to delegation weights.
+    nodes : list of str
+        List of node identifiers used in the graph.
+
+    Notes
+    -----
+    - Each node will have between 0 and 3 delegations to random other delegates
+    - Self-delegations are possible if they do not violate the rules for a well-formed delegation graph
+    - Loops are only added if they do not disconnect the graph from the sinks.
+    """
 
     np.random.seed(seed)
 
