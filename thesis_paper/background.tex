@@ -1,0 +1,71 @@
+% !TEX root = thesis.tex
+
+%%%%%%%%%%%%%%%%%%%%
+\chapter{Background}
+%%%%%%%%%%%%%%%%%%%%
+
+\section{Liquid Democracy}
+
+In a liquid democracy, voters are given the choice between voting themselves, and delegating their vote to another voter, who will vote on their behalf. This distinguishes the electorate into "delegates" or "voting sinks", who actually vote, and "delegators". Liquid democracy has no strict definition, and there are multiple different ways to implement it [Bertsche's paper]. In this paper, we will look at a fractional implementation of liquid democracy, as described below.
+
+ \TODO{could probably be made longer}
+
+ \section{Definitions}
+ 
+ \TODO{definition of "resolving a delegation graph" and "resolving a delegation" is missing (the former is just doing the latter for the entire grap or something like that)}
+
+If there are $n$ voters, we define a delegation graph as a directed, weighted graph $G$, with nodes $V = {1, ..., n}$ and directed edges $E$. Each node $v \in V$ is an agent who is eligible to vote. For any two nodes \(u,v \in V\) and a weight \(w \in \mathbb{R}\) with \(0 \le w \le 1\), the triple \((u,v,w) \in E\) denotes a delegation from \(u\) to \(v\) of weight \(w\). 
+
+In order to facilitate communication, a fractional amount of votes is also referred to as power. Each node initially has one vote, or an initial power $p^i_v = 1$. After resolving delegations, a node $v \in V'$s final power, or simply a node's power, is $p_v \in \mathbb{R}_{\ge0}$. A more rigid definition of a nodes power will be introduced in section XX. \TODO{maybe make this definition less intentionally vague, or provide the definition alr here idk}
+
+This paper will use the a fractional implementation of liquid democracy, where each node is either a sink or a delegator. This means that either the voter votes, or chooses to delegate their votes fractionally, meaning they can delegate fractions of their vote to different people. An agent further can't vote and delegate at the same time, so a sink can't delegate any power at all, and a delegator can't vote themselves. 
+
+We define our liquid democracy system with the following rules.
+
+\begin{enumerate}
+\item Each $v \in V$ is either a delegator or a sink. 
+\item Each sink $s \in V$ has no outgoing edges.
+\item Each delegator $d \in V$ has a power of $p_d = 0$, and it's outgoing edge weights sum up to exactly 1.
+\item Total power in the graph is equal to the amount of voters $|V|$.
+\end{enumerate}
+
+\TODO{Add a figure to show this delegation chain of A-w1->B-w2->C}
+
+When resolving delegations, we intuitively proceed iteratively. Looking at a delegation of power from node A to B to sink C below, we know that sink C's power must be its own power in addition to $w_2$ times that of B, which in turn is one plus $w_1$ times that of A, etc. Thus, we can define a node $v \in V$'s standing power as $p'_v = \sum_{(u, v, w) \in E} 1 + w*p'_u$. It should be noted that a nodes standing power carries little meaning is the node is not a sink, since ultimately the node will not be voting, regardless of the magnitude of their standing power.
+
+After resolving delegations, the following assertions must hold.
+
+\begin{enumerate}
+\item $\forall s \in V$: $p_s = p'_s$
+\item $\forall d \in V$: $p_d = 0$ 
+\end{enumerate}
+
+We assume that the weighted directed graph \(G=(V,E)\) contains no directed cycles, or that for every node \(d\in V\), there exists a sink \(s\in V\) (i.e., a vertex with no outgoing edges) and a sequence of vertices
+\[
+  d = v_{0},\; v_{1},\; v_{2},\;\dots,\; v_{k} = s
+\]
+such that for each \(i=0,1,\dots,k-1\), the edge \(\bigl(v_{i},\,v_{i+1},\,w_{i}\bigr)\in E\) has weight \(w_{i}>0\).
+
+Such cycles violate our description of our implementation of liquid democracy, Power in such cycles never reaches a sink, and it is out of the scope of this paper to discuss how best to resolve such cycles in a delegation system. 
+\TODO{Two things: 1. maybe we can show that this is like rly unlikely, and secondly maybe cite this paper: \url{https://liquid-democracy-journal.org/issue/3/The_Liquid_Democracy_Journal-Issue003-02-Circular_Delegations_-_Myth_or_Disaster.html}}
+\TODO {maybe add a proof here, that if this condition above holds, there is necessarily a path between all delegators and a sink}
+The following figures show cycles which are not allowed.
+
+\TODO{Add pictures of cycles that are not allowed, including a self loop and a loop with four nodes which is not a trivial circle, so like a->b->d and a->c->d, and maybe also a trivial circle, and add a reference to the sentence, so fig 1, 2, 3...}
+
+ Note, that while a self loop of weight one is not allowed, a self loop of weight $w \le 1$ is allowed as long as the rest of the node's power eventually flows to a sink. Since a delegator can't vote, any power a delegator delegates to themselves will flow back into the node, and be redistributed to the nodes delegates in the next iteration. 
+ 
+ \TODO{somewhere here, adda. list of all mathematical properties a well-defined delegation graph satisfies, like $\forall s \in S, w < 0: \not\exists (u, s, w) \in E$, and S, D are disjunct, etc.}
+ 
+ \TODO{Add also, that weight is always positive, a weight of 0 does not exist, since then that edge would just not be there.}
+ \section{Conservation of Power}
+ 
+ A vital property we set for the delegation graph is the conservation of power. While some authors have experimented with implementations of liquid democracy where this is not the case, \TODO{citations, the Berschke paper has some examples} we believe that for a system to be truly democratic, we must assert delegating is not penalised, so a vote cast by a sink should not be different in value to a vote cast by a sink through delegation from a delegator. This property is called "Equality of Direct and Delegating Voters" by Behrens and Swierczek \TODO{cite \url{https://liquid-democracy-journal.org/issue/3/The_Liquid_Democracy_Journal-Issue003-01-Preferential_Delegation_and_the_Problem_of_Negative_Voting_Weight.html}}.
+ 
+ Thus, our implementation needs a mechanism to ensure that the sum of the final power of all sinks is equal to the sum of the initial power of all nodes.
+
+
+
+\TODO{maybe prove these seven, or a subset of them :\url{https://liquid-democracy-journal.org/issue/3/The_Liquid_Democracy_Journal-Issue003-01-Preferential_Delegation_and_the_Problem_of_Negative_Voting_Weight.html}}
+
+\TODO{Maybe we can include a section called "Valid Delegation Graphs or sommething like that, whch includes what a well formed delegation graph must have, as well as methods to prevent delegation graphs from being not well-formed, like normalizing the delegations and opening up cycles or whatever}

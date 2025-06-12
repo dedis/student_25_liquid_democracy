@@ -1,0 +1,13 @@
+\usepackage{ifthen}
+\newboolean{showcomments}
+\setboolean{showcomments}{true}
+\ifthenelse{\boolean{showcomments}}
+{ \newcommand{\mynote}[3]{
+		\fbox{\bfseries\sffamily\scriptsize#1}
+		{\small$\blacktriangleright$\textsf{\emph{\color{#3}{#2}}}$\blacktriangleleft$}}
+	\newcommand{\zzz}[1]{{\setlength{\fboxsep}{2pt}\fcolorbox{black}{yellow}{\textsf{\emph{#1}}}}\xspace}}
+{ \newcommand{\mynote}[3]{}
+	\newcommand{\zzz}[1]{}}
+\newcommand{\note}[1]{\mynote{Student}{#1}{red}}
+\newcommand{\TODO}[1]{\zzz{TODO: #1}}
+\newcommand{\FIX}{\zzz{FIX}}
