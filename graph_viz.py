@@ -1,7 +1,7 @@
 import pandas as pd
 from jaal import Jaal
 
-def visualize_delegation_graph(delegations: dict, powers: dict):
+def visualize_delegation_graph(delegations: dict, powers: dict = None):
     """
     Visualizes a delegation graph using the Jaal library.
     Args:
@@ -12,7 +12,7 @@ def visualize_delegation_graph(delegations: dict, powers: dict):
                                 "A": {"B": 0.5},
                                 "C": {"A": 1.0, "B": 0.5}
                             }
-        powers (dict): A dictionary mapping nodes to their power values. 
+        powers (dict, optional): A dictionary mapping nodes to their power values. 
 
     Notes:
         - The powers return from an LP model need to be cleaned, so that non-sink nodes have a power of 0, otherwise
@@ -20,12 +20,16 @@ def visualize_delegation_graph(delegations: dict, powers: dict):
         - The function will attempt to find an available port starting from 8050 until 8055.
         - The graph is directed, with nodes colored based on whether they are sinks (blue) or not (gray).
         - The function assumes all nodes in the graph are present in the powers dict. If a node is missing from this dict, it will not be visualized.
-        - {node: 0.0 for node in delegations.keys()} can be used to generate the powers dict if powers are not available.
+        - If no powers dict is passed, the algorithm ignores any node who are node keys in the delegations dict
+        - If no powers dict is passed, each node will be visualized as if it had no power (gray)
     """
 
     if not delegations: 
         print("No delegations to visualize.")
         return
+    
+    if not powers:
+        powers = {node: 0.0 for node in delegations.keys()}
 
     node_df = pd.DataFrame({
         "id": powers.keys(),

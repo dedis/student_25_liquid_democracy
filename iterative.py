@@ -2,6 +2,7 @@ import sys, os
 sys.path.append(os.path.abspath("/Users/DavidHolzwarth/Uni/EPFL/bachelors-thesis"))
 
 import logger_creator
+import time 
 
 def iterate_delegations(delegations: dict, nodes: list, cutoff: float = 0.001) -> dict:
     """
@@ -28,9 +29,11 @@ def iterate_delegations(delegations: dict, nodes: list, cutoff: float = 0.001) -
     values = {node: 1.0 for node in nodes}
 
     count = 0
+    
     while True:
+
         temp_values = values.copy()  # Store previous iteration values
-        max_change = 0.0
+        total_change = 0.0
         
         for node, incoming_delegations in delegations.items():
             incoming_delegations = delegations[node]
@@ -38,10 +41,11 @@ def iterate_delegations(delegations: dict, nodes: list, cutoff: float = 0.001) -
             for src, weight in incoming_delegations.items():
                 values[node] += weight * temp_values[src]
                 values[src] -= weight * temp_values[src]
-                max_change = max(max_change, weight * temp_values[src])
+                total_change += weight * temp_values[src]
         
         count += 1
-        if max_change < cutoff:
+        print("it", values)
+        if total_change < cutoff:
 
             logger, handler = logger_creator.create_logger(name_prefix="iterative")
             logger.info(f"Iterated {count} times ({len(nodes)} nodes)")
@@ -49,3 +53,4 @@ def iterate_delegations(delegations: dict, nodes: list, cutoff: float = 0.001) -
             handler.close()
             
             return values
+        
