@@ -20,7 +20,7 @@ def visualize_delegation_graph(delegations: dict, powers: dict = None):
         - The function will attempt to find an available port starting from 8050 until 8055.
         - The graph is directed, with nodes colored based on whether they are sinks (blue) or not (gray).
         - The function assumes all nodes in the graph are present in the powers dict. If a node is missing from this dict, it will not be visualized.
-        - If no powers dict is passed, the algorithm ignores any node who are node keys in the delegations dict
+        - If no powers dict is passed, the algorithm doesn't visualize any node who are not keys in the delegations dict
         - If no powers dict is passed, each node will be visualized as if it had no power (gray)
     """
 

@@ -1,7 +1,7 @@
-
 import networkx as nx
 import random
 from typing import Union
+import logger_creator
 
 def prepare_graph(vertices, edges, sink_frac=0.2):
     """
@@ -13,9 +13,9 @@ def prepare_graph(vertices, edges, sink_frac=0.2):
         Edges are removed randomely until this condition is met
     - Normalizes the edge weights for each node such that the sum of outgoing edge weights equals 1.
     - Removes delegation cycles (terminal strongly connected components (SCCs))
-        A terminal SCC is a strongly connected component that has no outgoing edges to nodes outside of
-        the SCC. If such a component is found, one of its edges is removed at random.
-        This process is repeated until no terminal SCCs remain.
+        A terminal SCC is a strongly connected component that has outgoing edges, but none of them to nodes outside of
+        the SCC (so sinks are not terminal SCCS). If all such terminal SCCs are collapsed into a single 
+        node called "lost". This process is repeated until no terminal SCCs remain.
     
     Parameters
     ----------
@@ -45,6 +45,8 @@ def prepare_graph(vertices, edges, sink_frac=0.2):
 
     # 2. Merge multiple edges into one. The duplicated edges are discarded.
     DG = nx.DiGraph()
+    DG.add_nodes_from(G.nodes())  # <-- Ensures even isolated nodes are included
+
     for u, v, w in G.edges(data='weight'):
         if DG.has_edge(u, v):
             DG[u][v]['weight'] += w
@@ -52,7 +54,7 @@ def prepare_graph(vertices, edges, sink_frac=0.2):
             DG.add_edge(u, v, weight=w)
 
     # 3. If there are not a lot of sinks (less than 20% of nodes with outdegree 0), remove some edges
-    while sum(DG.out_degree(n) == 0 for n in DG.nodes()) < sink_frac * len(DG.nodes):
+    while sum(DG.out_degree(n) == 0 for n in DG.nodes()) < sink_frac * len(G.nodes):
         node = random.choice(list(DG.nodes()))
         if DG.out_degree(node) > 0:
             DG.remove_edges_from(list(DG.out_edges(node)))
@@ -63,49 +65,58 @@ def prepare_graph(vertices, edges, sink_frac=0.2):
         for u, v, w in DG.out_edges(node, data='weight'):
             DG.add_edge(u, v, weight=w / w_sum)
 
-    # 5. Remove terminal SCCs (cliques with no sink)
-    def remove_from_terminal_scc(graph):
+    # 5. Remove closed delegation cycles (terminal strongly connected components (SCCs))
+    initial_amount_of_nodes = len(DG.nodes())
+    def collapse_all_terminal_sccs(graph, lost_node_name="lost"):
+        # 1) find all SCCs
         sccs = list(nx.strongly_connected_components(graph))
+
+        # 2) identify the terminal ones
+        terminal_sccs = []
         for scc in sccs:
-            if len(scc) == 1 and graph.has_edge(list(scc)[0], list(scc)[0]):
-                # SCC is a self loop, which needs to be removed
-                graph.remove_edge(list(scc)[0], list(scc)[0])
-            terminal = True # assumes SCC is terminal unless an outgoing edge or sink is found
+            # ignore sinks
+            if any(graph.out_degree(n) == 0 for n in scc):
+                continue
+            # check whether there are any edges out of the scc
+            # (checks if all outgoing edges are to nodes also in the SCC)
+            if all(v in scc for u in scc for _, v in graph.out_edges(u)):
+                terminal_sccs.append(scc)
+
+        # 3) collapse each
+        for scc in terminal_sccs:
             for node in scc:
-                # Search for sinks
-                if graph.out_degree(node) == 0:
-                    terminal = False
-                    break
-                
-                # Search for outgoing edges
-                for _, v in graph.out_edges(node):
-                    if v not in scc:
-                        terminal = False
-                        break
-                if not terminal:
-                    break
+                for u, _ in list(graph.in_edges(node)):
+                    if u not in scc:
+                        w = graph[u][node].get("weight", 1.0)
+                        if graph.has_edge(u, lost_node_name):
+                            graph[u][lost_node_name]["weight"] += w
+                        else:
+                            graph.add_edge(u, lost_node_name, weight=w)
+                        graph.remove_edge(u, node)
+            graph.remove_nodes_from(scc)
 
-            if terminal:
-                # Terminal SCC found
-                node = random.choice(list(scc))
-                edge_to_remove = random.choice(list(graph.out_edges(node)))
-                graph.remove_edge(*edge_to_remove)
-                # Re-normalize the edge weights
-                w_sum = sum(w for _, _, w in DG.out_edges(node, data='weight'))
-                for u, v, w in DG.out_edges(node, data='weight'):
-                    DG.add_edge(u, v, weight=w / w_sum)
-                return True
-        return False
+        # returns the amount of terminal SCCs that were collapsed
+        return len(terminal_sccs)
 
-    while remove_from_terminal_scc(DG):
-        pass
+
+    # Keep removing terminal SCCs until none are left
+    amount_of_collapsed_sccs = collapse_all_terminal_sccs(DG)
+
+    final_amount_of_nodes = len(DG.nodes())
+
+    logger, handler = logger_creator.create_logger(name_prefix="prepare_graph")
+    logger.info(f"Initially {initial_amount_of_nodes} nodes, after collapsing terminal SCCs "
+                f"{final_amount_of_nodes} nodes remain. In total {amount_of_collapsed_sccs} terminal SCCs were collapsed.")
+    logger.removeHandler(handler)
+    handler.close()
 
     return DG
 
 def nx_graph_to_dict(G: nx.DiGraph) -> dict:
     """
     Converts a NetworkX DiGraph to a dictionary representation like {src: {dst: weight, ...}, ...}.
-    
+    Defaults to weight=None if no weight is specified on an edge.
+
     Parameters
     ----------
     G : networkx.DiGraph
@@ -116,7 +127,14 @@ def nx_graph_to_dict(G: nx.DiGraph) -> dict:
     dict
         A dictionary where keys are nodes and values are dictionaries of neighbors and their weights.
     """
-    return {src: {dst: data['weight'] for dst, data in G[src].items()} for src in G.nodes()}
+    return {
+        src: {
+            dst: data.get('weight', None)
+            for dst, data in G[src].items()
+        }
+        for src in G.nodes()
+    }
+
 
 def invert_graph(graph):
     """

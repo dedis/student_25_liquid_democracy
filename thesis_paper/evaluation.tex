@@ -9,7 +9,7 @@ The three algorithms will be evaluated based on their runtime and scalability as
 
 \section{Method}
 
-We will explore the runtime of the algorithms on small graphs, big graphs and then explore their behavior in specific situations and corner cases. For the first two sections, we have built an algorithm, that builds a graph with n nodes, and then adds between zero and three delegations per node to random other nodes, ensuring that there are no delegation cycles without a sink. A better explanation of how these graphs are artificially constructed can be found in the Annex. \TODO{Create this annex} We acknowledge, that these assumptions may not be representative of real delegation graphs, where, as studies have shown, delegates tend to not delegate randomly, but to a subset of experts, such as TV personalities, thus centering power to one or few people. This approach also ignores potential tendencies such as friends delegating to eachother more likely. Such situations will be explored in subsection XX. \TODO{Add citations that these situations happen. Maybe the viscous democracy paper, and the pirate party example, and in one of the six original papers Ford shared this was also mentioned}.
+We will explore the runtime of the algorithms on small graphs, big graphs and then explore their behavior in specific situations and corner cases. For the first two sections, we have built an algorithm, that builds a graph with n nodes, and then adds between zero and three delegations per node to random other nodes, ensuring that there are no delegation cycles without a sink. A better explanation of how these graphs are artificially constructed can be found in the Annex. \TODO{Create this annex} We acknowledge, that these assumptions may not be representative of real delegation graphs, where, as studies have shown, delegates tend to not delegate randomly, but to a subset of experts, such as TV personalities, thus centering power to one or few people. This approach also overlooks potential tendencies of voters, such as delegating to individuals they perceive as more competent or confident than them, or the tendency of power to concentrate among a few, very popular so-called "super-voters" \cite{klingVotingBehaviourPower2015}.
 
 To minimize the impact of background noise and measurement fluctuations on the benchmarks, algorithms with very short runtimes were executed multiple times, and the average runtime was recorded. The recorded runtimes always indicate just the runtime for the algorithms to resolve the delegations, times for set-up, such as the time for building the linear program, were not included. 
 
@@ -54,7 +54,7 @@ A possible explanation for this spike may be, that when the graph has 10 and 12 
         \fbox{\includegraphics[width=\textwidth]{12_random}}
         \caption{12 nodes}
     \end{subfigure}
-    \caption{Delegation graphs with 11 and 12 nodes}
+    \caption{Delegation graphs with 11 and 12 nodes (Blue nodes are sinks)}
     \label{fig:random-11and12}
 \end{figure}
 
@@ -111,9 +111,7 @@ Fitting the data into different kinds of curves reveals, that the LP implementat
 
 \subsection{Dense Graphs}
 
-While we expect most delegators in any delegation graph to only delegate to a handful of people, a well formed delegation graph can have any number of delegates per delegator. Thus, it is also interesting to compare how the three algorithms compare when resolving more dense graphs. In this section, we test the three implementations on NetworkX's $G_{n,p}$ graph generator \texttt{gnp\_random\_graph}, which returns a directed graph with $n$ nodes, where each node connected to each other node with probability $p$, which is set to $0.5$ for the remainder of this section.\TODO{Insert missing citation} These graphs are not well-formed delegation graphs out-of-the box, thus we adapt them by removing outgoing edges of nodes, turning them into sinks, until 10\% of the nodes are sinks. Then, each delegators vote is equally distributed to all of its outgoing edges, such that the edge weights add up to 1. Finally, any closed delegation cycles are removed by removing a random edge in the cycle (and re-normalizing the edge weights). 
-
-% \TODO{cite here https://networkx.org/documentation/stable/reference/generated networkx.generators.random_graphs.gnp_random_graph.html} at the end of the sentence where I introduce this graph
+While we expect most delegators in any delegation graph to only delegate to a handful of people, a well formed delegation graph can have any number of delegates per delegator. Thus, it is also interesting to compare how the three algorithms compare when resolving more dense graphs. In this section, we test the three implementations on NetworkX's $G_{n,p}$ graph generator \texttt{gnp\_random\_graph}, which returns a directed graph with $n$ nodes, where each node connected to each other node with probability $p$, which is set to $0.5$ for the remainder of this section \cite{hagbergExploringNetworkStructure2008hagbergExploringNetworkStructure2008}. These graphs are not well-formed delegation graphs out-of-the box, thus we adapt them by removing outgoing edges of nodes, turning them into sinks, until 10\% of the nodes are sinks. Then, each delegators vote is equally distributed to all of its outgoing edges, such that the edge weights add up to 1. Finally, any closed delegation cycles are removed by removing a random edge in the cycle (and re-normalizing the edge weights). 
 
 \begin{figure}[h]
     \centering
@@ -213,7 +211,7 @@ If a delegate delegates less than their vote, this causes less of an issue. As l
         \centering
         \includegraphics[width=\textwidth]{invalid_delegation_graph}
         \caption{Invalid delegation graph}
-         \label{subfig:invalid-delegation-graph}
+         \label{subfig:invalid-delegation-graph} 
     \end{subfigure}
     \caption{Two similar delegation graphs}
     \label{fig:small-delegation-graphs}
@@ -234,8 +232,7 @@ If the delegations form a closed delegation cycle, the iterative algorithm will 
 
 For the other two algorithms however, such a cycle can be caught. The equations for the standing power of the nodes within the cycle are linearly dependent on each other, thus the matrix resulting from them is not singular, and hence don't have a single solution. Solvers of systems of linear equations catch and throw an error.
 
-What is worth mentioning however, is that since we allow fractional delegation, it suffices if just one node is a closed delegation cycle does also delegates to a node outside of a delegation cycle (or turns into a sink), for the delegations to become resolvable again. The cycles that were explored in \cref{subsec:cycles_draining} are example of such a situation. While closed delegation loops frequently pose a problem in liquid democracies \TODO{cite}, they happen less frequently when allowing fractional delegation \TODO{cite}.
+What is worth mentioning however, is that since we allow fractional delegation, it suffices if just one node is a closed delegation cycle does also delegates to a node outside of a delegation cycle (or turns into a sink), for the delegations to become resolvable again. The cycles that were explored in \cref{subsec:cycles_draining} are example of such a situation. 
 
 
-
-%TODO Maybe mention also at some point, that this evaluation is a comparison between different solvers for systems of linear equations
+\TODO{Maybe mention also at some point, that this evaluation is a comparison between different solvers for systems of linear equations}

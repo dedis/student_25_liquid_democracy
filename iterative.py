@@ -44,7 +44,6 @@ def iterate_delegations(delegations: dict, nodes: list, cutoff: float = 0.001) -
                 total_change += weight * temp_values[src]
         
         count += 1
-        print("it", values)
         if total_change < cutoff:
 
             logger, handler = logger_creator.create_logger(name_prefix="iterative")

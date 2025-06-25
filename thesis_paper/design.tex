@@ -6,328 +6,95 @@
 \label{sec:design}
 %%%%%%%%%%%%%%%%
 
-\section{Iterative Approach}
-\label{sec:iterative_approach}
+This section describes our implementation of liquid democracy with fractional delegation. We start by defining delegation graphs, and introduce some constraints, after which we discuss what it entails resolve delegations.
 
-\subsection{Simple Iterative Approach}
+\section{Implementing Liquid Democracy with Fractional Delegation}
 
-When resolving a delegation graph, it may make sense to think about power as a liquid flowing through the graph, from a source to its sink. \TODO{cite ford's paper}. In order to come up with a suitable algorithm, we first describe intuitively what the algorithm should do. If a delegator A delegates half their vote to B and the other half to other nodes, the algorithm should add 0.5 to Bs power, and remove it from A. If B is a sink, the algorithm is done resolving this delegation. However,  B may not be a sink. In that case, the algorithm needs to iterate again, and spread Bs newly acquired power to its delegates. Thus, an algorithm would need to iterate over the graph multiple times, until an equilibrium has been reached, where each delegator has no more power. \Cref{alg:iterative_simple} shows such an algorithm drafted in pseudocode. Each iteration, a snapshot of the power's of each node is taken, and the reassignments of power are based on this snapshot. If the algorithm forwent the use of such a snapshot, it would lead to inconsistencies in the edge case of a self-delegation of weight less than 1, since the self-delegator's power would change in the middle of reassigning the power. 
+\subsection{Delegation Graphs}
 
-Another valid approach would be a queue-approach, where the algorithm pops node off a queue and delegates their power, and each delegate of this node gets re-added to the queue. A sweeping method treating the entire graph at once was chosen due to its increased simplicity and runtime analysis.
+In our implementation, voters are strictly given the choice to either delegate their vote (fractional) in its entirety, or vote directly. The electorate is thus divided into \textbf{sinks}, who actually vote, and \textbf{delegators}. 
 
-\begin{algorithm} [H]
- \caption{Iterative Algorithm}\label{alg:iterative_simple}
-\begin{algorithmic}[1]
-\State // Initialize each node’s power to 1.0  
-\ForAll{\(v \in \texttt{nodes}\)}
-    \State \(\texttt{powers}[v] \gets 1.0\)
-\EndFor
-\Repeat
-    \State \(\texttt{prev\_powers} \gets \texttt{powers}.\texttt{copy}()\)  \Comment{snapshot of previous iteration}
-    \ForAll{\(v \in \texttt{nodes}\)}
-        \State // For each incoming delegation \((u \to v)\), move \(w_{uv}\times\) previous power of u
-        \ForAll{\((u, w) \in \texttt{delegations}[v]\)}
-            \State \(\delta \gets w \times \texttt{prev\_powers}[u]\) \label{alg:iterative_simple_delta_assignment}
-            \State \(\texttt{powers}[u] \;-\!=\; \delta\) \label{alg:iterative_simple_remove_delta}
-            \State \(\texttt{powers}[v] \;+\!=\; \delta\) \label{alg:iterative_simple_add_delta}
-        \EndFor
-    \EndFor
-\Until{\(\texttt{prev\_powers} = \texttt{powers}\)} \label{alg:iterative_simple_termination_cond}\Comment{a steady state has been reached}
-\end{algorithmic}
-\end{algorithm}
+\section{Resolving Delegation}
 
-The following notation will be used throughout the next sections.
 
-$G = (V, E)$ is a well-formed delegation graph, with $V = D \dot\bigcup S$, where D is the set of delegators and S is the set of sinks.
+\TODO{The stuff below was pasted from the old background, it needs to be severely adapted...}
 
-Let $p_v^{(i)}, i \in \mathbb{N}_0$ be \texttt{powers}[v] after the $i$-th iteration of the repeat-until loop, with $p_v^{(0)}$ being the initial power of a node before the first iteration has started. Using this notation, our termination condition for the repeat-until loop at \cref{alg:iterative_simple_termination_cond} of \cref{alg:iterative_simple} is: $\forall v \in V: p_v^{(i-1)} = p_v^{(i)}$
+\section{Liquid Democracy with Fractional Delegation}
 
-Let $P_D^{(i)} = \sum_{d \in D} p_d^{(i)}$ and $P_S^{(i)} = \sum_{s \in S} p_s^{(i)}$ be the sums of all delegators and all sinks after each iteration.
+In a liquid democracy, voters are given the choice between voting themselves, and delegating their vote to another voter, who will vote on their behalf. This distinguishes the electorate into "sinks", who actually vote, and "delegators".  In this paper, we will look at a fractional implementation of liquid democracy, which allows delegators to split their one vote into fractions and delegate those to different people.
 
-Let $\delta_{(u, v, w)}^{(i)}$ be the delta assigned in \cref{alg:iterative_simple} at \cref{alg:iterative_simple_delta_assignment} during the $i$th iteration.
+ \TODO{Can be made longer}
 
-\subsubsection{Conservation of Power}
+ \section{Delegation Graphs}
+ 
+In order to facilitate communication, a fractional amount of votes is also referred to as \textbf{power}. Each node initially has one vote, or an \textbf{initial power} $p^{(0)}_v = 1$. Each \textbf{delegation} between two nodes has a \textbf{weight} $w \in \mathbb{R}^+$.  \textbf{Resolving delegations} means to determine how much power each sink holds according to the delegations. After resolving delegations, a node $v \in V'$s \textbf{final power}, is $p_v \in \mathbb{R}_{\ge0}$. A more rigid definition of a nodes final power will be introduced in \cref{sec:design}.
 
-This algorithm conserves power.
+This paper uses the a fractional implementation of liquid democracy, where each voter is either a \textbf{sink} or a \textbf{delegator}. This means that either the voter votes themselves, or chooses to delegate their vote fractionally. \textbf{Fractional delegation} allows the delegator to delegate (different) fractions of their initial vote to different voters. It is important to note, that since a node can only be either a delegator or a sink, it can't vote and delegate at the same time, so a sink can't delegate any power at all, and a delegator can't vote themselves. 
+ 
+We define a \textbf{delegation graph} as a finite, directed, weighted graph $G = (V, E)$, with sinks $S$ and delegators $D$ as follows:
 
-\begin{theorem}
-\label{theo:iterative_cons_of_power}
-Given a well-formed delegation graph, in \cref{alg:iterative_simple}, $P_t^{(i)} = P_D^{(i)} + P_S^{(i)}$ is equal to $|V|$ for any $i \in \mathbb{N}_0$.
-\end{theorem}
-\begin{proof}
+\begin{enumerate}
+\item $V = S \dot\bigcup D$, meaning that $V$ is the union of the two disjunct sets of sinks and delegators.
+\item Each $e \in E$ is a triple $(u, v, w)$, denoting a delegation from node $u$ to node $v$ of weight $w$.
+\item Each sink $s \in S$ has no outgoing edges.
+\item Each delegator $d \in D$ has $n \in \mathbb{N}^+$ outgoing edges, each with a positive weight \footnotemark, such that the sum of all outgoing edge weights equals 1.
+\item Each voter $v \in V$ has corresponding power value, which is initially 1.
+\end{enumerate}
 
-We prove the theorem inductively. When $i = 0$ (before the first iteration), each node is assigned a power of 1. So 
+\subsection{Closed Delegation Cycles}
 
+\footnotetext{Edge weights should not be 0, since the edge should be entirely omitted in this case.}
+
+We define a \textbf{closed delegation cycle} $C \subseteq V$ in a delegation graph $G = (S \dot\bigcup D, E)$ as a cycle in $G$ such that for every node $v \in C$, there exists no path from $v$ to any sink node in $S$. That is,
 \[
-\forall v \in V: p_v^{(i)} = 1 \implies P_t^{(0)} = |V|
+\forall v \in C,\ \nexists\ \text{path from } v \text{ to any } s \in S.
 \]
-
-Assume that for a $k \in \mathbb{N}_0: P_t^{(k)} = |V|$. During iteration $k+1$, the algorithm will iterate over all delegations, and for each $(u, v, w) \in E$, it will remove some $\delta_{(u, v, w)}^{(k+1)}$ from node \texttt{u} in \cref{alg:iterative_simple_remove_delta}, but add this same amount to node \texttt{v} in \cref{alg:iterative_simple_add_delta}. Since the delegation graph is well formed, the outgoing weights of any delegator add up to 1, so for all delegators $u \in D$, the total amount of power they delegate away during iteration $k+1$ adds up to the power they held in iteration $k$.
-
-\begin{align*}
-\sum_{(u, v, w) \in E} \delta_{(u, v, w)}^{(k+1)} &=  \sum_{(u, v, w) \in E} wp_u^{(k)} \\
-&= p_u^{(k)}  \sum_{(u, v, w) \in E} w \\
-&= p_u^{(k)} \cdot 1 \\
-&= p_u^{(k)}
-\end{align*}
-
-Thus, throughout the iteration of the outer loop, any delegator $u$ only ever moves power it already has, and for each "moving around" of power, conservation is guaranteed since any power subtracted from a delegator is re-added to the delegate. This means that power is only ever moved around, but not lost, and $P_t^{(k+1)} = |V|$. 
-
-By the principles of induction, the assumption holds for any $i \in \mathbb{N}_0$
-\end{proof}
-
-\subsubsection{Termination}
-
-Given a well formed delegation graph, this algorithm doesn't necessarily terminate, as shown by the following lemmata and theorem.
-
-First, we prove that a sink's power can't shrink, since there is no outgoing edge going out of a sink.
-
-\begin{lemma}\label{lem:sink_non_shrink}
-$\forall s \in S: p_s^{(i)} \ge p_s^{(i-1)}$ 
-\end{lemma}
-\begin{proof}
-Assume $p_s^{(i)} < p_s^{(i-1)}$. The power that left $s$ needs to have gone somewhere, since the algorithm conserves power. This implies, that there is a delegation $(s, v, w) \in E$ such that $\exists \delta > 0: \delta \gets w * p_s^{(i-1)}$. This contradicts our definition of a well-formed liquid delegation graph, since any sink can not have any outgoing edges.
-\end{proof}
-
-Next, we prove that if a node's power is 0, all its delegator's powers must have been 0 after the previous iteration
-\begin{lemma}\label{lem:simple_iterative_empty_node}
-$p_v^{(i)} = 0 \implies \forall (u, v, w) \in E: p_u^{(i - 1)} = 0$. 
-\end{lemma}
-\begin{proof} Assume $p_v^{(i)} = 0$, but $\exists (u, v, w) \in E: p_u^{(i-1)} > 0$
-
-Let $d \in \mathbb{R}_{0}$ be any additional power a node receives, that is not explicitly mentioned.
-
-\[
-p_u^{(i-1)} > 0 \implies \delta_{(u, v, w)}^{(i)} > 0 \implies p_v^{(i)} = \delta_{(u, v, w)}^{(i)} + d \implies p_v^{(i)} > 0 \lightning
-\]
-
-\end{proof}
-
-Next, we prove that the algorithm terminates at iteration $i+1$ exactly when $P_D^{(i)} = 0$.
-
-\begin{lemma}\label{lem:simple_alg_terminates}
- $p_v^{(i)} = p_v^{(i+1)} \forall v \in V \Leftrightarrow$ $P_D^{(i)} = 0$.
-\end{lemma}
-\begin{proof}
-
-\begin{align*}
-	P_D^{(i)} = 0 
-	&\Leftrightarrow p_d^{(i)} = 0, \forall d \in D \\
-	&\Leftrightarrow \not\exists (d, v, w) \in E: \delta_{(d, v, w)}^{(i+1)} > 0  &&\text{($\delta$ of a node with power 0 is 0)}\\
-	&\Leftrightarrow p_v^{(i)} = p_v^{(i+1)} \forall v \in V \qed  &&\text{($p_v$ doesn't change if zero is added to it)}
-\end{align*}
-\end{proof}
-
-\begin{theorem}\label{alg:iterative_alg_doesnt_terminate}
-Given a well-formed delegation graph, \cref{alg:iterative_simple} may not terminate.
-\end{theorem}
-\begin{proof} Assume the algorithm terminates on a well-formed delegation graph..
-
-Take the following well formed delegation graph $G = (S \dot\bigcup D, E)$with $S =\{C\}$ and $D = \{A, B\}$. B delegates half their vote to A, and half their vote to C, while A delegates its entire vote back to B. Since the algorithm terminates, there must be an $i \in \mathbb{N}$ such that $P_D^{(i)} = 0$. 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.4\textwidth]{small_cycle_graph}
-    \caption{Delegation graph with a cycle.}
-    \label{fig:small_cycle_graph}
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{invalid_graph_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{invalid_graph_2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{invalid_graph_3}
+    \end{subfigure}
+    \caption{Closed delegation cycles}
+    \label{fig:closed-delegation-cycles}
 \end{figure}
 
+\Cref{fig:closed-delegation-cycles} shows exemplary cycles which are not allowed. Such cycles would lead to contradictory situations, as power delegated within them would never reach a sink. Some existing works discuss possible ways to handle this "lost" power \cite{behrensCircularDelegationsMyth2015, brillInteractiveDemocracy2018}, but it is out of the scope of this paper to provide comment on these. We prove below, that if there are no closed delegation cycles in a delegation graph, all delegators' power reaches a sink.
 
-Both (B, A, 0.5) and (A, B, 1) $\in E$, so A is a predecessor of B, and B is a predecessor of A, thus B is its own predecessor.
-
-\begin{align*}
-	P_D^{(i)} = 0 
-	&\implies p_B^{(i)} = 0 \\
-	&\implies p_A^{(i-1)} = 0 &&\text{(Lemma \cref{lem:simple_iterative_empty_node})} \\
-	&\implies p_B^{(i-2)} = 0 &&\text{(Lemma \cref{lem:simple_iterative_empty_node})}
-\end{align*}
-
-This implication chain can be drawn arbitrarily long. In order for B to have a power of 0, it can never have held any power in the first place, contradicting our well-formed delegation graph, which dictates that all nodes start with a power of 1.
+\begin{theorem}
+Let $G = (S \dot\bigcup D, E)$ be a delegation graph. If $G$ contains no closed delegation cycles, then for every delegator $d \in D$, there exists a path from $d$ to a sink node $s \in S$.
+\end{theorem}
+\begin{proof}
+Suppose, for contradiction, that $G$ contains no closed delegation cycle, but $\exists d \in D$ such that no path from $d$ leads to any sink $s \in S$. Since G is a finite graph, any walk from $d$ must eventually repeat nodes, implying a cycle. If at least one node in this cycle can reach a sink, there would be a path for all others in the cycle to reach a sink via this node as well, thus all nodes in the cycle can not reach a sink either. Thus, G does contain a closed delegation cycle. $\lightning$
 \end{proof}
 
-If the graph is acyclic, this algorithm would need at most $|V|$ iterations, such as in a directed path, where each node gives their entire vote to the next node except for the final sink. However, as soon as cycles are introduced into the graph, the spreading of power only terminates after an infinite amount of steps. Looking further into the graph in \cref{fig:small_cycle_graph}, the expected resolution of these delegations would be that C holds node A and B's powers, as well as its own initial vote, so a power of three. However, looking at the powers as the algorithm iterates over this graph reveals that after the first iteration, C will have 1.5 votes, then 2, then 2.25, 2,50, 2.75, ..., however only after infinitely many steps it will have three. 
+ A \textbf{well-formed delegation graph} G is defined as a delegation graph, which contains no closed delegation cycles.
 
-\begin{table}[h]
-  \centering
-  \caption{$p_v{(i)}$ values of nodes in the graph in \cref{fig:small_cycle_graph}}
-  \label{tab:simple_iterative_example}
-  \begin{tabular}{| l | l | l | l |}
-    \hline
-    i & $p_A$ & $p_B$ & $p_C $ \\ \hline
-    0 & 1 & 1 &	1 \\ \hline
-    1 & 0.5 & 1 & 1.5 \\ \hline
-    2 & 0.5 & 0.5 & 2 \\ \hline
-    3 & 0.25 & 0.5 & 2.25 \\ \hline
-    4 & 0.25 & 0.25 & 2.50 \\ \hline
-    5 & 0.125 & 0.25 & 2.625 \\ \hline
-    \multicolumn{4}{| l |}{...} \\ \hline
-  \end{tabular}
-\end{table}
-
-\subsection{Iterative Algorithm with a Cutoff}
-
-Practically, the algorithm needs a cutoff condition, which terminates the while loop once the power values calculated are close enough to the real, final values. Since these are unknown before the algorithm terminates, we can count how much power is being shifted throughout the graph each iteration, and terminate once this value is sufficiently small. An extension to \cref{alg:iterative_simple} could look like \cref{alg:iterative_with_cutoff}. 
-
-\begin{algorithm} [H]
- \caption{Iterative Algorithm with a cuttoff value. Changes from \cref{alg:iterative_simple} are highlighted. }\label{alg:iterative_with_cutoff}
-\begin{algorithmic}
-\State // Initialize each node’s power to 1.0  
-\ForAll{\(v \in \texttt{nodes}\)}
-    \State \(\texttt{powers}[v] \gets 1.0\)
-\EndFor
-\Repeat
-    \State \(\texttt{prev\_powers} \gets \texttt{powers}.\texttt{copy}()\) 
-    \State \colorbox{yellow}{\(\texttt{total\_change} \gets \texttt{0}\)} 
-    \ForAll{\(v \in \texttt{nodes}\)}
-        \State // For each incoming delegation \((u \to v)\), move \(w_{uv}\times\) previous power of u
-        \ForAll{\((u, w) \in \texttt{delegations}[v]\)}
-            \State \(\delta \gets w \times \texttt{prev\_powers}[u]\)
-            \State \(\texttt{powers}[v] \;+\!=\; \delta\)
-            \State \(\texttt{powers}[u] \;-\!=\; \delta\)
-            \State \colorbox{yellow}{\(\texttt{total\_change} \;+\!=\; \delta \)}
-        \EndFor
-    \EndFor
-\Until{\colorbox{yellow}{\(\texttt{total\_change} < \texttt{cutoff}\)}}
-\end{algorithmic}
-\end{algorithm}
-
-\subsubsection{Conservation of Power}
-
-\Cref{theo:iterative_cons_of_power} states that \cref{alg:iterative_simple} conserves power across iterations. The same proof applies to \cref{alg:iterative_with_cutoff}, since only the if-condition of the outer loop has changed, but the algorithm works the same way. So while the algorithm will iterate less, power remains conserved across iterations.
-
-\subsubsection{Termination}
-
-\begin{lemma}\label{lem:iterative_alg_power_concentrates}
-Given a well-formed delegation graph, \cref{alg:iterative_with_cutoff} terminates if \texttt{cutoff} > 0.
-\end{lemma}
-
-\TODO{The proof is incomplete, I'll work over it later...}
-
-\begin{proof} We differentiate two cases. Fix an $i \in \mathbb{N}_0$.
-
-Case 1: $P_D^{(i)} = 0$
-
-In this case, no delegator has any power, so the \texttt{total\_change} can be at most 0, which is always smaller than \texttt{cutoff}. So the algorithm terminates.
-
-Case 2: $P_D^{(i)} > 0$
-
-\begin{align*}
-P_D^{(i)} > 0 
-& \implies \exists d_0 \in D: p_{d_0}^{(i)} > 0 \\ 
-& \implies \exists s \in S, \exists k \ge 1, \exists (v_0, ..., v_k): v_0 = d_0, v_k= s, (v_j, v_{(j+1)}, w) \in E \forall 0 \le j \le k \\
-&\text{(There is a path between $d_0$ and a sink)} \\
-& \implies \exists d_{k-1} \in D: (d_{k-1}, s, w) \in E \\
-& \text{($d_{k-1}$ is the node on the path from $d_0$ to $s$ that has an edge to $s$)}
-\end{align*}
-
-Assume ${p_{d_{k-1}}}^{(i)} = 0$.
-
-Left $\mathrm{Pred}^*(d_0)$ be defined as follows:
-
-\[
-\mathrm{Pred}^*(d_{0})=\bigl\{u \in V \bigm| \exists\text{ a path }u \rightsquigarrow d_{0} \bigr\}
-\]
-
-Also, let $\mathrm{dist}(d_{0}, p), p \in V$  be defined as follows :
-
-\[
-\mathrm{dist}(d_{0},p) =\min\bigl\{|P| : P\text{ is a path }d_{0}\rightsquigarrow p\bigr\}.
-\]
-
-\begin{align*}
-{p_{d_{k-1}}}^{(i)} = 0 &\implies 
-\end{align*}
-
-$\max\bigl\{\mathrm{dist}(d_0,p)\bigm|p\in \mathrm{Pred}^*(d_0)\bigr\} $
-
-...
-
-%{p_{d_{(k-1)}}}^{(i)} = 0
-
-%The algorithm assumes, that the \texttt{total\_change} eventually shrinks below the cutoff value. 
-
-% todo continue here, I am too lazy atm to try and figure out how to prove that P_D shrinks properly
-
-\end{proof}
-
-\section{System of Linear Equations Approach}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.4\textwidth]{delegation_graph_sample}
-	\caption{Sample delegations}
-	\label{fig:sample_delegations}
-\end{figure}
-
-As discussed in the previous section, resolving delegations happens iteratively. However, it may not be necessarily to actually iterate through the entire graph. When looking at the delegations in \cref{fig:sample_delegations}, we know, that sink C's power must be its own initial power of 1 in addition to $w_2$ times that of B, which in turn is one plus $w_1$ times that of A, etc. For a well formed delegation graph $G=(S\dot\bigcup D, E)$, we can define a node $v \in V$'s \textbf{standing power} as $p'_v = 1 + \sum_{(u, v, w) \in E} wp'_u$, from which we can create the following definition of final power of nodes:
-
-\[
-p_v = 
-\begin{cases}
- p'_v v \in S \\ 
- 0, v \in D 
- \end{cases}
-\]
-
-In order to find a sink node's standing power, knowledge of its delegator's standing power is necessary. However, since delegators definitively have a final power of zero, we need to overwrite this standing power value with zero.  
-
-Given a directed, weighted delegation graph $G = (V = S \dot\bigcup D, E)$, the algorithm proceeds as follows.
+ Note, that while a self loop of weight one is not allowed in a well-formed delegation graph, a self loop of weight $w \le 1$ is allowed as long as the rest of the node's power eventually flows to a sink. Since a delegator can't vote, any power a delegator delegates to themselves will "flow" back into the node, and then be redistributed to the nodes delegates. How the delegations are actually resolved will be covered in greater detail in \cref{sec:design}. 
+ 
+ \section{Conservation of Power}
+ 
+ A vital property we set for the delegation graph is the conservation of power. While some authors have experimented with implementations of liquid democracy where this is not the case \cite{bersetcheGeneralizingLiquidDemocracy2022, boldiViscousDemocracySocial2011}, we believe that for a system to be truly democratic, we must assert delegating is not penalised, so a vote cast by a sink should not be different in value to a vote cast by a sink through delegation from a delegator. This property is called "Equality of Direct and Delegating Voters" by Behrens and Swierczek \cite{behrensPreferentialDelegationProblem2015}.  
+ Thus, any implementation needs a mechanism to ensure that the sum of the final power of all sinks is equal to the sum of the initial power of all nodes.
+ 
+ We posit, for the moment intentionally vaguely, that for a well-formed delegation graph $G=(S \dot\bigcup D, E)$, after resolving delegations, the following assertions must hold.
 
 \begin{enumerate}
-\item Set up a system of linear equations, such that for each node $v \in V$ there is an equation $p'_v = 1+\sum_{(u, v, w) \in E}wp'_u$
-\item Solve the system of linear equations to find the value of $p'_v$ for all $v \in V$
-\item For each $s \in S$ set $p_s = p'_s$
-\item For each $d \in D$ set $p_d = 0$
+\item $\forall s \in V$: $p_s = p$, where $p$ is the power delegated to $s$ directly or indirectly via its delegators.
+\item $\forall d \in V$: $p_d = 0$ 
+\item $\sum_{d \in D} p_d = |V|$
 \end{enumerate}
 
-In order to assure that the power is conserved during delegation, it may seem intuitive to add a constraint $\sum_{s \in S} p_s = |V|$ to the system of linear equations. However, we prove that such an equation is not strictly necessary, as the other equations in the system of equations already imply the conservation of power.
+\TODO{maybe prove these seven, or a subset of them: \url{https://liquid-democracy-journal.org/issue/3/The_Liquid_Democracy_Journal-Issue003-01-Preferential_Delegation_and_the_Problem_of_Negative_Voting_Weight.html}}
 
-We start with the solutions $\{p'_v | v \in V\}$.
-
-\begin{align*}
-\forall v \in V: p'_v &= 1+\sum_{(u, v, w) \in E} \bigl(wp'_u \bigr) \\
-\implies \sum_{v \in V} p'_v &= \sum_{v \in V} \bigl( 1 + \sum_{(u, v, w) \in E} \bigl( wp'_u \bigr ) \bigr) \\
-&= \sum_{v \in V} 1 + \sum_{v \in V} \sum_{(u, v, w) \in E} wp'_u \\
-&= |V| + \sum_{v \in V} \sum_{(u, v, w) \in E} wp'_u \\
-&= |V| + \sum_{(u, v, w) \in E} wp'_u
-\end{align*}
-
-Focusing on the $\sum_{(u, v, w) \in E} wp'_u$ term, this can be re-grouped by $u$ as follows 
-
-\begin{align*}
-\sum_{(u, v, w) \in E} wp'_u &= \sum_{u \in V} \sum_{(u, v, w) \in E} wp'_u \\
-&= \sum_{u \in V} p'_u  \sum_{(u, v, w) \in E} w
-\end{align*}
-
-Since, according to our definition of a delegation graph, all sinks have no outgoing notes, and all delegators's outgoing node weights add up to 1, we know that
-
-\[
-\sum_{(u, v, w) \in E} w = \begin{cases} 1, u \in D \\ 0, u \in S \end{cases}
-\]
-
-Thus, we can rewrite the above equation.
-
-\begin{align*}
-\sum_{u \in V} p'_u  \sum_{(u, v, w) \in E} w &= \left(\sum_{u \in D} p'_u  \sum_{(u, v, w) \in E} w \right) + \left( \sum_{u \in S} p'_u  \sum_{(u, v, w) \in E} w \right) \\
-&= \left( \sum_{u \in D} p'_u \cdot 1 \right) + \left(\sum_{u \in S} p'_u \cdot 0 \right) \\
-&= \sum_{u \in D} p'_u
-\end{align*}
-
-Focusing now on term $\sum_{v \in V} p'_v$, since $V = S \bigcup D$ , and $S$ and $D$ are disjunct we can say
-
-\[
-\sum_{v \in V} p'_v = \sum_{v \in S} p'_v  + \sum_{v \in D} p'_v 
-\]
-
-Thus, these two equations, we get
-
-\[
-\sum_{v \in S} p'_v  + \sum_{v \in D} p'_v  = |V| + \sum_{u \in D} p'_u
-\]
-\[
-\implies \sum_{v \in S} p'_v   = |V| \qed
-\]
-
-
-\TODO{maybe prove correctness, but that would require some effort,}\\
-\TODO{since we first need to establish what is "correct"}
