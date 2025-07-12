@@ -67,7 +67,7 @@ def prepare_graph(vertices, edges, sink_frac=0.2):
 
     # 5. Remove closed delegation cycles (terminal strongly connected components (SCCs))
     initial_amount_of_nodes = len(DG.nodes())
-    def collapse_all_terminal_sccs(graph, lost_node_name="lost"):
+    def collapse_all_terminal_sccs(graph, lost_node_name="cycle_sink_node"):
         # 1) find all SCCs
         sccs = list(nx.strongly_connected_components(graph))
 
@@ -102,7 +102,7 @@ def prepare_graph(vertices, edges, sink_frac=0.2):
     # Keep removing terminal SCCs until none are left
     amount_of_collapsed_sccs = collapse_all_terminal_sccs(DG)
 
-    final_amount_of_nodes = len(DG.nodes())
+    final_amount_of_nodes = len([n for n in DG.nodes() if n != "lost"])
 
     logger, handler = logger_creator.create_logger(name_prefix="prepare_graph")
     logger.info(f"Initially {initial_amount_of_nodes} nodes, after collapsing terminal SCCs "

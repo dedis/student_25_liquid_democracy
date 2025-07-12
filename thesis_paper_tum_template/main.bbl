@@ -1,0 +1,1738 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global/global}
+    \entry{beckerWhenCanLiquid2021}{misc}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=09e0ad7acf864c2836751492cbd00ce2}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Ruben},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b88ab0c69afe3aa1c751f31e0396ec8b}{%
+           family={D'Angelo},
+           familyi={D\bibinitperiod},
+           given={Gianlorenzo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c291b1362d24185a97febfbbc8f223c0}{%
+           family={Delfaraz},
+           familyi={D\bibinitperiod},
+           given={Esmaeil},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=44a0f44ffdbad97a8cbb37eb2121966a}{%
+           family={Gilbert},
+           familyi={G\bibinitperiod},
+           given={Hugo},
+           giveni={H\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{d86364f0ccdc421efa20709b4cbca29f}
+      \strng{fullhash}{d86364f0ccdc421efa20709b4cbca29f}
+      \strng{fullhashraw}{d86364f0ccdc421efa20709b4cbca29f}
+      \strng{bibnamehash}{d86364f0ccdc421efa20709b4cbca29f}
+      \strng{authorbibnamehash}{d86364f0ccdc421efa20709b4cbca29f}
+      \strng{authornamehash}{d86364f0ccdc421efa20709b4cbca29f}
+      \strng{authorfullhash}{d86364f0ccdc421efa20709b4cbca29f}
+      \strng{authorfullhashraw}{d86364f0ccdc421efa20709b4cbca29f}
+      \field{labelalpha}{Bec+21}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we investigate the so-called ODP-problem that has been formulated by Caragiannis and Micha [10]. Here, we are in a setting with two election alternatives out of which one is assumed to be correct. In ODP, the goal is to organise the delegations in the social network in order to maximize the probability that the correct alternative, referred to as ground truth, is elected. While the problem is known to be computationally hard, we strengthen existing hardness results by providing a novel strong approximation hardness result: For any positive constant \$C\$, we prove that, unless \$P=NP\$, there is no polynomial-time algorithm for ODP that achieves an approximation guarantee of \${\textbackslash}alpha {\textbackslash}ge ({\textbackslash}ln n){\textasciicircum}\{-C\}\$, where \$n\$ is the number of voters. The reduction designed for this result uses poorly connected social networks in which some voters suffer from misinformation. Interestingly, under some hypothesis on either the accuracies of voters or the connectivity of the network, we obtain a polynomial-time \$1/2\$-approximation algorithm. This observation proves formally that the connectivity of the social network is a key feature for the efficiency of the liquid democracy paradigm. Lastly, we run extensive simulations and observe that simple algorithms (working either in a centralized or decentralized way) outperform direct democracy on a large class of instances. Overall, our contributions yield new insights on the question in which situations liquid democracy can be beneficial.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{4}
+      \field{number}{arXiv:2104.01828}
+      \field{title}{When {{Can Liquid Democracy Unveil}} the {{Truth}}?}
+      \field{urlday}{7}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2104.01828
+      \endverb
+      \verb{eprint}
+      \verb 2104.01828
+      \endverb
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/YAZBGI5T/Becker et al. - 2021 - When Can Liquid Democracy Unveil the Truth.pdf;/Users/DavidHolzwarth/Zotero/storage/JL9T88Y9/2104.html
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Computer Science and Game Theory,Computer Science - Social and Information Networks}
+    \endentry
+    \entry{behrensCircularDelegationsMyth2015}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e17021b9ad6b521cb3bc8a7e135ec6f2}{%
+           family={Behrens},
+           familyi={B\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {The Liquid Democracy Journal}%
+      }
+      \strng{namehash}{e17021b9ad6b521cb3bc8a7e135ec6f2}
+      \strng{fullhash}{e17021b9ad6b521cb3bc8a7e135ec6f2}
+      \strng{fullhashraw}{e17021b9ad6b521cb3bc8a7e135ec6f2}
+      \strng{bibnamehash}{e17021b9ad6b521cb3bc8a7e135ec6f2}
+      \strng{authorbibnamehash}{e17021b9ad6b521cb3bc8a7e135ec6f2}
+      \strng{authornamehash}{e17021b9ad6b521cb3bc8a7e135ec6f2}
+      \strng{authorfullhash}{e17021b9ad6b521cb3bc8a7e135ec6f2}
+      \strng{authorfullhashraw}{e17021b9ad6b521cb3bc8a7e135ec6f2}
+      \field{labelalpha}{Beh15}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{Circular {{Delegations}} -- {{Myth}} or {{Disaster}}?}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{bersetcheGeneralizingLiquidDemocracy2022}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0700fc436a6773b0dd85ddd2b96cebbf}{%
+           family={Bersetche},
+           familyi={B\bibinitperiod},
+           given={Francisco\bibnamedelima M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{0700fc436a6773b0dd85ddd2b96cebbf}
+      \strng{fullhash}{0700fc436a6773b0dd85ddd2b96cebbf}
+      \strng{fullhashraw}{0700fc436a6773b0dd85ddd2b96cebbf}
+      \strng{bibnamehash}{0700fc436a6773b0dd85ddd2b96cebbf}
+      \strng{authorbibnamehash}{0700fc436a6773b0dd85ddd2b96cebbf}
+      \strng{authornamehash}{0700fc436a6773b0dd85ddd2b96cebbf}
+      \strng{authorfullhash}{0700fc436a6773b0dd85ddd2b96cebbf}
+      \strng{authorfullhashraw}{0700fc436a6773b0dd85ddd2b96cebbf}
+      \field{labelalpha}{Ber22}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In this study, we propose a generalization of the classic model of liquid democracy that allows fractional delegation of voting weight, while simultaneously allowing for the existence of equilibrium states. Our approach empowers agents to partition and delegate their votes to multiple representatives, all while retaining a fraction of the voting power for themselves. We introduce a penalty mechanism for the length of delegation chains. We discuss the desirable properties of a reasonable generalization of the classic model, and prove that smaller penalty factors bring the model closer to satisfying these properties. In the subsequent section, we explore the presence of equilibrium states in a general delegation game utilizing the proposed voting measure. In contrast to the classical model, we demonstrate that this game exhibits pure strategy Nash equilibria, contingent upon the imposition of a penalty on the length of delegation chains.}
+      \field{shorttitle}{Generalizing {{Liquid Democracy}} to Multi-Agent Delegation}
+      \field{title}{Generalizing {{Liquid Democracy}} to Multi-Agent Delegation: {{A Voting Power Measure}} and {{Equilibrium Analysis}}}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2209.14128
+      \endverb
+      \keyw{FOS: Computer and information sciences,Multiagent Systems (cs.MA)}
+    \endentry
+    \entry{boldiViscousDemocracySocial2011}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=94daa93362557b56d0bd35012512b156}{%
+           family={Boldi},
+           familyi={B\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e5f96000b50965c4c5a75005644d7e29}{%
+           family={Bonchi},
+           familyi={B\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9945b3859caed4e19a23f700fa1b79db}{%
+           family={Castillo},
+           familyi={C\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb3b77ad742e7c12096b67272f1cf7e5}{%
+           family={Vigna},
+           familyi={V\bibinitperiod},
+           given={Sebastiano},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a661028315bae389d98ebd1bd99a8816}
+      \strng{fullhash}{a661028315bae389d98ebd1bd99a8816}
+      \strng{fullhashraw}{a661028315bae389d98ebd1bd99a8816}
+      \strng{bibnamehash}{a661028315bae389d98ebd1bd99a8816}
+      \strng{authorbibnamehash}{a661028315bae389d98ebd1bd99a8816}
+      \strng{authornamehash}{a661028315bae389d98ebd1bd99a8816}
+      \strng{authorfullhash}{a661028315bae389d98ebd1bd99a8816}
+      \strng{authorfullhashraw}{a661028315bae389d98ebd1bd99a8816}
+      \field{labelalpha}{Bol+11}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Decision-making procedures in online social networks should reflect participants' political influence within the network.}
+      \field{issn}{0001-0782, 1557-7317}
+      \field{journaltitle}{Communications of the ACM}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{Viscous Democracy for Social Networks}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{54}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{129\bibrangedash 137}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/1953122.1953154
+      \endverb
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/SUL7C9D5/Boldi et al. - 2011 - Viscous democracy for social networks.pdf
+      \endverb
+    \endentry
+    \entry{brillInteractiveDemocracy2018}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=32389ea1c98e018c433f1b62b8daaa7c}{%
+           family={Brill},
+           familyi={B\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Stockholm, Sweden}%
+      }
+      \list{publisher}{1}{%
+        {International Foundation for Autonomous Agents and Multiagent Systems}%
+      }
+      \strng{namehash}{32389ea1c98e018c433f1b62b8daaa7c}
+      \strng{fullhash}{32389ea1c98e018c433f1b62b8daaa7c}
+      \strng{fullhashraw}{32389ea1c98e018c433f1b62b8daaa7c}
+      \strng{bibnamehash}{32389ea1c98e018c433f1b62b8daaa7c}
+      \strng{authorbibnamehash}{32389ea1c98e018c433f1b62b8daaa7c}
+      \strng{authornamehash}{32389ea1c98e018c433f1b62b8daaa7c}
+      \strng{authorfullhash}{32389ea1c98e018c433f1b62b8daaa7c}
+      \strng{authorfullhashraw}{32389ea1c98e018c433f1b62b8daaa7c}
+      \field{labelalpha}{Bri18}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 17th {{International Conference}} on {{Autonomous Agents}} and {{MultiAgent Systems}}}
+      \field{title}{Interactive {{Democracy}}}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{1183\bibrangedash 1187}
+      \range{pages}{5}
+    \endentry
+    \entry{behrensPreferentialDelegationProblem2015}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e17021b9ad6b521cb3bc8a7e135ec6f2}{%
+           family={Behrens},
+           familyi={B\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f1556af6b5b6393c6f39897646365dae}{%
+           family={Swierczek},
+           familyi={S\bibinitperiod},
+           given={Björn},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {The Liquid Democracy Journal}%
+      }
+      \strng{namehash}{ac9ab4e39d88ef7abae682def8a5423a}
+      \strng{fullhash}{ac9ab4e39d88ef7abae682def8a5423a}
+      \strng{fullhashraw}{ac9ab4e39d88ef7abae682def8a5423a}
+      \strng{bibnamehash}{ac9ab4e39d88ef7abae682def8a5423a}
+      \strng{authorbibnamehash}{ac9ab4e39d88ef7abae682def8a5423a}
+      \strng{authornamehash}{ac9ab4e39d88ef7abae682def8a5423a}
+      \strng{authorfullhash}{ac9ab4e39d88ef7abae682def8a5423a}
+      \strng{authorfullhashraw}{ac9ab4e39d88ef7abae682def8a5423a}
+      \field{labelalpha}{BS15}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{Preferential {{Delegation}} and the {{Problem}} of {{Negative Voting Weight}}}
+      \field{year}{2015}
+    \endentry
+    \entry{caragiannisContributionCritiqueLiquid2019}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=01d5a6791659109e20db5e5b0fbc9b50}{%
+           family={Caragiannis},
+           familyi={C\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8500fb9d7796b2f12f22e9c7971645e}{%
+           family={Micha},
+           familyi={M\bibinitperiod},
+           given={Evi},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Macao, China}%
+      }
+      \list{publisher}{1}{%
+        {International Joint Conferences on Artificial Intelligence Organization}%
+      }
+      \strng{namehash}{e5952a06ecad1e52235e03c333a799ee}
+      \strng{fullhash}{e5952a06ecad1e52235e03c333a799ee}
+      \strng{fullhashraw}{e5952a06ecad1e52235e03c333a799ee}
+      \strng{bibnamehash}{e5952a06ecad1e52235e03c333a799ee}
+      \strng{authorbibnamehash}{e5952a06ecad1e52235e03c333a799ee}
+      \strng{authornamehash}{e5952a06ecad1e52235e03c333a799ee}
+      \strng{authorfullhash}{e5952a06ecad1e52235e03c333a799ee}
+      \strng{authorfullhashraw}{e5952a06ecad1e52235e03c333a799ee}
+      \field{labelalpha}{CM19}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Liquid democracy, which combines features of direct and representative democracy has been proposed as a modern practice for collective decision making. Its advocates support that by allowing voters to delegate their vote to more informed voters can result in better decisions. In an attempt to evaluate the validity of such claims, we study liquid democracy as a means to discover an underlying ground truth. We revisit a recent model by Kahng et al. [2018] and conclude with three negative results, criticizing an important assumption of their modeling, as well as liquid democracy more generally. In particular, we first identify cases where natural local mechanisms are much worse than either direct voting or the other extreme of full delegation to a common dictator. We then show that delegating to less informed voters may considerably increase the chance of discovering the ground truth. Finally, we show that deciding delegations that maximize the probability to find the ground truth is a computationally hard problem.}
+      \field{booktitle}{Proceedings of the {{Twenty-Eighth International Joint Conference}} on {{Artificial Intelligence}}}
+      \field{isbn}{978-0-9992411-4-1}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{title}{A {{Contribution}} to the {{Critique}} of {{Liquid Democracy}}}
+      \field{urlday}{7}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{116\bibrangedash 122}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.24963/ijcai.2019/17
+      \endverb
+    \endentry
+    \entry{degraveResolvingMultiproxyTransitive2014}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ffb3bfdfdfade5d509bbfd6c0d4fcc50}{%
+           family={Degrave},
+           familyi={D\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{ffb3bfdfdfade5d509bbfd6c0d4fcc50}
+      \strng{fullhash}{ffb3bfdfdfade5d509bbfd6c0d4fcc50}
+      \strng{fullhashraw}{ffb3bfdfdfade5d509bbfd6c0d4fcc50}
+      \strng{bibnamehash}{ffb3bfdfdfade5d509bbfd6c0d4fcc50}
+      \strng{authorbibnamehash}{ffb3bfdfdfade5d509bbfd6c0d4fcc50}
+      \strng{authornamehash}{ffb3bfdfdfade5d509bbfd6c0d4fcc50}
+      \strng{authorfullhash}{ffb3bfdfdfade5d509bbfd6c0d4fcc50}
+      \strng{authorfullhashraw}{ffb3bfdfdfade5d509bbfd6c0d4fcc50}
+      \field{labelalpha}{Deg14}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Solving a delegation graph for transitive votes is already a non-trivial task for many programmers. When extending the current main paradigm, where each voter can only appoint a single transitive delegation, to a system where each vote can be separated over multiple delegations, solving the delegation graph becomes even harder. This article presents a solution of an example graph, and a non-formal proof of why this algorithm works.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{12}
+      \field{number}{arXiv:1412.4039}
+      \field{title}{Resolving Multi-Proxy Transitive Vote Delegation}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1412.4039
+      \endverb
+      \verb{eprint}
+      \verb 1412.4039
+      \endverb
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/S5EFDUXU/Degrave - 2014 - Resolving multi-proxy transitive vote delegation.pdf;/Users/DavidHolzwarth/Zotero/storage/GKNM8K7R/1412.html
+      \endverb
+      \keyw{Computer Science - Multiagent Systems}
+    \endentry
+    \entry{forrestCBCUserGuide2005}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6dfeb77929539c7c7c9521913d8870d3}{%
+           family={Forrest},
+           familyi={F\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ed4684e5a95288e51b14e95eff347aa}{%
+           family={{Lougee-Heimer}},
+           familyi={L\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {CBC}%
+      }
+      \strng{namehash}{d61c97d6495f22980e99c2111a14d310}
+      \strng{fullhash}{d61c97d6495f22980e99c2111a14d310}
+      \strng{fullhashraw}{d61c97d6495f22980e99c2111a14d310}
+      \strng{bibnamehash}{d61c97d6495f22980e99c2111a14d310}
+      \strng{authorbibnamehash}{d61c97d6495f22980e99c2111a14d310}
+      \strng{authornamehash}{d61c97d6495f22980e99c2111a14d310}
+      \strng{authorfullhash}{d61c97d6495f22980e99c2111a14d310}
+      \strng{authorfullhashraw}{d61c97d6495f22980e99c2111a14d310}
+      \field{labelalpha}{FL05}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{CBC User Guide}}}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2005}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{johnforrestCoinorCbcRelease2024}{misc}{}{}
+      \name{author}{23}{}{%
+        {{un=0,uniquepart=base,hash=6dfeb77929539c7c7c9521913d8870d3}{%
+           family={Forrest},
+           familyi={F\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=747abee6183ace8aed1ee61915be9631}{%
+           family={Ralphs},
+           familyi={R\bibinitperiod},
+           given={Ted},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=987d34271b0cc03ed2771b4661adefc0}{%
+           family={Vigerske},
+           familyi={V\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f7c27c3feb96d53b3537c51257164cbc}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Haroldo\bibnamedelima Gambini},
+           giveni={H\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d7c884fa0867b9cf57a3564a23b557a}{%
+           family={Hafer},
+           familyi={H\bibinitperiod},
+           given={Lou},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d5c5826d087252fe55ed0af2d98ebc6a}{%
+           family={Kristjansson},
+           familyi={K\bibinitperiod},
+           given={Bjarni},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aecb34bfd2adc3201ccc80c33cc74bca}{%
+           family={{jpfasano}},
+           familyi={j\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=ad1fcb5b63eb544d65bca735aeab34f8}{%
+           family={EdwinStraver},
+           familyi={E\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=87c0ee88d1866c5cdd7e903ac708e468}{%
+           family={{Jan-Willem}},
+           familyi={J\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=ae562f612365bfa1287b8268e8b021df}{%
+           family={Lubin},
+           familyi={L\bibinitperiod},
+           given={Miles},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a36a1218140213ab3480861379af2af7}{%
+           family={{rlougee}},
+           familyi={r\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=84fa2da067eef205c2b0da7d253f3db3}{%
+           family={{a-andre}},
+           familyi={a\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=febf60bbe6966f8143c81a0269b2c9e8}{%
+           family={{jpgoncal1}},
+           familyi={j\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=f22e2ce5c25a45b54db031e109cfdb14}{%
+           family={Brito},
+           familyi={B\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bffa98a0971fcb8ed94c7e211c1e591d}{%
+           family={{h-i-gassmann}},
+           familyi={h\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=7fff1e89740665f84662c9e492ec691c}{%
+           family={Cristina},
+           familyi={C\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=69bd835b5f1a8a96e628d7a3bfc8ceb7}{%
+           family={Saltzman},
+           familyi={S\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0eacbe4bf9d74ab2b5444acdbf1b2b8c}{%
+           family={{tosttost}},
+           familyi={t\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=0bcc93d4e9fb2e430bb541678c6b12a4}{%
+           family={Pitrus},
+           familyi={P\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1bf463a9d7a6572812d50fdace930f7b}{%
+           family={MATSUSHIMA},
+           familyi={M\bibinitperiod},
+           given={Fumiaki},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d8033b252f35c23bc730b3c2683fd0e}{%
+           family={Vossler},
+           familyi={V\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3cc85eef0ea82fb96f52e1d0685f9ef3}{%
+           family={SWGY},
+           familyi={S\bibinitperiod},
+           given={Ron\bibnamedelima @},
+           giveni={R\bibinitperiod\bibinitdelim @\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9e249f60b99b4a5d610749c65a74fc5}{%
+           family={{to-st}},
+           familyi={s\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1a8cd48037b11132a8dad80d1d0a205}
+      \strng{fullhash}{b9f928ce4a3a1aa08f3331950ddbba07}
+      \strng{fullhashraw}{b9f928ce4a3a1aa08f3331950ddbba07}
+      \strng{bibnamehash}{b9f928ce4a3a1aa08f3331950ddbba07}
+      \strng{authorbibnamehash}{b9f928ce4a3a1aa08f3331950ddbba07}
+      \strng{authornamehash}{f1a8cd48037b11132a8dad80d1d0a205}
+      \strng{authorfullhash}{b9f928ce4a3a1aa08f3331950ddbba07}
+      \strng{authorfullhashraw}{b9f928ce4a3a1aa08f3331950ddbba07}
+      \field{labelalpha}{For+24}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{COIN-OR Branch-and-Cut solver}
+      \field{howpublished}{Zenodo}
+      \field{month}{8}
+      \field{shorttitle}{Coin-or/{{Cbc}}}
+      \field{title}{Coin-or/{{Cbc}}: {{Release}} Releases/2.10.12}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5281/ZENODO.2720283
+      \endverb
+    \endentry
+    \entry{golzFluidMechanicsLiquid2021}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=fe5b3f65e36b26ca79bd8983e45d2c68}{%
+           family={GÖlz},
+           familyi={G\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03e34bb0c00af0475d6e013a9eee39b1}{%
+           family={Kahng},
+           familyi={K\bibinitperiod},
+           given={Anson},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60153e1e3922f905e2e0b0f5fefc7345}{%
+           family={Mackenzie},
+           familyi={M\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7ff34acec04d8032d96671d5ccbe05bc}{%
+           family={Procaccia},
+           familyi={P\bibinitperiod},
+           given={Ariel\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{821e17ea7a838d7929446c424a109c24}
+      \strng{fullhash}{821e17ea7a838d7929446c424a109c24}
+      \strng{fullhashraw}{821e17ea7a838d7929446c424a109c24}
+      \strng{bibnamehash}{821e17ea7a838d7929446c424a109c24}
+      \strng{authorbibnamehash}{821e17ea7a838d7929446c424a109c24}
+      \strng{authornamehash}{821e17ea7a838d7929446c424a109c24}
+      \strng{authorfullhash}{821e17ea7a838d7929446c424a109c24}
+      \strng{authorfullhashraw}{821e17ea7a838d7929446c424a109c24}
+      \field{labelalpha}{GÖl+21}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Liquid democracy is the principle of making collective decisions by letting agents transitively delegate their votes. Despite its significant appeal, it has become apparent that a weakness of liquid democracy is that a small subset of agents may gain massive influence. To address this, we propose to change the current practice by allowing agents to specify multiple delegation options instead of just one. Much like in nature, where---fluid mechanics teaches us---liquid maintains an equal level in connected vessels, we seek to control the flow of votes in a way that balances influence as much as possible. Specifically, we analyze the problem of choosing delegations to approximately minimize the maximum number of votes entrusted to any agent by drawing connections to the literature on confluent flow. We also introduce a random graph model for liquid democracy and use it to demonstrate the benefits of our approach both theoretically and empirically.}
+      \field{issn}{2167-8375, 2167-8383}
+      \field{journaltitle}{ACM Transactions on Economics and Computation}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{4}
+      \field{title}{The {{Fluid Mechanics}} of {{Liquid Democracy}}}
+      \field{urlday}{7}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{9}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 39}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1145/3485012
+      \endverb
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/B85NFKLR/GÖlz et al. - 2021 - The Fluid Mechanics of Liquid Democracy.pdf
+      \endverb
+    \endentry
+    \entry{hagbergExploringNetworkStructure2008}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=94707ad079516150870c2f9a2932df46}{%
+           family={Hagberg},
+           familyi={H\bibinitperiod},
+           given={Aric\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12f80aa3aca50b90f024775e52dde170}{%
+           family={Schult},
+           familyi={S\bibinitperiod},
+           given={Daniel\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58fb3a96810da0d56606677a3ce7e677}{%
+           family={Swart},
+           familyi={S\bibinitperiod},
+           given={Pieter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Pasadena, California}%
+      }
+      \strng{namehash}{3a1b2e51fcffd45628935c7b6334f944}
+      \strng{fullhash}{3a1b2e51fcffd45628935c7b6334f944}
+      \strng{fullhashraw}{3a1b2e51fcffd45628935c7b6334f944}
+      \strng{bibnamehash}{3a1b2e51fcffd45628935c7b6334f944}
+      \strng{authorbibnamehash}{3a1b2e51fcffd45628935c7b6334f944}
+      \strng{authornamehash}{3a1b2e51fcffd45628935c7b6334f944}
+      \strng{authorfullhash}{3a1b2e51fcffd45628935c7b6334f944}
+      \strng{authorfullhashraw}{3a1b2e51fcffd45628935c7b6334f944}
+      \field{labelalpha}{HSS08}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{NetworkX is a Python language package for exploration and analysis of networks and network algorithms. The core package provides data structures for representing many types of networks, or graphs, including simple graphs, directed graphs, and graphs with parallel edges and self-loops. The nodes in NetworkX graphs can be any (hashable) Python object and edges can contain arbitrary data; this flexibility makes NetworkX ideal for representing networks found in many different scientific fields. In addition to the basic data structures many graph algorithms are implemented for calculating network properties and structure measures: shortest paths, betweenness centrality, clustering, and degree distribution and many more. NetworkX can read and write various graph formats for easy exchange with existing data, and provides generators for many classic graphs and popular graph models, such as the Erdos-Renyi, Small World, and Barabasi-Albert models. The ease-of-use and flexibility of the Python programming language together with connection to the SciPy tools make NetworkX a powerful tool for scientific computations. We discuss some of our recent work studying synchronization of coupled oscillators to demonstrate how NetworkX enables research in the field of computational networks.}
+      \field{booktitle}{Python in {{Science Conference}}}
+      \field{month}{6}
+      \field{title}{Exploring {{Network Structure}}, {{Dynamics}}, and {{Function}} Using {{NetworkX}}}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \field{pages}{11\bibrangedash 15}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.25080/TCWV9851
+      \endverb
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/A2I4CQUC/Hagberg et al. - 2008 - Exploring Network Structure, Dynamics, and Function using NetworkX.pdf
+      \endverb
+    \endentry
+    \entry{klingVotingBehaviourPower2015}{misc}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=cfcdb5998a8a2202c8e5cecab7bb6be9}{%
+           family={Kling},
+           familyi={K\bibinitperiod},
+           given={Christoph\bibnamedelima Carl},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=36e43d6ced3692628ce6e63d39fbab21}{%
+           family={Kunegis},
+           familyi={K\bibinitperiod},
+           given={Jerome},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=47611f54ef5f6de06929ed9a2c0b6fd2}{%
+           family={Hartmann},
+           familyi={H\bibinitperiod},
+           given={Heinrich},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a886f243c9ad0d58b6297daa714e4d89}{%
+           family={Strohmaier},
+           familyi={S\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3489f3873d85937d1977e3a21e5e76a7}{%
+           family={Staab},
+           familyi={S\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{2cb1a77cbac843a3170bbd2b61d820f1}
+      \strng{fullhash}{3dc5cbd23867505590b6bc063340c887}
+      \strng{fullhashraw}{3dc5cbd23867505590b6bc063340c887}
+      \strng{bibnamehash}{3dc5cbd23867505590b6bc063340c887}
+      \strng{authorbibnamehash}{3dc5cbd23867505590b6bc063340c887}
+      \strng{authornamehash}{2cb1a77cbac843a3170bbd2b61d820f1}
+      \strng{authorfullhash}{3dc5cbd23867505590b6bc063340c887}
+      \strng{authorfullhashraw}{3dc5cbd23867505590b6bc063340c887}
+      \field{labelalpha}{Kli+15}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In recent years, political parties have adopted Online Delegative Democracy platforms such as LiquidFeedback to organise themselves and their political agendas via a grassroots approach. A common objection against the use of these platforms is the delegation system, where a user can delegate his vote to another user, giving rise to so-called super-voters, i.e. powerful users who receive many delegations. It has been asserted in the past that the presence of these super-voters undermines the democratic process, and therefore delegative democracy should be avoided. In this paper, we look at the emergence of super-voters in the largest delegative online democracy platform worldwide, operated by Germany's Pirate Party. We investigate the distribution of power within the party systematically, study whether super-voters exist, and explore the influence they have on the outcome of votings conducted online. While we find that the theoretical power of super-voters is indeed high, we also observe that they use their power wisely. Super-voters do not fully act on their power to change the outcome of votes, but they vote in favour of proposals with the majority of voters in many cases thereby exhibiting a stabilising effect on the system. We use these findings to present a novel class of power indices that considers observed voting biases and gives significantly better predictions than state-of-the-art measures.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{number}{arXiv:1503.07723}
+      \field{shorttitle}{Voting {{Behaviour}} and {{Power}} in {{Online Democracy}}}
+      \field{title}{Voting {{Behaviour}} and {{Power}} in {{Online Democracy}}: {{A Study}} of {{LiquidFeedback}} in {{Germany}}'s {{Pirate Party}}}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1503.07723
+      \endverb
+      \verb{eprint}
+      \verb 1503.07723
+      \endverb
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/VII28LU6/Kling et al. - 2015 - Voting Behaviour and Power in Online Democracy A Study of LiquidFeedback in Germany's Pirate Party.pdf;/Users/DavidHolzwarth/Zotero/storage/GGKHUV8H/1503.html
+      \endverb
+      \keyw{Computer Science - Computers and Society,Computer Science - Social and Information Networks}
+    \endentry
+    \entry{kotsialouIncentivisingParticipationLiquid2019}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cfcd7eaace02cf73c06fbe051c770c8e}{%
+           family={Kotsialou},
+           familyi={K\bibinitperiod},
+           given={Grammateia},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6ec5c82cfaace694587e65d1aae03d5}{%
+           family={Riley},
+           familyi={R\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{7fe877d3451d94af5d1af0b2069302b8}
+      \strng{fullhash}{7fe877d3451d94af5d1af0b2069302b8}
+      \strng{fullhashraw}{7fe877d3451d94af5d1af0b2069302b8}
+      \strng{bibnamehash}{7fe877d3451d94af5d1af0b2069302b8}
+      \strng{authorbibnamehash}{7fe877d3451d94af5d1af0b2069302b8}
+      \strng{authornamehash}{7fe877d3451d94af5d1af0b2069302b8}
+      \strng{authorfullhash}{7fe877d3451d94af5d1af0b2069302b8}
+      \strng{authorfullhashraw}{7fe877d3451d94af5d1af0b2069302b8}
+      \field{labelalpha}{KR19}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Liquid democracy allows members of an electorate to either directly vote over alternatives, or delegate their voting rights to someone they trust. Most of the liquid democracy literature and implementations allow each voter to nominate only one delegate per election. However, if that delegate abstains, the voting rights assigned to her are left unused. To minimise the number of unused delegations, it has been suggested that each voter should declare a personal ranking over voters she trusts. In this paper, we show that even if personal rankings over voters are declared, the standard delegation method of liquid democracy remains problematic. More specifically, we show that when personal rankings over voters are declared, it could be undesirable to receive delegated voting rights, which is contrary to what liquid democracy fundamentally relies on. To solve this issue, we propose a new method to delegate voting rights in an election, called breadth-first delegation. Additionally, the proposed method prioritises assigning voting rights to individuals closely connected to the voters who delegate.}
+      \field{eprintclass}{econ}
+      \field{eprinttype}{arXiv}
+      \field{month}{2}
+      \field{number}{arXiv:1811.03710}
+      \field{title}{Incentivising {{Participation}} in {{Liquid Democracy}} with {{Breadth-First Delegation}}}
+      \field{urlday}{7}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1811.03710
+      \endverb
+      \verb{eprint}
+      \verb 1811.03710
+      \endverb
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/YVEPCHJ2/Kotsialou und Riley - 2019 - Incentivising Participation in Liquid Democracy with Breadth-First Delegation.pdf;/Users/DavidHolzwarth/Zotero/storage/NLYJTQ5R/1811.html
+      \endverb
+      \keyw{Computer Science - Computer Science and Game Theory,Economics - Theoretical Economics}
+    \endentry
+    \entry{liSuperLUUsersGuide1999}{report}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=5220f10ec6e54a702fcddc5b6cfbf3fe}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={X.S.},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6d4ba0108aacad5123ed9d37da735a2}{%
+           family={Demmel},
+           familyi={D\bibinitperiod},
+           given={J.W.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=e4d6f377acab94f52db8045db7a976e4}{%
+           family={Gilbert},
+           familyi={G\bibinitperiod},
+           given={J.R.},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=97b99bb053cb235d0abc9c53709953ce}{%
+           family={Grigori},
+           familyi={G\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c15cebe5e47252d16a44d66b0287ce8f}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0c048bdaad611ff1f77b22a2cf345e87}{%
+           family={Yamazaki},
+           familyi={Y\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Lawrence Berkeley National Laboratory}%
+      }
+      \strng{namehash}{7f8d66c11d12d67cf7bc19c87478e80d}
+      \strng{fullhash}{7104ae11f1688bd9c7ee25032406166e}
+      \strng{fullhashraw}{7104ae11f1688bd9c7ee25032406166e}
+      \strng{bibnamehash}{7104ae11f1688bd9c7ee25032406166e}
+      \strng{authorbibnamehash}{7104ae11f1688bd9c7ee25032406166e}
+      \strng{authornamehash}{7f8d66c11d12d67cf7bc19c87478e80d}
+      \strng{authorfullhash}{7104ae11f1688bd9c7ee25032406166e}
+      \strng{authorfullhashraw}{7104ae11f1688bd9c7ee25032406166e}
+      \field{labelalpha}{Li+99}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Last update: June 2018}
+      \field{month}{9}
+      \field{number}{LBNL-44289}
+      \field{title}{{{SuperLU Users}}' {{Guide}}}
+      \field{type}{Tech Report}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{1999}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{osullivanPuLPLinearProgramming2011}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c8b9f4ff9a617269b502d5d52689f63e}{%
+           family={O'Sullivan},
+           familyi={O\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=61b8043abd04ec51730d402e4e5f8627}{%
+           family={Mitchell},
+           familyi={M\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6a09fd9d4b66412cec2802755aa5942e}{%
+           family={Dunning},
+           familyi={D\bibinitperiod},
+           given={Iain},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f17ef24d07c723ad4c91255d217abfaa}
+      \strng{fullhash}{f17ef24d07c723ad4c91255d217abfaa}
+      \strng{fullhashraw}{f17ef24d07c723ad4c91255d217abfaa}
+      \strng{bibnamehash}{f17ef24d07c723ad4c91255d217abfaa}
+      \strng{authorbibnamehash}{f17ef24d07c723ad4c91255d217abfaa}
+      \strng{authornamehash}{f17ef24d07c723ad4c91255d217abfaa}
+      \strng{authorfullhash}{f17ef24d07c723ad4c91255d217abfaa}
+      \strng{authorfullhashraw}{f17ef24d07c723ad4c91255d217abfaa}
+      \field{labelalpha}{OMD11}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{PuLP}} : {{A Linear Programming Toolkit}} for {{Python}}}
+      \field{year}{2011}
+    \endentry
+    \entry{paulinOverviewTenYears2020}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8c14aebb5cbc71720b71c9fa4e1c9822}{%
+           family={Paulin},
+           familyi={P\bibinitperiod},
+           given={Alois},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Seoul Republic of Korea}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{8c14aebb5cbc71720b71c9fa4e1c9822}
+      \strng{fullhash}{8c14aebb5cbc71720b71c9fa4e1c9822}
+      \strng{fullhashraw}{8c14aebb5cbc71720b71c9fa4e1c9822}
+      \strng{bibnamehash}{8c14aebb5cbc71720b71c9fa4e1c9822}
+      \strng{authorbibnamehash}{8c14aebb5cbc71720b71c9fa4e1c9822}
+      \strng{authornamehash}{8c14aebb5cbc71720b71c9fa4e1c9822}
+      \strng{authorfullhash}{8c14aebb5cbc71720b71c9fa4e1c9822}
+      \strng{authorfullhashraw}{8c14aebb5cbc71720b71c9fa4e1c9822}
+      \field{labelalpha}{Pau20}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The 21st {{Annual International Conference}} on {{Digital Government Research}}}
+      \field{isbn}{978-1-4503-8791-0}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{title}{An {{Overview}} of {{Ten Years}} of {{Liquid Democracy Research}}}
+      \field{urlday}{7}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{116\bibrangedash 121}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1145/3396956.3396963
+      \endverb
+    \endentry
+    \entry{pythonsoftwarefoundationPythonTutorialSection}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c7b5508dc5e59a2846d22617276cc27c}{%
+           family={{Python Software Foundation}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{fullhash}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{fullhashraw}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{bibnamehash}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{authorbibnamehash}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{authornamehash}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{authorfullhash}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{authorfullhashraw}{c7b5508dc5e59a2846d22617276cc27c}
+      \field{labelalpha}{Pyt}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The {{Python Tutorial}}, {{Section}} 5: {{Data Structures}}}
+      \field{urlday}{17}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{revel2022liquid}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=762b4372d1acfa30e9336413b7c68a7c}{%
+           family={Revel},
+           familyi={R\bibinitperiod},
+           given={Manon},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88daef5acb62a085e052d904d9e06613}{%
+           family={Halpern},
+           familyi={H\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=779ca8fb0fc780868bed235144fc006a}{%
+           family={Berinsky},
+           familyi={B\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9814576d57251b512116243e61b38a6e}{%
+           family={Jadbabaie},
+           familyi={J\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{fullhash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{fullhashraw}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{bibnamehash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{authorbibnamehash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{authornamehash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{authorfullhash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{authorfullhashraw}{b8ea026e870fbad518ce1cda7704b602}
+      \field{labelalpha}{Rev+22}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{{ACM}} Conference on Equity and Access in Algorithms, Mechanisms, and Optimization}
+      \field{title}{Liquid Democracy in Practice: {{An}} Empirical Analysis of Its Epistemic Performance}
+      \field{year}{2022}
+    \endentry
+    \entry{virtanenSciPy10Fundamental2020}{article}{}{}
+      \name{author}{112}{}{%
+        {{un=0,uniquepart=base,hash=18703a2bb6a62484483c193a212da2f8}{%
+           family={Virtanen},
+           familyi={V\bibinitperiod},
+           given={Pauli},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=646fbfe08374cc41c2f9bd971d8c4725}{%
+           family={Gommers},
+           familyi={G\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d500f4849030f34359cdb3e1513acf83}{%
+           family={Oliphant},
+           familyi={O\bibinitperiod},
+           given={Travis\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=35bb9c71f55048509a3e9018c349ed73}{%
+           family={Haberland},
+           familyi={H\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbb0c40f5d70be8ce47ce9daafdf5749}{%
+           family={Reddy},
+           familyi={R\bibinitperiod},
+           given={Tyler},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9fd9ed8466bbb96364ae008f2a665e6e}{%
+           family={Cournapeau},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09a667aa6a26526bfcccb2676a494e55}{%
+           family={Burovski},
+           familyi={B\bibinitperiod},
+           given={Evgeni},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3d6efaaa3d9682e20787eb06ff70a3d7}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={Pearu},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c7e4c94b846fa41e2fc0a88e0dc656d}{%
+           family={Weckesser},
+           familyi={W\bibinitperiod},
+           given={Warren},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7447cb057596bc2645d3980bb04f5c78}{%
+           family={Bright},
+           familyi={B\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84397453ac4d8b4fb5057997640d09e7}{%
+           family={Van\bibnamedelimb Der\bibnamedelima Walt},
+           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           given={Stéfan\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=626cc151613864abeb653c0d8172d98c}{%
+           family={Brett},
+           familyi={B\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57849e8550281b202bd611bf6f11e14b}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b053969d2c6a9ec8689980fb6463cd56}{%
+           family={Millman},
+           familyi={M\bibinitperiod},
+           given={K.\bibnamedelimi Jarrod},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbaf80580622bd40577f4a6d38021c0a}{%
+           family={Mayorov},
+           familyi={M\bibinitperiod},
+           given={Nikolay},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7bcf847eaccba039f7a4523540673aea}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Andrew\bibnamedelimb R.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b3d26f886661aa723985bcfd835ba18}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ad1d38817acd2f00cb7f324ec7d37ea}{%
+           family={Kern},
+           familyi={K\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d336f110675c46226ece1db501ce712}{%
+           family={Larson},
+           familyi={L\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65b1934a87acb0abe09c469aaf11c326}{%
+           family={Carey},
+           familyi={C\bibinitperiod},
+           given={C\bibnamedelima J},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9989e8a18827e34b15112d671f52bd35}{%
+           family={Polat},
+           familyi={P\bibinitperiod},
+           given={İlhan},
+           giveni={İ\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8b88d61c79de60e6e1b5d44e03f5dec}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf4be16325cb4f641345ca394443fd18}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Eric\bibnamedelima W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0fd9a0e34f1b2adda41357c948d14986}{%
+           family={VanderPlas},
+           familyi={V\bibinitperiod},
+           given={Jake},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6a95a8ced3b86b4e7e60a74bc6ebf5a}{%
+           family={Laxalde},
+           familyi={L\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=85242652d69220e83cf71ceb8d90a8cb}{%
+           family={Perktold},
+           familyi={P\bibinitperiod},
+           given={Josef},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bca159e697db439e23b8947dfa4b614}{%
+           family={Cimrman},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70b659f5067a8a2efbee66f770681598}{%
+           family={Henriksen},
+           familyi={H\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa5163c76600eb11a4d07a28f0701cb0}{%
+           family={Quintero},
+           familyi={Q\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db2b4761cc46be347b418e68660c9554}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Charles\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7d86aea5ad1f2b4e27f2f014c71712c2}{%
+           family={Archibald},
+           familyi={A\bibinitperiod},
+           given={Anne\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3876f7c3dbbb1a17823dcd135d07cfc6}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Antônio\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bab4e5caee2d67831e464ce575022b37}{%
+           family={Pedregosa},
+           familyi={P\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56cefedcf0dac832a7cbe45bcbd0deec}{%
+           family={Van\bibnamedelima Mulbregt},
+           familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa8bf7a30651c7bc3d20ff02fc843dd9}{%
+           family={{SciPy 1.0 Contributors}},
+           familyi={S\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=aa05dec222bd6e161fb71869fe3f7197}{%
+           family={Vijaykumar},
+           familyi={V\bibinitperiod},
+           given={Aditya},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be52b28aaad045da57e9e8f251799408}{%
+           family={Bardelli},
+           familyi={B\bibinitperiod},
+           given={Alessandro\bibnamedelima Pietro},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7526804275259ec551c12acb6ff6031}{%
+           family={Rothberg},
+           familyi={R\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c45a40496577a1a9fa2368bec5cc4ead}{%
+           family={Hilboll},
+           familyi={H\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c5c274c284d56db6c924d1a15e8961d}{%
+           family={Kloeckner},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89373eb06418d6530c31b0fb655f5b04}{%
+           family={Scopatz},
+           familyi={S\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66a10017a89513b8272bcedcc279b8b4}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Antony},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=848bbb8a883bec42d46ee442da523381}{%
+           family={Rokem},
+           familyi={R\bibinitperiod},
+           given={Ariel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ed8e41e1d9c2d0971bdd14c9ee88627}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={C.\bibnamedelimi Nathan},
+           giveni={C\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=61abf0e349b6ac223448eba7aa3c99ad}{%
+           family={Fulton},
+           familyi={F\bibinitperiod},
+           given={Chad},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ee39bc3045bdce26bb617bb993a841c4}{%
+           family={Masson},
+           familyi={M\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b213c3f14fbb35237220ace796186f7a}{%
+           family={Häggström},
+           familyi={H\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00ca2f3aec7fd0f59d04154070c51ab0}{%
+           family={Fitzgerald},
+           familyi={F\bibinitperiod},
+           given={Clark},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3aca461f88b9ecb9857e9c33b893a695}{%
+           family={Nicholson},
+           familyi={N\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d20b554274c1bd1d4d143a32b7f1de7e}{%
+           family={Hagen},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f43c659188539774f5e840d6eee537f}{%
+           family={Pasechnik},
+           familyi={P\bibinitperiod},
+           given={Dmitrii\bibnamedelima V.},
+           giveni={D\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=afdb93cdfde1e7883ee852f0023fb4b0}{%
+           family={Olivetti},
+           familyi={O\bibinitperiod},
+           given={Emanuele},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6eaa2bfd29afeb561a216016319d6646}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4321feefe3d5715c6fe12639d2a1f7f1}{%
+           family={Wieser},
+           familyi={W\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b98e088807fc11eda9211e7f4ff90e24}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Fabrice},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57982dd776f41f6a7d3a5f079d381a6d}{%
+           family={Lenders},
+           familyi={L\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0d2270ae2410f7abf6d0a56340d9449}{%
+           family={Wilhelm},
+           familyi={W\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bfc347fb1e07aa6e0887b3bb8eae633a}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c870b38e79337432e4c59f29da7d769b}{%
+           family={Price},
+           familyi={P\bibinitperiod},
+           given={Gavin\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2840fb90e21a5d1c97d471453e0c2cca}{%
+           family={Ingold},
+           familyi={I\bibinitperiod},
+           given={Gert-Ludwig},
+           giveni={G\bibinithyphendelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=29cd4a91196977b126cf70678ee417f7}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Gregory\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=235032fbc12d47e45283ca9a714aeda7}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Gregory\bibnamedelima R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e8b9805bba2fca015c8d25da55e631e}{%
+           family={Audren},
+           familyi={A\bibinitperiod},
+           given={Hervé},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c515a6e33d101c89570e3a6f9b3b31d3}{%
+           family={Probst},
+           familyi={P\bibinitperiod},
+           given={Irvin},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=638e5ffc9fa426c83a13d623ef715ea2}{%
+           family={Dietrich},
+           familyi={D\bibinitperiod},
+           given={Jörg\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af5c6c9503dfee3ab3d9b4a940fc6c02}{%
+           family={Silterra},
+           familyi={S\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f74f6cbd534b3da24a45aeec1e9a383f}{%
+           family={Webber},
+           familyi={W\bibinitperiod},
+           given={James\bibnamedelima T},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a2e13f3aaf432fc62a2f4b6d209b1f49}{%
+           family={Slavič},
+           familyi={S\bibinitperiod},
+           given={Janko},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b92b9241b4c25551cd7ea434e96dc8de}{%
+           family={Nothman},
+           familyi={N\bibinitperiod},
+           given={Joel},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a66cc2c3e7389d3fe45a0517beadeb0}{%
+           family={Buchner},
+           familyi={B\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ad936d33caf10e79930dd94371fa21f}{%
+           family={Kulick},
+           familyi={K\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=85c10679ad8f08c2b0ea65e5de627728}{%
+           family={Schönberger},
+           familyi={S\bibinitperiod},
+           given={Johannes\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8f06b0297a426c25fa3d22116d892f8f}{%
+           family={De\bibnamedelima Miranda\bibnamedelima Cardoso},
+           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={José\bibnamedelima Vinícius},
+           giveni={J\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00626d473856bea1990e1c2236d987bb}{%
+           family={Reimer},
+           familyi={R\bibinitperiod},
+           given={Joscha},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e469354cc6ed20924b52439df7606aa2}{%
+           family={Harrington},
+           familyi={H\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0c7ac973adeee6d9391d583b298c3e4d}{%
+           family={Rodríguez},
+           familyi={R\bibinitperiod},
+           given={Juan\bibnamedelimb Luis\bibnamedelima Cano},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c435c98f7175eec5cb17c38ccd93512}{%
+           family={{Nunez-Iglesias}},
+           familyi={N\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0568dd9ebd78bb327b3ad58f66444daa}{%
+           family={Kuczynski},
+           familyi={K\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b66b79f7398fdf7e05f13d995e0085f0}{%
+           family={Tritz},
+           familyi={T\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=140f3f1af8537ad5e6f9e6ef92c046d8}{%
+           family={Thoma},
+           familyi={T\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60eb67cc225c58ee93309a22b68a3776}{%
+           family={Newville},
+           familyi={N\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9110ca3cb1148151e8c6c4402b54e220}{%
+           family={Kümmerer},
+           familyi={K\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49770833f6986345aaf831d83e18c697}{%
+           family={Bolingbroke},
+           familyi={B\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8a39cb6c0141eb1be39621d310d3bae}{%
+           family={Tartre},
+           familyi={T\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81b9dd62937b64275110797d8a43ba1b}{%
+           family={Pak},
+           familyi={P\bibinitperiod},
+           given={Mikhail},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4d23819637a961e0e598e1c82a8f10d}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Nathaniel\bibnamedelima J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98c47f992836f8ea7d889f5134f751f4}{%
+           family={Nowaczyk},
+           familyi={N\bibinitperiod},
+           given={Nikolai},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44efb56671232d232b95014856ca438d}{%
+           family={Shebanov},
+           familyi={S\bibinitperiod},
+           given={Nikolay},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=47a2574f7100983f6caf38bde6abc7cd}{%
+           family={Pavlyk},
+           familyi={P\bibinitperiod},
+           given={Oleksandr},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3aa5fcd928686e8420ae5df426418e04}{%
+           family={Brodtkorb},
+           familyi={B\bibinitperiod},
+           given={Per\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d61e2f2c7fea6ab51c26c2caf6fe957}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Perry},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e8f543421b415613202c26e32c43f1d}{%
+           family={McGibbon},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima T.},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5137612ca11ad7b3dcd5fe4273348265}{%
+           family={Feldbauer},
+           familyi={F\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1ec5d726b397cbdde5d399cd578a9ac}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a97d5d83dca4b11b91cc05daba7cde59}{%
+           family={Tygier},
+           familyi={T\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ac85e461ddda955d4724d185829529c}{%
+           family={Sievert},
+           familyi={S\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb3b77ad742e7c12096b67272f1cf7e5}{%
+           family={Vigna},
+           familyi={V\bibinitperiod},
+           given={Sebastiano},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c6d5e5a357ab6333c33f718b25985e4}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9eb1d76883803e1d1c7ca78792273163}{%
+           family={More},
+           familyi={M\bibinitperiod},
+           given={Surhud},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e6336c94d448e3efed147cf15bcdbe7}{%
+           family={Pudlik},
+           familyi={P\bibinitperiod},
+           given={Tadeusz},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c89667601d344e72ad8807ce00a1e6b}{%
+           family={Oshima},
+           familyi={O\bibinitperiod},
+           given={Takuya},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=493c3600e64c3952e72887ef47eedf2e}{%
+           family={Pingel},
+           familyi={P\bibinitperiod},
+           given={Thomas\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3236a008975b02dc3605613ce12da1c4}{%
+           family={Robitaille},
+           familyi={R\bibinitperiod},
+           given={Thomas\bibnamedelima P.},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=96cc97b5c8d21d7f8fe98412e20339e6}{%
+           family={Spura},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=513dd6de64f279f2db06ae98629a452f}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Thouis\bibnamedelima R.},
+           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed4111dcc8b824a2aa5c2d782f1ca57a}{%
+           family={Cera},
+           familyi={C\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9aafe8db25e9e0504ef1975bde9a59d}{%
+           family={Leslie},
+           familyi={L\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f2d393099735f59c19ebcf04efbb524}{%
+           family={Zito},
+           familyi={Z\bibinitperiod},
+           given={Tiziano},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02500b85887810c5283b5ccff6767f84}{%
+           family={Krauss},
+           familyi={K\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7360c864bd358b9cfd6c68cd9aecc77c}{%
+           family={Upadhyay},
+           familyi={U\bibinitperiod},
+           given={Utkarsh},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e2fb284cc447dda0b361d24f661475ce}{%
+           family={Halchenko},
+           familyi={H\bibinitperiod},
+           given={Yaroslav\bibnamedelima O.},
+           giveni={Y\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12df80534e59fa5a3d59c001f6d1fca1}{%
+           family={{Vázquez-Baeza}},
+           familyi={V\bibinitperiod},
+           given={Yoshiki},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2614ea043823efadef6a201c96446be0}
+      \strng{fullhash}{f28dd4e569c8cefbb36bc012821bdb9b}
+      \strng{fullhashraw}{f28dd4e569c8cefbb36bc012821bdb9b}
+      \strng{bibnamehash}{2614ea043823efadef6a201c96446be0}
+      \strng{authorbibnamehash}{2614ea043823efadef6a201c96446be0}
+      \strng{authornamehash}{2614ea043823efadef6a201c96446be0}
+      \strng{authorfullhash}{f28dd4e569c8cefbb36bc012821bdb9b}
+      \strng{authorfullhashraw}{f28dd4e569c8cefbb36bc012821bdb9b}
+      \field{labelalpha}{Vir+20}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Abstract SciPy is an open-source scientific computing library for the Python programming language. Since its initial release in 2001, SciPy has become a de facto standard for leveraging scientific algorithms in Python, with over 600 unique code contributors, thousands of dependent packages, over 100,000 dependent repositories and millions of downloads per year. In this work, we provide an overview of the capabilities and development practices of SciPy 1.0 and highlight some recent technical developments.}
+      \field{issn}{1548-7091, 1548-7105}
+      \field{journaltitle}{Nature Methods}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{3}
+      \field{shorttitle}{{{SciPy}} 1.0}
+      \field{title}{{{SciPy}} 1.0: Fundamental Algorithms for Scientific Computing in {{Python}}}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{17}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{261\bibrangedash 272}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1038/s41592-019-0686-2
+      \endverb
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/HAFDHMKR/Virtanen et al. - 2020 - SciPy 1.0 fundamental algorithms for scientific computing in Python.pdf
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{dinesh20oakland}
+  \missing{latex}
+\endrefsection
+\endinput
+

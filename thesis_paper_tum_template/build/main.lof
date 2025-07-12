@@ -1,0 +1,42 @@
+\babel@toc {american}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Example drawing}}{1}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Example plot}}{2}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Example listing}}{2}{figure.caption.7}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Closed delegation cycles\relax }}{8}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Sample delegations\relax }}{10}{figure.caption.9}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Delegation graph and its inverse dict representation\relax }}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Delegation graph with a cycle.\relax }}{19}{figure.caption.15}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Two similar delegation graphs\relax }}{23}{figure.caption.21}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Process to clean any graph into a delegation graph.\relax }}{26}{figure.caption.22}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph.\relax }}{27}{figure.caption.23}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph.\relax }}{28}{figure.caption.24}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Delegation graphs with 11 and 12 nodes (Blue nodes are sinks)\relax }}{29}{figure.caption.25}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph.\relax }}{29}{figure.caption.26}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph.\relax }}{30}{figure.caption.27}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph.\relax }}{31}{figure.caption.28}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph.\relax }}{32}{figure.caption.29}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph.\relax }}{32}{figure.caption.30}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces An example of the cycles used for the benchmarks. The blue node is the sink\relax }}{33}{figure.caption.31}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph.\relax }}{34}{figure.caption.32}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph.\relax }}{35}{figure.caption.33}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph.\relax }}{36}{figure.caption.34}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Distribution of outdegrees in the Epinions graph.\relax }}{37}{figure.caption.35}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Distribution of node powers in the Epinions graph.\relax }}{37}{figure.caption.36}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Runtime of delegation algorithms on the Epinions Graph.\relax }}{38}{figure.caption.37}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Distribution of outdegrees in the Bitcoin OTC Trust Graph.\relax }}{38}{figure.caption.38}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Distribution of powers in the Bitcoin OTC Trust Graph.\relax }}{39}{figure.caption.39}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Runtime of delegation algorithms on the Bitcoin OTC Trust Graph.\relax }}{39}{figure.caption.40}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Distribution of outdegrees in the Slashdot Zoo Graph.\relax }}{40}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Distribution of powers in the Slashdot Zoo Graph.\relax }}{40}{figure.caption.42}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Runtime of delegation algorithms on the Slashdot Graph.\relax }}{40}{figure.caption.43}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,0 +1,49 @@
+% !TEX root = ../main.tex
+\graphicspath{{../figures/}}
+
+%%%%%%%%%%%%%%%%%%%%
+\chapter{Background}
+%%%%%%%%%%%%%%%%%%%%
+
+\section{Liquid Democracy}
+
+Liquid Democracy is a voting system that blends aspects of direct and representative democracy. Although there is no universally accepted definition, Liquid Democracy generally allows agents to either cast their votes directly or delegate them to a proxy who votes on their behalf. Most formulations of Liquid Democracy also support transitive delegation: an agent who receives delegated votes may, in turn, delegate them further, creating chains of delegation. \cite{degraveResolvingMultiproxyTransitive2014, boldiViscousDemocracySocial2011, revel2022liquid, bersetcheGeneralizingLiquidDemocracy2022}
+
+\subsection{Motivation}
+
+Liquid democracy is generally motivated by two core shortcomings of traditional democratic systems: the low participation often observed in direct democracy, and the limited accountability characteristic of representative democracy. \cite{fordDelegativeDemocracy2002, brillInteractiveDemocracy2018} While democracy depends on active participation, direct voting is not always feasible or convenient for individual voters due to constraints such as lack of information, interest, or time. Liquid democracy addresses this by allowing voters to delegate their vote to a trusted proxy, thereby enabling indirect yet meaningful participation. Conversely, representative democracies frequently suffer from diminished accountability, particularly when representatives are elected for long, fixed terms and drawn from a small pool. Liquid democracy mitigates this by opening the pool of potential representatives to all voters, effectively flattening hierarchies. Furthermore, it allows delegations to be updated or revoked at any time, restoring agency to the voter. \cite{brillInteractiveDemocracy2018} In doing so, liquid democracy emerges as a promising hybrid model—offering a flexible middle ground between participatory engagement and representational practicality.
+
+\subsection{Challenges}
+
+While liquid democracy offers a promising balance between direct and representative models, it also introduces several challenges. First, it is inherently more complex than traditional voting mechanisms. Voters must understand not only how to vote or delegate, but also the implications of transitive delegation. This added complexity may deter participation, especially among less politically engaged people. Second, empirical studies—most notably within the German Pirate Party—have highlighted a recurring problem of vote concentration, where a small number of highly visible or trusted individuals accumulate disproportionate amounts of voting power. This phenomenon will be introduced in detail in paragraph XX. Finally, from a computational standpoint, resolving the outcome of a delegative vote is no longer a matter of just counting ballots. Instead, the resolution process involves traversing potentially large and cyclic delegation graphs. These technical hurdles necessitate robust infrastructure and may raise questions about transparency, efficiency, and verifiability in large-scale deployments.
+
+\subsection{Applications}
+
+One of the most prominent real-world applications of Liquid Democracy was in the German Pirate Party, where members participated in decision-making through a Liquid Democracy platform between 2010 and 2015. \cite{paulinOverviewTenYears2020} Throughout the period 2010 - 2013, 499,009 votes on 6,517 topics were cast, with pirate party members having made 14,964 delegations. \cite{klingVotingBehaviourPower2015} Other case studies of Liquid Democracy include the Student Union of the Faculty of Information Studies in Novo Mesto, ProposteAmbrosoli2013, a pilot used in regional election in the Lombardi Region of Italy, Google Votes - a proposal dissemination feature used within Google’s internal socialcorporate network - and the Partido de la Red, an Argentinian political party. \cite{paulinOverviewTenYears2020}
+
+\section{Fractional Delegation}
+
+The subject of this paper is an implementation of liquid democracy, in which agents do not need to choose only one person to delegate their vote to. They can delegate fractions of their vote to multiple other agents. We call this \textbf{fractional delegation}. 
+
+\subsection{Motivation}
+
+Classic liquid democracies, where each agent may delegate their vote to only one other person, suffer from a well-documented tendency for voting power to concentrate in the hands of a few individuals—or, in some cases, even a single person. \cite{klingVotingBehaviourPower2015, caragiannisContributionCritiqueLiquid2019, beckerWhenCanLiquid2021} When the German Pirate Party used Liquid democracy to allow their members to vote on the party's goals, Martin Haase, a linguistics professor, gained such a large backing, that his vote was "like a decree". \cite{beckerWebPlatformMakes2012} This concentration undermines the democratic ideal, effectively creating an oligarchic structure in which a small group of powerful individuals can determine voting outcomes with little accountability to their delegators. Such a system is not only less representative but also more vulnerable to corruption or manipulation, as influencing a few powerful delegates may be easier and cheaper than persuading a broad and diverse electorate. Moreover, if a powerful agent fails to participate in a decision, a large number of citizens may find themselves voiceless in the outcome.
+
+A further shortcoming of classic liquid democracy is that agents are forced to either vote themselves or delegate their one vote to exactly one person. Even if agents don't end up using the option of delegating to multiple people, we still believe it to be a valuable feature, as it better reflects the nuanced trust relationships present in real-world communities. In many cases, agents may trust several individuals to represent different aspects of their interests or to provide redundancy. By allowing fractional delegation, this diversity of trust is better captured, leading to a more resilient and representative aggregation of preferences. 
+
+Finally, Liquid Democracy faces the challenge of cyclic delegation. When one participant, say A, delegates their vote to another, B, and B in turn delegates it back to A, the vote becomes trapped in a cycle and is effectively lost. \cite{behrensCircularDelegationsMyth2015} Allowing fractional delegations mitigates this problem: if either A or B had delegated a portion of their vote to a third party, that fraction could eventually reach someone who casts a vote. This reduces the number of votes lost within the system.
+
+\subsection{Existing Methods to Deal with Vote Concentration}
+
+The problem of vote concentration has been addressed in literature. 
+
+Partly in response to this problem, Boldi et al. propose introducing a damping factor into the delegation process: the further a vote is delegated, the weaker it becomes. \cite{boldiViscousDemocracySocial2011} This approach offers a promising way to prevent excessive concentration of power and reflects the intuition that trust diminishes as a vote moves further from its original source. However, it also conflicts with the democratic principle that every vote should carry equal weight. 
+
+Gölz et al. and Kotsialou \& Riley take a different approach. They propose allowing agents to nominate multiple potential delegates. An algorithm then selects the most suitable delegate for each agent, aiming to minimize power concentration and avoid delegation cycles. \cite{kotsialouIncentivisingParticipationLiquid2019, golzFluidMechanicsLiquid2021} Even in this approach, however, each delegator ultimately entrusts their vote to only one delegate.
+
+\subsection{Other Works on Fractional Delegation}
+
+The idea of allowing the fractional splitting of votes in Liquid Democracy has been introduced works. Degrave first proposes so-called "multi-proxy delegation", which closely resembles our understanding fractional delegation, in that each delegators can delegate to more than one proxy (delegate) at a time. \cite{degraveResolvingMultiproxyTransitive2014} 
+They enforce in their implementation that the delegated vote is divided equally among the chosen proxies; for example, a voter delegating to three proxies would assign one third of their vote to each.
+
+Bertsche revisits and extends this idea under the term multi-agent delegation.  \cite{bersetcheGeneralizingLiquidDemocracy2022} Their approach allows an arbitrary fraction of votes to be delegated, not necessarily equal fractions to each delegate. Furthermore, voters are permitted to delegate part of their vote while still retaining a fraction for themselves—enabling them to vote directly and delegate simultaneously. They find, that delegation graphs allowing fractional delegation allow for an "equilibrium state", there is a collection of delegations so that no agent can unilaterally change their delegations to increase their voting power.

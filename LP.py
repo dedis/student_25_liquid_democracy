@@ -3,19 +3,26 @@ import numpy as np
 from datetime import datetime
 from pulp import *
 
+# These two are necessary, since PuLP needs variables to be strings, but they may be input as integers or other types
+# Eg. a node being called either 1 or '1'
+def get_node_to_str_map(nodes: list) -> dict:
+    return {node: str(node) for node in nodes}
 
-THIRD = 1/3
+def get_str_to_node_map(nodes: list) -> dict:
+    return {str(node): node for node in nodes}
 
 def set_up(delegations: dict, nodes: list):
     """
     nodes need to be strings
     """
 
+    node_to_str = get_node_to_str_map(nodes)
+
     # Initialize LP model
     model = LpProblem("DelegationResolution", LpMinimize)
     
     # Initialize LP variables
-    lp_vars = {node: LpVariable(str(node)) for node in nodes}
+    lp_vars = {node: LpVariable(node_to_str[node]) for node in nodes}
 
     # Identify sink and non-sink nodes. Outgoing nodes are those that have delegations going out of them
     outgoing_nodes = {src for node in delegations for src, weight in delegations[node].items() if weight > 0}
@@ -24,7 +31,7 @@ def set_up(delegations: dict, nodes: list):
     # Add constraints for each node
     for node in nodes:
         incomings = delegations.get(node, {})
-        model += (lp_vars[node] == 1 + sum(weight * lp_vars[src] for src, weight in incomings.items())), f"Constraint_{node}"
+        model += (lp_vars[node] == 1 + sum(weight * lp_vars[src] for src, weight in incomings.items())), f"Constraint_{node_to_str[node]}"
 
     return model, sink_nodes
 
@@ -63,37 +70,18 @@ def resolve_delegations(delegations: dict, nodes: List[str]) -> Tuple[dict, list
             and should thus be ignored when treating the output
         - Sink nodes (nodes without outgoing delegations) must collectively hold the total power.
     """
-    # # Initialize LP model
-    # model = LpProblem("DelegationResolution", LpMinimize)
-    
-    # # Initialize LP variables
-    # lp_vars = {node: LpVariable(node) for node in nodes}
-
-    # # Identify sink and non-sink nodes
-    # outgoing_nodes = {src for node in delegations for src, weight in delegations[node].items() if weight > 0}
-    # sink_nodes = [node for node in nodes if node not in outgoing_nodes]
-    
-    # # Add constraints for each node
-    # for node in outgoing_nodes:
-    #     incomings = delegations.get(node, {})
-    #     model += (lp_vars[node] == 1 + sum(weight * lp_vars[src] for src, weight in incomings.items())), f"Constraint_{node}"
-    
-    # # Ensure no power is lost (the power of sink nodes has to equal the input power)
-    # model += sum(lp_vars[node] for node in sink_nodes) == len(nodes), "SinkNodesConstraint"
-    
-    # model.solve(PULP_CBC_CMD(msg=0, options=["primalT=1e-2", "dualT=1e-2"]))
-    
-    # # Return the computed values
-    # if (model.status == 1):
-    #     return {node: value(var) for node, var in lp_vars.items()}, sink_nodes
-    # else:
-    #     raise Exception(f"LP model is {constants.LpStatus[model.status]}. {model}")
     model, sink_nodes = set_up(delegations, nodes)
 
     solve(model)
 
+    str_to_node_map = get_str_to_node_map(nodes)
+
     # Return the computed values
     if (model.status == 1):
-        return {var.name: (value(var) if var.name in sink_nodes else 0.0) for var in model.variables()}, sink_nodes
+        return {
+            str_to_node_map[var.name]: (value(var) if str_to_node_map[var.name] in sink_nodes else 0.0)
+            for var in model.variables()
+            if var.name != "__dummy" # Exclude the dummy variable created by PuLP
+        }, sink_nodes
     else:
         raise Exception(f"LP model is {constants.LpStatus[model.status]}. {model}")
