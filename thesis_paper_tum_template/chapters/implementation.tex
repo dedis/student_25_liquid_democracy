@@ -40,22 +40,20 @@ The first approach uses a dedicated linear system solver. We use SciPy's \texttt
  
  The implementation makes use of SciPy's Compressed Sparse Column (CSC) arrays, which builds matrixes using $(x,y)$ coordinates and their corresponding data, which unless specified otherwise is 0 \cite{virtanenSciPy10Fundamental2020}. 
 
-\TODO{This sentence below abt the perfect accuracy makes no sense atm, change it to fit into this section}
-The solver solves the system of linear equations directly, using the SuperLU solver, so it is not possible to trade off runtime for accuracy, as done in the previous methods \cite{liSuperLUUsersGuide1999}. 
+The solver solves the system of linear equations directly, using the SuperLU solver, meaning it will always solve the system of linear equations perfectly accurately, unlike other implementations which will be discussed below. \cite{liSuperLUUsersGuide1999}. 
 
 \section{Linear Programing Solver (LP)}
 
 Secondly, we use the Python library PuLP, which provides an interface to Linear Programming (LP) solvers \cite{osullivanPuLPLinearProgramming2011}. To resolve the delegation graphs, we use the "Coin-or branch and cut" (CBC) solver, since it is free and open-source \cite{johnforrestCoinorCbcRelease2024}. Given the academic context and the moderate size of our delegation graphs, CBC provides a practical balance between performance and accessibility. Moreover, since our model essentially solves a system of linear equations with a unique correct solution, the choice of solver has little influence on the outcome itself — even if CBC is not the most optimized solver for this class of problems. While commercial solvers may offer faster runtimes, CBC is sufficient for our use case and ensures reproducibility without licensing constraints.
 
-\TODO{The mention below abt the perfect accuracy makes no sense atm, since we have not introduced the iterative solver yet, change it to fit into this section}
-The algorithm first sets up the linear program, setting up an equation $p'_v = \sum_{(u, v, w) \in E} 1 + wp'_u$ for each node $v \in V$. This is then solved by the CBC solver, with the primal tolerance set to $5*10^{-3}$ to level the playing field compared to the iterative algorithm, which does not have perfect accuracy either. A tolerance of $5 * 10^{-3}$ assures that $\lvert p'_v -\sum_{(u, v, w) \in E} 1 + wp'_u \rvert \le 5*10^{-3}$, so the solutions will be correct when rounded to the second decimal place \cite{forrestCBCUserGuide2005}. Finally, the algorithm cleans the $p_v'$ values, setting any delegators power to 0. 
+The algorithm first sets up the linear program, setting up an equation $p'_v = \sum_{(u, v, w) \in E} 1 + wp'_u$ for each node $v \in V$. This is then solved by the CBC solver, with the primal tolerance set to $5*10^{-3}$ to level the playing field compared to the iterative algorithm, which will be introduced in the next section. A tolerance of $5 * 10^{-3}$ assures that $\lvert p'_v -\sum_{(u, v, w) \in E} 1 + wp'_u \rvert \le 5*10^{-3}$, so the solutions will be correct when rounded to the second decimal place \cite{forrestCBCUserGuide2005}. Finally, the algorithm cleans the $p_v'$ values, setting any delegators power to 0. 
 
 
 \TODO{Add links to the implementations on GitHub}
 
 \section{Iterative Solver (Iterative)}
 
-The iterative solver aims to leverage the format of the input, and eliminate any necessary overhead. It is based on the Jacobi method of solving systems of linear equations, which solves the system by iteratively refining the solution \TODO{cite}, however we will prioritize an intuitive explanation of the procedure.
+The iterative solver aims to leverage the format of the input, and eliminate any necessary overhead. It is based on the Jacobi method of solving systems of linear equations, which solves the system by iteratively refining the solution \TODO{cite}, however we will prioritise an intuitive explanation of the procedure.
 
 \subsection{Approach}
 
