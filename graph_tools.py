@@ -3,7 +3,7 @@ import random
 from typing import Union
 import logger_creator
 
-def prepare_graph(vertices, edges, sink_frac=0.2):
+def prepare_graph(vertices, edges, sink_frac=0.2, seed=None):
     """
     Transforms a graph into a valid Liquid Democracy Delegation Graph by performing the following operations:
     
@@ -32,6 +32,9 @@ def prepare_graph(vertices, edges, sink_frac=0.2):
     -------
     networkx.DiGraph
     """
+    if seed is not None:
+        random.seed(seed)
+
     # 1. Create initial graph
     G = nx.MultiDiGraph()
     G.add_nodes_from(vertices)

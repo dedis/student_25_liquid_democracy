@@ -54,41 +54,32 @@ def is_connected_to_sink(delegations, start_node):
 
     return dfs(start_node)
 
-def create_delegation_graph(num_nodes: int, num_loops: int, seed: int = None):
+def create_delegation_graph(num_nodes: int, seed: int = None):
     """
-    Generates a random delegation graph with a specified number of nodes and loops.
+    Generates a random delegation graph with fractional delegations, avoiding closed cycles and ensuring connectivity to a sink.
 
-    Parameters
-    ----------
-    num_nodes : int
-        Number of nodes (voters) in the graph.
-    num_loops : int
-        Number of loops (cyclical delegations) to add after initial graph construction.
-    seed : int, optional
-        Random seed for reproducibility.
+    Each node may delegate its vote fractionally to up to 3 other nodes. Delegations are assigned randomly such that
+    the sum of weights from any node equals 1.0. The graph is guaranteed to be free of closed delegation cycles.
 
-    Returns
-    -------
-    delegations : dict
-        A dictionary representing the delegation graph. Keys are node identifiers (str),
-        and values are dictionaries mapping delegate nodes to delegation weights.
-    nodes : list of str
-        List of node identifiers used in the graph.
+    Parameters:
+    - num_nodes (int): The number of nodes (voters) in the graph.
+    - seed (int, optional): A random seed for reproducibility.
 
-    Notes
-    -----
-    - Each node will have between 0 and 3 delegations to random other delegates
-    - Self-delegations are possible if they do not violate the rules for a well-formed delegation graph
-    - Loops are only added if they do not disconnect the graph from the sinks.
+    Returns:
+    - delegations (dict[int, dict[int, float]]): A nested dictionary representing the delegation graph.
+      Outer keys are source nodes; inner keys are target nodes with associated delegation weights.
+    - nodes (list[int]): A list of all nodes
+
+    Notes:
+    - Delegation weights are all multiples of 0.1
     """
 
     np.random.seed(seed)
 
-    nodes = []
+    nodes = list(range(num_nodes))
     delegations = {}
     for i in range(num_nodes):
-        node = str(i)
-        nodes += [node]
+        node = i     
         # Choose how many delegations this node shall have
         num_delegations = np.random.randint(0, min(3, i) + 1)
         if num_delegations > 0:
@@ -101,59 +92,27 @@ def create_delegation_graph(num_nodes: int, num_loops: int, seed: int = None):
             for j in range(len(delegation_weights)):
                 delegate = delegates[j]
 
-                # Avoids delegations of N -1-> N, which are not allowed (since N is not voting and voting at the same time)
-                if (delegate == node) and ((delegation_weights[j] == 1) or delegations.get(node, {}).get(node, 0) + delegation_weights[j] == 1):
-                    # If the only delegate is itself, turn this node into a sink by just not adding the delegation 
-                    if len(delegates) == 1:
-                        break 
-                    # Else remove the delegation, and add the weight to the next delegate's weight
-                    else:
-                        delegation_weights[j + 1] +=  delegation_weights[j] 
+                # Avoids self delegations of any weight
+                # This causes the outdgoing power of this node to no longer be 1, but that will be fixed later on
+                if (delegate == node):
                         continue
-
                 else:
-                    delegations.setdefault(str(node), {}).setdefault(str(delegate), 0)
+                    # Add the delegation to the dictionary, initializing if necessary
+                    delegations.setdefault(node, {}).setdefault(delegate, 0)
                     delegations[node][delegate] += delegation_weights[j]
-
-    for i in range(num_loops):
-        
-        # Try to find a non-sink node with which to create a loop
-        node = None
-        for j in range(len(nodes)):
-            node = np.random.choice(nodes)
-            if node not in delegations or len(delegations[node]) == 0:
-                node = None
-            else:
-                break
-
-        for j, delegate in enumerate(delegations.get(node, {})):
-            # Try to create a loop between this node and the selected delegate
-
-            # #If delegate is a sink
-            if delegate not in delegations or len(delegations[delegate]) == 0:
-                # Add the loop
-                delegations[delegate] = {str(node): 1}
-
-                # Check that we did not create an illegal cycle
-                if not is_connected_to_sink(delegations, node):
-                    # Remove the loop
-                    del delegations[delegate]
-                    continue
-            # Delegate is not a sink
-            else:
-
-                # Choose any weight from the set of weights, except 1
-                # Adding a new delegation with weight 1 might create a cycle
-                new_delegation_weight = np.random.choice([weight for weight in WEIGHTS if weight not in [1]])
-
-                # Free up weight from the other delegations
-                for k, v in delegations[delegate].items():
-                        delegations[delegate][k] = (1 - new_delegation_weight) * v
-
-                # Add this weight directed toward the node, to create a loop 
-                delegations[delegate].setdefault(str(node), 0)
-                delegations[delegate][node] += new_delegation_weight
-
-                break
-
+                    if not is_connected_to_sink(delegations, node):
+                        # If the delegation graph is not connected to a sink, remove the delegation
+                        # This causes the outdgoing power of this node to no longer be 1, but that will be fixed later on
+                        delegations[node][delegate] -= delegation_weights[j]
+                        if delegations[node][delegate] <= 0:
+                            del delegations[node][delegate]
+                
+            # Ensure node has outgoing delegations summing to 1.0
+            if node in delegations and sum(delegations[node].values()) < 1.0:
+                # If the node has outgong delegations, distribute the remaining weight evenly among the existing delegations
+                remaining_weight = 1.0 - sum(delegations[node].values())
+                for delegate in delegations[node]:
+                    delegations[node][delegate] += remaining_weight / len(delegations[node])
+                
+  
     return delegations, nodes

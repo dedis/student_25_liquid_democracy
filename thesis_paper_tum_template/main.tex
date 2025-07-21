@@ -12,15 +12,16 @@
 \newcommand*{\getFaculty}{Informatics}
 \newcommand*{\getDegree}{Informatics}
 \newcommand*{\getSchool}{Computation, Information and Technology}
-\newcommand*{\getTitle}{Thesis title}
-\newcommand*{\getTitleGer}{Titel der Abschlussarbeit}
+\newcommand*{\getTitle}{Exploring the Resolution of Delegations in Liquid Democracy with Fractional Delegation}
+\newcommand*{\getTitleGer}{Eine Untersuchung der Stimmgewichtberechnung in Liquid Democracy mit fraktionalem Delegieren}
 \newcommand*{\getAuthor}{David Nicolaus Matthäus Holzwarth}
 \newcommand*{\getDoctype}{Bachelor's Thesis}
 \newcommand*{\getSupervisor}{Prof. Dr. Pramod Bhatotia}
-\newcommand*{\getAdvisor}{Prof. Dr. Bryan Ford}
-\newcommand*{\getKeywords}{keyword;another keyword;one more}
+\newcommand*{\getAdvisor}{Prof. Dr. Bryan Alexander Ford}
+\newcommand*{\getKeywords}{Liquid Democracy; Fractional Delegation}
 \newcommand*{\getSubmissionDate}{Submission date}
 \newcommand*{\getSubmissionLocation}{Munich}
+
 
 % TODO: change citation style in settings
 \input{settings}
@@ -36,7 +37,7 @@
 
 \input{pages/title}
 \input{pages/disclaimer}
-\input{pages/acknowledgments}
+%\input{pages/acknowledgments}
 \input{pages/abstract}
 \microtypesetup{protrusion=false}
 \tableofcontents{}
@@ -44,7 +45,7 @@
 
 \mainmatter{}
 
-\input{chapters/01_introduction}
+%\input{chapters/01_introduction}
 \input{chapters/introduction}
 \input{chapters/background}
 \input{chapters/design}
@@ -52,7 +53,6 @@
 \input{chapters/evaluation}
 \input{chapters/related_work}
 \input{chapters/conclusion}
-
 
 \appendix{}
 
@@ -62,6 +62,8 @@
 \begin{acronym}
 	\itemsep-.25\baselineskip
 	\acro{TUM}[TUM]{Technical University of Munich}
+	\acro{LS}{Linear Systems Solver}
+	\acro{LP}{Linear Programming Solver}
 	% TODO: add acronyms
 \end{acronym}
 
@@ -69,5 +71,4 @@
 \listoftables{}
 \microtypesetup{protrusion=true}
 \printbibliography{}
-
 \end{document}

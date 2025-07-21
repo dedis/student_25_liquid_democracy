@@ -1,4 +1,4 @@
-% !TeX root = ../main.tex
+% !TEX root = ../main.tex
 
 %%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction}
@@ -6,22 +6,19 @@
 
 %In the classical democracies found in most western countries, each voter casts one vote for the candidate they wish to vote for. It is expected of voters to make an informed choice, based on the information available to them.  [cite fords paper or dahls "on democracy"] 
 
-The introduction is a longer writeup that gently eases the reader into your
-thesis~\cite{dinesh20oakland}. Use the first paragraph to discuss the setting.
 
-In the second paragraph you can introduce the main challenge that you see.
+In democratic systems, the balance between direct participation and practical representation remains an ongoing challenge. On the one hand, direct democracy ensures that voters retain full control over political outcomes. On the other hand, representative systems introduce intermediaries who can make informed decisions on behalf of voters, addressing scalability and engagement issues. In recent years, Liquid Democracy has emerged as a compelling hybrid model—allowing voters to either vote directly or delegate their vote to another agent, who may in turn delegate again. This approach has the potential to increase participation while maintaining flexibility and accountability.
 
-The third paragraph lists why related work is insufficient.
+However, while the flexibility of Liquid Democracy is attractive, its implementation introduces several theoretical and technical difficulties. Chief among these are the concentration of voting power in few highly trusted individuals, the presence of cycles in delegation graphs which can trap votes, and the computational burden of resolving such graphs into concrete voting outcomes. These challenges become more pronounced as the number of voters and complexity of delegation relationships grow.
 
-The fourth and fifth paragraphs discuss your approach and why it is needed.
+Motivated by this problem, this thesis introduces a variant of Liquid Democracy with fractional delegation, allowing voters to split their vote among multiple delegates. This approach captures the diversity and redundancy of trust in real communities, increases resilience to vote loss, and reduces the risks of vote concentration. However, this generalization complicates the task of computing the final distribution of voting power, especially in the presence of cycles and partial delegations.
 
-The sixth paragraph will introduce your thesis statement. Think how you can
-distill the essence of your thesis into a single sentence.
+We formalize this model of fractional Liquid Democracy and propose three different methods for resolving delegation graphs: solving a system of linear equations using a dedicated solver for systems of linear equations, using a linear programming formulation, and simulating the delegation process with an iterative algorithm (Iterative). We also introduce preprocessing techniques to handle ill-formed graphs and turn arbitrary graphs into delegation graphs.
 
-The seventh paragraph will highlight some of your results
+The core thesis of this work is that delegation graphs in a fractional Liquid Democracy model can be resolved efficiently and fairly using methods based on linear systems, while maintaining conservation of voting power and tolerating cyclic delegations through preprocessing.
 
-The eights paragraph discusses your core contribution.
+We evaluate these approaches through benchmarks on synthetic, social, and real-world graphs. We show that in many cases the LS solver beats the other two implementations, but that there are exceptions, such as very large graphs.
 
-This section is usually 3-5 pages.
+In summary, this work contributes: (1) a formal definition of fractional delegation in Liquid Democracy, (2) three distinct and implementable resolution algorithms, (3) a preprocessing method for handling delegation cycles, and (4) a benchmark analysis across a variety of graph classes. These insights contribute to building scalable, fair, and expressive voting systems for digital democracy.
 
-Also include a description of how the paper is set up.
+The rest of the paper is structured as follows: \Cref{chap:background} provides necessary background on Liquid Democracy and fractional delegation. \Cref{chap:design} formalizes the problem and our design choices. \Cref{chap:implementation} discusses the implementation of the proposed algorithms. \Cref{chap:evaluation} evaluates their performance across diverse delegation graphs. \Cref{chap:related_work} reviews related literature, and \Cref{chap:conclusion} concludes with key insights and future work.

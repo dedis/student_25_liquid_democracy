@@ -21,12 +21,12 @@
   \datalist[entry]{anyt/global//global/global/global}
     \entry{beckerWhenCanLiquid2021}{misc}{}{}
       \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=09e0ad7acf864c2836751492cbd00ce2}{%
+        {{un=1,uniquepart=given,hash=09e0ad7acf864c2836751492cbd00ce2}{%
            family={Becker},
            familyi={B\bibinitperiod},
            given={Ruben},
            giveni={R\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=b88ab0c69afe3aa1c751f31e0396ec8b}{%
            family={D'Angelo},
            familyi={D\bibinitperiod},
@@ -62,7 +62,6 @@
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{In this paper, we investigate the so-called ODP-problem that has been formulated by Caragiannis and Micha [10]. Here, we are in a setting with two election alternatives out of which one is assumed to be correct. In ODP, the goal is to organise the delegations in the social network in order to maximize the probability that the correct alternative, referred to as ground truth, is elected. While the problem is known to be computationally hard, we strengthen existing hardness results by providing a novel strong approximation hardness result: For any positive constant \$C\$, we prove that, unless \$P=NP\$, there is no polynomial-time algorithm for ODP that achieves an approximation guarantee of \${\textbackslash}alpha {\textbackslash}ge ({\textbackslash}ln n){\textasciicircum}\{-C\}\$, where \$n\$ is the number of voters. The reduction designed for this result uses poorly connected social networks in which some voters suffer from misinformation. Interestingly, under some hypothesis on either the accuracies of voters or the connectivity of the network, we obtain a polynomial-time \$1/2\$-approximation algorithm. This observation proves formally that the connectivity of the social network is a key feature for the efficiency of the liquid democracy paradigm. Lastly, we run extensive simulations and observe that simple algorithms (working either in a centralized or decentralized way) outperform direct democracy on a large class of instances. Overall, our contributions yield new insights on the question in which situations liquid democracy can be beneficial.}
       \field{eprintclass}{cs}
       \field{eprinttype}{arXiv}
       \field{month}{4}
@@ -83,6 +82,37 @@
       \verb /Users/DavidHolzwarth/Zotero/storage/YAZBGI5T/Becker et al. - 2021 - When Can Liquid Democracy Unveil the Truth.pdf;/Users/DavidHolzwarth/Zotero/storage/JL9T88Y9/2104.html
       \endverb
       \keyw{Computer Science - Artificial Intelligence,Computer Science - Computer Science and Game Theory,Computer Science - Social and Information Networks}
+    \endentry
+    \entry{beckerWebPlatformMakes2012}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=7b937fb03ea2617701b9abf83f4c1d16}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{7b937fb03ea2617701b9abf83f4c1d16}
+      \strng{fullhash}{7b937fb03ea2617701b9abf83f4c1d16}
+      \strng{fullhashraw}{7b937fb03ea2617701b9abf83f4c1d16}
+      \strng{bibnamehash}{7b937fb03ea2617701b9abf83f4c1d16}
+      \strng{authorbibnamehash}{7b937fb03ea2617701b9abf83f4c1d16}
+      \strng{authornamehash}{7b937fb03ea2617701b9abf83f4c1d16}
+      \strng{authorfullhash}{7b937fb03ea2617701b9abf83f4c1d16}
+      \strng{authorfullhashraw}{7b937fb03ea2617701b9abf83f4c1d16}
+      \field{labelalpha}{Bec12}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Spiegel International}
+      \field{month}{2}
+      \field{title}{Web {{Platform Makes Professor Most Powerful Pirate}}}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2012}
+      \field{urldateera}{ce}
     \endentry
     \entry{behrensCircularDelegationsMyth2015}{misc}{}{}
       \name{author}{1}{}{%
@@ -154,6 +184,41 @@
       \verb 10.48550/ARXIV.2209.14128
       \endverb
       \keyw{FOS: Computer and information sciences,Multiagent Systems (cs.MA)}
+    \endentry
+    \entry{burden2011numerical}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fd1fdecbb7b3fc967e3a67f5e433d8c2}{%
+           family={Burden},
+           familyi={B\bibinitperiod},
+           given={R.L.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b638efeb09e467b34820b166a09d078}{%
+           family={Faires},
+           familyi={F\bibinitperiod},
+           given={J.D.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Brooks/Cole, Cengage Learning}%
+      }
+      \strng{namehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{fullhash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{fullhashraw}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{bibnamehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{authorbibnamehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{authornamehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{authorfullhash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{authorfullhashraw}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \field{labelalpha}{BF11}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-538-73564-3}
+      \field{title}{Numerical Analysis}
+      \field{year}{2011}
     \endentry
     \entry{boldiViscousDemocracySocial2011}{article}{}{}
       \name{author}{4}{}{%
@@ -254,41 +319,9 @@
       \field{urldateera}{ce}
       \field{pages}{1183\bibrangedash 1187}
       \range{pages}{5}
-    \endentry
-    \entry{behrensPreferentialDelegationProblem2015}{misc}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=e17021b9ad6b521cb3bc8a7e135ec6f2}{%
-           family={Behrens},
-           familyi={B\bibinitperiod},
-           given={Jan},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f1556af6b5b6393c6f39897646365dae}{%
-           family={Swierczek},
-           familyi={S\bibinitperiod},
-           given={Björn},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {The Liquid Democracy Journal}%
-      }
-      \strng{namehash}{ac9ab4e39d88ef7abae682def8a5423a}
-      \strng{fullhash}{ac9ab4e39d88ef7abae682def8a5423a}
-      \strng{fullhashraw}{ac9ab4e39d88ef7abae682def8a5423a}
-      \strng{bibnamehash}{ac9ab4e39d88ef7abae682def8a5423a}
-      \strng{authorbibnamehash}{ac9ab4e39d88ef7abae682def8a5423a}
-      \strng{authornamehash}{ac9ab4e39d88ef7abae682def8a5423a}
-      \strng{authorfullhash}{ac9ab4e39d88ef7abae682def8a5423a}
-      \strng{authorfullhashraw}{ac9ab4e39d88ef7abae682def8a5423a}
-      \field{labelalpha}{BS15}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{1}
-      \field{title}{Preferential {{Delegation}} and the {{Problem}} of {{Negative Voting Weight}}}
-      \field{year}{2015}
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/2C8UBUUL/Brill - 2018 - Interactive Democracy.pdf
+      \endverb
     \endentry
     \entry{caragiannisContributionCritiqueLiquid2019}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -339,6 +372,63 @@
       \range{pages}{7}
       \verb{doi}
       \verb 10.24963/ijcai.2019/17
+      \endverb
+    \endentry
+    \entry{chakrabartiRMATRecursiveModel2004}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1995e37eb2dfe4651f28297cbdc3f466}{%
+           family={Chakrabarti},
+           familyi={C\bibinitperiod},
+           given={Deepayan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=08d645215ccd73a5325f3539a65f736f}{%
+           family={Zhan},
+           familyi={Z\bibinitperiod},
+           given={Yiping},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=976e034dd29cfc47640ae45c16d21a9d}{%
+           family={Faloutsos},
+           familyi={F\bibinitperiod},
+           given={Christos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Society for Industrial and Applied Mathematics}%
+      }
+      \strng{namehash}{b76a1c8c82368da9d415909d8618e9da}
+      \strng{fullhash}{b76a1c8c82368da9d415909d8618e9da}
+      \strng{fullhashraw}{b76a1c8c82368da9d415909d8618e9da}
+      \strng{bibnamehash}{b76a1c8c82368da9d415909d8618e9da}
+      \strng{authorbibnamehash}{b76a1c8c82368da9d415909d8618e9da}
+      \strng{authornamehash}{b76a1c8c82368da9d415909d8618e9da}
+      \strng{authorfullhash}{b76a1c8c82368da9d415909d8618e9da}
+      \strng{authorfullhashraw}{b76a1c8c82368da9d415909d8618e9da}
+      \field{labelalpha}{CZF04}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{booktitle}{Proceedings of the 2004 {{SIAM International Conference}} on {{Data Mining}}}
+      \field{isbn}{978-0-89871-568-2 978-1-61197-274-0}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{shorttitle}{R-{{MAT}}}
+      \field{title}{R-{{MAT}}: {{A Recursive Model}} for {{Graph Mining}}}
+      \field{urlday}{13}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \field{pages}{442\bibrangedash 446}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1137/1.9781611972740.43
+      \endverb
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/NELX65QD/Chakrabarti et al. - 2004 - R-MAT A Recursive Model for Graph Mining.pdf
       \endverb
     \endentry
     \entry{degraveResolvingMultiproxyTransitive2014}{misc}{}{}
@@ -564,6 +654,36 @@
       \verb 10.5281/ZENODO.2720283
       \endverb
     \endentry
+    \entry{fordDelegativeDemocracy2002}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5a50d3ad145a7f008cb2a77765952811}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{fullhash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{fullhashraw}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{bibnamehash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{authorbibnamehash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{authornamehash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{authorfullhash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{authorfullhashraw}{5a50d3ad145a7f008cb2a77765952811}
+      \field{labelalpha}{For02}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{Delegative {{Democracy}}}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2002}
+      \field{urldateera}{ce}
+    \endentry
     \entry{golzFluidMechanicsLiquid2021}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=fe5b3f65e36b26ca79bd8983e45d2c68}{%
@@ -680,6 +800,46 @@
       \verb{file}
       \verb /Users/DavidHolzwarth/Zotero/storage/A2I4CQUC/Hagberg et al. - 2008 - Exploring Network Structure, Dynamics, and Function using NetworkX.pdf
       \endverb
+    \endentry
+    \entry{kunegis2009a}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=783acda4813bfe14364427f83804ce7a}{%
+           family={Kunegis},
+           familyi={K\bibinitperiod},
+           given={Jérôme},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12a016fc0ebb1b2147b8a33d3b242990}{%
+           family={Lommatzsch},
+           familyi={L\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a19299883183370e09a01f6cec3b9ea4}{%
+           family={Bauckhage},
+           familyi={B\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bca015659861162e6807e7674bde9457}
+      \strng{fullhash}{bca015659861162e6807e7674bde9457}
+      \strng{fullhashraw}{bca015659861162e6807e7674bde9457}
+      \strng{bibnamehash}{bca015659861162e6807e7674bde9457}
+      \strng{authorbibnamehash}{bca015659861162e6807e7674bde9457}
+      \strng{authornamehash}{bca015659861162e6807e7674bde9457}
+      \strng{authorfullhash}{bca015659861162e6807e7674bde9457}
+      \strng{authorfullhashraw}{bca015659861162e6807e7674bde9457}
+      \field{labelalpha}{KLB09}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc. {{Int}}. {{World}} Wide Web Conf.}
+      \field{title}{The {{Slashdot Zoo}}: {{Mining}} a Social Network with Negative Edges}
+      \field{year}{2009}
+      \field{pages}{741\bibrangedash 750}
+      \range{pages}{10}
     \endentry
     \entry{klingVotingBehaviourPower2015}{misc}{}{}
       \name{author}{5}{}{%
@@ -805,6 +965,110 @@
       \verb /Users/DavidHolzwarth/Zotero/storage/YVEPCHJ2/Kotsialou und Riley - 2019 - Incentivising Participation in Liquid Democracy with Breadth-First Delegation.pdf;/Users/DavidHolzwarth/Zotero/storage/NLYJTQ5R/1811.html
       \endverb
       \keyw{Computer Science - Computer Science and Game Theory,Economics - Theoretical Economics}
+    \endentry
+    \entry{kumar2016edge}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=7b22747cb76db93e9a010ffb2cdad89b}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Srijan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=557846187b783f35817d070c6fafb498}{%
+           family={Spezzano},
+           familyi={S\bibinitperiod},
+           given={Francesca},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93d3253df18357da07a1a1b595c5e045}{%
+           family={Subrahmanian},
+           familyi={S\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=976e034dd29cfc47640ae45c16d21a9d}{%
+           family={Faloutsos},
+           familyi={F\bibinitperiod},
+           given={Christos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{fullhash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{fullhashraw}{82f6a944d05381ef4eecab65facabf72}
+      \strng{bibnamehash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{authorbibnamehash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{authornamehash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{authorfullhash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{authorfullhashraw}{82f6a944d05381ef4eecab65facabf72}
+      \field{labelalpha}{Kum+16}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Data Mining ({{ICDM}}), 2016 {{IEEE}} 16th International Conference On}
+      \field{title}{Edge Weight Prediction in Weighted Signed Networks}
+      \field{year}{2016}
+      \field{pages}{221\bibrangedash 230}
+      \range{pages}{10}
+    \endentry
+    \entry{kumar2018rev2}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=7b22747cb76db93e9a010ffb2cdad89b}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Srijan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b5c2ebc85fb8cba01d66e9eaaae19fd1}{%
+           family={Hooi},
+           familyi={H\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=465993cd5f20a6c763fe177574e9f76c}{%
+           family={Makhija},
+           familyi={M\bibinitperiod},
+           given={Disha},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1430e2bb5896c498829bb07066c7e0d4}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Mohit},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=976e034dd29cfc47640ae45c16d21a9d}{%
+           family={Faloutsos},
+           familyi={F\bibinitperiod},
+           given={Christos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93d3253df18357da07a1a1b595c5e045}{%
+           family={Subrahmanian},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{986b8769dbdfb402af7ed40302c264e6}
+      \strng{fullhash}{91d46f0e4f0564ed3fd7b63093d5df1f}
+      \strng{fullhashraw}{91d46f0e4f0564ed3fd7b63093d5df1f}
+      \strng{bibnamehash}{91d46f0e4f0564ed3fd7b63093d5df1f}
+      \strng{authorbibnamehash}{91d46f0e4f0564ed3fd7b63093d5df1f}
+      \strng{authornamehash}{986b8769dbdfb402af7ed40302c264e6}
+      \strng{authorfullhash}{91d46f0e4f0564ed3fd7b63093d5df1f}
+      \strng{authorfullhashraw}{91d46f0e4f0564ed3fd7b63093d5df1f}
+      \field{labelalpha}{Kum+18}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Eleventh {{ACM}} International Conference on Web Search and Data Mining}
+      \field{title}{Rev2: {{Fraudulent}} User Prediction in Rating Platforms}
+      \field{year}{2018}
+      \field{pages}{333\bibrangedash 341}
+      \range{pages}{9}
     \endentry
     \entry{liSuperLUUsersGuide1999}{report}{}{}
       \name{author}{6}{}{%
@@ -977,6 +1241,97 @@
       \field{urlmonth}{5}
       \field{urlyear}{2025}
       \field{urldateera}{ce}
+    \endentry
+    \entry{richardsonTrustManagementSemantic2003}{incollection}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f96c5999895363061e2fe84b4cd057df}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b876a40aac16cd3d6b0278b1154b9da}{%
+           family={Agrawal},
+           familyi={A\bibinitperiod},
+           given={Rakesh},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=926269a097c38456f5b32d7efb1d1a80}{%
+           family={Domingos},
+           familyi={D\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{6}{}{%
+        {{hash=97b8779c08da200ee2eb194bdc10ae4f}{%
+           family={Goos},
+           familyi={G\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+        {{hash=84d4ea2bd3ec736effccd97ee64d09ef}{%
+           family={Hartmanis},
+           familyi={H\bibinitperiod},
+           given={Juris},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4e6d4340bf56539a33dcad95ee6e8fc5}{%
+           family={Van\bibnamedelima Leeuwen},
+           familyi={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ba4603066ec9f23db109035b8d738b0c}{%
+           family={Fensel},
+           familyi={F\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+        {{hash=03c6ada8436bd8591a5165974dd0341a}{%
+           family={Sycara},
+           familyi={S\bibinitperiod},
+           given={Katia},
+           giveni={K\bibinitperiod}}}%
+        {{hash=9ce82dcbbd1b7f4f2625e6301a68ccf6}{%
+           family={Mylopoulos},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{f8bbf0f7c7af4c1d6803c3e7270a250f}
+      \strng{fullhash}{f8bbf0f7c7af4c1d6803c3e7270a250f}
+      \strng{fullhashraw}{f8bbf0f7c7af4c1d6803c3e7270a250f}
+      \strng{bibnamehash}{f8bbf0f7c7af4c1d6803c3e7270a250f}
+      \strng{authorbibnamehash}{f8bbf0f7c7af4c1d6803c3e7270a250f}
+      \strng{authornamehash}{f8bbf0f7c7af4c1d6803c3e7270a250f}
+      \strng{authorfullhash}{f8bbf0f7c7af4c1d6803c3e7270a250f}
+      \strng{authorfullhashraw}{f8bbf0f7c7af4c1d6803c3e7270a250f}
+      \strng{editorbibnamehash}{bf91c1190fb1623e09bff37e0c5871e2}
+      \strng{editornamehash}{3225c68498c2eafbe2a06ae5bbef851f}
+      \strng{editorfullhash}{bf91c1190fb1623e09bff37e0c5871e2}
+      \strng{editorfullhashraw}{bf91c1190fb1623e09bff37e0c5871e2}
+      \field{labelalpha}{RAD03}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {{Semantic Web}} - {{ISWC}} 2003}
+      \field{isbn}{978-3-540-20362-9 978-3-540-39718-2}
+      \field{title}{Trust {{Management}} for the {{Semantic Web}}}
+      \field{urlday}{13}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{2870}
+      \field{year}{2003}
+      \field{urldateera}{ce}
+      \field{pages}{351\bibrangedash 368}
+      \range{pages}{18}
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/WS4EINIP/Richardson et al. - 2003 - Trust Management for the Semantic Web.pdf
+      \endverb
     \endentry
     \entry{revel2022liquid}{inproceedings}{}{}
       \name{author}{4}{}{%
@@ -1730,9 +2085,56 @@
       \verb /Users/DavidHolzwarth/Zotero/storage/HAFDHMKR/Virtanen et al. - 2020 - SciPy 1.0 fundamental algorithms for scientific computing in Python.pdf
       \endverb
     \endentry
+    \entry{zhouKanonymityLdiversityApproaches2011}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=847b802eb49a8d64e0694a5f417c19e7}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Bin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56af930e1f5e2c9a791b71e7b347c0ba}{%
+           family={Pei},
+           familyi={P\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{70ef8e1599a3427bd04929f9853d1b67}
+      \strng{fullhash}{70ef8e1599a3427bd04929f9853d1b67}
+      \strng{fullhashraw}{70ef8e1599a3427bd04929f9853d1b67}
+      \strng{bibnamehash}{70ef8e1599a3427bd04929f9853d1b67}
+      \strng{authorbibnamehash}{70ef8e1599a3427bd04929f9853d1b67}
+      \strng{authornamehash}{70ef8e1599a3427bd04929f9853d1b67}
+      \strng{authorfullhash}{70ef8e1599a3427bd04929f9853d1b67}
+      \strng{authorfullhashraw}{70ef8e1599a3427bd04929f9853d1b67}
+      \field{labelalpha}{ZP11}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0219-1377, 0219-3116}
+      \field{journaltitle}{Knowledge and Information Systems}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{1}
+      \field{title}{The K-Anonymity and l-Diversity Approaches for Privacy Preservation in Social Networks against Neighborhood Attacks}
+      \field{urlday}{13}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{28}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{47\bibrangedash 77}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1007/s10115-010-0311-2
+      \endverb
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/4C5EHYXL/Zhou und Pei - 2011 - The k-anonymity and l-diversity approaches for privacy preservation in social networks against neigh.pdf
+      \endverb
+    \endentry
   \enddatalist
-  \missing{dinesh20oakland}
-  \missing{latex}
 \endrefsection
 \endinput
 

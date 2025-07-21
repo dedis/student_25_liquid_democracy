@@ -3,7 +3,7 @@
 
 %%%%%%%%%%%%%%%%
 \chapter{Design}
-\label{sec:design}
+\label{chap:design}
 %%%%%%%%%%%%%%%%
 
 This section describes our implementation of liquid democracy with fractional delegation. We start by introducing the problem, then introducing prerequisite definitions and finally the method to resolve delegations. 
@@ -33,7 +33,7 @@ We pose the following problem.
 
 \subsection{Definitions}
 
-\textbf{Delegation graphs} represent \textbf{delegations} between voters using weighted, directed edges between nodes. \textbf{Power} refers to a fractional amount of votes. Each node initially has one vote, or an \textbf{initial power} $p^{(0)}_v = 1$. Each delegation between two nodes has a positive, nonzero \textbf{weight} $w \in \mathbb{R}^+$. \textbf{Resolving delegations} means to determine how much power each sink holds according to the delegations. After resolving delegations, a node $v \in V'$s \textbf{final power}, is $p_v \in \mathbb{R}_{\ge0}$. A more rigid definition of a nodes final power will be introduced in section XX.
+\textbf{Delegation graphs} represent \textbf{delegations} between voters using weighted, directed edges between nodes. \textbf{Power} refers to a fractional amount of votes. Each node initially has one vote, or an \textbf{initial power} $p^{(0)}_v = 1$. Each delegation between two nodes has a positive, nonzero \textbf{weight} $w \in \mathbb{R}^+$. \textbf{Resolving delegations} means to determine how much power each sink holds according to the delegations. After resolving delegations, a node $v \in V'$s \textbf{final power}, is $p_v \in \mathbb{R}_{\ge0}$. A more rigid definition of a nodes final power will be introduced in \cref{sec:resolving_delegations}.
 
 As per the problem statement, voters are strictly given the choice to either delegate their vote (fractional) in its entirety, or vote directly. The electorate is thus divided into two disjoint \textbf{sinks} S, who actually vote, and \textbf{delegators} D. 
 
@@ -51,7 +51,7 @@ We thus define a \textbf{delegation graph} as a finite, directed, weighted graph
 
  \subsection{Conservation of Power}
  
- A vital property we set for the delegation graph is the conservation of power. While some authors have experimented with implementations of liquid democracy where this is not the case \cite{bersetcheGeneralizingLiquidDemocracy2022, boldiViscousDemocracySocial2011}, we believe that for a system to be truly democratic, we must assert delegating is not penalised, so a vote cast by a sink should not be different in value to a vote cast by a sink through delegation from a delegator. Thus, any implementation needs a mechanism to ensure that the sum of the final power of all sinks is equal to the sum of the initial power of all nodes.
+ A vital property we set for the delegation graph in the problem statement is the conservation of power. While some authors have experimented with implementations of liquid democracy where this is not the case \cite{bersetcheGeneralizingLiquidDemocracy2022, boldiViscousDemocracySocial2011}, we believe that for a system to be truly democratic, we must assert delegating is not penalised, so a vote cast by a sink should not be different in value to a vote cast by a sink through delegation from a delegator. Thus, any implementation needs a mechanism to ensure that the sum of the final power of all sinks is equal to the sum of the initial power of all nodes.
 
 \subsection{Closed Delegation Cycles}
 
@@ -96,6 +96,7 @@ Suppose, for contradiction, that $G$ contains no closed delegation cycle, but $\
  A \textbf{well-formed delegation graph} G is defined as a delegation graph, which contains no closed delegation cycles. Note, that while a self loop of weight one is not allowed in a well-formed delegation graph, a self loop of weight $w \le 1$ is allowed as long as the rest of the node's power eventually flows to a sink. Since a delegator can't vote, any power a delegator delegates to themselves will "flow" back into the node, and then be redistributed to the nodes delegates. 
 
 \section{Resolving Delegations}
+\label{sec:resolving_delegations}
 
 \begin{figure}[t]
 	\centering
@@ -112,31 +113,89 @@ p_C = 1 + w_2p'_B = 1 + w_2(1 + w_1p'_A)
 
 This motivates the recursive definition of standing power in a delegation graph $G = (V, E)$ as:
 
-$p'_v = 1 + \sum_{(u, v, w) \in E} wp'_u$
+\[
+p'_v = 1 + \sum_{(u, v, w) \in E} wp'_u
+\]
 
-Using this, we define the final voting power $p_v$ of a node as:
-
+Using this definition---and in line with the problem statement that delegating nodes must not retain any power---we define the final voting power $p_v$ of a node as:
 \[
 p_v = 
 \begin{cases}
- p'_v, v \in S \\ 
- 0, v \in D 
- \end{cases}
+p'_v & \text{if } v \in S \\
+0     & \text{if } v \in D
+\end{cases}
 \]
 
-The problem of finding each node's standing power is thus a problem of solving a system of linear equations, namely calculating the standing power for all nodes. We can prove, that given a well-formed delegation graph, this method returns a unique solution, and that given a well formed delegation graph and the above definition of the final power of a node, power is conserved.
-
-1. power is conserved
-
-2. there is a unique solution when the graph is well formed?
+The problem of finding each node's standing power is thus a problem of solving a system of linear equations, namely calculating the standing power for all nodes. We can prove, that given a well-formed delegation graph, this method returns a unique solution, and power is conserved.
 
 \subsection{Existence of a Unique Solution}
+\label{subsec:unique_sol}
 
-\TODO{There are two ways I can prove this. Firstly is to just quote (p.74-76). Alternatively, a more complicated but less weird source would be to prove this shit using (theore 8.1.26 and some other theorem, see chatgpt Chat "Trace behavior of matrices"). the second one I am not 100\% convinced yet that it actually works}
+The system of linear equations $p'_v = 1 + \sum_{(u, v, w) \in E} wp'_u$ can also be rearranged to be in matrix form: 
 
-first link \url{file:///Users/DavidHolzwarth/Downloads/978-1-84996-299-5.pdf} (Max-Linear Systems: Theory and Algorithms) by Butkovic
+\begin{align*}
+p' = \mathbb{1} + Wp' &\implies p' - Wp' = \mathbb{1} \\
+&\implies (I - W)p' = \mathbb{1}
+\end{align*}
 
-second link \url{https://www.anandinstitute.org/pdf/Roger_A.Horn.%20_Matrix_Analysis_2nd_edition(BookSee.org).pdf}
+where \( p' \in \mathbb{R}^{|V|} \) is the vector of standing power values for each node, \( W \in \mathbb{R}^{|V| \times |V|} \) is the weighted adjacency matrix of the graph (with \( W_{ij} \) denoting the weight of the edge from node \( j \) to node \( i \)), and \( \mathbb{1} \) is the all-ones vector. This notation will be used within the proof below.
+
+\begin{theorem}
+Given a well-formed delegation graph $G=(V, E)$, the equation $p'_v = 1 + \sum_{(u, v, w) \in E} wp'_u$ has a unique solution for all $v \in V$.
+\end{theorem}
+\begin{proof}
+
+The theorem holds trivially if $|V| = 0$, since the statement “for all $v \in V$” is vacuously true.
+
+Assume now that $G = (V, E)$ contains at least one node. Let $G' = (V, E')$, where
+\[
+E' = E \cup \{(s, s, 1) \mid s \text{ is a sink in } V\}.
+\]
+By construction, each node in $G'$ has outgoing edges whose weights sum to 1, so $G'$ is a (row-stochastic) Markov chain. Furthermore, $G$ satisfies the following:
+
+\begin{enumerate}
+\item There exists at least one sink (follows from well-formedness and $|V| > 0$),
+\item Every node has a path to at least one sink (by assumption on well-formed delegation graphs).
+\end{enumerate}
+
+Thus, $G'$ is an absorbing Markov chain: every state can reach an absorbing state (a sink with a self loop) in finite steps. A standard result for such chains is that their transition matrix $P$ can be rearranged as:
+
+\[
+P = \begin{bmatrix}
+Q & R \\
+0 & I_r
+\end{bmatrix},
+\]
+
+where $Q$ describes transitions between transient (non-sink) states, $R$ transitions from transient to absorbing states, and $I_r$, the identity matrix, the transitions from absorbing states, which necessarily always transition back into themselves. After infinite transitions, the probability of still being in a transient state is zero, thus $\lim_{k \to \infty} Q^k = 0$, which implies that $Q$'s spectral radius $\rho(Q) < 1$.
+
+Now consider the system of linear equations
+
+\[
+(I - W)p' = \mathbb{1}
+\]
+
+Let $W^T$ be $W$'s transpose. Then $W^T$ structurally resembles a transition matrix, with row sums = 1.
+
+Define the subgraph $D \subset G$ induced by all delegating (non-sink) nodes. Let $W_D^T$ be the transpose of the weight matrix for $D$, which only includes delegations among delegating nodes. 
+
+Then $W_D^T = Q$, so $W_D = Q^T$ and $\rho(W_D) = \rho(Q) < 1$. The equality of the two matrices follows from the observation that the construction of $G'$ from $G$ only adds self-loops to sink nodes, leaving all delegating nodes and their outgoing edges unchanged.
+
+Note that standing power values for delegating nodes depend only on the values of other delegators — never on sink nodes. This justifies restricting the analysis to the submatrix $W_D$, as the equation system governing these nodes is self-contained.
+
+We now restrict our attention to the system of equations over only the transient nodes:
+\[
+(I - W_D) p'_D = \mathbb{1}.
+\]
+
+Since $\rho(W_D) < 1$, the Neumann series
+\[
+(I - W_D)^{-1} = \sum_{k=0}^{\infty} W_D^k
+\]
+converges, and thus $(I - W_D)$ is invertible. Therefore, $p'_D$ has a unique solution.
+
+Finally, since the standing power of each sink depends only on the standing power values of delegators, and those are uniquely determined, the full vector $p'$ is uniquely determined as well.
+\end{proof}
 
  \subsection{Conservation of Power}
  

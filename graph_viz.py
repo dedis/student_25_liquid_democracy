@@ -56,30 +56,14 @@ def visualize_delegation_graph(delegations: dict, powers: dict = None):
                                         vis_opts={
                                             'interaction': {'hover': True},
                                             'node': {
-                                                'color': 'color', 
-                                                'title': 'power'
+                                                'color': "color", 
+                                                'title': "power"
                                             }
                                         })
             
             break
-        except:
+        except Exception as e:
+            print(e)
             port += 1
 
     print("Graph visualization failed because no ports were found or there was another error.")
-
-def clean_powers(powers, sinks):
-    """
-    NO LONGER NECESSARY
-    Cleans the powers dictionary so that non-sink nodes have a power of 0.
-    
-    Args:
-        powers (dict): A dictionary mapping nodes to their power values.
-        sinks (list): A list of sink nodes.
-
-    Returns:
-        dict: A cleaned dictionary with non-sink nodes set to 0.
-    """
-    for node in powers.keys():
-        if node not in sinks:
-            powers[node] = 0.0
-    return powers
