@@ -3,33 +3,33 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Closed delegation cycles}}{9}{figure.caption.3}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Sample delegations}}{10}{figure.caption.4}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Closed delegation cycles}}{8}{figure.caption.3}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Sample delegations}}{9}{figure.caption.4}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Delegation graph and its inverse dict representation}}{16}{figure.caption.5}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Delegation graph with a cycle}}{20}{figure.caption.10}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Two similar delegation graphs}}{24}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Delegation graph and its inverse dict representation}}{15}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Delegation graph with a cycle}}{19}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Two similar delegation graphs}}{23}{figure.caption.21}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Preprocessign pipeline to turn any graph into a delegation graph}}{26}{figure.caption.17}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph}}{27}{figure.caption.18}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Runtimes to resolve randomly generated delegation graphs}}{28}{figure.caption.19}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Delegation graphs with 12 and 13 nodes (blue nodes are sinks)}}{29}{figure.caption.20}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Runtimes to resolve large, randomly generated delegation graphs}}{30}{figure.caption.22}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Runtimes to resolve dense delegation graphs}}{31}{figure.caption.23}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Runtimes to resolve larger dense delegation graphs}}{32}{figure.caption.24}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces A delegation graph with a cycle that retains a lot of its power}}{32}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces An example of the cycles used for the benchmarks. The blue node is the sink}}{33}{figure.caption.26}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Runtimes to resolve cycles which retain a lot of their power}}{33}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Runtimes to resolve cycles which retain a lot of their power. The iterative solver's runtime, to allow inspection of the LS and LP solver's runtimes.}}{34}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Runtimes to resolve delegation graphs with no edges}}{35}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces A Watts-Strogatz graph with $(n, k, p) = (40, 4, 0.1)$, where $60\%$ of the edges have been removed}}{36}{figure.caption.30}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Runtimes to resolve the Watt-Strogatz based delegation graphs. The grey line indicates the amount of cycles found in the graph. It does not include closed delegation cycles, which the preprocessing pipeline collapsed.}}{36}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces A directed, weighted R-Mat graph with $(a, b, c, d) = (0.45, 0.25, 0.25, 0.15)$, $N = 40$, $M = 400$, where edges with weight $< 2$ removed}}{37}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Runtimes to resolve the R-Mat based delegation graphs}}{39}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Runtimes}}{41}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Histogram of outdegrees}}{41}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Distribution of outdegrees between 0 and 50}}{42}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Distribution of powers}}{42}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Preprocessign pipeline to turn any graph into a delegation graph}}{25}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph}}{26}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Runtimes to resolve randomly generated delegation graphs}}{27}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Delegation graphs with 12 and 13 nodes (blue nodes are sinks)}}{28}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Runtimes to resolve large, randomly generated delegation graphs}}{29}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Runtimes to resolve dense delegation graphs}}{30}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Runtimes to resolve larger dense delegation graphs}}{31}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces A delegation graph with a cycle that retains a lot of its power}}{31}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces An example of the cycles used for the benchmarks. The blue node is the sink}}{32}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Runtimes to resolve cycles which retain a lot of their power}}{32}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Runtimes to resolve cycles which retain a lot of their power. The iterative solver's runtime, to allow inspection of the LS and LP solver's runtimes.}}{33}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Runtimes to resolve delegation graphs with no edges}}{34}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces A Watts-Strogatz graph with $(n, k, p) = (40, 4, 0.1)$, where $60\%$ of the edges have been removed}}{35}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Runtimes to resolve the Watt-Strogatz based delegation graphs. The grey line indicates the amount of cycles found in the graph. It does not include closed delegation cycles, which the preprocessing pipeline collapsed.}}{35}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces A directed, weighted R-Mat graph with $(a, b, c, d) = (0.45, 0.25, 0.25, 0.15)$, $N = 40$, $M = 400$, where edges with weight $< 2$ removed}}{36}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Runtimes to resolve the R-Mat based delegation graphs}}{38}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Runtimes}}{40}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Histogram of outdegrees}}{40}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Distribution of outdegrees between 0 and 50}}{41}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Distribution of powers}}{41}{figure.caption.42}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

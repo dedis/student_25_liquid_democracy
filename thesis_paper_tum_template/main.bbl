@@ -1136,6 +1136,31 @@
       \field{year}{1999}
       \field{urldateera}{ce}
     \endentry
+    \entry{nilsElectricvote2020}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=221a92a055cf8b8aa77ab948d12e30d7}{%
+           family={Nils},
+           familyi={N\bibinitperiod},
+           given={Wandel},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{221a92a055cf8b8aa77ab948d12e30d7}
+      \strng{fullhash}{221a92a055cf8b8aa77ab948d12e30d7}
+      \strng{fullhashraw}{221a92a055cf8b8aa77ab948d12e30d7}
+      \strng{bibnamehash}{221a92a055cf8b8aa77ab948d12e30d7}
+      \strng{authorbibnamehash}{221a92a055cf8b8aa77ab948d12e30d7}
+      \strng{authornamehash}{221a92a055cf8b8aa77ab948d12e30d7}
+      \strng{authorfullhash}{221a92a055cf8b8aa77ab948d12e30d7}
+      \strng{authorfullhashraw}{221a92a055cf8b8aa77ab948d12e30d7}
+      \field{labelalpha}{Nil20}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Electric.Vote}
+      \field{year}{Last updated 17 Jan 2020}
+    \endentry
     \entry{osullivanPuLPLinearProgramming2011}{misc}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=c8b9f4ff9a617269b502d5d52689f63e}{%
@@ -1376,6 +1401,80 @@
       \field{booktitle}{{{ACM}} Conference on Equity and Access in Algorithms, Mechanisms, and Optimization}
       \field{title}{Liquid Democracy in Practice: {{An}} Empirical Analysis of Its Epistemic Performance}
       \field{year}{2022}
+    \endentry
+    \entry{NEURIPS2023_dbb51809}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6e0236f4fc38789992277ca620a2bb17}{%
+           family={Utke},
+           familyi={U\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b42a4f7baabf7b213853537b57844650}{%
+           family={{Schmidt-Kraepelin}},
+           familyi={S\bibinitperiod},
+           given={Ulrike},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{6}{}{%
+        {{hash=6d9c5f3daf57997af27b3617ec7d1fe9}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=85bc7cefdd5554b76135cee4b8e4ce02}{%
+           family={Naumann},
+           familyi={N\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fbc410321d4ef88338a144a263d84a52}{%
+           family={Globerson},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b4c13335066154b96f9f6b69c52f1c34}{%
+           family={Saenko},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d5244a9be1ca0eac9110d23de0146408}{%
+           family={Hardt},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3cd8fe4b36223cabb80a65d5bca613b3}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{0cb9c536202cdc38fe368d085ec9db46}
+      \strng{fullhash}{0cb9c536202cdc38fe368d085ec9db46}
+      \strng{fullhashraw}{0cb9c536202cdc38fe368d085ec9db46}
+      \strng{bibnamehash}{0cb9c536202cdc38fe368d085ec9db46}
+      \strng{authorbibnamehash}{0cb9c536202cdc38fe368d085ec9db46}
+      \strng{authornamehash}{0cb9c536202cdc38fe368d085ec9db46}
+      \strng{authorfullhash}{0cb9c536202cdc38fe368d085ec9db46}
+      \strng{authorfullhashraw}{0cb9c536202cdc38fe368d085ec9db46}
+      \strng{editorbibnamehash}{c4805185ea5603cbf8bdc85fe57d1ec3}
+      \strng{editornamehash}{12307d0f1d6230fcc2ad01b24f51815f}
+      \strng{editorfullhash}{c4805185ea5603cbf8bdc85fe57d1ec3}
+      \strng{editorfullhashraw}{c4805185ea5603cbf8bdc85fe57d1ec3}
+      \field{labelalpha}{US23}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Anonymous and Copy-Robust Delegations for Liquid Democracy}
+      \field{volume}{36}
+      \field{year}{2023}
+      \field{pages}{69441\bibrangedash 69463}
+      \range{pages}{23}
     \endentry
     \entry{virtanenSciPy10Fundamental2020}{article}{}{}
       \name{author}{112}{}{%

@@ -1,0 +1,6 @@
+PWD /Users/DavidHolzwarth/Uni/EPFL/bachelors-thesis/thesis_paper_tum_template/chapters
+INPUT /usr/local/texlive/2025/texmf.cnf
+INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT introduction.tex
+OUTPUT introduction.log
