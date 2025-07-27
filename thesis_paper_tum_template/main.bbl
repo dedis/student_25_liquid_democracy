@@ -18,7 +18,7 @@
 
 
 \refsection{0}
-  \datalist[entry]{anyt/global//global/global/global}
+  \datalist[entry]{nty/global//global/global/global}
     \entry{beckerWhenCanLiquid2021}{misc}{}{}
       \name{author}{4}{}{%
         {{un=1,uniquepart=given,hash=09e0ad7acf864c2836751492cbd00ce2}{%
@@ -57,7 +57,6 @@
       \strng{authornamehash}{d86364f0ccdc421efa20709b4cbca29f}
       \strng{authorfullhash}{d86364f0ccdc421efa20709b4cbca29f}
       \strng{authorfullhashraw}{d86364f0ccdc421efa20709b4cbca29f}
-      \field{labelalpha}{Bec+21}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -100,7 +99,6 @@
       \strng{authornamehash}{7b937fb03ea2617701b9abf83f4c1d16}
       \strng{authorfullhash}{7b937fb03ea2617701b9abf83f4c1d16}
       \strng{authorfullhashraw}{7b937fb03ea2617701b9abf83f4c1d16}
-      \field{labelalpha}{Bec12}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -134,7 +132,6 @@
       \strng{authornamehash}{e17021b9ad6b521cb3bc8a7e135ec6f2}
       \strng{authorfullhash}{e17021b9ad6b521cb3bc8a7e135ec6f2}
       \strng{authorfullhashraw}{e17021b9ad6b521cb3bc8a7e135ec6f2}
-      \field{labelalpha}{Beh15}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -167,7 +164,6 @@
       \strng{authornamehash}{0700fc436a6773b0dd85ddd2b96cebbf}
       \strng{authorfullhash}{0700fc436a6773b0dd85ddd2b96cebbf}
       \strng{authorfullhashraw}{0700fc436a6773b0dd85ddd2b96cebbf}
-      \field{labelalpha}{Ber22}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -184,41 +180,6 @@
       \verb 10.48550/ARXIV.2209.14128
       \endverb
       \keyw{FOS: Computer and information sciences,Multiagent Systems (cs.MA)}
-    \endentry
-    \entry{burden2011numerical}{book}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=fd1fdecbb7b3fc967e3a67f5e433d8c2}{%
-           family={Burden},
-           familyi={B\bibinitperiod},
-           given={R.L.},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4b638efeb09e467b34820b166a09d078}{%
-           family={Faires},
-           familyi={F\bibinitperiod},
-           given={J.D.},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Brooks/Cole, Cengage Learning}%
-      }
-      \strng{namehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
-      \strng{fullhash}{dba4adbcad5c917bfa5b4c2bd01e0397}
-      \strng{fullhashraw}{dba4adbcad5c917bfa5b4c2bd01e0397}
-      \strng{bibnamehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
-      \strng{authorbibnamehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
-      \strng{authornamehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
-      \strng{authorfullhash}{dba4adbcad5c917bfa5b4c2bd01e0397}
-      \strng{authorfullhashraw}{dba4adbcad5c917bfa5b4c2bd01e0397}
-      \field{labelalpha}{BF11}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-0-538-73564-3}
-      \field{title}{Numerical Analysis}
-      \field{year}{2011}
     \endentry
     \entry{boldiViscousDemocracySocial2011}{article}{}{}
       \name{author}{4}{}{%
@@ -255,7 +216,6 @@
       \strng{authornamehash}{a661028315bae389d98ebd1bd99a8816}
       \strng{authorfullhash}{a661028315bae389d98ebd1bd99a8816}
       \strng{authorfullhashraw}{a661028315bae389d98ebd1bd99a8816}
-      \field{labelalpha}{Bol+11}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -305,7 +265,6 @@
       \strng{authornamehash}{32389ea1c98e018c433f1b62b8daaa7c}
       \strng{authorfullhash}{32389ea1c98e018c433f1b62b8daaa7c}
       \strng{authorfullhashraw}{32389ea1c98e018c433f1b62b8daaa7c}
-      \field{labelalpha}{Bri18}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -322,6 +281,40 @@
       \verb{file}
       \verb /Users/DavidHolzwarth/Zotero/storage/2C8UBUUL/Brill - 2018 - Interactive Democracy.pdf
       \endverb
+    \endentry
+    \entry{burden2011numerical}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fd1fdecbb7b3fc967e3a67f5e433d8c2}{%
+           family={Burden},
+           familyi={B\bibinitperiod},
+           given={R.L.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b638efeb09e467b34820b166a09d078}{%
+           family={Faires},
+           familyi={F\bibinitperiod},
+           given={J.D.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Brooks/Cole, Cengage Learning}%
+      }
+      \strng{namehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{fullhash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{fullhashraw}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{bibnamehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{authorbibnamehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{authornamehash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{authorfullhash}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \strng{authorfullhashraw}{dba4adbcad5c917bfa5b4c2bd01e0397}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-538-73564-3}
+      \field{title}{Numerical Analysis}
+      \field{year}{2011}
     \endentry
     \entry{caragiannisContributionCritiqueLiquid2019}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -352,7 +345,6 @@
       \strng{authornamehash}{e5952a06ecad1e52235e03c333a799ee}
       \strng{authorfullhash}{e5952a06ecad1e52235e03c333a799ee}
       \strng{authorfullhashraw}{e5952a06ecad1e52235e03c333a799ee}
-      \field{labelalpha}{CM19}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -406,7 +398,6 @@
       \strng{authornamehash}{b76a1c8c82368da9d415909d8618e9da}
       \strng{authorfullhash}{b76a1c8c82368da9d415909d8618e9da}
       \strng{authorfullhashraw}{b76a1c8c82368da9d415909d8618e9da}
-      \field{labelalpha}{CZF04}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -451,7 +442,6 @@
       \strng{authornamehash}{ffb3bfdfdfade5d509bbfd6c0d4fcc50}
       \strng{authorfullhash}{ffb3bfdfdfade5d509bbfd6c0d4fcc50}
       \strng{authorfullhashraw}{ffb3bfdfdfade5d509bbfd6c0d4fcc50}
-      \field{labelalpha}{Deg14}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
@@ -477,6 +467,35 @@
       \verb /Users/DavidHolzwarth/Zotero/storage/S5EFDUXU/Degrave - 2014 - Resolving multi-proxy transitive vote delegation.pdf;/Users/DavidHolzwarth/Zotero/storage/GKNM8K7R/1412.html
       \endverb
       \keyw{Computer Science - Multiagent Systems}
+    \endentry
+    \entry{fordDelegativeDemocracy2002}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5a50d3ad145a7f008cb2a77765952811}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{fullhash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{fullhashraw}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{bibnamehash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{authorbibnamehash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{authornamehash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{authorfullhash}{5a50d3ad145a7f008cb2a77765952811}
+      \strng{authorfullhashraw}{5a50d3ad145a7f008cb2a77765952811}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{Delegative {{Democracy}}}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2002}
+      \field{urldateera}{ce}
     \endentry
     \entry{forrestCBCUserGuide2005}{misc}{}{}
       \name{author}{2}{}{%
@@ -504,7 +523,6 @@
       \strng{authornamehash}{d61c97d6495f22980e99c2111a14d310}
       \strng{authorfullhash}{d61c97d6495f22980e99c2111a14d310}
       \strng{authorfullhashraw}{d61c97d6495f22980e99c2111a14d310}
-      \field{labelalpha}{FL05}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
@@ -635,7 +653,6 @@
       \strng{authornamehash}{f1a8cd48037b11132a8dad80d1d0a205}
       \strng{authorfullhash}{b9f928ce4a3a1aa08f3331950ddbba07}
       \strng{authorfullhashraw}{b9f928ce4a3a1aa08f3331950ddbba07}
-      \field{labelalpha}{For+24}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
@@ -653,36 +670,6 @@
       \verb{doi}
       \verb 10.5281/ZENODO.2720283
       \endverb
-    \endentry
-    \entry{fordDelegativeDemocracy2002}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5a50d3ad145a7f008cb2a77765952811}{%
-           family={Ford},
-           familyi={F\bibinitperiod},
-           given={Bryan},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{5a50d3ad145a7f008cb2a77765952811}
-      \strng{fullhash}{5a50d3ad145a7f008cb2a77765952811}
-      \strng{fullhashraw}{5a50d3ad145a7f008cb2a77765952811}
-      \strng{bibnamehash}{5a50d3ad145a7f008cb2a77765952811}
-      \strng{authorbibnamehash}{5a50d3ad145a7f008cb2a77765952811}
-      \strng{authornamehash}{5a50d3ad145a7f008cb2a77765952811}
-      \strng{authorfullhash}{5a50d3ad145a7f008cb2a77765952811}
-      \strng{authorfullhashraw}{5a50d3ad145a7f008cb2a77765952811}
-      \field{labelalpha}{For02}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{5}
-      \field{title}{Delegative {{Democracy}}}
-      \field{urlday}{12}
-      \field{urlmonth}{7}
-      \field{urlyear}{2025}
-      \field{year}{2002}
-      \field{urldateera}{ce}
     \endentry
     \entry{golzFluidMechanicsLiquid2021}{article}{}{}
       \name{author}{4}{}{%
@@ -719,7 +706,6 @@
       \strng{authornamehash}{821e17ea7a838d7929446c424a109c24}
       \strng{authorfullhash}{821e17ea7a838d7929446c424a109c24}
       \strng{authorfullhashraw}{821e17ea7a838d7929446c424a109c24}
-      \field{labelalpha}{GÖl+21}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
@@ -778,7 +764,6 @@
       \strng{authornamehash}{3a1b2e51fcffd45628935c7b6334f944}
       \strng{authorfullhash}{3a1b2e51fcffd45628935c7b6334f944}
       \strng{authorfullhashraw}{3a1b2e51fcffd45628935c7b6334f944}
-      \field{labelalpha}{HSS08}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -800,46 +785,6 @@
       \verb{file}
       \verb /Users/DavidHolzwarth/Zotero/storage/A2I4CQUC/Hagberg et al. - 2008 - Exploring Network Structure, Dynamics, and Function using NetworkX.pdf
       \endverb
-    \endentry
-    \entry{kunegis2009a}{inproceedings}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=783acda4813bfe14364427f83804ce7a}{%
-           family={Kunegis},
-           familyi={K\bibinitperiod},
-           given={Jérôme},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=12a016fc0ebb1b2147b8a33d3b242990}{%
-           family={Lommatzsch},
-           familyi={L\bibinitperiod},
-           given={Andreas},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a19299883183370e09a01f6cec3b9ea4}{%
-           family={Bauckhage},
-           familyi={B\bibinitperiod},
-           given={Christian},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{bca015659861162e6807e7674bde9457}
-      \strng{fullhash}{bca015659861162e6807e7674bde9457}
-      \strng{fullhashraw}{bca015659861162e6807e7674bde9457}
-      \strng{bibnamehash}{bca015659861162e6807e7674bde9457}
-      \strng{authorbibnamehash}{bca015659861162e6807e7674bde9457}
-      \strng{authornamehash}{bca015659861162e6807e7674bde9457}
-      \strng{authorfullhash}{bca015659861162e6807e7674bde9457}
-      \strng{authorfullhashraw}{bca015659861162e6807e7674bde9457}
-      \field{labelalpha}{KLB09}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proc. {{Int}}. {{World}} Wide Web Conf.}
-      \field{title}{The {{Slashdot Zoo}}: {{Mining}} a Social Network with Negative Edges}
-      \field{year}{2009}
-      \field{pages}{741\bibrangedash 750}
-      \range{pages}{10}
     \endentry
     \entry{klingVotingBehaviourPower2015}{misc}{}{}
       \name{author}{5}{}{%
@@ -885,7 +830,6 @@
       \strng{authornamehash}{2cb1a77cbac843a3170bbd2b61d820f1}
       \strng{authorfullhash}{3dc5cbd23867505590b6bc063340c887}
       \strng{authorfullhashraw}{3dc5cbd23867505590b6bc063340c887}
-      \field{labelalpha}{Kli+15}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -939,7 +883,6 @@
       \strng{authornamehash}{7fe877d3451d94af5d1af0b2069302b8}
       \strng{authorfullhash}{7fe877d3451d94af5d1af0b2069302b8}
       \strng{authorfullhashraw}{7fe877d3451d94af5d1af0b2069302b8}
-      \field{labelalpha}{KR19}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -965,52 +908,6 @@
       \verb /Users/DavidHolzwarth/Zotero/storage/YVEPCHJ2/Kotsialou und Riley - 2019 - Incentivising Participation in Liquid Democracy with Breadth-First Delegation.pdf;/Users/DavidHolzwarth/Zotero/storage/NLYJTQ5R/1811.html
       \endverb
       \keyw{Computer Science - Computer Science and Game Theory,Economics - Theoretical Economics}
-    \endentry
-    \entry{kumar2016edge}{inproceedings}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=7b22747cb76db93e9a010ffb2cdad89b}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Srijan},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=557846187b783f35817d070c6fafb498}{%
-           family={Spezzano},
-           familyi={S\bibinitperiod},
-           given={Francesca},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=93d3253df18357da07a1a1b595c5e045}{%
-           family={Subrahmanian},
-           familyi={S\bibinitperiod}}}%
-        {{un=0,uniquepart=base,hash=976e034dd29cfc47640ae45c16d21a9d}{%
-           family={Faloutsos},
-           familyi={F\bibinitperiod},
-           given={Christos},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{82f6a944d05381ef4eecab65facabf72}
-      \strng{fullhash}{82f6a944d05381ef4eecab65facabf72}
-      \strng{fullhashraw}{82f6a944d05381ef4eecab65facabf72}
-      \strng{bibnamehash}{82f6a944d05381ef4eecab65facabf72}
-      \strng{authorbibnamehash}{82f6a944d05381ef4eecab65facabf72}
-      \strng{authornamehash}{82f6a944d05381ef4eecab65facabf72}
-      \strng{authorfullhash}{82f6a944d05381ef4eecab65facabf72}
-      \strng{authorfullhashraw}{82f6a944d05381ef4eecab65facabf72}
-      \field{labelalpha}{Kum+16}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Data Mining ({{ICDM}}), 2016 {{IEEE}} 16th International Conference On}
-      \field{title}{Edge Weight Prediction in Weighted Signed Networks}
-      \field{year}{2016}
-      \field{pages}{221\bibrangedash 230}
-      \range{pages}{10}
     \endentry
     \entry{kumar2018rev2}{inproceedings}{}{}
       \name{author}{6}{}{%
@@ -1059,7 +956,6 @@
       \strng{authornamehash}{986b8769dbdfb402af7ed40302c264e6}
       \strng{authorfullhash}{91d46f0e4f0564ed3fd7b63093d5df1f}
       \strng{authorfullhashraw}{91d46f0e4f0564ed3fd7b63093d5df1f}
-      \field{labelalpha}{Kum+18}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -1069,6 +965,90 @@
       \field{year}{2018}
       \field{pages}{333\bibrangedash 341}
       \range{pages}{9}
+    \endentry
+    \entry{kumar2016edge}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=7b22747cb76db93e9a010ffb2cdad89b}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Srijan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=557846187b783f35817d070c6fafb498}{%
+           family={Spezzano},
+           familyi={S\bibinitperiod},
+           given={Francesca},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93d3253df18357da07a1a1b595c5e045}{%
+           family={Subrahmanian},
+           familyi={S\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=976e034dd29cfc47640ae45c16d21a9d}{%
+           family={Faloutsos},
+           familyi={F\bibinitperiod},
+           given={Christos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{fullhash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{fullhashraw}{82f6a944d05381ef4eecab65facabf72}
+      \strng{bibnamehash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{authorbibnamehash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{authornamehash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{authorfullhash}{82f6a944d05381ef4eecab65facabf72}
+      \strng{authorfullhashraw}{82f6a944d05381ef4eecab65facabf72}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Data Mining ({{ICDM}}), 2016 {{IEEE}} 16th International Conference On}
+      \field{title}{Edge Weight Prediction in Weighted Signed Networks}
+      \field{year}{2016}
+      \field{pages}{221\bibrangedash 230}
+      \range{pages}{10}
+    \endentry
+    \entry{kunegis2009a}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=783acda4813bfe14364427f83804ce7a}{%
+           family={Kunegis},
+           familyi={K\bibinitperiod},
+           given={Jérôme},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12a016fc0ebb1b2147b8a33d3b242990}{%
+           family={Lommatzsch},
+           familyi={L\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a19299883183370e09a01f6cec3b9ea4}{%
+           family={Bauckhage},
+           familyi={B\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bca015659861162e6807e7674bde9457}
+      \strng{fullhash}{bca015659861162e6807e7674bde9457}
+      \strng{fullhashraw}{bca015659861162e6807e7674bde9457}
+      \strng{bibnamehash}{bca015659861162e6807e7674bde9457}
+      \strng{authorbibnamehash}{bca015659861162e6807e7674bde9457}
+      \strng{authornamehash}{bca015659861162e6807e7674bde9457}
+      \strng{authorfullhash}{bca015659861162e6807e7674bde9457}
+      \strng{authorfullhashraw}{bca015659861162e6807e7674bde9457}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc. {{Int}}. {{World}} Wide Web Conf.}
+      \field{title}{The {{Slashdot Zoo}}: {{Mining}} a Social Network with Negative Edges}
+      \field{year}{2009}
+      \field{pages}{741\bibrangedash 750}
+      \range{pages}{10}
     \endentry
     \entry{liSuperLUUsersGuide1999}{report}{}{}
       \name{author}{6}{}{%
@@ -1120,7 +1100,6 @@
       \strng{authornamehash}{7f8d66c11d12d67cf7bc19c87478e80d}
       \strng{authorfullhash}{7104ae11f1688bd9c7ee25032406166e}
       \strng{authorfullhashraw}{7104ae11f1688bd9c7ee25032406166e}
-      \field{labelalpha}{Li+99}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -1153,7 +1132,6 @@
       \strng{authornamehash}{221a92a055cf8b8aa77ab948d12e30d7}
       \strng{authorfullhash}{221a92a055cf8b8aa77ab948d12e30d7}
       \strng{authorfullhashraw}{221a92a055cf8b8aa77ab948d12e30d7}
-      \field{labelalpha}{Nil20}
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
@@ -1190,7 +1168,6 @@
       \strng{authornamehash}{f17ef24d07c723ad4c91255d217abfaa}
       \strng{authorfullhash}{f17ef24d07c723ad4c91255d217abfaa}
       \strng{authorfullhashraw}{f17ef24d07c723ad4c91255d217abfaa}
-      \field{labelalpha}{OMD11}
       \field{sortinit}{O}
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{labelnamesource}{author}
@@ -1221,7 +1198,6 @@
       \strng{authornamehash}{8c14aebb5cbc71720b71c9fa4e1c9822}
       \strng{authorfullhash}{8c14aebb5cbc71720b71c9fa4e1c9822}
       \strng{authorfullhashraw}{8c14aebb5cbc71720b71c9fa4e1c9822}
-      \field{labelalpha}{Pau20}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
@@ -1256,7 +1232,6 @@
       \strng{authornamehash}{c7b5508dc5e59a2846d22617276cc27c}
       \strng{authorfullhash}{c7b5508dc5e59a2846d22617276cc27c}
       \strng{authorfullhashraw}{c7b5508dc5e59a2846d22617276cc27c}
-      \field{labelalpha}{Pyt}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
@@ -1266,6 +1241,49 @@
       \field{urlmonth}{5}
       \field{urlyear}{2025}
       \field{urldateera}{ce}
+    \endentry
+    \entry{revel2022liquid}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=762b4372d1acfa30e9336413b7c68a7c}{%
+           family={Revel},
+           familyi={R\bibinitperiod},
+           given={Manon},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88daef5acb62a085e052d904d9e06613}{%
+           family={Halpern},
+           familyi={H\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=779ca8fb0fc780868bed235144fc006a}{%
+           family={Berinsky},
+           familyi={B\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9814576d57251b512116243e61b38a6e}{%
+           family={Jadbabaie},
+           familyi={J\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{fullhash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{fullhashraw}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{bibnamehash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{authorbibnamehash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{authornamehash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{authorfullhash}{b8ea026e870fbad518ce1cda7704b602}
+      \strng{authorfullhashraw}{b8ea026e870fbad518ce1cda7704b602}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{{ACM}} Conference on Equity and Access in Algorithms, Mechanisms, and Optimization}
+      \field{title}{Liquid Democracy in Practice: {{An}} Empirical Analysis of Its Epistemic Performance}
+      \field{year}{2022}
     \endentry
     \entry{richardsonTrustManagementSemantic2003}{incollection}{}{}
       \name{author}{3}{}{%
@@ -1338,7 +1356,6 @@
       \strng{editornamehash}{3225c68498c2eafbe2a06ae5bbef851f}
       \strng{editorfullhash}{bf91c1190fb1623e09bff37e0c5871e2}
       \strng{editorfullhashraw}{bf91c1190fb1623e09bff37e0c5871e2}
-      \field{labelalpha}{RAD03}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
@@ -1357,50 +1374,6 @@
       \verb{file}
       \verb /Users/DavidHolzwarth/Zotero/storage/WS4EINIP/Richardson et al. - 2003 - Trust Management for the Semantic Web.pdf
       \endverb
-    \endentry
-    \entry{revel2022liquid}{inproceedings}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=762b4372d1acfa30e9336413b7c68a7c}{%
-           family={Revel},
-           familyi={R\bibinitperiod},
-           given={Manon},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=88daef5acb62a085e052d904d9e06613}{%
-           family={Halpern},
-           familyi={H\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=779ca8fb0fc780868bed235144fc006a}{%
-           family={Berinsky},
-           familyi={B\bibinitperiod},
-           given={Adam},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9814576d57251b512116243e61b38a6e}{%
-           family={Jadbabaie},
-           familyi={J\bibinitperiod},
-           given={Ali},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{b8ea026e870fbad518ce1cda7704b602}
-      \strng{fullhash}{b8ea026e870fbad518ce1cda7704b602}
-      \strng{fullhashraw}{b8ea026e870fbad518ce1cda7704b602}
-      \strng{bibnamehash}{b8ea026e870fbad518ce1cda7704b602}
-      \strng{authorbibnamehash}{b8ea026e870fbad518ce1cda7704b602}
-      \strng{authornamehash}{b8ea026e870fbad518ce1cda7704b602}
-      \strng{authorfullhash}{b8ea026e870fbad518ce1cda7704b602}
-      \strng{authorfullhashraw}{b8ea026e870fbad518ce1cda7704b602}
-      \field{labelalpha}{Rev+22}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{{{ACM}} Conference on Equity and Access in Algorithms, Mechanisms, and Optimization}
-      \field{title}{Liquid Democracy in Practice: {{An}} Empirical Analysis of Its Epistemic Performance}
-      \field{year}{2022}
     \endentry
     \entry{NEURIPS2023_dbb51809}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -1464,7 +1437,6 @@
       \strng{editornamehash}{12307d0f1d6230fcc2ad01b24f51815f}
       \strng{editorfullhash}{c4805185ea5603cbf8bdc85fe57d1ec3}
       \strng{editorfullhashraw}{c4805185ea5603cbf8bdc85fe57d1ec3}
-      \field{labelalpha}{US23}
       \field{sortinit}{U}
       \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
       \field{labelnamesource}{author}
@@ -2156,7 +2128,6 @@
       \strng{authornamehash}{2614ea043823efadef6a201c96446be0}
       \strng{authorfullhash}{f28dd4e569c8cefbb36bc012821bdb9b}
       \strng{authorfullhashraw}{f28dd4e569c8cefbb36bc012821bdb9b}
-      \field{labelalpha}{Vir+20}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
@@ -2207,7 +2178,6 @@
       \strng{authornamehash}{70ef8e1599a3427bd04929f9853d1b67}
       \strng{authorfullhash}{70ef8e1599a3427bd04929f9853d1b67}
       \strng{authorfullhashraw}{70ef8e1599a3427bd04929f9853d1b67}
-      \field{labelalpha}{ZP11}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{labelnamesource}{author}

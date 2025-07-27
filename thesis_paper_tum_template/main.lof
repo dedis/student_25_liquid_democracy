@@ -23,7 +23,7 @@
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Runtimes to resolve cycles which retain a lot of their power. The iterative solver's runtime, to allow inspection of the LS and LP solver's runtimes.}}{33}{figure.caption.33}%
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Runtimes to resolve delegation graphs with no edges}}{34}{figure.caption.34}%
 \contentsline {figure}{\numberline {5.13}{\ignorespaces A Watts-Strogatz graph with $(n, k, p) = (40, 4, 0.1)$, where $60\%$ of the edges have been removed}}{35}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Runtimes to resolve the Watt-Strogatz based delegation graphs. The grey line indicates the amount of cycles found in the graph. It does not include closed delegation cycles, which the preprocessing pipeline collapsed.}}{35}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Runtimes to resolve the Watt-Strogatz based delegation graphs. The grey line indicates the amount of cycles found in the graph. It does not include closed delegation cycles, which the preprocessing pipeline collapsed.}}{36}{figure.caption.36}%
 \contentsline {figure}{\numberline {5.15}{\ignorespaces A directed, weighted R-Mat graph with $(a, b, c, d) = (0.45, 0.25, 0.25, 0.15)$, $N = 40$, $M = 400$, where edges with weight $< 2$ removed}}{36}{figure.caption.37}%
 \contentsline {figure}{\numberline {5.16}{\ignorespaces Runtimes to resolve the R-Mat based delegation graphs}}{38}{figure.caption.38}%
 \contentsline {figure}{\numberline {5.17}{\ignorespaces Runtimes}}{40}{figure.caption.39}%

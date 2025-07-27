@@ -234,7 +234,7 @@ The runtimes in \cref{subfig:cycle-small-linear} show, that as expected, the ite
 
 As seen in \cref{fig:cycle_large}, which shows the LS and LP solver's runtimes as this type of graph scales to $200 000$ nodes, their runtime growth is linear. In fact, they fit almost perfectly into a linear regression, both with a slope of almost zero, suggesting that even as these graphs scale to even greater orders of magnitude, the solver's runtime is barely affected. An explanation for this efficiency may include the very sparse nature of this graph, as each node except for one has only one delegation.
 
-\TODO{Maybe a graph for the real world models, that shows the runtime as precision for the iterative thing increases would be very cool.}
+\TODO{Maybe a graph for the real world models, that shows the runtime as precision for the iterative thing increases would be very cool. - Note, I tried this, and its a power law relationship too, but I'm not actually sure how interesting it is.}
 
 \subsection{No Delegations}
 
