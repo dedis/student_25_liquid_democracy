@@ -162,18 +162,6 @@ def invert_graph(graph):
     return inverted_graph
 
 
-def nx_graph_nodes_to_str(graph: Union[nx.Graph, nx.DiGraph]) -> Union[nx.Graph, nx.DiGraph]:
-    """
-    Converts the labels of nodes of a graph to strings by casting (str(node)).
-
-    Parameters:
-    - graph (networkx.Graph): The input graph with nodes to be converted.
-
-    Returns:
-    - networkx.Graph: A new graph with string labels for the nodes.
-    """
-    return nx.relabel_nodes(graph, {node: str(node) for node in graph.nodes()})
-
 def dict_to_nx_graph(graph_dict: dict) -> nx.DiGraph:
     """
     Converts a dictionary representation of a graph to a NetworkX DiGraph.

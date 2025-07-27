@@ -4,25 +4,25 @@ WEIGHTS = [(i + 1) / 10 for i in range(1, 10)]
 
 def get_random_delegation_weights(n: int) -> list:
     """
-    Generates at most `n` random weights from the set of {0.1, 0.2, ..., 0.9} such that they sum to exactly 1.0.
+    Generates up to `n` random weights from the set of {0.1, 0.2, ..., 0.9} such that they sum to exactly 1.0.
 
     Parameters:
-    - n (int): The number of weights to generate.
+    - n (int): Maximum number of weights to generate.
 
     Returns:
-    - list[float]: A list of `n` values that sum to 1.0.
+    - list[float]: A list of up to `n` values that sum to 1.0.
 
     Notes:
-        - If `n == 0`, an empty list is returned.
+        - If `n <= 0`, an empty list is returned.
         - The algorithm may find less than 'n' weights, if e.g. n = 2, the algorithm may choose 1.0 as weight and only return [1.0]
         - The algorithm ensures no negative values
     """
-    if n == 0: return []
+    if n <= 0: return []
 
     diff = 1
     weights = []
     for i in range(n-1):
-        for j in range(11):
+        for _ in range(11):
             # Tries 10 times to find a valid weight. If this is not possible the algorithm gives up
             choice = np.random.choice(WEIGHTS)
             if diff - choice > 0:

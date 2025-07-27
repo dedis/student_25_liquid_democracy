@@ -2,9 +2,6 @@ import numpy as np
 from typing import List, Tuple
 from scipy.sparse import csc_array
 from scipy.sparse.linalg import spsolve
-import scipy 
-
-
 
 def get_node_to_int_map(nodes: list) -> dict:
     return {node: i for i, node in enumerate(nodes)}
