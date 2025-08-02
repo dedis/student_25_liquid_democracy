@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.12)  2 AUG 2025 17:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.12)  2 AUG 2025 18:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2301,17 +2301,17 @@ File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 
 [7]
-<./figures/invalid_graph_1.png, id=289, 195.73125pt x 180.675pt>
+<./figures/invalid_graph_1.png, id=287, 195.73125pt x 180.675pt>
 File: ./figures/invalid_graph_1.png Graphic file (type png)
 <use ./figures/invalid_graph_1.png>
 Package pdftex.def Info: ./figures/invalid_graph_1.png  used on input line 64.
 (pdftex.def)             Requested size: 133.84483pt x 123.55486pt.
-<./figures/invalid_graph_2.png, id=291, 195.73125pt x 180.675pt>
+<./figures/invalid_graph_2.png, id=289, 195.73125pt x 180.675pt>
 File: ./figures/invalid_graph_2.png Graphic file (type png)
 <use ./figures/invalid_graph_2.png>
 Package pdftex.def Info: ./figures/invalid_graph_2.png  used on input line 69.
 (pdftex.def)             Requested size: 133.84483pt x 123.55486pt.
-<./figures/invalid_graph_3.png, id=292, 195.73125pt x 180.675pt>
+<./figures/invalid_graph_3.png, id=290, 195.73125pt x 180.675pt>
 File: ./figures/invalid_graph_3.png Graphic file (type png)
 <use ./figures/invalid_graph_3.png>
 Package pdftex.def Info: ./figures/invalid_graph_3.png  used on input line 74.
@@ -2320,7 +2320,7 @@ Package pdftex.def Info: ./figures/invalid_graph_3.png  used on input line 74.
 
 [8 <./figures/invalid_graph_1.png> <./figures/invalid_graph_2.png> <./figures/i
 nvalid_graph_3.png>]
-<./figures/delegation_graph_sample.png, id=306, 325.215pt x 107.40125pt>
+<./figures/delegation_graph_sample.png, id=304, 325.215pt x 107.40125pt>
 File: ./figures/delegation_graph_sample.png Graphic file (type png)
 <use ./figures/delegation_graph_sample.png>
 Package pdftex.def Info: ./figures/delegation_graph_sample.png  used on input l
@@ -2338,13 +2338,13 @@ ine 104.
 
 [13]
 chapter 4.
-<./figures/small_cycle_graph.png, id=355, 636.3775pt x 313.17pt>
+<./figures/small_cycle_graph.png, id=353, 636.3775pt x 313.17pt>
 File: ./figures/small_cycle_graph.png Graphic file (type png)
 <use ./figures/small_cycle_graph.png>
 Package pdftex.def Info: ./figures/small_cycle_graph.png  used on input line 19
 .
 (pdftex.def)             Requested size: 188.21371pt x 92.61848pt.
-<./figures/small_cycle_graph_inverse_dict.png, id=356, 157.58875pt x 96.36pt>
+<./figures/small_cycle_graph_inverse_dict.png, id=354, 157.58875pt x 96.36pt>
 File: ./figures/small_cycle_graph_inverse_dict.png Graphic file (type png)
 <use ./figures/small_cycle_graph_inverse_dict.png>
 Package pdftex.def Info: ./figures/small_cycle_graph_inverse_dict.png  used on 
@@ -2485,13 +2485,13 @@ l.220         \EndFor
 [20]
 
 [21]
-<./figures/allowed_self_loop.png, id=466, 198.7425pt x 102.3825pt>
+<./figures/allowed_self_loop.png, id=464, 198.7425pt x 102.3825pt>
 File: ./figures/allowed_self_loop.png Graphic file (type png)
 <use ./figures/allowed_self_loop.png>
 Package pdftex.def Info: ./figures/allowed_self_loop.png  used on input line 27
 8.
 (pdftex.def)             Requested size: 169.39119pt x 87.26454pt.
-<./figures/invalid_delegation_graph.png, id=467, 218.8175pt x 95.35625pt>
+<./figures/invalid_delegation_graph.png, id=465, 218.8175pt x 95.35625pt>
 File: ./figures/invalid_delegation_graph.png Graphic file (type png)
 <use ./figures/invalid_delegation_graph.png>
 Package pdftex.def Info: ./figures/invalid_delegation_graph.png  used on input 
@@ -2503,13 +2503,13 @@ line 285.
 
 [23 <./figures/allowed_self_loop.png> <./figures/invalid_delegation_graph.png>]
 chapter 5.
-<./figures/Thesis Evaluation Methodology Process.png, id=485, 2512.38625pt x 29
+<./figures/Thesis Evaluation Methodology Process.png, id=484, 2512.38625pt x 29
 1.0875pt>
 File: ./figures/Thesis Evaluation Methodology Process.png Graphic file (type pn
 g)
 <use ./figures/Thesis Evaluation Methodology Process.png>
 Package pdftex.def Info: ./figures/Thesis Evaluation Methodology Process.png  u
-sed on input line 23.
+sed on input line 25.
 (pdftex.def)             Requested size: 418.25555pt x 48.45819pt.
 
 
@@ -2519,36 +2519,36 @@ sed on input line 23.
 ]
 
 [25 <./figures/Thesis Evaluation Methodology Process.png>]
-<./figures/0-1000_random.png, id=498, 422.7795pt x 327.3831pt>
+<./figures/0-1000_random.png, id=497, 422.7795pt x 327.3831pt>
 File: ./figures/0-1000_random.png Graphic file (type png)
 <use ./figures/0-1000_random.png>
-Package pdftex.def Info: ./figures/0-1000_random.png  used on input line 49.
+Package pdftex.def Info: ./figures/0-1000_random.png  used on input line 51.
 (pdftex.def)             Requested size: 167.29967pt x 129.55219pt.
 
 
 [26 <./figures/0-1000_random.png>]
-<./figures/0-20_random.png, id=507, 429.2838pt x 327.3831pt>
+<./figures/0-20_random.png, id=506, 429.2838pt x 327.3831pt>
 File: ./figures/0-20_random.png Graphic file (type png)
 <use ./figures/0-20_random.png>
-Package pdftex.def Info: ./figures/0-20_random.png  used on input line 62.
+Package pdftex.def Info: ./figures/0-20_random.png  used on input line 64.
 (pdftex.def)             Requested size: 167.29967pt x 127.58397pt.
-<./figures/12_4_random.png, id=509, 800.9925pt x 800.9925pt>
+<./figures/12_4_random.png, id=508, 800.9925pt x 800.9925pt>
 File: ./figures/12_4_random.png Graphic file (type png)
 <use ./figures/12_4_random.png>
-Package pdftex.def Info: ./figures/12_4_random.png  used on input line 73.
+Package pdftex.def Info: ./figures/12_4_random.png  used on input line 75.
 (pdftex.def)             Requested size: 188.21371pt x 188.20882pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 73--74
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 75--76
  [][] 
  []
 
-<./figures/13_4_random.png, id=510, 706.64pt x 706.64pt>
+<./figures/13_4_random.png, id=509, 706.64pt x 706.64pt>
 File: ./figures/13_4_random.png Graphic file (type png)
 <use ./figures/13_4_random.png>
-Package pdftex.def Info: ./figures/13_4_random.png  used on input line 80.
+Package pdftex.def Info: ./figures/13_4_random.png  used on input line 82.
 (pdftex.def)             Requested size: 188.21371pt x 188.20757pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 80--81
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 82--83
  [][] 
  []
 
@@ -2556,139 +2556,139 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 80--81
 
 [27 <./figures/0-20_random.png>]
 
-Package nag Warning: figure with no \caption on input line 98.
+Package nag Warning: figure with no \caption on input line 100.
 
-<./figures/0-50000_random.png, id=519, 409.7709pt x 327.3831pt>
+<./figures/0-50000_random.png, id=518, 409.7709pt x 327.3831pt>
 File: ./figures/0-50000_random.png Graphic file (type png)
 <use ./figures/0-50000_random.png>
-Package pdftex.def Info: ./figures/0-50000_random.png  used on input line 104.
+Package pdftex.def Info: ./figures/0-50000_random.png  used on input line 106.
 (pdftex.def)             Requested size: 188.21371pt x 150.37325pt.
-<./figures/0-50000_random_loglog.png, id=520, 417.7206pt x 330.2739pt>
+<./figures/0-50000_random_loglog.png, id=519, 417.7206pt x 330.2739pt>
 File: ./figures/0-50000_random_loglog.png Graphic file (type png)
 <use ./figures/0-50000_random_loglog.png>
 Package pdftex.def Info: ./figures/0-50000_random_loglog.png  used on input lin
-e 111.
+e 113.
 (pdftex.def)             Requested size: 188.21371pt x 148.80833pt.
 
 
 [28 <./figures/12_4_random.png> <./figures/13_4_random.png>]
-<./figures/0-2000_dense.png, id=531, 406.8801pt x 327.3831pt>
+<./figures/0-2000_dense.png, id=530, 406.8801pt x 327.3831pt>
 File: ./figures/0-2000_dense.png Graphic file (type png)
 <use ./figures/0-2000_dense.png>
-Package pdftex.def Info: ./figures/0-2000_dense.png  used on input line 132.
+Package pdftex.def Info: ./figures/0-2000_dense.png  used on input line 134.
 (pdftex.def)             Requested size: 188.21371pt x 151.43729pt.
-<./figures/0-2000_dense_loglog.png, id=532, 417.7206pt x 330.2739pt>
+<./figures/0-2000_dense_loglog.png, id=531, 417.7206pt x 330.2739pt>
 File: ./figures/0-2000_dense_loglog.png Graphic file (type png)
 <use ./figures/0-2000_dense_loglog.png>
 Package pdftex.def Info: ./figures/0-2000_dense_loglog.png  used on input line 
-139.
+141.
 (pdftex.def)             Requested size: 188.21371pt x 148.80833pt.
 
 
 [29 <./figures/0-50000_random.png> <./figures/0-50000_random_loglog.png>]
-<./figures/0-5000_dense.png, id=542, 419.166pt x 327.3831pt>
+<./figures/0-5000_dense.png, id=541, 419.166pt x 327.3831pt>
 File: ./figures/0-5000_dense.png Graphic file (type png)
 <use ./figures/0-5000_dense.png>
-Package pdftex.def Info: ./figures/0-5000_dense.png  used on input line 159.
+Package pdftex.def Info: ./figures/0-5000_dense.png  used on input line 161.
 (pdftex.def)             Requested size: 188.21371pt x 147.00131pt.
-<./figures/0-5000_dense_loglog.png, id=543, 417.7206pt x 330.2739pt>
+<./figures/0-5000_dense_loglog.png, id=542, 417.7206pt x 330.2739pt>
 File: ./figures/0-5000_dense_loglog.png Graphic file (type png)
 <use ./figures/0-5000_dense_loglog.png>
 Package pdftex.def Info: ./figures/0-5000_dense_loglog.png  used on input line 
-166.
+168.
 (pdftex.def)             Requested size: 188.21371pt x 148.80833pt.
-<./figures/small_cycle_graph_2.png, id=546, 461.725pt x 195.73125pt>
+<./figures/small_cycle_graph_2.png, id=545, 461.725pt x 195.73125pt>
 File: ./figures/small_cycle_graph_2.png Graphic file (type png)
 <use ./figures/small_cycle_graph_2.png>
 Package pdftex.def Info: ./figures/small_cycle_graph_2.png  used on input line 
-181.
+183.
 (pdftex.def)             Requested size: 167.29967pt x 70.92014pt.
 
 
 [30 <./figures/0-2000_dense.png> <./figures/0-2000_dense_loglog.png>]
-<./figures/big_cycle_example.png, id=557, 455.7025pt x 264.99pt>
+<./figures/big_cycle_example.png, id=556, 455.7025pt x 264.99pt>
 File: ./figures/big_cycle_example.png Graphic file (type png)
 <use ./figures/big_cycle_example.png>
 Package pdftex.def Info: ./figures/big_cycle_example.png  used on input line 19
-2.
+4.
 (pdftex.def)             Requested size: 167.29967pt x 97.28459pt.
-<./figures/0-1000_cycle.png, id=558, 406.8801pt x 327.3831pt>
+<./figures/0-1000_cycle.png, id=557, 406.8801pt x 327.3831pt>
 File: ./figures/0-1000_cycle.png Graphic file (type png)
 <use ./figures/0-1000_cycle.png>
-Package pdftex.def Info: ./figures/0-1000_cycle.png  used on input line 201.
+Package pdftex.def Info: ./figures/0-1000_cycle.png  used on input line 203.
 (pdftex.def)             Requested size: 188.21371pt x 151.43729pt.
-<./figures/0-1000_cycle_loglog.png, id=559, 444.4605pt x 330.2739pt>
+<./figures/0-1000_cycle_loglog.png, id=558, 444.4605pt x 330.2739pt>
 File: ./figures/0-1000_cycle_loglog.png Graphic file (type png)
 <use ./figures/0-1000_cycle_loglog.png>
 Package pdftex.def Info: ./figures/0-1000_cycle_loglog.png  used on input line 
-208.
+210.
 (pdftex.def)             Requested size: 188.21371pt x 139.85806pt.
 
 
 [31 <./figures/0-5000_dense.png> <./figures/0-5000_dense_loglog.png> <./figures
 /small_cycle_graph_2.png>]
-<./figures/0-200000_cycle.png, id=571, 412.6617pt x 327.3831pt>
+<./figures/0-200000_cycle.png, id=570, 412.6617pt x 327.3831pt>
 File: ./figures/0-200000_cycle.png Graphic file (type png)
 <use ./figures/0-200000_cycle.png>
-Package pdftex.def Info: ./figures/0-200000_cycle.png  used on input line 222.
+Package pdftex.def Info: ./figures/0-200000_cycle.png  used on input line 224.
 (pdftex.def)             Requested size: 188.21371pt x 149.31921pt.
-<./figures/0-200000_cycle_loglog.png, id=572, 444.4605pt x 330.2739pt>
+<./figures/0-200000_cycle_loglog.png, id=571, 444.4605pt x 330.2739pt>
 File: ./figures/0-200000_cycle_loglog.png Graphic file (type png)
 <use ./figures/0-200000_cycle_loglog.png>
 Package pdftex.def Info: ./figures/0-200000_cycle_loglog.png  used on input lin
-e 229.
+e 231.
 (pdftex.def)             Requested size: 188.21371pt x 139.85806pt.
 
 
 [32 <./figures/big_cycle_example.png> <./figures/0-1000_cycle.png> <./figures/0
 -1000_cycle_loglog.png>]
-<./figures/0-200000_no_del.png, id=584, 412.6617pt x 327.3831pt>
+<./figures/0-200000_no_del.png, id=583, 412.6617pt x 327.3831pt>
 File: ./figures/0-200000_no_del.png Graphic file (type png)
 <use ./figures/0-200000_no_del.png>
-Package pdftex.def Info: ./figures/0-200000_no_del.png  used on input line 247.
+Package pdftex.def Info: ./figures/0-200000_no_del.png  used on input line 249.
 
 (pdftex.def)             Requested size: 188.21371pt x 149.31921pt.
-<./figures/0-200000_no_del_loglog.png, id=585, 423.5022pt x 330.2739pt>
+<./figures/0-200000_no_del_loglog.png, id=584, 423.5022pt x 330.2739pt>
 File: ./figures/0-200000_no_del_loglog.png Graphic file (type png)
 <use ./figures/0-200000_no_del_loglog.png>
 Package pdftex.def Info: ./figures/0-200000_no_del_loglog.png  used on input li
-ne 254.
+ne 256.
 (pdftex.def)             Requested size: 188.21371pt x 146.77739pt.
 
 
 LaTeX Warning: Citation 'wattsCollectiveDynamicsSmallworld1998a' on page 33 und
-efined on input line 272.
+efined on input line 274.
 
 
 
 [33 <./figures/0-200000_cycle.png> <./figures/0-200000_cycle_loglog.png>]
 
 [34 <./figures/0-200000_no_del.png> <./figures/0-200000_no_del_loglog.png>]
-<./figures/sw_graph_example_40n.png, id=603, 402.50375pt x 243.91125pt>
+<./figures/sw_graph_example_40n.png, id=602, 402.50375pt x 243.91125pt>
 File: ./figures/sw_graph_example_40n.png Graphic file (type png)
 <use ./figures/sw_graph_example_40n.png>
 Package pdftex.def Info: ./figures/sw_graph_example_40n.png  used on input line
- 286.
+ 288.
 (pdftex.def)             Requested size: 167.29967pt x 101.3813pt.
-<./figures/0-5000_small_world.png, id=604, 455.301pt x 339.669pt>
+<./figures/0-5000_small_world.png, id=603, 455.301pt x 339.669pt>
 File: ./figures/0-5000_small_world.png Graphic file (type png)
 <use ./figures/0-5000_small_world.png>
 Package pdftex.def Info: ./figures/0-5000_small_world.png  used on input line 2
-95.
+97.
 (pdftex.def)             Requested size: 188.21371pt x 140.41061pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 295--296
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 297--298
  [][] 
  []
 
-<./figures/0-5000_small_world_loglog.png, id=605, 417.7206pt x 330.2739pt>
+<./figures/0-5000_small_world_loglog.png, id=604, 417.7206pt x 330.2739pt>
 File: ./figures/0-5000_small_world_loglog.png Graphic file (type png)
 <use ./figures/0-5000_small_world_loglog.png>
 Package pdftex.def Info: ./figures/0-5000_small_world_loglog.png  used on input
- line 302.
+ line 304.
 (pdftex.def)             Requested size: 188.21371pt x 148.80833pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 302--303
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 304--305
  [][] 
  []
 
@@ -2696,33 +2696,33 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 302--303
 
 [35 <./figures/sw_graph_example_40n.png> <./figures/0-5000_small_world.png> <./
 figures/0-5000_small_world_loglog.png>]
-<./figures/rmat_graph_example_40n.png, id=620, 1085.05376pt x 526.96875pt>
+<./figures/rmat_graph_example_40n.png, id=619, 1085.05376pt x 526.96875pt>
 File: ./figures/rmat_graph_example_40n.png Graphic file (type png)
 <use ./figures/rmat_graph_example_40n.png>
 Package pdftex.def Info: ./figures/rmat_graph_example_40n.png  used on input li
-ne 321.
+ne 323.
 (pdftex.def)             Requested size: 167.29967pt x 81.2451pt.
 
 
 [36 <./figures/rmat_graph_example_40n.png>]
-<./figures/0-50000_rmat.png, id=633, 409.7709pt x 327.3831pt>
+<./figures/0-50000_rmat.png, id=632, 409.7709pt x 327.3831pt>
 File: ./figures/0-50000_rmat.png Graphic file (type png)
 <use ./figures/0-50000_rmat.png>
-Package pdftex.def Info: ./figures/0-50000_rmat.png  used on input line 336.
+Package pdftex.def Info: ./figures/0-50000_rmat.png  used on input line 338.
 (pdftex.def)             Requested size: 188.21371pt x 150.37325pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 336--337
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 338--339
  [][] 
  []
 
-<./figures/0-50000_rmat_loglog.png, id=634, 417.7206pt x 330.2739pt>
+<./figures/0-50000_rmat_loglog.png, id=633, 417.7206pt x 330.2739pt>
 File: ./figures/0-50000_rmat_loglog.png Graphic file (type png)
 <use ./figures/0-50000_rmat_loglog.png>
 Package pdftex.def Info: ./figures/0-50000_rmat_loglog.png  used on input line 
-343.
+345.
 (pdftex.def)             Requested size: 188.21371pt x 148.80833pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 343--344
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 345--346
  [][] 
  []
 
@@ -2731,7 +2731,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 343--344
 [37]
 
 [38 <./figures/0-50000_rmat.png> <./figures/0-50000_rmat_loglog.png>]
-<./figures/bitcoinotc_dataset.png, id=660, 387.3672pt x 268.8444pt>
+<./figures/bitcoinotc_dataset.png, id=659, 387.3672pt x 268.8444pt>
 File: ./figures/bitcoinotc_dataset.png Graphic file (type png)
 <use ./figures/bitcoinotc_dataset.png>
 Package pdftex.def Info: ./figures/bitcoinotc_dataset.png  used on input line 3
@@ -2742,7 +2742,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 386--387
 [][] 
  []
 
-<./figures/epinions_dataset.png, id=661, 396.7623pt x 268.8444pt>
+<./figures/epinions_dataset.png, id=660, 396.7623pt x 268.8444pt>
 File: ./figures/epinions_dataset.png Graphic file (type png)
 <use ./figures/epinions_dataset.png>
 Package pdftex.def Info: ./figures/epinions_dataset.png  used on input line 391
@@ -2753,7 +2753,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 391--392
 [][] 
  []
 
-<./figures/slashdot_dataset.png, id=662, 390.258pt x 268.8444pt>
+<./figures/slashdot_dataset.png, id=661, 390.258pt x 268.8444pt>
 File: ./figures/slashdot_dataset.png Graphic file (type png)
 <use ./figures/slashdot_dataset.png>
 Package pdftex.def Info: ./figures/slashdot_dataset.png  used on input line 397
@@ -2764,7 +2764,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 397--398
  [][] 
  []
 
-<./figures/bitcoinotc_outdegree_distr.png, id=663, 411.939pt x 327.3831pt>
+<./figures/bitcoinotc_outdegree_distr.png, id=662, 411.939pt x 327.3831pt>
 File: ./figures/bitcoinotc_outdegree_distr.png Graphic file (type png)
 <use ./figures/bitcoinotc_outdegree_distr.png>
 Package pdftex.def Info: ./figures/bitcoinotc_outdegree_distr.png  used on inpu
@@ -2775,7 +2775,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 407--408
 [][] 
  []
 
-<./figures/epinions_outdegree_distr.png, id=664, 411.939pt x 327.3831pt>
+<./figures/epinions_outdegree_distr.png, id=663, 411.939pt x 327.3831pt>
 File: ./figures/epinions_outdegree_distr.png Graphic file (type png)
 <use ./figures/epinions_outdegree_distr.png>
 Package pdftex.def Info: ./figures/epinions_outdegree_distr.png  used on input 
@@ -2786,7 +2786,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 413--414
 [][] 
  []
 
-<./figures/slashdot_outdegree_distr.png, id=665, 411.939pt x 327.3831pt>
+<./figures/slashdot_outdegree_distr.png, id=664, 411.939pt x 327.3831pt>
 File: ./figures/slashdot_outdegree_distr.png Graphic file (type png)
 <use ./figures/slashdot_outdegree_distr.png>
 Package pdftex.def Info: ./figures/slashdot_outdegree_distr.png  used on input 
@@ -2797,7 +2797,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 420--421
  [][] 
  []
 
-<./figures/bitcoinotc_outdegree_distr_50.png, id=666, 419.166pt x 327.3831pt>
+<./figures/bitcoinotc_outdegree_distr_50.png, id=665, 419.166pt x 327.3831pt>
 File: ./figures/bitcoinotc_outdegree_distr_50.png Graphic file (type png)
 <use ./figures/bitcoinotc_outdegree_distr_50.png>
 Package pdftex.def Info: ./figures/bitcoinotc_outdegree_distr_50.png  used on i
@@ -2808,7 +2808,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 431--432
 [][] 
  []
 
-<./figures/epinions_outdegree_distr_50.png, id=667, 425.6703pt x 327.3831pt>
+<./figures/epinions_outdegree_distr_50.png, id=666, 425.6703pt x 327.3831pt>
 File: ./figures/epinions_outdegree_distr_50.png Graphic file (type png)
 <use ./figures/epinions_outdegree_distr_50.png>
 Package pdftex.def Info: ./figures/epinions_outdegree_distr_50.png  used on inp
@@ -2819,7 +2819,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 437--438
 [][] 
  []
 
-<./figures/slashdot_outdegree_distr_50.png, id=668, 425.6703pt x 327.3831pt>
+<./figures/slashdot_outdegree_distr_50.png, id=667, 425.6703pt x 327.3831pt>
 File: ./figures/slashdot_outdegree_distr_50.png Graphic file (type png)
 <use ./figures/slashdot_outdegree_distr_50.png>
 Package pdftex.def Info: ./figures/slashdot_outdegree_distr_50.png  used on inp
@@ -2830,7 +2830,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 444--445
  [][] 
  []
 
-<./figures/bitcoinotc_power_distr.png, id=669, 411.939pt x 327.3831pt>
+<./figures/bitcoinotc_power_distr.png, id=668, 411.939pt x 327.3831pt>
 File: ./figures/bitcoinotc_power_distr.png Graphic file (type png)
 <use ./figures/bitcoinotc_power_distr.png>
 Package pdftex.def Info: ./figures/bitcoinotc_power_distr.png  used on input li
@@ -2841,7 +2841,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 455--456
 [][] 
  []
 
-<./figures/epinions_power_distr.png, id=670, 411.939pt x 327.3831pt>
+<./figures/epinions_power_distr.png, id=669, 411.939pt x 327.3831pt>
 File: ./figures/epinions_power_distr.png Graphic file (type png)
 <use ./figures/epinions_power_distr.png>
 Package pdftex.def Info: ./figures/epinions_power_distr.png  used on input line
@@ -2852,7 +2852,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 461--462
 [][] 
  []
 
-<./figures/slashdot_power_distr.png, id=671, 417.7206pt x 327.3831pt>
+<./figures/slashdot_power_distr.png, id=670, 417.7206pt x 327.3831pt>
 File: ./figures/slashdot_power_distr.png Graphic file (type png)
 <use ./figures/slashdot_power_distr.png>
 Package pdftex.def Info: ./figures/slashdot_power_distr.png  used on input line
@@ -2865,24 +2865,23 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 468--469
 
 
 
-[39]
+[39]) (./chapters/related_work.tex
 
 [40 <./figures/bitcoinotc_dataset.png> <./figures/epinions_dataset.png> <./figu
 res/slashdot_dataset.png> <./figures/bitcoinotc_outdegree_distr.png> <./figures
-/epinions_outdegree_distr.png> <./figures/slashdot_outdegree_distr.png>])
-(./chapters/related_work.tex
+/epinions_outdegree_distr.png> <./figures/slashdot_outdegree_distr.png>]
 
 [41 <./figures/bitcoinotc_outdegree_distr_50.png> <./figures/epinions_outdegree
 _distr_50.png> <./figures/slashdot_outdegree_distr_50.png> <./figures/bitcoinot
 c_power_distr.png> <./figures/epinions_power_distr.png> <./figures/slashdot_pow
 er_distr.png>]
 chapter 6.
-) (./chapters/conclusion.tex
+
 
 [42
 
 
-]
+]) (./chapters/conclusion.tex
 
 [43]
 chapter 7.
@@ -2892,14 +2891,7 @@ chapter 7.
 
 
 ]
-chapter without number
-
-
-[45
-
-
-]
-Package tocbasic Info: character protrusion at lof deactivated on input line 74
+Package tocbasic Info: character protrusion at lof deactivated on input line 73
 .
  (./main.lof)
 \tf@lof=\write8
@@ -2907,13 +2899,13 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 74
 
 
 
-[46
+[45
 
 
 ]
 
-[47]
-Package tocbasic Info: character protrusion at lot deactivated on input line 75
+[46]
+Package tocbasic Info: character protrusion at lot deactivated on input line 74
 .
  (./main.lot)
 \tf@lot=\write9
@@ -2921,7 +2913,7 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 75
 
 
 
-[48
+[47
 
 
 ]
@@ -2931,14 +2923,14 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
 
 
-[49
+[48
 
 
 ]
 
-[50]
+[49]
 
-[51]
+[50]
 \openout2 = `chapters/appendix.aux'.
 
  (./chapters/appendix.tex
@@ -2968,29 +2960,98 @@ Overfull \hbox (54.03922pt too wide) in paragraph at lines 19--20
  []
 
 
-Overfull \hbox (152.18996pt too wide) in paragraph at lines 21--22
-[]\T1/pplx/m/n/10.95 (-20) Watts-Strogatz Small World Graph Gen-er-a-tor: [][][
-] 
+Overfull \hbox (2.29466pt too wide) in paragraph at lines 26--27
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / graph _ tools .
  []
 
 
-Overfull \hbox (51.35005pt too wide) in paragraph at lines 23--24
-[]\T1/pplx/m/n/10.95 (-20) R-Mat Graph Gen-er-a-tor: [][][] 
- []
 
-
-Overfull \hbox (6.33936pt too wide) in paragraph at lines 28--29
-[]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[]t
-hesis / blob / main / graph _ tools . py$[] 
- []
-
-)
-
-[52
+[51
 
 
 
 ]
+Overfull \hbox (10.78223pt too wide) in paragraph at lines 41--42
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / Benchmarking /
+ []
+
+
+Overfull \hbox (10.78223pt too wide) in paragraph at lines 49--50
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / Benchmarking /
+ []
+
+
+Overfull \hbox (10.78223pt too wide) in paragraph at lines 57--58
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / Benchmarking /
+ []
+
+
+Overfull \hbox (10.78223pt too wide) in paragraph at lines 65--66
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / Benchmarking /
+ []
+
+
+Overfull \hbox (10.78223pt too wide) in paragraph at lines 73--74
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / Benchmarking /
+ []
+
+
+Overfull \hbox (10.78223pt too wide) in paragraph at lines 81--82
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / Benchmarking /
+ []
+
+
+
+[52]
+Overfull \hbox (10.78223pt too wide) in paragraph at lines 89--90
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / Benchmarking /
+ []
+
+
+Overfull \hbox (28.32317pt too wide) in paragraph at lines 95--96
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / data / bitcoinotc _
+ []
+
+
+Overfull \hbox (10.78223pt too wide) in paragraph at lines 99--100
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / Benchmarking /
+ []
+
+
+Overfull \hbox (17.00642pt too wide) in paragraph at lines 105--106
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / data / epinions _
+ []
+
+
+Overfull \hbox (10.78223pt too wide) in paragraph at lines 109--110
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / Benchmarking /
+ []
+
+
+Overfull \hbox (17.00642pt too wide) in paragraph at lines 115--116
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / data / slashdot _
+ []
+
+)
+Overfull \hbox (10.78223pt too wide) in paragraph at lines 119--77
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[
+]thesis / blob / main / Benchmarking /
+ []
+
+
 
 [53]
 
@@ -3012,11 +3073,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57613 strings out of 473190
- 1254425 string characters out of 5715800
- 2333882 words of memory out of 5000000
- 79114 multiletter control sequences out of 15000+600000
- 653836 words of font info for 533 fonts, out of 8000000 for 9000
+ 57604 strings out of 473190
+ 1254318 string characters out of 5715800
+ 2333958 words of memory out of 5000000
+ 79113 multiletter control sequences out of 15000+600000
+ 652580 words of font info for 529 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,13n,107p,10899b,4026s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -3028,16 +3089,15 @@ ocal/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/
 texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texl
 ive/2025/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/cm-super/sfit1095.pfb></usr/local/texlive/2025/t
-exmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></usr/local/texlive/2025/tex
-mf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf
--dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-d
-ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-dist/fon
-ts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type
-1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (61 pages, 1306040 bytes).
+exmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-dist/f
+onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
+pe1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (61 pages, 1293619 bytes).
 PDF statistics:
- 1171 PDF objects out of 1200 (max. 8388607)
- 971 compressed objects within 10 object streams
- 249 named destinations out of 1000 (max. 500000)
- 123716 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 1189 PDF objects out of 1200 (max. 8388607)
+ 991 compressed objects within 10 object streams
+ 248 named destinations out of 1000 (max. 500000)
+ 121660 words of extra memory for PDF output out of 128383 (max. 10000000)
 

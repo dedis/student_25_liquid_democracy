@@ -13,50 +13,107 @@ Linear Programming Solver: \url{https://github.com/davidholzwarth/bachelors-thes
 
 Iterative Solver: \url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/iterative.py}
 
-\subsection{Graph Generators}
+\subsection{Graph Generator}
 \label{an:graph_generators}
 
 Random Delegation Graph Generator: \url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/graph_gen.py}
 
-Watts-Strogatz Small World Graph Generator: \TODO{XXX}
-
-R-Mat Graph Generator: \TODO{XXX}
-
 \subsection{Preprocessing}
 \label{an:preprocessing}
 
+The algorithm for removing closed delegation cycles is in step five of the pipeline at the following link.
+
 \url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/graph_tools.py}
 
-The algorithm for removing closed delegation cycles is in step five of this pipeline.
-
-\TODO{Might have some algorithms missing, liek r-mat generation and stuff}
-
 \section{Results}
+\label{an:results}
 
-\TODO{Idea, explain the nomenclature of the file names int he data folder, and then just send the link once.}
+The runtimes for the benchmarks for these graphs can be found at the following link. The files follow the following naming scheme: "n-m\_type", where n is the lower bound of nodes in the benchmark, m is the upper bound of nodes, type is the type code of graph this benchmark was run on. Each subsection of this annex will detail what type code is used for graphs in this section. For example, dense graphs have type code \texttt{dense}, so the runtimes for such a dense graph on graphs containing between zero and 2000 nodes will be: \texttt{0-2000\_dense}
 
-\TODO{However, dont forget, that some sections have more detailed results, tha tI need to show, like fitting the power laws and stuff. (dense, cycle reten, no del, r-mat statistics abt incoming and outdoing edges, for the real datasets: all statistics}
+\url{https://github.com/davidholzwarth/bachelors-thesis/tree/main/data}
 
 \subsection{Small Graphs}
 
+Type code: \texttt{random}
+
+Other statistics and the code to generate the graph can be found at this link: 
+
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/Benchmarking/runtime_exploration.ipynb}
+
 \subsection{Large Graphs}
+
+Type code: \texttt{random}
+
+Other statistics and the code to generate the graph can be found at this link: 
+
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/Benchmarking/runtime_exploration.ipynb}
 
 \subsection{Dense Graphs}
 
+Type code: \texttt{dense}
+
+Other statistics and the code to generate the graph can be found at this link: 
+
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/Benchmarking/dense_graphs.ipynb}
+
 \subsection{Cycles Which Retain a Lot of their Power}
+
+Type code: \texttt{big\_loop}
+
+Other statistics and the code to generate the graph can be found at this link: 
+
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/Benchmarking/big_loop.ipynb}
 
 \subsection{No Delegations}
 
-\subsection{Small World Graphs}
+Type code: \texttt{no\_del}
+
+Other statistics and the code to generate the graph can be found at this link: 
+
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/Benchmarking/no_edges.ipynb}
+
+\subsection{Watts-Strogatz Small World Graphs}
+
+Type code: \texttt{small\_world}
+
+Other statistics and the code to generate the graph can be found at this link: 
+
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/Benchmarking/small_world.ipynb}
 
 \subsection{R-Mat Graphs}
 
+Type code: \texttt{rmat}
+
+Other statistics and the code to generate the graph can be found at this link: 
+
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/Benchmarking/r-mat.ipynb}
+
 \subsection{Bitcoin OTC Trust Network}
+
+The runtimes can be found here:
+
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/data/bitcoinotc_dataset.txt}
+
+The code to prepare this graph and its analysis can be found here:
+
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/Benchmarking/bitcoin_otc_trust_dataset.ipynb}
 
 \subsection{Epinions}
 
+The runtimes can be found here:
+
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/data/epinions_dataset.txt}
+
+The code to prepare this graph and its analysis can be found here:
+
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/Benchmarking/epinions_dataset.ipynb}
+
 \subsection{Slashdot Zoo}
 
+The runtimes can be found here:
 
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/data/slashdot_dataset.txt}
 
+The code to prepare this graph and its analysis can be found here:
 
+\url{https://github.com/davidholzwarth/bachelors-thesis/blob/main/Benchmarking/slashdot_zoo.ipynb}
