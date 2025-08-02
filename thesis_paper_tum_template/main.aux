@@ -17,6 +17,9 @@
 \@writefile{loa}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
 \BKM@entry{id=2,dest={746F632E30},srcline={45}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030745C303030655C3030306E5C303030745C30303073}
+\newacro{TUM}[\AC@hyperlink{TUM}{TUM}]{Technical University of Munich}
+\newacro{LS}[\AC@hyperlink{LS}{LS}]{Linear Systems Solver}
+\newacro{LP}[\AC@hyperlink{LP}{LP}]{Linear Programming Solver}
 \BKM@entry{id=3,dest={636861707465722E31},srcline={4}}{5C3337365C3337375C303030495C3030306E5C303030745C303030725C3030306F5C303030645C303030755C303030635C303030745C303030695C3030306F5C3030306E}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -75,14 +78,14 @@
 \newlabel{subsec:motivation@cref}{{[subsection][1][2,2]2.2.1}{[1][4][]4}{}{}{}}
 \abx@aux@cite{0}{behrensCircularDelegationsMyth2015}
 \abx@aux@segm{0}{0}{behrensCircularDelegationsMyth2015}
-\BKM@entry{id=11,dest={73756273656374696F6E2E322E322E32},srcline={38}}{5C3337365C3337375C303030455C303030785C303030695C303030735C303030745C303030695C3030306E5C303030675C3030305C3034305C3030304D5C303030655C303030745C303030685C3030306F5C303030645C303030735C3030305C3034305C303030745C3030306F5C3030305C3034305C303030445C303030655C303030615C3030306C5C3030305C3034305C303030775C303030695C303030745C303030685C3030305C3034305C303030565C3030306F5C303030745C303030655C3030305C3034305C303030435C3030306F5C3030306E5C303030635C303030655C3030306E5C303030745C303030725C303030615C303030745C303030695C3030306F5C3030306E}
+\BKM@entry{id=11,dest={73756273656374696F6E2E322E322E32},srcline={38}}{5C3337365C3337375C303030455C303030785C303030695C303030735C303030745C303030695C3030306E5C303030675C3030305C3034305C3030304D5C303030655C303030745C303030685C3030306F5C303030645C303030735C3030305C3034305C303030745C3030306F5C3030305C3034305C303030445C303030655C303030615C3030306C5C3030305C3034305C303030775C303030695C303030745C303030685C3030305C3034305C303030565C3030306F5C303030745C303030655C3030305C3034305C303030435C3030306F5C3030306E5C303030635C303030655C3030306E5C303030745C303030725C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030435C303030795C303030635C3030306C5C303030695C303030635C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E}
 \abx@aux@cite{0}{boldiViscousDemocracySocial2011}
 \abx@aux@segm{0}{0}{boldiViscousDemocracySocial2011}
 \abx@aux@cite{0}{kotsialouIncentivisingParticipationLiquid2019}
 \abx@aux@segm{0}{0}{kotsialouIncentivisingParticipationLiquid2019}
 \abx@aux@cite{0}{golzFluidMechanicsLiquid2021}
 \abx@aux@segm{0}{0}{golzFluidMechanicsLiquid2021}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Existing Methods to Deal with Vote Concentration}{5}{subsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Existing Methods to Deal with Vote Concentration and Cyclic Delegation}{5}{subsection.2.2.2}\protected@file@percent }
 \BKM@entry{id=12,dest={636861707465722E33},srcline={5}}{5C3337365C3337375C303030445C303030655C303030735C303030695C303030675C3030306E}
 \BKM@entry{id=13,dest={73656374696F6E2E332E31},srcline={11}}{5C3337365C3337375C303030505C303030725C3030306F5C303030625C3030306C5C303030655C3030306D5C3030305C3034305C303030535C303030745C303030615C303030745C303030655C3030306D5C303030655C3030306E5C30303074}
 \BKM@entry{id=14,dest={73656374696F6E2E332E32},srcline={31}}{5C3337365C3337375C303030495C3030306D5C303030705C3030306C5C303030655C3030306D5C303030655C3030306E5C303030745C303030695C3030306E5C303030675C3030305C3034305C3030304C5C303030695C303030715C303030755C303030695C303030645C3030305C3034305C303030445C303030655C3030306D5C3030306F5C303030635C303030725C303030615C303030635C303030795C3030305C3034305C303030775C303030695C303030745C303030685C3030305C3034305C303030465C303030725C303030615C303030635C303030745C303030695C3030306F5C3030306E5C303030615C3030306C5C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E}
@@ -95,17 +98,17 @@
 \newlabel{chap:design}{{3}{6}{Design}{chapter.3}{}}
 \newlabel{chap:design@cref}{{[chapter][3][]3}{[1][6][]6}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Problem Statement}{6}{section.3.1}\protected@file@percent }
-\BKM@entry{id=16,dest={73756273656374696F6E2E332E322E32},srcline={53}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030735C303030655C303030725C303030765C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C3030306F5C303030665C3030305C3034305C303030505C3030306F5C303030775C303030655C30303072}
+\BKM@entry{id=16,dest={73756273656374696F6E2E332E322E32},srcline={51}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030735C303030655C303030725C303030765C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C3030306F5C303030665C3030305C3034305C303030505C3030306F5C303030775C303030655C30303072}
 \abx@aux@cite{0}{bersetcheGeneralizingLiquidDemocracy2022}
 \abx@aux@segm{0}{0}{bersetcheGeneralizingLiquidDemocracy2022}
 \abx@aux@cite{0}{boldiViscousDemocracySocial2011}
 \abx@aux@segm{0}{0}{boldiViscousDemocracySocial2011}
-\BKM@entry{id=17,dest={73756273656374696F6E2E332E322E33},srcline={57}}{5C3337365C3337375C303030435C3030306C5C3030306F5C303030735C303030655C303030645C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030435C303030795C303030635C3030306C5C303030655C30303073}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Implementing Liquid Democracy with Fractional Delegation}{7}{section.3.2}\protected@file@percent }
 \newlabel{sec:ld_with_frac_del}{{3.2}{7}{Implementing Liquid Democracy with Fractional Delegation}{section.3.2}{}}
 \newlabel{sec:ld_with_frac_del@cref}{{[section][2][3]3.2}{[1][6][]7}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Definitions}{7}{subsection.3.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Conservation of Power}{7}{subsection.3.2.2}\protected@file@percent }
+\BKM@entry{id=17,dest={73756273656374696F6E2E332E322E33},srcline={55}}{5C3337365C3337375C303030435C3030306C5C3030306F5C303030735C303030655C303030645C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030435C303030795C303030635C3030306C5C303030655C30303073}
 \abx@aux@cite{0}{behrensCircularDelegationsMyth2015}
 \abx@aux@segm{0}{0}{behrensCircularDelegationsMyth2015}
 \abx@aux@cite{0}{brillInteractiveDemocracy2018}
@@ -115,26 +118,28 @@
 \newlabel{fig:closed-delegation-cycles}{{3.1}{8}{Closed delegation cycles}{figure.caption.3}{}}
 \newlabel{fig:closed-delegation-cycles@cref}{{[figure][1][3]3.1}{[1][8][]8}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Closed Delegation Cycles}{8}{subsection.3.2.3}\protected@file@percent }
-\BKM@entry{id=18,dest={73656374696F6E2E332E33},srcline={96}}{5C3337365C3337375C303030525C303030655C303030735C3030306F5C3030306C5C303030765C303030695C3030306E5C303030675C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
+\newlabel{subsec:cdc}{{3.2.3}{8}{Closed Delegation Cycles}{subsection.3.2.3}{}}
+\newlabel{subsec:cdc@cref}{{[subsection][3][3,2]3.2.3}{[1][8][]8}{}{}{}}
+\BKM@entry{id=18,dest={73656374696F6E2E332E33},srcline={99}}{5C3337365C3337375C303030525C303030655C303030735C3030306F5C3030306C5C303030765C303030695C3030306E5C303030675C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Sample delegations}}{9}{figure.caption.4}\protected@file@percent }
 \newlabel{fig:sample_delegations}{{3.2}{9}{Sample delegations}{figure.caption.4}{}}
 \newlabel{fig:sample_delegations@cref}{{[figure][2][3]3.2}{[1][9][]9}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Resolving Delegations}{9}{section.3.3}\protected@file@percent }
 \newlabel{sec:resolving_delegations}{{3.3}{9}{Resolving Delegations}{section.3.3}{}}
 \newlabel{sec:resolving_delegations@cref}{{[section][3][3]3.3}{[1][9][]9}{}{}{}}
-\BKM@entry{id=19,dest={73756273656374696F6E2E332E332E31},srcline={131}}{5C3337365C3337375C303030455C303030785C303030695C303030735C303030745C303030655C3030306E5C303030635C303030655C3030305C3034305C3030306F5C303030665C3030305C3034305C303030615C3030305C3034305C303030555C3030306E5C303030695C303030715C303030755C303030655C3030305C3034305C303030535C3030306F5C3030306C5C303030755C303030745C303030695C3030306F5C3030306E}
+\BKM@entry{id=19,dest={73756273656374696F6E2E332E332E31},srcline={134}}{5C3337365C3337375C303030455C303030785C303030695C303030735C303030745C303030655C3030306E5C303030635C303030655C3030305C3034305C3030306F5C303030665C3030305C3034305C303030615C3030305C3034305C303030555C3030306E5C303030695C303030715C303030755C303030655C3030305C3034305C303030535C3030306F5C3030306C5C303030755C303030745C303030695C3030306F5C3030306E}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Existence of a Unique Solution}{10}{subsection.3.3.1}\protected@file@percent }
 \newlabel{subsec:unique_sol}{{3.3.1}{10}{Existence of a Unique Solution}{subsection.3.3.1}{}}
 \newlabel{subsec:unique_sol@cref}{{[subsection][1][3,3]3.3.1}{[1][10][]10}{}{}{}}
-\BKM@entry{id=20,dest={73756273656374696F6E2E332E332E32},srcline={200}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030735C303030655C303030725C303030765C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C3030306F5C303030665C3030305C3034305C303030505C3030306F5C303030775C303030655C30303072}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Conservation of Power}{11}{subsection.3.3.2}\protected@file@percent }
-\BKM@entry{id=21,dest={73756273656374696F6E2E332E332E33},srcline={243}}{5C3337365C3337375C303030525C303030655C303030735C3030306F5C3030306C5C303030765C303030695C3030306E5C303030675C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C303030735C3030305C3034305C303030625C303030795C3030305C3034305C303030535C3030306F5C3030306C5C303030765C303030695C3030306E5C303030675C3030305C3034305C303030615C3030305C3034305C303030535C303030795C303030735C303030745C303030655C3030306D5C3030305C3034305C3030306F5C303030665C3030305C3034305C3030304C5C303030695C3030306E5C303030655C303030615C303030725C3030305C3034305C303030455C303030715C303030755C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
+\BKM@entry{id=20,dest={73756273656374696F6E2E332E332E32},srcline={205}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030735C303030655C303030725C303030765C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C3030306F5C303030665C3030305C3034305C303030505C3030306F5C303030775C303030655C30303072}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Conservation of Power}{12}{subsection.3.3.2}\protected@file@percent }
 \newlabel{eq:cons_1}{{{3.1}}{12}{Conservation of Power}{AMS.6}{}}
-\newlabel{eq:cons_1@cref}{{[equation][2147483647][]{3.1}}{[1][11][]12}{}{}{}}
-\newlabel{eq:cons_2}{{{3.2}}{12}{Conservation of Power}{AMS.8}{}}
-\newlabel{eq:cons_2@cref}{{[equation][2147483647][]{3.2}}{[1][12][]12}{}{}{}}
-\newlabel{eq:cons_3}{{{3.3}}{12}{Conservation of Power}{AMS.9}{}}
-\newlabel{eq:cons_3@cref}{{[equation][2147483647][]{3.3}}{[1][12][]12}{}{}{}}
+\newlabel{eq:cons_1@cref}{{[equation][2147483647][]{3.1}}{[1][12][]12}{}{}{}}
+\BKM@entry{id=21,dest={73756273656374696F6E2E332E332E33},srcline={255}}{5C3337365C3337375C303030525C303030655C303030735C3030306F5C3030306C5C303030765C303030695C3030306E5C303030675C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C303030735C3030305C3034305C303030625C303030795C3030305C3034305C303030535C3030306F5C3030306C5C303030765C303030695C3030306E5C303030675C3030305C3034305C303030615C3030305C3034305C303030535C303030795C303030735C303030745C303030655C3030306D5C3030305C3034305C3030306F5C303030665C3030305C3034305C3030304C5C303030695C3030306E5C303030655C303030615C303030725C3030305C3034305C303030455C303030715C303030755C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
+\newlabel{eq:cons_2}{{{3.2}}{13}{Conservation of Power}{AMS.8}{}}
+\newlabel{eq:cons_2@cref}{{[equation][2147483647][]{3.2}}{[1][12][]13}{}{}{}}
+\newlabel{eq:cons_3}{{{3.3}}{13}{Conservation of Power}{AMS.9}{}}
+\newlabel{eq:cons_3@cref}{{[equation][2147483647][]{3.3}}{[1][13][]13}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Resolving Delegations by Solving a System of Linear Equations}{13}{subsection.3.3.3}\protected@file@percent }
 \BKM@entry{id=22,dest={636861707465722E34},srcline={5}}{5C3337365C3337375C303030495C3030306D5C303030705C3030306C5C303030655C3030306D5C303030655C3030306E5C303030745C303030615C303030745C303030695C3030306F5C3030306E}
 \abx@aux@cite{0}{hagbergExploringNetworkStructure2008}
@@ -163,23 +168,15 @@
 \abx@aux@segm{0}{0}{johnforrestCoinorCbcRelease2024}
 \abx@aux@cite{0}{forrestCBCUserGuide2005}
 \abx@aux@segm{0}{0}{forrestCBCUserGuide2005}
-\BKM@entry{id=25,dest={73656374696F6E2E342E33},srcline={52}}{5C3337365C3337375C303030495C303030745C303030655C303030725C303030615C303030745C303030695C303030765C303030655C3030305C3034305C303030535C3030306F5C3030306C5C303030765C303030655C30303072}
+\BKM@entry{id=25,dest={73656374696F6E2E342E33},srcline={50}}{5C3337365C3337375C303030495C303030745C303030655C303030725C303030615C303030745C303030695C303030765C303030655C3030305C3034305C303030535C3030306F5C3030306C5C303030765C303030655C30303072}
 \abx@aux@cite{0}{burden2011numerical}
 \abx@aux@segm{0}{0}{burden2011numerical}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Delegation graph and its inverse dict representation}}{15}{figure.caption.10}\protected@file@percent }
 \newlabel{fig:inverse_dict_example}{{4.1}{15}{Delegation graph and its inverse dict representation}{figure.caption.10}{}}
 \newlabel{fig:inverse_dict_example@cref}{{[figure][1][4]4.1}{[1][14][]15}{}{}{}}
-\AC@undonewlabel{acro:LS}
-\newlabel{a}{{4.1}{15}{Linear Systems Solver}{section*.11}{}}
-\newlabel{a@cref}{{[section][1][4]4.1}{[1][14][]15}{}{}{}}
-\acronymused{LS}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Linear Programming Solver}{15}{section.4.2}\protected@file@percent }
-\AC@undonewlabel{acro:LP}
-\newlabel{a}{{4.2}{15}{Linear Programming Solver}{section*.12}{}}
-\newlabel{a@cref}{{[section][2][4]4.2}{[1][15][]15}{}{}{}}
-\acronymused{LP}
-\BKM@entry{id=26,dest={73756273656374696F6E2E342E332E31},srcline={56}}{5C3337365C3337375C303030415C303030705C303030705C303030725C3030306F5C303030615C303030635C30303068}
-\BKM@entry{id=27,dest={73756273656374696F6E2E342E332E32},srcline={95}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030735C303030655C303030725C303030765C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C3030306F5C303030665C3030305C3034305C303030505C3030306F5C303030775C303030655C30303072}
+\BKM@entry{id=26,dest={73756273656374696F6E2E342E332E31},srcline={54}}{5C3337365C3337375C303030415C303030705C303030705C303030725C3030306F5C303030615C303030635C30303068}
+\BKM@entry{id=27,dest={73756273656374696F6E2E342E332E32},srcline={91}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030735C303030655C303030725C303030765C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C3030306F5C303030665C3030305C3034305C303030505C3030306F5C303030775C303030655C30303072}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Iterative Solver}{16}{section.4.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Approach}{16}{subsection.4.3.1}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Iterative algorithm}}{17}{algorithm.1}\protected@file@percent }
@@ -194,48 +191,46 @@
 \newlabel{alg:iterative_simple_termination_cond}{{15}{17}{Iterative algorithm}{ALG@line.15}{}}
 \newlabel{alg:iterative_simple_termination_cond@cref}{{[algorithm][1][]1}{[1][16][]17}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Conservation of Power}{17}{subsection.4.3.2}\protected@file@percent }
-\newlabel{theo:iterative_cons_of_power}{{3}{17}{}{theorem.3}{}}
-\newlabel{theo:iterative_cons_of_power@cref}{{[theorem][3][]3}{[1][17][]17}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Similarity to the Previous Approach}{18}{subsubsection*.14}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Delegation graph with a cycle}}{19}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:small_cycle_graph}{{4.2}{19}{Delegation graph with a cycle}{figure.caption.15}{}}
+\newlabel{theo:iterative_cons_of_power}{{4}{17}{}{theorem.4}{}}
+\newlabel{theo:iterative_cons_of_power@cref}{{[theorem][4][]4}{[1][17][]17}{}{}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Similarity to the Previous Approach}{18}{subsubsection*.12}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Delegation graph with a cycle}}{19}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:small_cycle_graph}{{4.2}{19}{Delegation graph with a cycle}{figure.caption.13}{}}
 \newlabel{fig:small_cycle_graph@cref}{{[figure][2][4]4.2}{[1][19][]19}{}{}{}}
-\newlabel{lem:simple_alg_terminates}{{4}{19}{}{theorem.4}{}}
-\newlabel{lem:simple_alg_terminates@cref}{{[theorem][4][]4}{[1][18][]19}{}{}{}}
-\newlabel{alg:iterative_alg_doesnt_terminate}{{5}{19}{}{theorem.5}{}}
-\newlabel{alg:iterative_alg_doesnt_terminate@cref}{{[theorem][5][]5}{[1][19][]19}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces $p_v{(i)}$ values of nodes in the graph in \cref  {fig:small_cycle_graph}}}{20}{table.caption.16}\protected@file@percent }
-\newlabel{tab:simple_iterative_example}{{4.1}{20}{$p_v{(i)}$ values of nodes in the graph in \cref {fig:small_cycle_graph}}{table.caption.16}{}}
+\newlabel{lem:simple_alg_terminates}{{5}{19}{}{theorem.5}{}}
+\newlabel{lem:simple_alg_terminates@cref}{{[theorem][5][]5}{[1][19][]19}{}{}{}}
+\newlabel{alg:iterative_alg_doesnt_terminate}{{6}{19}{}{theorem.6}{}}
+\newlabel{alg:iterative_alg_doesnt_terminate@cref}{{[theorem][6][]6}{[1][19][]19}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces $p_v{(i)}$ values of nodes in the graph in \cref  {fig:small_cycle_graph}}}{20}{table.caption.14}\protected@file@percent }
+\newlabel{tab:simple_iterative_example}{{4.1}{20}{$p_v{(i)}$ values of nodes in the graph in \cref {fig:small_cycle_graph}}{table.caption.14}{}}
 \newlabel{tab:simple_iterative_example@cref}{{[table][1][4]4.1}{[1][19][]20}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Conservation of Power}{20}{subsubsection*.18}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Termination}{20}{subsubsection*.20}\protected@file@percent }
-\newlabel{lem:iterative_alg_power_concentrates}{{6}{20}{}{theorem.6}{}}
-\newlabel{lem:iterative_alg_power_concentrates@cref}{{[theorem][6][]6}{[1][20][]20}{}{}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Conservation of Power}{20}{subsubsection*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Termination}{20}{subsubsection*.18}\protected@file@percent }
+\newlabel{lem:iterative_alg_power_concentrates}{{7}{20}{}{theorem.7}{}}
+\newlabel{lem:iterative_alg_power_concentrates@cref}{{[theorem][7][]7}{[1][20][]20}{}{}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Iterative Algorithm with a cuttoff value. Changes from \cref  {alg:iterative_simple} are highlighted.}}{21}{algorithm.2}\protected@file@percent }
 \newlabel{alg:iterative_with_cutoff}{{2}{21}{Iterative Algorithm with a cuttoff value. Changes from \cref {alg:iterative_simple} are highlighted}{algorithm.2}{}}
-\newlabel{alg:iterative_with_cutoff@cref}{{[algorithm][2][]2}{[1][19][]21}{}{}{}}
-\BKM@entry{id=28,dest={73656374696F6E2E342E34},srcline={269}}{5C3337365C3337375C303030525C3030306F5C303030625C303030755C303030735C303030745C3030306E5C303030655C303030735C30303073}
-\BKM@entry{id=29,dest={73756273656374696F6E2E342E342E31},srcline={273}}{5C3337365C3337375C303030495C3030306E5C303030765C303030615C3030306C5C303030695C303030645C3030305C3034305C303030645C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
+\newlabel{alg:iterative_with_cutoff@cref}{{[algorithm][2][]2}{[1][20][]21}{}{}{}}
+\BKM@entry{id=28,dest={73656374696F6E2E342E34},srcline={264}}{5C3337365C3337375C303030525C3030306F5C303030625C303030755C303030735C303030745C3030306E5C303030655C303030735C30303073}
+\BKM@entry{id=29,dest={73756273656374696F6E2E342E342E31},srcline={268}}{5C3337365C3337375C303030495C3030306E5C303030765C303030615C3030306C5C303030695C303030645C3030305C3034305C303030645C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Robustness}{22}{section.4.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Invalid delegations}{22}{subsection.4.4.1}\protected@file@percent }
-\BKM@entry{id=30,dest={73756273656374696F6E2E342E342E32},srcline={307}}{5C3337365C3337375C303030435C3030306C5C3030306F5C303030735C303030655C303030645C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030435C303030795C303030635C3030306C5C303030655C30303073}
-\newlabel{subfig:permissible-self-delegation}{{4.3a}{23}{Permissible delegation graph}{figure.caption.21}{}}
+\BKM@entry{id=30,dest={73756273656374696F6E2E342E342E32},srcline={302}}{5C3337365C3337375C303030435C3030306C5C3030306F5C303030735C303030655C303030645C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030435C303030795C303030635C3030306C5C303030655C30303073}
+\newlabel{subfig:permissible-self-delegation}{{4.3a}{23}{Permissible delegation graph}{figure.caption.19}{}}
 \newlabel{subfig:permissible-self-delegation@cref}{{[subfigure][1][4,3]4.3a}{[1][22][]23}{}{}{}}
-\newlabel{sub@subfig:permissible-self-delegation}{{a}{23}{Permissible delegation graph}{figure.caption.21}{}}
+\newlabel{sub@subfig:permissible-self-delegation}{{a}{23}{Permissible delegation graph}{figure.caption.19}{}}
 \newlabel{sub@subfig:permissible-self-delegation@cref}{{[subfigure][1][4,3]4.3a}{[1][22][]23}{}{}{}}
-\newlabel{subfig:invalid-delegation-graph}{{4.3b}{23}{Invalid delegation graph}{figure.caption.21}{}}
+\newlabel{subfig:invalid-delegation-graph}{{4.3b}{23}{Invalid delegation graph}{figure.caption.19}{}}
 \newlabel{subfig:invalid-delegation-graph@cref}{{[subfigure][2][4,3]4.3b}{[1][22][]23}{}{}{}}
-\newlabel{sub@subfig:invalid-delegation-graph}{{b}{23}{Invalid delegation graph}{figure.caption.21}{}}
+\newlabel{sub@subfig:invalid-delegation-graph}{{b}{23}{Invalid delegation graph}{figure.caption.19}{}}
 \newlabel{sub@subfig:invalid-delegation-graph@cref}{{[subfigure][2][4,3]4.3b}{[1][22][]23}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Two similar delegation graphs}}{23}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:small-delegation-graphs}{{4.3}{23}{Two similar delegation graphs}{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Two similar delegation graphs}}{23}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:small-delegation-graphs}{{4.3}{23}{Two similar delegation graphs}{figure.caption.19}{}}
 \newlabel{fig:small-delegation-graphs@cref}{{[figure][3][4]4.3}{[1][22][]23}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Closed Delegation Cycles}{23}{subsection.4.4.2}\protected@file@percent }
 \BKM@entry{id=31,dest={636861707465722E35},srcline={5}}{5C3337365C3337375C303030455C303030765C303030615C3030306C5C303030755C303030615C303030745C303030695C3030306F5C3030306E}
 \BKM@entry{id=32,dest={73656374696F6E2E352E31},srcline={11}}{5C3337365C3337375C3030304D5C303030655C303030745C303030685C3030306F5C30303064}
 \BKM@entry{id=33,dest={73756273656374696F6E2E352E312E31},srcline={13}}{5C3337365C3337375C303030475C303030655C3030306E5C303030655C303030725C303030615C303030745C303030695C3030306E5C303030675C3030305C3034305C303030525C303030615C3030306E5C303030645C3030306F5C3030306D5C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
-\abx@aux@cite{0}{klingVotingBehaviourPower2015}
-\abx@aux@segm{0}{0}{klingVotingBehaviourPower2015}
 \BKM@entry{id=34,dest={73756273656374696F6E2E352E312E32},srcline={17}}{5C3337365C3337375C303030505C303030725C303030655C303030705C303030725C3030306F5C303030635C303030655C303030735C303030735C303030695C3030306E5C30303067}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Evaluation}{24}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -247,15 +242,15 @@
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}Method}{24}{section.5.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Generating Random Delegation Graphs}{24}{subsection.5.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Preprocessing}{24}{subsection.5.1.2}\protected@file@percent }
-\BKM@entry{id=35,dest={73756273656374696F6E2E352E312E33},srcline={30}}{5C3337365C3337375C3030304D5C303030655C303030615C303030735C303030755C303030725C303030655C3030306D5C303030655C3030306E5C30303074}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Preprocessign pipeline to turn any graph into a delegation graph}}{25}{figure.caption.22}\protected@file@percent }
-\newlabel{fig:cleaning_process}{{5.1}{25}{Preprocessign pipeline to turn any graph into a delegation graph}{figure.caption.22}{}}
+\BKM@entry{id=35,dest={73756273656374696F6E2E352E312E33},srcline={32}}{5C3337365C3337375C3030304D5C303030655C303030615C303030735C303030755C303030725C303030655C3030306D5C303030655C3030306E5C30303074}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Preprocessign pipeline to turn any graph into a delegation graph}}{25}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:cleaning_process}{{5.1}{25}{Preprocessign pipeline to turn any graph into a delegation graph}{figure.caption.20}{}}
 \newlabel{fig:cleaning_process@cref}{{[figure][1][5]5.1}{[1][24][]25}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Measurement}{25}{subsection.5.1.3}\protected@file@percent }
-\BKM@entry{id=36,dest={73656374696F6E2E352E32},srcline={39}}{5C3337365C3337375C303030535C303030795C3030306E5C303030745C303030685C303030655C303030745C303030695C303030635C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
-\BKM@entry{id=37,dest={73756273656374696F6E2E352E322E31},srcline={42}}{5C3337365C3337375C303030535C3030306D5C303030615C3030306C5C3030306C5C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Runtime of delegation algorithms on a randomly generated delegation graph}}{26}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:random-small}{{5.2}{26}{Runtime of delegation algorithms on a randomly generated delegation graph}{figure.caption.23}{}}
+\BKM@entry{id=36,dest={73656374696F6E2E352E32},srcline={41}}{5C3337365C3337375C303030535C303030795C3030306E5C303030745C303030685C303030655C303030745C303030695C303030635C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
+\BKM@entry{id=37,dest={73756273656374696F6E2E352E322E31},srcline={44}}{5C3337365C3337375C303030535C3030306D5C303030615C3030306C5C3030306C5C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Runtimes to resolve randomly generated delegation graphs}}{26}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:random-small}{{5.2}{26}{Runtimes to resolve randomly generated delegation graphs}{figure.caption.21}{}}
 \newlabel{fig:random-small@cref}{{[figure][2][5]5.2}{[1][26][]26}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}Synthetic Graphs}{26}{section.5.2}\protected@file@percent }
 \newlabel{sec:synthetic_graphs}{{5.2}{26}{Synthetic Graphs}{section.5.2}{}}
@@ -263,136 +258,137 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Small Graphs}{26}{subsection.5.2.1}\protected@file@percent }
 \newlabel{subsec:small_graphs}{{5.2.1}{26}{Small Graphs}{subsection.5.2.1}{}}
 \newlabel{subsec:small_graphs@cref}{{[subsection][1][5,2]5.2.1}{[1][26][]26}{}{}{}}
-\acronymused{LS}
-\BKM@entry{id=38,dest={73756273656374696F6E2E352E322E32},srcline={90}}{5C3337365C3337375C3030304C5C303030615C303030725C303030675C303030655C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Runtimes to resolve randomly generated delegation graphs}}{27}{figure.caption.24}\protected@file@percent }
-\newlabel{fig:random-tiny}{{5.3}{27}{Runtimes to resolve randomly generated delegation graphs}{figure.caption.24}{}}
+\BKM@entry{id=38,dest={73756273656374696F6E2E352E322E32},srcline={92}}{5C3337365C3337375C3030304C5C303030615C303030725C303030675C303030655C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Runtimes to resolve randomly generated delegation graphs}}{27}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:random-tiny}{{5.3}{27}{Runtimes to resolve randomly generated delegation graphs}{figure.caption.22}{}}
 \newlabel{fig:random-tiny@cref}{{[figure][3][5]5.3}{[1][27][]27}{}{}{}}
-\BKM@entry{id=39,dest={73756273656374696F6E2E352E322E33},srcline={122}}{5C3337365C3337375C303030445C303030655C3030306E5C303030735C303030655C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Large Graphs}{27}{subsection.5.2.2}\protected@file@percent }
+\BKM@entry{id=39,dest={73756273656374696F6E2E352E322E33},srcline={124}}{5C3337365C3337375C303030445C303030655C3030306E5C303030735C303030655C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
 \abx@aux@cite{0}{hagbergExploringNetworkStructure2008}
 \abx@aux@segm{0}{0}{hagbergExploringNetworkStructure2008}
-\newlabel{subfig:random-12and13-12}{{5.4a}{28}{12 nodes}{figure.caption.25}{}}
+\newlabel{subfig:random-12and13-12}{{5.4a}{28}{12 nodes}{figure.caption.23}{}}
 \newlabel{subfig:random-12and13-12@cref}{{[subfigure][1][5,4]5.4a}{[1][27][]28}{}{}{}}
-\newlabel{sub@subfig:random-12and13-12}{{a}{28}{12 nodes}{figure.caption.25}{}}
+\newlabel{sub@subfig:random-12and13-12}{{a}{28}{12 nodes}{figure.caption.23}{}}
 \newlabel{sub@subfig:random-12and13-12@cref}{{[subfigure][1][5,4]5.4a}{[1][27][]28}{}{}{}}
-\newlabel{subfig:random-12and13-13}{{5.4b}{28}{13 nodes}{figure.caption.25}{}}
+\newlabel{subfig:random-12and13-13}{{5.4b}{28}{13 nodes}{figure.caption.23}{}}
 \newlabel{subfig:random-12and13-13@cref}{{[subfigure][2][5,4]5.4b}{[1][27][]28}{}{}{}}
-\newlabel{sub@subfig:random-12and13-13}{{b}{28}{13 nodes}{figure.caption.25}{}}
+\newlabel{sub@subfig:random-12and13-13}{{b}{28}{13 nodes}{figure.caption.23}{}}
 \newlabel{sub@subfig:random-12and13-13@cref}{{[subfigure][2][5,4]5.4b}{[1][27][]28}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Delegation graphs with 12 and 13 nodes (blue nodes are sinks)}}{28}{figure.caption.25}\protected@file@percent }
-\newlabel{fig:random-12and13}{{5.4}{28}{Delegation graphs with 12 and 13 nodes (blue nodes are sinks)}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Delegation graphs with 12 and 13 nodes (blue nodes are sinks)}}{28}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:random-12and13}{{5.4}{28}{Delegation graphs with 12 and 13 nodes (blue nodes are sinks)}{figure.caption.23}{}}
 \newlabel{fig:random-12and13@cref}{{[figure][4][5]5.4}{[1][27][]28}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Large Graphs}{28}{subsection.5.2.2}\protected@file@percent }
-\newlabel{fig:random-large-linear}{{5.5a}{29}{Linear scale}{figure.caption.27}{}}
+\newlabel{fig:random-large-linear}{{5.5a}{29}{Linear scale}{figure.caption.25}{}}
 \newlabel{fig:random-large-linear@cref}{{[subfigure][1][5,5]5.5a}{[1][28][]29}{}{}{}}
-\newlabel{sub@fig:random-large-linear}{{a}{29}{Linear scale}{figure.caption.27}{}}
+\newlabel{sub@fig:random-large-linear}{{a}{29}{Linear scale}{figure.caption.25}{}}
 \newlabel{sub@fig:random-large-linear@cref}{{[subfigure][1][5,5]5.5a}{[1][28][]29}{}{}{}}
-\newlabel{subfig:random-large-loglog}{{5.5b}{29}{Loglog scale}{figure.caption.27}{}}
+\newlabel{subfig:random-large-loglog}{{5.5b}{29}{Loglog scale}{figure.caption.25}{}}
 \newlabel{subfig:random-large-loglog@cref}{{[subfigure][2][5,5]5.5b}{[1][28][]29}{}{}{}}
-\newlabel{sub@subfig:random-large-loglog}{{b}{29}{Loglog scale}{figure.caption.27}{}}
+\newlabel{sub@subfig:random-large-loglog}{{b}{29}{Loglog scale}{figure.caption.25}{}}
 \newlabel{sub@subfig:random-large-loglog@cref}{{[subfigure][2][5,5]5.5b}{[1][28][]29}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Runtimes to resolve large, randomly generated delegation graphs}}{29}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:random-large}{{5.5}{29}{Runtimes to resolve large, randomly generated delegation graphs}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Runtimes to resolve large, randomly generated delegation graphs}}{29}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:random-large}{{5.5}{29}{Runtimes to resolve large, randomly generated delegation graphs}{figure.caption.25}{}}
 \newlabel{fig:random-large@cref}{{[figure][5][5]5.5}{[1][28][]29}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Dense Graphs}{29}{subsection.5.2.3}\protected@file@percent }
-\BKM@entry{id=40,dest={73756273656374696F6E2E352E322E34},srcline={174}}{5C3337365C3337375C303030435C303030795C303030635C3030306C5C303030655C303030735C3030305C3034305C303030575C303030685C303030695C303030635C303030685C3030305C3034305C303030525C303030655C303030745C303030615C303030695C3030306E5C3030305C3034305C303030615C3030305C3034305C3030304C5C3030306F5C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030745C303030685C303030655C303030695C303030725C3030305C3034305C303030505C3030306F5C303030775C303030655C30303072}
-\newlabel{fig:dense-linear}{{5.6a}{30}{Linear scale}{figure.caption.28}{}}
+\BKM@entry{id=40,dest={73756273656374696F6E2E352E322E34},srcline={176}}{5C3337365C3337375C303030435C303030795C303030635C3030306C5C303030655C303030735C3030305C3034305C303030575C303030685C303030695C303030635C303030685C3030305C3034305C303030525C303030655C303030745C303030615C303030695C3030306E5C3030305C3034305C303030615C3030305C3034305C3030304C5C3030306F5C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030745C303030685C303030655C303030695C303030725C3030305C3034305C303030505C3030306F5C303030775C303030655C30303072}
+\newlabel{fig:dense-linear}{{5.6a}{30}{Linear scale}{figure.caption.26}{}}
 \newlabel{fig:dense-linear@cref}{{[subfigure][1][5,6]5.6a}{[1][29][]30}{}{}{}}
-\newlabel{sub@fig:dense-linear}{{a}{30}{Linear scale}{figure.caption.28}{}}
+\newlabel{sub@fig:dense-linear}{{a}{30}{Linear scale}{figure.caption.26}{}}
 \newlabel{sub@fig:dense-linear@cref}{{[subfigure][1][5,6]5.6a}{[1][29][]30}{}{}{}}
-\newlabel{subfig:dense-loglog}{{5.6b}{30}{Loglog scale}{figure.caption.28}{}}
+\newlabel{subfig:dense-loglog}{{5.6b}{30}{Loglog scale}{figure.caption.26}{}}
 \newlabel{subfig:dense-loglog@cref}{{[subfigure][2][5,6]5.6b}{[1][29][]30}{}{}{}}
-\newlabel{sub@subfig:dense-loglog}{{b}{30}{Loglog scale}{figure.caption.28}{}}
+\newlabel{sub@subfig:dense-loglog}{{b}{30}{Loglog scale}{figure.caption.26}{}}
 \newlabel{sub@subfig:dense-loglog@cref}{{[subfigure][2][5,6]5.6b}{[1][29][]30}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Runtimes to resolve dense delegation graphs}}{30}{figure.caption.28}\protected@file@percent }
-\newlabel{fig:dense}{{5.6}{30}{Runtimes to resolve dense delegation graphs}{figure.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Runtimes to resolve dense delegation graphs}}{30}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:dense}{{5.6}{30}{Runtimes to resolve dense delegation graphs}{figure.caption.26}{}}
 \newlabel{fig:dense@cref}{{[figure][6][5]5.6}{[1][29][]30}{}{}{}}
-\newlabel{subfig:dense-large-linear}{{5.7a}{31}{Linear scale}{figure.caption.29}{}}
+\newlabel{subfig:dense-large-linear}{{5.7a}{31}{Linear scale}{figure.caption.27}{}}
 \newlabel{subfig:dense-large-linear@cref}{{[subfigure][1][5,7]5.7a}{[1][30][]31}{}{}{}}
-\newlabel{sub@subfig:dense-large-linear}{{a}{31}{Linear scale}{figure.caption.29}{}}
+\newlabel{sub@subfig:dense-large-linear}{{a}{31}{Linear scale}{figure.caption.27}{}}
 \newlabel{sub@subfig:dense-large-linear@cref}{{[subfigure][1][5,7]5.7a}{[1][30][]31}{}{}{}}
-\newlabel{subfig:dense-large-loglog}{{5.7b}{31}{Loglog scale}{figure.caption.29}{}}
+\newlabel{subfig:dense-large-loglog}{{5.7b}{31}{Loglog scale}{figure.caption.27}{}}
 \newlabel{subfig:dense-large-loglog@cref}{{[subfigure][2][5,7]5.7b}{[1][30][]31}{}{}{}}
-\newlabel{sub@subfig:dense-large-loglog}{{b}{31}{Loglog scale}{figure.caption.29}{}}
+\newlabel{sub@subfig:dense-large-loglog}{{b}{31}{Loglog scale}{figure.caption.27}{}}
 \newlabel{sub@subfig:dense-large-loglog@cref}{{[subfigure][2][5,7]5.7b}{[1][30][]31}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Runtimes to resolve larger dense delegation graphs}}{31}{figure.caption.29}\protected@file@percent }
-\newlabel{fig:dense-large}{{5.7}{31}{Runtimes to resolve larger dense delegation graphs}{figure.caption.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Runtimes to resolve larger dense delegation graphs}}{31}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:dense-large}{{5.7}{31}{Runtimes to resolve larger dense delegation graphs}{figure.caption.27}{}}
 \newlabel{fig:dense-large@cref}{{[figure][7][5]5.7}{[1][30][]31}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces A delegation graph with a cycle that retains a lot of its power}}{31}{figure.caption.30}\protected@file@percent }
-\newlabel{fig:cycle_example}{{5.8}{31}{A delegation graph with a cycle that retains a lot of its power}{figure.caption.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces A delegation graph with a cycle that retains a lot of its power}}{31}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:cycle_example}{{5.8}{31}{A delegation graph with a cycle that retains a lot of its power}{figure.caption.28}{}}
 \newlabel{fig:cycle_example@cref}{{[figure][8][5]5.8}{[1][30][]31}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Cycles Which Retain a Lot of their Power}{31}{subsection.5.2.4}\protected@file@percent }
 \newlabel{subsec:cycles_draining}{{5.2.4}{31}{Cycles Which Retain a Lot of their Power}{subsection.5.2.4}{}}
 \newlabel{subsec:cycles_draining@cref}{{[subsection][4][5,2]5.2.4}{[1][30][]31}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces An example of the cycles used for the benchmarks. The blue node is the sink}}{32}{figure.caption.31}\protected@file@percent }
-\newlabel{fig:big_cycle_example}{{5.9}{32}{An example of the cycles used for the benchmarks. The blue node is the sink}{figure.caption.31}{}}
-\newlabel{fig:big_cycle_example@cref}{{[figure][9][5]5.9}{[1][31][]32}{}{}{}}
-\newlabel{subfig:cycle-small-linear}{{5.10a}{32}{Linear scale}{figure.caption.32}{}}
-\newlabel{subfig:cycle-small-linear@cref}{{[subfigure][1][5,10]5.10a}{[1][31][]32}{}{}{}}
-\newlabel{sub@subfig:cycle-small-linear}{{a}{32}{Linear scale}{figure.caption.32}{}}
-\newlabel{sub@subfig:cycle-small-linear@cref}{{[subfigure][1][5,10]5.10a}{[1][31][]32}{}{}{}}
-\newlabel{subfig:cycle-small-loglog}{{5.10b}{32}{Loglog scale}{figure.caption.32}{}}
-\newlabel{subfig:cycle-small-loglog@cref}{{[subfigure][2][5,10]5.10b}{[1][31][]32}{}{}{}}
-\newlabel{sub@subfig:cycle-small-loglog}{{b}{32}{Loglog scale}{figure.caption.32}{}}
-\newlabel{sub@subfig:cycle-small-loglog@cref}{{[subfigure][2][5,10]5.10b}{[1][31][]32}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Runtimes to resolve cycles which retain a lot of their power}}{32}{figure.caption.32}\protected@file@percent }
-\newlabel{fig:cycle_small}{{5.10}{32}{Runtimes to resolve cycles which retain a lot of their power}{figure.caption.32}{}}
-\newlabel{fig:cycle_small@cref}{{[figure][10][5]5.10}{[1][31][]32}{}{}{}}
 \BKM@entry{id=41,dest={73756273656374696F6E2E352E322E35},srcline={239}}{5C3337365C3337375C3030304E5C3030306F5C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces An example of the cycles used for the benchmarks. The blue node is the sink}}{32}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:big_cycle_example}{{5.9}{32}{An example of the cycles used for the benchmarks. The blue node is the sink}{figure.caption.29}{}}
+\newlabel{fig:big_cycle_example@cref}{{[figure][9][5]5.9}{[1][31][]32}{}{}{}}
+\newlabel{subfig:cycle-small-linear}{{5.10a}{32}{Linear scale}{figure.caption.30}{}}
+\newlabel{subfig:cycle-small-linear@cref}{{[subfigure][1][5,10]5.10a}{[1][31][]32}{}{}{}}
+\newlabel{sub@subfig:cycle-small-linear}{{a}{32}{Linear scale}{figure.caption.30}{}}
+\newlabel{sub@subfig:cycle-small-linear@cref}{{[subfigure][1][5,10]5.10a}{[1][31][]32}{}{}{}}
+\newlabel{subfig:cycle-small-loglog}{{5.10b}{32}{Loglog scale}{figure.caption.30}{}}
+\newlabel{subfig:cycle-small-loglog@cref}{{[subfigure][2][5,10]5.10b}{[1][31][]32}{}{}{}}
+\newlabel{sub@subfig:cycle-small-loglog}{{b}{32}{Loglog scale}{figure.caption.30}{}}
+\newlabel{sub@subfig:cycle-small-loglog@cref}{{[subfigure][2][5,10]5.10b}{[1][31][]32}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Runtimes to resolve cycles which retain a lot of their power}}{32}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:cycle_small}{{5.10}{32}{Runtimes to resolve cycles which retain a lot of their power}{figure.caption.30}{}}
+\newlabel{fig:cycle_small@cref}{{[figure][10][5]5.10}{[1][31][]32}{}{}{}}
 \BKM@entry{id=42,dest={73656374696F6E2E352E33},srcline={265}}{5C3337365C3337375C303030535C3030306F5C303030635C303030695C303030615C3030306C5C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
-\newlabel{subfig:cycle-large-linear}{{5.11a}{33}{Linear scale}{figure.caption.33}{}}
+\BKM@entry{id=43,dest={73756273656374696F6E2E352E332E31},srcline={270}}{5C3337365C3337375C303030535C3030306D5C303030615C3030306C5C3030306C5C3030305C3034305C303030575C3030306F5C303030725C3030306C5C303030645C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
+\abx@aux@cite{0}{wattsCollectiveDynamicsSmallworld1998a}
+\abx@aux@segm{0}{0}{wattsCollectiveDynamicsSmallworld1998a}
+\newlabel{subfig:cycle-large-linear}{{5.11a}{33}{Linear scale}{figure.caption.31}{}}
 \newlabel{subfig:cycle-large-linear@cref}{{[subfigure][1][5,11]5.11a}{[1][32][]33}{}{}{}}
-\newlabel{sub@subfig:cycle-large-linear}{{a}{33}{Linear scale}{figure.caption.33}{}}
+\newlabel{sub@subfig:cycle-large-linear}{{a}{33}{Linear scale}{figure.caption.31}{}}
 \newlabel{sub@subfig:cycle-large-linear@cref}{{[subfigure][1][5,11]5.11a}{[1][32][]33}{}{}{}}
-\newlabel{subfig:cycle-large-loglog}{{5.11b}{33}{Loglog scale}{figure.caption.33}{}}
+\newlabel{subfig:cycle-large-loglog}{{5.11b}{33}{Loglog scale}{figure.caption.31}{}}
 \newlabel{subfig:cycle-large-loglog@cref}{{[subfigure][2][5,11]5.11b}{[1][32][]33}{}{}{}}
-\newlabel{sub@subfig:cycle-large-loglog}{{b}{33}{Loglog scale}{figure.caption.33}{}}
+\newlabel{sub@subfig:cycle-large-loglog}{{b}{33}{Loglog scale}{figure.caption.31}{}}
 \newlabel{sub@subfig:cycle-large-loglog@cref}{{[subfigure][2][5,11]5.11b}{[1][32][]33}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Runtimes to resolve cycles which retain a lot of their power. The iterative solver's runtime, to allow inspection of the LS and LP solver's runtimes.}}{33}{figure.caption.33}\protected@file@percent }
-\newlabel{fig:cycle_large}{{5.11}{33}{Runtimes to resolve cycles which retain a lot of their power. The iterative solver's runtime, to allow inspection of the LS and LP solver's runtimes}{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Runtimes to resolve cycles which retain a lot of their power. The iterative solver's runtime, to allow inspection of the LS and LP solver's runtimes.}}{33}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:cycle_large}{{5.11}{33}{Runtimes to resolve cycles which retain a lot of their power. The iterative solver's runtime, to allow inspection of the LS and LP solver's runtimes}{figure.caption.31}{}}
 \newlabel{fig:cycle_large@cref}{{[figure][11][5]5.11}{[1][32][]33}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}No Delegations}{33}{subsection.5.2.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}Social Graphs}{33}{section.5.3}\protected@file@percent }
 \newlabel{sec:social_graphs}{{5.3}{33}{Social Graphs}{section.5.3}{}}
 \newlabel{sec:social_graphs@cref}{{[section][3][5]5.3}{[1][33][]33}{}{}{}}
-\BKM@entry{id=43,dest={73756273656374696F6E2E352E332E31},srcline={270}}{5C3337365C3337375C303030535C3030306D5C303030615C3030306C5C3030306C5C3030305C3034305C303030575C3030306F5C303030725C3030306C5C303030645C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
-\newlabel{subfig:no-del-linear}{{5.12a}{34}{Linear scale}{figure.caption.34}{}}
+\newlabel{subfig:no-del-linear}{{5.12a}{34}{Linear scale}{figure.caption.32}{}}
 \newlabel{subfig:no-del-linear@cref}{{[subfigure][1][5,12]5.12a}{[1][33][]34}{}{}{}}
-\newlabel{sub@subfig:no-del-linear}{{a}{34}{Linear scale}{figure.caption.34}{}}
+\newlabel{sub@subfig:no-del-linear}{{a}{34}{Linear scale}{figure.caption.32}{}}
 \newlabel{sub@subfig:no-del-linear@cref}{{[subfigure][1][5,12]5.12a}{[1][33][]34}{}{}{}}
-\newlabel{subfig:no-del-loglog}{{5.12b}{34}{Loglog scale}{figure.caption.34}{}}
+\newlabel{subfig:no-del-loglog}{{5.12b}{34}{Loglog scale}{figure.caption.32}{}}
 \newlabel{subfig:no-del-loglog@cref}{{[subfigure][2][5,12]5.12b}{[1][33][]34}{}{}{}}
-\newlabel{sub@subfig:no-del-loglog}{{b}{34}{Loglog scale}{figure.caption.34}{}}
+\newlabel{sub@subfig:no-del-loglog}{{b}{34}{Loglog scale}{figure.caption.32}{}}
 \newlabel{sub@subfig:no-del-loglog@cref}{{[subfigure][2][5,12]5.12b}{[1][33][]34}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Runtimes to resolve delegation graphs with no edges}}{34}{figure.caption.34}\protected@file@percent }
-\newlabel{fig:no_del}{{5.12}{34}{Runtimes to resolve delegation graphs with no edges}{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Runtimes to resolve delegation graphs with no edges}}{34}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:no_del}{{5.12}{34}{Runtimes to resolve delegation graphs with no edges}{figure.caption.32}{}}
 \newlabel{fig:no_del@cref}{{[figure][12][5]5.12}{[1][33][]34}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Small World Graphs}{34}{subsection.5.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces A Watts-Strogatz graph with $(n, k, p) = (40, 4, 0.1)$, where $60\%$ of the edges have been removed}}{35}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:ws_example}{{5.13}{35}{A Watts-Strogatz graph with $(n, k, p) = (40, 4, 0.1)$, where $60\%$ of the edges have been removed}{figure.caption.33}{}}
+\newlabel{fig:ws_example@cref}{{[figure][13][5]5.13}{[1][35][]35}{}{}{}}
+\newlabel{subfig:sw_linear}{{5.14a}{35}{Linear scale}{figure.caption.34}{}}
+\newlabel{subfig:sw_linear@cref}{{[subfigure][1][5,14]5.14a}{[1][35][]35}{}{}{}}
+\newlabel{sub@subfig:sw_linear}{{a}{35}{Linear scale}{figure.caption.34}{}}
+\newlabel{sub@subfig:sw_linear@cref}{{[subfigure][1][5,14]5.14a}{[1][35][]35}{}{}{}}
+\newlabel{subfig:sw_loglog}{{5.14b}{35}{Loglog scale}{figure.caption.34}{}}
+\newlabel{subfig:sw_loglog@cref}{{[subfigure][2][5,14]5.14b}{[1][35][]35}{}{}{}}
+\newlabel{sub@subfig:sw_loglog}{{b}{35}{Loglog scale}{figure.caption.34}{}}
+\newlabel{sub@subfig:sw_loglog@cref}{{[subfigure][2][5,14]5.14b}{[1][35][]35}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Runtimes to resolve the Watt-Strogatz based delegation graphs. The grey line indicates the amount of cycles found in the graph. It does not include closed delegation cycles, which the preprocessing pipeline collapsed.}}{35}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:sw}{{5.14}{35}{Runtimes to resolve the Watt-Strogatz based delegation graphs. The grey line indicates the amount of cycles found in the graph. It does not include closed delegation cycles, which the preprocessing pipeline collapsed}{figure.caption.34}{}}
+\newlabel{fig:sw@cref}{{[figure][14][5]5.14}{[1][35][]35}{}{}{}}
 \BKM@entry{id=44,dest={73756273656374696F6E2E352E332E32},srcline={315}}{5C3337365C3337375C303030525C3030302D5C3030304D5C303030615C303030745C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
 \abx@aux@cite{0}{chakrabartiRMATRecursiveModel2004}
 \abx@aux@segm{0}{0}{chakrabartiRMATRecursiveModel2004}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces A Watts-Strogatz graph with $(n, k, p) = (40, 4, 0.1)$, where $60\%$ of the edges have been removed}}{35}{figure.caption.35}\protected@file@percent }
-\newlabel{fig:ws_example}{{5.13}{35}{A Watts-Strogatz graph with $(n, k, p) = (40, 4, 0.1)$, where $60\%$ of the edges have been removed}{figure.caption.35}{}}
-\newlabel{fig:ws_example@cref}{{[figure][13][5]5.13}{[1][35][]35}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}R-Mat Graphs}{35}{subsection.5.3.2}\protected@file@percent }
 \abx@aux@cite{0}{chakrabartiRMATRecursiveModel2004}
 \abx@aux@segm{0}{0}{chakrabartiRMATRecursiveModel2004}
 \abx@aux@cite{0}{zhouKanonymityLdiversityApproaches2011}
 \abx@aux@segm{0}{0}{zhouKanonymityLdiversityApproaches2011}
-\newlabel{subfig:sw_linear}{{5.14a}{36}{Linear scale}{figure.caption.36}{}}
-\newlabel{subfig:sw_linear@cref}{{[subfigure][1][5,14]5.14a}{[1][35][]36}{}{}{}}
-\newlabel{sub@subfig:sw_linear}{{a}{36}{Linear scale}{figure.caption.36}{}}
-\newlabel{sub@subfig:sw_linear@cref}{{[subfigure][1][5,14]5.14a}{[1][35][]36}{}{}{}}
-\newlabel{subfig:sw_loglog}{{5.14b}{36}{Loglog scale}{figure.caption.36}{}}
-\newlabel{subfig:sw_loglog@cref}{{[subfigure][2][5,14]5.14b}{[1][35][]36}{}{}{}}
-\newlabel{sub@subfig:sw_loglog}{{b}{36}{Loglog scale}{figure.caption.36}{}}
-\newlabel{sub@subfig:sw_loglog@cref}{{[subfigure][2][5,14]5.14b}{[1][35][]36}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Runtimes to resolve the Watt-Strogatz based delegation graphs. The grey line indicates the amount of cycles found in the graph. It does not include closed delegation cycles, which the preprocessing pipeline collapsed.}}{36}{figure.caption.36}\protected@file@percent }
-\newlabel{fig:sw}{{5.14}{36}{Runtimes to resolve the Watt-Strogatz based delegation graphs. The grey line indicates the amount of cycles found in the graph. It does not include closed delegation cycles, which the preprocessing pipeline collapsed}{figure.caption.36}{}}
-\newlabel{fig:sw@cref}{{[figure][14][5]5.14}{[1][35][]36}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces A directed, weighted R-Mat graph with $(a, b, c, d) = (0.45, 0.25, 0.25, 0.15)$, $N = 40$, $M = 400$, where edges with weight $< 2$ removed}}{36}{figure.caption.37}\protected@file@percent }
-\newlabel{fig:rmat_example}{{5.15}{36}{A directed, weighted R-Mat graph with $(a, b, c, d) = (0.45, 0.25, 0.25, 0.15)$, $N = 40$, $M = 400$, where edges with weight $< 2$ removed}{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces A directed, weighted R-Mat graph with $(a, b, c, d) = (0.45, 0.25, 0.25, 0.15)$, $N = 40$, $M = 400$, where edges with weight $< 2$ removed}}{36}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:rmat_example}{{5.15}{36}{A directed, weighted R-Mat graph with $(a, b, c, d) = (0.45, 0.25, 0.25, 0.15)$, $N = 40$, $M = 400$, where edges with weight $< 2$ removed}{figure.caption.35}{}}
 \newlabel{fig:rmat_example@cref}{{[figure][15][5]5.15}{[1][36][]36}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}R-Mat Graphs}{36}{subsection.5.3.2}\protected@file@percent }
 \BKM@entry{id=45,dest={73656374696F6E2E352E34},srcline={352}}{5C3337365C3337375C303030525C303030655C303030615C3030306C5C3030302D5C303030575C3030306F5C303030725C3030306C5C303030645C3030305C3034305C303030445C303030615C303030745C303030615C303030735C303030655C303030745C30303073}
 \@writefile{toc}{\contentsline {section}{\numberline {5.4}Real-World Datasets}{37}{section.5.4}\protected@file@percent }
 \BKM@entry{id=46,dest={73756273656374696F6E2E352E342E31},srcline={356}}{5C3337365C3337375C303030425C303030695C303030745C303030635C3030306F5C303030695C3030306E5C3030305C3034305C3030304F5C303030545C303030435C3030305C3034305C303030545C303030725C303030755C303030735C303030745C3030305C3034305C3030304E5C303030655C303030745C303030775C3030306F5C303030725C3030306B}
@@ -403,16 +399,16 @@
 \BKM@entry{id=47,dest={73756273656374696F6E2E352E342E32},srcline={364}}{5C3337365C3337375C303030455C303030705C303030695C3030306E5C303030695C3030306F5C3030306E5C30303073}
 \abx@aux@cite{0}{richardsonTrustManagementSemantic2003}
 \abx@aux@segm{0}{0}{richardsonTrustManagementSemantic2003}
-\newlabel{subfig:rmat_linear}{{5.16a}{38}{Linear scale}{figure.caption.38}{}}
+\newlabel{subfig:rmat_linear}{{5.16a}{38}{Linear scale}{figure.caption.36}{}}
 \newlabel{subfig:rmat_linear@cref}{{[subfigure][1][5,16]5.16a}{[1][37][]38}{}{}{}}
-\newlabel{sub@subfig:rmat_linear}{{a}{38}{Linear scale}{figure.caption.38}{}}
+\newlabel{sub@subfig:rmat_linear}{{a}{38}{Linear scale}{figure.caption.36}{}}
 \newlabel{sub@subfig:rmat_linear@cref}{{[subfigure][1][5,16]5.16a}{[1][37][]38}{}{}{}}
-\newlabel{subfig:rmat_loglog}{{5.16b}{38}{Loglog scale}{figure.caption.38}{}}
+\newlabel{subfig:rmat_loglog}{{5.16b}{38}{Loglog scale}{figure.caption.36}{}}
 \newlabel{subfig:rmat_loglog@cref}{{[subfigure][2][5,16]5.16b}{[1][37][]38}{}{}{}}
-\newlabel{sub@subfig:rmat_loglog}{{b}{38}{Loglog scale}{figure.caption.38}{}}
+\newlabel{sub@subfig:rmat_loglog}{{b}{38}{Loglog scale}{figure.caption.36}{}}
 \newlabel{sub@subfig:rmat_loglog@cref}{{[subfigure][2][5,16]5.16b}{[1][37][]38}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Runtimes to resolve the R-Mat based delegation graphs}}{38}{figure.caption.38}\protected@file@percent }
-\newlabel{fig:rmat}{{5.16}{38}{Runtimes to resolve the R-Mat based delegation graphs}{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Runtimes to resolve the R-Mat based delegation graphs}}{38}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:rmat}{{5.16}{38}{Runtimes to resolve the R-Mat based delegation graphs}{figure.caption.36}{}}
 \newlabel{fig:rmat@cref}{{[figure][16][5]5.16}{[1][37][]38}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Bitcoin OTC Trust Network}{38}{subsection.5.4.1}\protected@file@percent }
 \BKM@entry{id=48,dest={73756273656374696F6E2E352E342E33},srcline={372}}{5C3337365C3337375C303030535C3030306C5C303030615C303030735C303030685C303030645C3030306F5C303030745C3030305C3034305C3030305A5C3030306F5C3030306F}
@@ -425,54 +421,54 @@
 \newlabel{subsec:datasets_eval}{{5.4.4}{39}{Evaluation of the datasets}{subsection.5.4.4}{}}
 \newlabel{subsec:datasets_eval@cref}{{[subsection][4][5,4]5.4.4}{[1][39][]39}{}{}{}}
 \BKM@entry{id=50,dest={73656374696F6E2E352E35},srcline={482}}{5C3337365C3337375C3030304B5C303030655C303030795C3030305C3034305C303030495C3030306E5C303030735C303030695C303030675C303030685C303030745C30303073}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Runtimes}}{40}{figure.caption.39}\protected@file@percent }
-\newlabel{fig:datasets_runtimes}{{5.17}{40}{Runtimes}{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Runtimes}}{40}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:datasets_runtimes}{{5.17}{40}{Runtimes}{figure.caption.37}{}}
 \newlabel{fig:datasets_runtimes@cref}{{[figure][17][5]5.17}{[1][39][]40}{}{}{}}
-\newlabel{subfig:bitcoinotc_outdegrees}{{5.18a}{40}{Bitcoin OTC dataset}{figure.caption.40}{}}
+\newlabel{subfig:bitcoinotc_outdegrees}{{5.18a}{40}{Bitcoin OTC dataset}{figure.caption.38}{}}
 \newlabel{subfig:bitcoinotc_outdegrees@cref}{{[subfigure][1][5,18]5.18a}{[1][39][]40}{}{}{}}
-\newlabel{sub@subfig:bitcoinotc_outdegrees}{{a}{40}{Bitcoin OTC dataset}{figure.caption.40}{}}
+\newlabel{sub@subfig:bitcoinotc_outdegrees}{{a}{40}{Bitcoin OTC dataset}{figure.caption.38}{}}
 \newlabel{sub@subfig:bitcoinotc_outdegrees@cref}{{[subfigure][1][5,18]5.18a}{[1][39][]40}{}{}{}}
-\newlabel{subfig:epinions_outdegrees}{{5.18b}{40}{Epinions dataset}{figure.caption.40}{}}
+\newlabel{subfig:epinions_outdegrees}{{5.18b}{40}{Epinions dataset}{figure.caption.38}{}}
 \newlabel{subfig:epinions_outdegrees@cref}{{[subfigure][2][5,18]5.18b}{[1][39][]40}{}{}{}}
-\newlabel{sub@subfig:epinions_outdegrees}{{b}{40}{Epinions dataset}{figure.caption.40}{}}
+\newlabel{sub@subfig:epinions_outdegrees}{{b}{40}{Epinions dataset}{figure.caption.38}{}}
 \newlabel{sub@subfig:epinions_outdegrees@cref}{{[subfigure][2][5,18]5.18b}{[1][39][]40}{}{}{}}
-\newlabel{subfig:slashdot_outdegrees}{{5.18c}{40}{Slashdot Zoo dataset}{figure.caption.40}{}}
+\newlabel{subfig:slashdot_outdegrees}{{5.18c}{40}{Slashdot Zoo dataset}{figure.caption.38}{}}
 \newlabel{subfig:slashdot_outdegrees@cref}{{[subfigure][3][5,18]5.18c}{[1][39][]40}{}{}{}}
-\newlabel{sub@subfig:slashdot_outdegrees}{{c}{40}{Slashdot Zoo dataset}{figure.caption.40}{}}
+\newlabel{sub@subfig:slashdot_outdegrees}{{c}{40}{Slashdot Zoo dataset}{figure.caption.38}{}}
 \newlabel{sub@subfig:slashdot_outdegrees@cref}{{[subfigure][3][5,18]5.18c}{[1][39][]40}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Histogram of outdegrees}}{40}{figure.caption.40}\protected@file@percent }
-\newlabel{fig:datasets_outdegree_distr}{{5.18}{40}{Histogram of outdegrees}{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Histogram of outdegrees}}{40}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:datasets_outdegree_distr}{{5.18}{40}{Histogram of outdegrees}{figure.caption.38}{}}
 \newlabel{fig:datasets_outdegree_distr@cref}{{[figure][18][5]5.18}{[1][39][]40}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.5}Key Insights}{40}{section.5.5}\protected@file@percent }
-\newlabel{subfig:bitcoinotc_outdegrees}{{5.19a}{41}{Bitcoin OTC dataset}{figure.caption.41}{}}
+\newlabel{subfig:bitcoinotc_outdegrees}{{5.19a}{41}{Bitcoin OTC dataset}{figure.caption.39}{}}
 \newlabel{subfig:bitcoinotc_outdegrees@cref}{{[subfigure][1][5,19]5.19a}{[1][39][]41}{}{}{}}
-\newlabel{sub@subfig:bitcoinotc_outdegrees}{{a}{41}{Bitcoin OTC dataset}{figure.caption.41}{}}
+\newlabel{sub@subfig:bitcoinotc_outdegrees}{{a}{41}{Bitcoin OTC dataset}{figure.caption.39}{}}
 \newlabel{sub@subfig:bitcoinotc_outdegrees@cref}{{[subfigure][1][5,19]5.19a}{[1][39][]41}{}{}{}}
-\newlabel{subfig:epinions_outdegrees}{{5.19b}{41}{Epinions dataset}{figure.caption.41}{}}
+\newlabel{subfig:epinions_outdegrees}{{5.19b}{41}{Epinions dataset}{figure.caption.39}{}}
 \newlabel{subfig:epinions_outdegrees@cref}{{[subfigure][2][5,19]5.19b}{[1][39][]41}{}{}{}}
-\newlabel{sub@subfig:epinions_outdegrees}{{b}{41}{Epinions dataset}{figure.caption.41}{}}
+\newlabel{sub@subfig:epinions_outdegrees}{{b}{41}{Epinions dataset}{figure.caption.39}{}}
 \newlabel{sub@subfig:epinions_outdegrees@cref}{{[subfigure][2][5,19]5.19b}{[1][39][]41}{}{}{}}
-\newlabel{subfig:slashdot_outdegrees}{{5.19c}{41}{Slashdot Zoo dataset}{figure.caption.41}{}}
+\newlabel{subfig:slashdot_outdegrees}{{5.19c}{41}{Slashdot Zoo dataset}{figure.caption.39}{}}
 \newlabel{subfig:slashdot_outdegrees@cref}{{[subfigure][3][5,19]5.19c}{[1][39][]41}{}{}{}}
-\newlabel{sub@subfig:slashdot_outdegrees}{{c}{41}{Slashdot Zoo dataset}{figure.caption.41}{}}
+\newlabel{sub@subfig:slashdot_outdegrees}{{c}{41}{Slashdot Zoo dataset}{figure.caption.39}{}}
 \newlabel{sub@subfig:slashdot_outdegrees@cref}{{[subfigure][3][5,19]5.19c}{[1][39][]41}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Distribution of outdegrees between 0 and 50}}{41}{figure.caption.41}\protected@file@percent }
-\newlabel{fig:datasets_outdegree_distr_50}{{5.19}{41}{Distribution of outdegrees between 0 and 50}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Distribution of outdegrees between 0 and 50}}{41}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:datasets_outdegree_distr_50}{{5.19}{41}{Distribution of outdegrees between 0 and 50}{figure.caption.39}{}}
 \newlabel{fig:datasets_outdegree_distr_50@cref}{{[figure][19][5]5.19}{[1][39][]41}{}{}{}}
-\newlabel{subfig:bitcoinotc_powers}{{5.20a}{41}{Bitcoin OTC dataset}{figure.caption.42}{}}
+\newlabel{subfig:bitcoinotc_powers}{{5.20a}{41}{Bitcoin OTC dataset}{figure.caption.40}{}}
 \newlabel{subfig:bitcoinotc_powers@cref}{{[subfigure][1][5,20]5.20a}{[1][39][]41}{}{}{}}
-\newlabel{sub@subfig:bitcoinotc_powers}{{a}{41}{Bitcoin OTC dataset}{figure.caption.42}{}}
+\newlabel{sub@subfig:bitcoinotc_powers}{{a}{41}{Bitcoin OTC dataset}{figure.caption.40}{}}
 \newlabel{sub@subfig:bitcoinotc_powers@cref}{{[subfigure][1][5,20]5.20a}{[1][39][]41}{}{}{}}
-\newlabel{subfig:epinions_powers}{{5.20b}{41}{Epinions dataset}{figure.caption.42}{}}
+\newlabel{subfig:epinions_powers}{{5.20b}{41}{Epinions dataset}{figure.caption.40}{}}
 \newlabel{subfig:epinions_powers@cref}{{[subfigure][2][5,20]5.20b}{[1][39][]41}{}{}{}}
-\newlabel{sub@subfig:epinions_powers}{{b}{41}{Epinions dataset}{figure.caption.42}{}}
+\newlabel{sub@subfig:epinions_powers}{{b}{41}{Epinions dataset}{figure.caption.40}{}}
 \newlabel{sub@subfig:epinions_powers@cref}{{[subfigure][2][5,20]5.20b}{[1][39][]41}{}{}{}}
-\newlabel{subfig:slashdot_powers}{{5.20c}{41}{Slashdot Zoo dataset}{figure.caption.42}{}}
+\newlabel{subfig:slashdot_powers}{{5.20c}{41}{Slashdot Zoo dataset}{figure.caption.40}{}}
 \newlabel{subfig:slashdot_powers@cref}{{[subfigure][3][5,20]5.20c}{[1][39][]41}{}{}{}}
-\newlabel{sub@subfig:slashdot_powers}{{c}{41}{Slashdot Zoo dataset}{figure.caption.42}{}}
+\newlabel{sub@subfig:slashdot_powers}{{c}{41}{Slashdot Zoo dataset}{figure.caption.40}{}}
 \newlabel{sub@subfig:slashdot_powers@cref}{{[subfigure][3][5,20]5.20c}{[1][39][]41}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Distribution of powers}}{41}{figure.caption.42}\protected@file@percent }
-\newlabel{fig:datasets_powers}{{5.20}{41}{Distribution of powers}{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Distribution of powers}}{41}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:datasets_powers}{{5.20}{41}{Distribution of powers}{figure.caption.40}{}}
 \newlabel{fig:datasets_powers@cref}{{[figure][20][5]5.20}{[1][39][]41}{}{}{}}
 \BKM@entry{id=51,dest={636861707465722E36},srcline={4}}{5C3337365C3337375C303030525C303030655C3030306C5C303030615C303030745C303030655C303030645C3030305C3034305C303030575C3030306F5C303030725C3030306B}
 \abx@aux@cite{0}{degraveResolvingMultiproxyTransitive2014}
@@ -498,26 +494,41 @@
 \@writefile{lol}{\addvspace {10\p@ }}
 \newlabel{chap:conclusion}{{7}{44}{Conclusion and Further Research}{chapter.7}{}}
 \newlabel{chap:conclusion@cref}{{[chapter][7][]7}{[1][44][]44}{}{}{}}
-\BKM@entry{id=53,dest={636861707465722A2E3433},srcline={63}}{5C3337365C3337375C303030415C303030625C303030625C303030725C303030655C303030765C303030695C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbreviations}{45}{chapter*.43}\protected@file@percent }
+\BKM@entry{id=53,dest={636861707465722A2E3431},srcline={69}}{5C3337365C3337375C303030415C303030625C303030625C303030725C303030655C303030765C303030695C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Abbreviations}{45}{chapter*.41}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\newacro{TUM}[\AC@hyperlink{TUM}{TUM}]{Technical University of Munich}
-\newacro{LS}[\AC@hyperlink{LS}{LS}]{Linear Systems Solver}
-\newacro{LP}[\AC@hyperlink{LP}{LP}]{Linear Programming Solver}
-\BKM@entry{id=54,dest={636861707465722A2E3434},srcline={72}}{5C3337365C3337375C3030304C5C303030695C303030735C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030465C303030695C303030675C303030755C303030725C303030655C30303073}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline List of Figures}{46}{chapter*.44}\protected@file@percent }
-\BKM@entry{id=55,dest={636861707465722A2E3435},srcline={73}}{5C3337365C3337375C3030304C5C303030695C303030735C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030545C303030615C303030625C3030306C5C303030655C30303073}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline List of Tables}{48}{chapter*.45}\protected@file@percent }
-\BKM@entry{id=56,dest={636861707465722A2E3436},srcline={75}}{5C3337365C3337375C303030425C303030695C303030625C3030306C5C303030695C3030306F5C303030675C303030725C303030615C303030705C303030685C30303079}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Bibliography}{49}{chapter*.46}\protected@file@percent }
+\BKM@entry{id=54,dest={636861707465722A2E3432},srcline={74}}{5C3337365C3337375C3030304C5C303030695C303030735C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030465C303030695C303030675C303030755C303030725C303030655C30303073}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline List of Figures}{46}{chapter*.42}\protected@file@percent }
+\BKM@entry{id=55,dest={636861707465722A2E3433},srcline={75}}{5C3337365C3337375C3030304C5C303030695C303030735C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030545C303030615C303030625C3030306C5C303030655C30303073}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline List of Tables}{48}{chapter*.43}\protected@file@percent }
+\BKM@entry{id=56,dest={636861707465722A2E3434},srcline={77}}{5C3337365C3337375C303030425C303030695C303030625C3030306C5C303030695C3030306F5C303030675C303030725C303030615C303030705C303030685C30303079}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Bibliography}{49}{chapter*.44}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\abx@aux@read@bbl@mdfivesum{6EF7FE0B01BE191B8788C353727E6428}
+\@input{chapters/appendix.aux}
+\BKM@entry{id=57,dest={617070656E6469782E41},srcline={3}}{5C3337365C3337375C303030415C303030705C303030705C303030655C3030306E5C303030645C303030695C30303078}
+\BKM@entry{id=58,dest={73656374696F6E2E412E31},srcline={5}}{5C3337365C3337375C303030415C3030306C5C303030675C3030306F5C303030725C303030695C303030745C303030685C3030306D5C30303073}
+\BKM@entry{id=59,dest={73756273656374696F6E2E412E312E31},srcline={7}}{5C3337365C3337375C303030525C303030655C303030735C3030306F5C3030306C5C303030755C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030415C3030306C5C303030675C3030306F5C303030725C303030695C303030745C303030685C3030306D5C30303073}
+\BKM@entry{id=60,dest={73756273656374696F6E2E412E312E32},srcline={16}}{5C3337365C3337375C303030475C303030725C303030615C303030705C303030685C3030305C3034305C303030475C303030655C3030306E5C303030655C303030725C303030615C303030745C3030306F5C303030725C30303073}
+\BKM@entry{id=61,dest={73756273656374696F6E2E412E312E33},srcline={25}}{5C3337365C3337375C303030505C303030725C303030655C303030705C303030725C3030306F5C303030635C303030655C303030735C303030735C303030695C3030306E5C30303067}
+\BKM@entry{id=62,dest={73656374696F6E2E412E32},srcline={34}}{5C3337365C3337375C303030525C303030655C303030735C303030755C3030306C5C303030745C30303073}
+\BKM@entry{id=63,dest={73756273656374696F6E2E412E322E31},srcline={40}}{5C3337365C3337375C303030535C3030306D5C303030615C3030306C5C3030306C5C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
+\BKM@entry{id=64,dest={73756273656374696F6E2E412E322E32},srcline={42}}{5C3337365C3337375C3030304C5C303030615C303030725C303030675C303030655C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
+\BKM@entry{id=65,dest={73756273656374696F6E2E412E322E33},srcline={44}}{5C3337365C3337375C303030445C303030655C3030306E5C303030735C303030655C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
+\BKM@entry{id=66,dest={73756273656374696F6E2E412E322E34},srcline={46}}{5C3337365C3337375C303030435C303030795C303030635C3030306C5C303030655C303030735C3030305C3034305C303030575C303030685C303030695C303030635C303030685C3030305C3034305C303030525C303030655C303030745C303030615C303030695C3030306E5C3030305C3034305C303030615C3030305C3034305C3030304C5C3030306F5C303030745C3030305C3034305C3030306F5C303030665C3030305C3034305C303030745C303030685C303030655C303030695C303030725C3030305C3034305C303030505C3030306F5C303030775C303030655C30303072}
+\BKM@entry{id=67,dest={73756273656374696F6E2E412E322E35},srcline={48}}{5C3337365C3337375C3030304E5C3030306F5C3030305C3034305C303030445C303030655C3030306C5C303030655C303030675C303030615C303030745C303030695C3030306F5C3030306E5C30303073}
+\BKM@entry{id=68,dest={73756273656374696F6E2E412E322E36},srcline={50}}{5C3337365C3337375C303030535C3030306D5C303030615C3030306C5C3030306C5C3030305C3034305C303030575C3030306F5C303030725C3030306C5C303030645C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
+\BKM@entry{id=69,dest={73756273656374696F6E2E412E322E37},srcline={52}}{5C3337365C3337375C303030525C3030302D5C3030304D5C303030615C303030745C3030305C3034305C303030475C303030725C303030615C303030705C303030685C30303073}
+\BKM@entry{id=70,dest={73756273656374696F6E2E412E322E38},srcline={54}}{5C3337365C3337375C303030425C303030695C303030745C303030635C3030306F5C303030695C3030306E5C3030305C3034305C3030304F5C303030545C303030435C3030305C3034305C303030545C303030725C303030755C303030735C303030745C3030305C3034305C3030304E5C303030655C303030745C303030775C3030306F5C303030725C3030306B}
+\BKM@entry{id=71,dest={73756273656374696F6E2E412E322E39},srcline={56}}{5C3337365C3337375C303030455C303030705C303030695C3030306E5C303030695C3030306F5C3030306E5C30303073}
+\BKM@entry{id=72,dest={73756273656374696F6E2E412E322E3130},srcline={58}}{5C3337365C3337375C303030535C3030306C5C303030615C303030735C303030685C303030645C3030306F5C303030745C3030305C3034305C3030305A5C3030306F5C3030306F}
+\global\csname @altsecnumformattrue\endcsname
+\abx@aux@read@bbl@mdfivesum{37E8E2A5D92151BFA7332C54C695E4AE}
 \abx@aux@defaultrefcontext{0}{beckerWhenCanLiquid2021}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{beckerWebPlatformMakes2012}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{behrensCircularDelegationsMyth2015}{nty/global//global/global/global}
@@ -548,12 +559,12 @@
 \abx@aux@defaultrefcontext{0}{NEURIPS2023_dbb51809}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{virtanenSciPy10Fundamental2020}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{zhouKanonymityLdiversityApproaches2011}{nty/global//global/global/global}
-\global\@namedef{scr@dte@chapter@lastmaxnumwidth}{9.85492pt}
-\global\@namedef{scr@dte@section@lastmaxnumwidth}{18.0674pt}
-\global\@namedef{scr@dte@subsection@lastmaxnumwidth}{26.27988pt}
-\global\@namedef{scr@dte@table@lastmaxnumwidth}{18.0674pt}
-\global\@namedef{scr@dte@figure@lastmaxnumwidth}{23.54239pt}
+\global\@namedef{scr@dte@chapter@lastmaxnumwidth}{15.6365pt}
+\global\@namedef{scr@dte@section@lastmaxnumwidth}{23.84898pt}
+\global\@namedef{scr@dte@subsection@lastmaxnumwidth}{37.53645pt}
+\global\@namedef{scr@dte@table@lastmaxnumwidth}{20.80489pt}
+\global\@namedef{scr@dte@figure@lastmaxnumwidth}{26.27988pt}
 \@writefile{toc}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
 \@writefile{lof}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
 \@writefile{lot}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
-\gdef \@abspage@last{58}
+\gdef \@abspage@last{61}

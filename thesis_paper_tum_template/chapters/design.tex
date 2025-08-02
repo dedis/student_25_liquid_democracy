@@ -10,21 +10,21 @@ This section describes our implementation of liquid democracy with fractional de
 
 \section{Problem Statement}
 
-We consider a fractional delegation model, where voters may distribute their vote across multiple  delegates. Each voter can either retain their full vote or delegate it to others in fractional amounts summing to one. The voter's final power must be zero if they delegate, and equal to the proportion of votes delegated to them in addition to their own initial vote if they don't. Votes must be conserved.
+We consider a fractional delegation model, where voters may distribute their vote across multiple  delegates. Each voter can either retain their full vote or delegate it to others in fractional amounts summing to one. The voter's final power must be zero if they delegate, and equal to the proportion of votes delegated to them in addition to their own initial vote if they don't. All votes must be conserved, unless they are lost due to cyclic delegation.
 
 More precisely, we pose the following problem.
 
 \begin{enumerate}
-\item \textbf{Given} a set of voters and their delegations, where each voter has one vote, and either:
+\item \textbf{Given} a set of voters and their delegations, where each voter has one initial vote, and either:
 \begin{enumerate}
 \item votes directly 
-\item delegates their vote such that their vote is delegated to other delegates in its entirety
+\item delegates their vote in its entirety
 \end{enumerate}
 \item \textbf{We want to find} the final voting power of each voter ("resolve the delegation graph") such that:
 \begin{enumerate}
 \item a voter's final voting power is zero if they choose to delegate and not vote directly 
 \item a voter's final voting power is equal to the amount of votes delegated to them, including their own initial vote and transitive delegations, otherwise
-\item power is conserved. the sum of the final power of all nodes must be equal to the amount of votes initially in the graph
+\item power is conserved. The sum of the final power of all nodes must be equal to the amount of votes initially in the graph. This does not include power that is stuck as a result of cyclic delegation. What exactly this entails will be detailed in \cref{subsec:cdc}
 \end{enumerate}
 \end{enumerate}
 
@@ -33,28 +33,27 @@ More precisely, we pose the following problem.
 
 \subsection{Definitions}
 
-\textbf{Delegation graphs} represent \textbf{delegations} between voters using weighted, directed edges between nodes. \textbf{Power} refers to a fractional amount of votes. Each node initially has one vote, or an \textbf{initial power} $p^{(0)}_v = 1$. Each delegation between two nodes has a positive, nonzero \textbf{weight} $w \in (0, 1] $\footnotemark. \textbf{Resolving delegations} means to determine how much power each node holds according to the delegations. After resolving delegations, a node $v \in V'$s \textbf{final power}, is $p_v$. A more rigid definition of a nodes final power will be introduced in \cref{sec:resolving_delegations}.
+\textbf{Delegation graphs} represent \textbf{delegations} between voters using weighted, directed edges between nodes. \textbf{Power} refers to a fractional amount of votes. Each node $v$ initially has one vote, or an \textbf{initial power} $p^{(0)}_v = 1$. Each delegation between two nodes has a \textbf{weight} $w \in [0, 1] $\footnotemark. \textbf{Resolving delegations} means to determine how much power each node holds according to the delegations. After resolving delegations, a node $v$'s \textbf{final power} is $p_v$. A more rigid definition of a nodes final power will be introduced in \cref{sec:resolving_delegations}.
 
-\footnotetext{Edge weights should not be 0, since the edge should be entirely omitted in this case.}
+\footnotetext{Edge weights should generally not be zero, since that signifies the absence of a delegation, hence the absence of an edge. However, this does not need to be enforced, since edges with a weight of zero don't break the method.}
 
-
-As per the problem statement, voters are strictly given the choice to either delegate their vote (fractional) in its entirety, or vote directly. The electorate is thus divided into two disjoint \textbf{sinks} S, who actually vote, and \textbf{delegators} D. 
+As per the problem statement, voters are strictly given the choice to either delegate their vote (fractionally) in its entirety, or vote directly. The electorate is thus divided into two disjoint sets, \textbf{sinks} S, who actually vote, and \textbf{delegators} D. 
 
 We thus define a \textbf{delegation graph} as a finite, directed, weighted graph $G = (V, E)$, with sinks $S$ and delegators $D$ as follows:
 
 \begin{enumerate}
 \item $V = S \dot\bigcup D$, meaning that $V$ is the union of the two \textit{disjoint} sets of sinks and delegators.
-\item Each $e \in E$ is a triple $(u, v, w)$, denoting a delegation from node $u$ to node $v$ of weight $w$.
+\item Each edge $e \in E$ is a triple $(u, v, w)$ denoting a delegation from node $u$ to node $v$ of weight $w$.
 \item Each sink $s \in S$ has no outgoing edges.
-\item Each delegator $d \in D$ has $n \in \mathbb{N}^+$ outgoing edges, each with a positive weight, such that the sum of all of its outgoing edge weights equals 1.
-\item Each voter $v \in V$ has corresponding power value, which is initially 1.
+\item Each delegator $d \in D$ has $n \in \mathbb{N}$ outgoing edges, each with a positive weight, such that the sum of all of its outgoing edge weights equals 1.
 \end{enumerate}
 
  \subsection{Conservation of Power}
  
- A vital property we set for the delegation graph in the problem statement is the conservation of power. While some authors have experimented with implementations of liquid democracy where this is not the case, we believe that for a system to be truly democratic, we must assert delegating is not penalized, so a vote cast by a sink should not be different in value to a vote cast by a sink through delegation from a delegator. \cite{bersetcheGeneralizingLiquidDemocracy2022, boldiViscousDemocracySocial2011} Thus, any implementation needs a mechanism to ensure that the sum of the final power of all sinks is equal to the sum of the initial power of all nodes.
+ A vital property we set for the delegation graph in the problem statement is the conservation of power. While some authors have experimented with implementations of liquid democracy where this is not the case, we believe that for a system to be truly democratic, we must assert delegating is not penalized, so a vote cast by a sink should not be different in value to a vote cast by a sink through delegation from a delegator. \cite{bersetcheGeneralizingLiquidDemocracy2022, boldiViscousDemocracySocial2011} Thus, any implementation should have mechanism to ensure that the sum of the final power of all sinks is equal to the sum of the initial power of all nodes. We touch upon how this requirement can be implemented in \cref{sec:resolving_delegations}.
 
 \subsection{Closed Delegation Cycles}
+\label{subsec:cdc}
 
 We define a \textbf{closed delegation cycle} $C \subseteq V$ in a delegation graph $G = (S \dot\bigcup D, E)$ as a cycle in $G$ such that for every node $v \in C$, there exists no path from $v$ to any sink node in $S$.
 
@@ -80,18 +79,22 @@ We define a \textbf{closed delegation cycle} $C \subseteq V$ in a delegation gra
 
 \Cref{fig:closed-delegation-cycles} shows exemplary closed delegation cycles. These cycles lead to contradictory situations, as power delegated within never reaches a sink. Some works discuss ways to handle power stuck in such cycles or mitigate the risk of such cycles appearing, but effectively it is lost. \cite{behrensCircularDelegationsMyth2015, brillInteractiveDemocracy2018} This means that none of the nodes in a closed cycle will vote, which is in line with the will of voters, who all wish to not vote themselves, instead delegate their power, letting their delegate(s) decide what to do with this power. 
 
-In practice, such cycles need to be addressed before resolving delegations in a preprocessing step. Our approach to this is to find all such cycles, and collapse them into an additional sink node in the graph, the \textbf{cycle sink node}. Any delegation into the cycle is redirected into the cycle sink node,  thus ensuring the graph no longer has any closed delegation cycles. The algorithm to do so can be found in annex XX. \TODO{Add this into the annex, if that necessary...} 
+In practice, such cycles need to be addressed before resolving delegations in a preprocessing step, since our method of resolving delegation graphs introduced in \cref{sec:resolving_delegations} is not equipped to handle such cycles by itself. Our approach to this is to find all such cycles, and collapse them into an additional sink node in the graph. Any delegation toward nodes within the cycle is redirected into this added sink, thus ensuring the graph no longer has any closed delegation cycles.
 
-We prove below, that given the absence of such closed delegation cycles, delegations are resolvable given a delegation graph. 
+ This is true since, before the preprocessing step, any power delegated by a node not affected by a closed delegation cycle, meaning it is neither part of the delegation cycle nor delegates its votes such that it ends up in a delegation cycle, had a way to a sink. After the preprocessing step, even power delegated by nodes that are affected by a closed delegation cycle is either removed from the graph since its node got collapsed, or has a way to a sink, namely the specially added sink.
+ 
+ The algorithm for this preprocessing step so can be found in the appendix in \cref{an:preprocessing}
+
+We prove below, that given the absence of such closed delegation cycles, delegations are resolvable in a delegation graph. 
 
 \begin{theorem}
 Let $G = (S \dot\bigcup D, E)$ be a delegation graph. If $G$ contains no closed delegation cycles, then for every delegator $d \in D$, there exists a path from $d$ to a sink node $s \in S$.
 \end{theorem}
 \begin{proof}
-Suppose, for contradiction, that $G$ contains no closed delegation cycle, but $\exists d \in D$ such that no path from $d$ leads to any sink $s \in S$. Since G is a finite graph, any walk from $d$ must eventually repeat nodes, implying a cycle. If at least one node in this cycle can reach a sink, there would be a path for all others in the cycle to reach a sink via this node as well, thus all nodes in the cycle can not reach a sink either. Thus, G does contain a closed delegation cycle. $\lightning$
+Suppose, for contradiction, that $G$ contains no closed delegation cycle, but there exists a $d \in D$ such that no path from $d$ leads to any sink $s \in S$. Since G is a finite graph, any walk from $d$ must eventually repeat nodes, implying a cycle. If at least one node in this cycle can reach a sink, there would be a path for all others in the cycle to reach a sink via this node as well, thus all nodes in the cycle can not reach a sink either. Thus, G does contain a closed delegation cycle. $\lightning$
 \end{proof}
 
-We define a \textbf{well-formed delegation graph} as a delegation graph, which contains no closed delegation cycles. Note, that while a self loop of weight one is not allowed in a well-formed delegation graph, a self loop of weight $w < 1$ is allowed as long as the rest of the node's power eventually flows to a sink. Since a delegator cannot vote themselves, any power it delegates to itself will "flow" back into the node, and then be redistributed to its delegates. 
+We define a \textbf{well-formed delegation graph} as a delegation graph, which contains no closed delegation cycles. Note, that while a self loop, so a delegates to oneself, of weight one is trivially \textbf{not} allowed in a well-formed delegation graph, a self loop of weight $w < 1$ is permitted as long as the rest of the node's power eventually flows to a sink. Since a delegator cannot vote themselves, any power it delegates to itself will "flow" back into the node, and then be redistributed to its delegates. 
 
 \section{Resolving Delegations}
 \label{sec:resolving_delegations}
@@ -103,7 +106,7 @@ We define a \textbf{well-formed delegation graph} as a delegation graph, which c
 	\label{fig:sample_delegations}
 \end{figure}
 
-We will use the sample delegation chain in \cref{fig:sample_delegations} to create an intuition on how we will resolve delegation graphs. Sink node $C$ receives its own initial vote, and is also delegated a fraction $w_2$ of $B$'s vote. Node $B$, in turn, receives its own vote and a fraction $w_1$ of A's vote. Let $p'_A$ and$ p'_B$ denote the \textbf{standing power} of nodes $A$ and $B$, i.e. the total amount of power delegated to them. Then, the final power of $C$, assuming no other incoming delegations, is:
+We will use the sample delegation chain in \cref{fig:sample_delegations} to create an intuition on how we will resolve delegation graphs. Sink node $C$ receives its own initial vote, and is also delegated a fraction $w_2$ of $B$'s vote. Node $B$, in turn, receives its own vote and a fraction $w_1$ of A's vote. Let $p'_A$ and$ p'_B$ denote the \textbf{standing power} of nodes $A$ and $B$, i.e. the total amount of power they have, including their own initial vote and any power delegated to them. Then, the final power of $C$, assuming no other incoming delegations, is:
 
 \begin{align*}
 p_C &= 1 + w_2p'_B \\
@@ -126,24 +129,26 @@ p'_v & \text{if } v \in S \\
 \end{cases}
 \]
 
-The problem of finding each node's standing power is thus a problem of solving a system of linear equations, namely calculating the standing power for all nodes. We can prove, that given a well-formed delegation graph, this method returns a unique solution, and power is conserved.
+The problem of finding each node's standing power is thus a problem of solving a system of linear equations, namely calculating the standing power for all nodes. We prove below, that given a well-formed delegation graph, this method returns a unique solution, in which power is also conserved.
 
 \subsection{Existence of a Unique Solution}
 \label{subsec:unique_sol}
 
-The system of linear equations $p'_v = 1 + \sum_{(u, v, w) \in E} wp'_u$ can also be rearranged to be in matrix form: 
+We first introduce notation, which will be used within the proof. The system of linear equations $p'_v = 1 + \sum_{(u, v, w) \in E} wp'_u$ can also be rearranged to be in matrix form: 
 
 \begin{align*}
 p' = \mathbb{1} + Wp' &\implies p' - Wp' = \mathbb{1} \\
 &\implies (I - W)p' = \mathbb{1}
 \end{align*}
 
-where \( p' \in \mathbb{R}_+^{|V|} \) is the vector of standing power values for each node, \( W \in (0, 1]^{|V| \times |V|} \) is the adjacency matrix of the graph (with \( W_{ij} \) denoting the weight of the edge from node \( j \) to node \( i \)), and \( \mathbb{1} \) is the all-ones vector. This notation will be used within the proof below.
+where \( p' \in \mathbb{R}_+^{|V|} \) is the vector of standing power values for each node, \( W \in [0, 1]^{|V| \times |V|} \) is the adjacency matrix of the graph (with \( W_{ij} \) denoting the weight of the edge from node \( j \) to node \( i \)), and \( \mathbb{1} \) is the all-ones vector. 
 
 \begin{theorem}
 Given a well-formed delegation graph $G=(V, E)$, the equation $p'_v = 1 + \sum_{(u, v, w) \in E} wp'_u$ has a unique solution for all $v \in V$.
 \end{theorem}
 \begin{proof}
+
+We prove the theorem by modifying the delegation graph into an absorbing Markov chain, and then making use of some of its properties.
 
 The theorem holds trivially if $|V| = 0$, since the statement “for all $v \in V$” is vacuously true.
 
@@ -151,14 +156,14 @@ Assume now that $G = (V, E)$ contains at least one node. Let $G' = (V, E')$, whe
 \[
 E' = E \cup \{(s, s, 1) \mid s \text{ is a sink in } V\}.
 \]
-By construction, each node in $G'$ has outgoing edges whose weights sum to 1, so $G'$ is a (row-stochastic) Markov chain. Furthermore, $G$ satisfies the following:
+By construction, each node in $G'$ has outgoing edges whose weights sum to 1, so $G'$ is a Markov chain. Furthermore, $G$ satisfies the following:
 
 \begin{enumerate}
-\item There exists at least one sink (follows from well-formedness and $|V| > 0$),
-\item Every node has a path to at least one sink (by assumption on well-formed delegation graphs).
+\item There exists at least one sink (follows from well-formedness of G and $|V| > 0$),
+\item Every node has a path to at least one sink (follows from well-formedness of G).
 \end{enumerate}
 
-Thus, $G'$ is an absorbing Markov chain: every state can reach an absorbing state (a sink with a self loop) in finite steps. A standard result for such chains is that their transition matrix $P$ can be rearranged as:
+Thus, $G'$ is an absorbing Markov chain: every state can reach an absorbing state (a sink with a self loop) in finite steps. A standard result for such Markov chains is that their transition matrix $P$ can be rearranged as:
 
 \[
 P = \begin{bmatrix}
@@ -175,11 +180,11 @@ Now consider the system of linear equations
 (I - W)p' = \mathbb{1}
 \]
 
-Let $W^T$ be $W$'s transpose. Then $W^T$ structurally resembles a transition matrix, with row sums = 1.
+Let $W^T$ be $W$'s transpose. Then $W^T$ structurally resembles a Markov chain's transition matrix, with row sums = 1.
 
-Define the subgraph $D \subset G$ induced by all delegating (non-sink) nodes. Let $W_D^T$ be the transpose of the weight matrix for $D$, which only includes delegations among delegating nodes. 
+Define the subgraph $D \subset G$, containing only all delegating (non-sink) nodes. Let $W_D^T$ be the transpose of the weight matrix for $D$, which only includes delegations among delegating nodes. 
 
-Then $W_D^T = Q$, so $W_D = Q^T$ and $\rho(W_D) = \rho(Q) < 1$. The equality of the two matrices follows from the observation that the construction of $G'$ from $G$ only adds self-loops to sink nodes, leaving all delegating nodes and their outgoing edges unchanged.
+Then $W_D^T = Q$, so $W_D = Q^T$ and thus $\rho(W_D) = \rho(Q) < 1$. The equality of the two matrices follows from the observation that the construction of $G'$ from $G$ only adds self-loops to sink nodes, leaving all delegating nodes and their outgoing edges unchanged.
 
 Note that standing power values for delegating nodes depend only on the values of other delegators — never on sink nodes. This justifies restricting the analysis to the submatrix $W_D$, as the equation system governing these nodes is self-contained.
 
@@ -194,28 +199,34 @@ Since $\rho(W_D) < 1$, the Neumann series
 \]
 converges, and thus $(I - W_D)$ is invertible. Therefore, $p'_D$ has a unique solution.
 
-Finally, since the standing power of each sink depends only on the standing power values of delegators, and those are uniquely determined, the full vector $p'$ is uniquely determined as well.
+Finally, since the standing power of each sink depends only on the standing power values of delegators, and those are uniquely determined, the standing power value of all nodes is uniquely determined as well.
 \end{proof}
 
  \subsection{Conservation of Power}
  
  In order to assure that the power is conserved during delegation, it may seem intuitive to add a constraint $\sum_{s \in S} p_s = |V|$ to the system of linear equations. However, we prove that such an equation is not necessary, as the other equations in the system of equations already imply the conservation of power.
+ 
+ \begin{theorem}
+ For a well-formed delegation graph $G = (V, E)$, with $V = S \dot\bigcup D$, $\sum_{s \in S} p_s = |V|$ holds. 
+ \end{theorem}
+ \begin{proof}
 
 We start with the solutions $\{p'_v | v \in V\}$.
 
 Summing over all $v \in V$:
 \begin{align*}
 \sum_{v \in V} p'v &= \sum_{v \in V} \left( 1 + \sum_{(u, v, w) \in E} wp'_u \right) \\
+&= \sum_{v \in V} 1 + \sum_{v \in V} \left ( \sum_{(u, v, w) \in E} wp'_u \right ) \\
 &= |V| + \sum_{(u, v, w) \in E} wp'_u \numberthis \label{eq:cons_1}
 \end{align*}
 
 Now regroup the second term by the source node $u$:
 
 \begin{align*}
-\sum_{(u, v, w) \in E} wp'_u &= \sum_{u \in V} \sum_{(u, v, w) \in E} wp'_u  \\ 
+\sum_{(u, v, w) \in E} wp'_u &= \sum_{u \in V} \left ( \sum_{(u, v, w) \in E} wp'_u  \right ) \\ 
 &= \sum_{u \in V} p'_u  \sum_{(u, v, w) \in E} w \\
 \intertext{
-According to our definition of a delegation graph, all sinks have no outgoing notes, and all delegators's outgoing node weights add up to 1. So, for any node $u$::
+According to our definition of a delegation graph, all sinks have no outgoing notes, and all delegators's outgoing node weights add up to 1. So, for any node $u$:
 \[
 \sum_{(u, v, w) \in E} w = \begin{cases} 1, u \in D \\ 0, u \in S \end{cases}
 \]
@@ -237,8 +248,9 @@ Therefore, combining \eqref{eq:cons_2} and \eqref{eq:cons_3}, the original equal
 
 \begin{align*}
 \sum_{v \in S} p'_v  + \sum_{v \in D} p'_v &= |V| + \sum_{u \in D} p'_u \\
-\implies \sum_{v \in S} p'_v  &= |V| \qed
+\implies \sum_{v \in S} p'_v  &= |V|
 \end{align*}
+ \end{proof}
 
 \subsection{Resolving Delegations by Solving a System of Linear Equations}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.12)  23 JUL 2025 21:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.12)  2 AUG 2025 17:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1916,12 +1916,6 @@ LaTeX Font Info:    Trying to load font information for T1+pplx on input line 3
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
 ) (./main.aux
 
-LaTeX Warning: Label `a' multiply defined.
-
-
-LaTeX Warning: Label `a@cref' multiply defined.
-
-
 LaTeX Warning: Label `subfig:bitcoinotc_outdegrees' multiply defined.
 
 
@@ -1957,7 +1951,7 @@ LaTeX Warning: Label `sub@subfig:slashdot_outdegrees' multiply defined.
 
 LaTeX Warning: Label `sub@subfig:slashdot_outdegrees@cref' multiply defined.
 
-)
+(./chapters/appendix.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -1993,7 +1987,8 @@ Package nag Info: Command \RaggedLeft not defined, skipping amendment on input
 line 31.
 Package nag Info: Command \RaggedRight not defined, skipping amendment on input
  line 31.
- (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count495
 \scratchdimen=\dimen308
@@ -2080,7 +2075,15 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
-(./main.bbl)
+(./main.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                wattsCollectiveDynamicsSmallworld1998a
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 31.
 Package biblatex Info: Reference segment=0 on input line 31.
 \c@lstlisting=\count502
@@ -2238,13 +2241,19 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 45
 
 
 
-])
+]
+
+[6])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
 
-[6] (./chapters/introduction.tex
+[7] (./chapters/introduction.tex
 chapter 1.
 
 
@@ -2286,41 +2295,36 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 38.
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-49.
+48.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 
 [7]
-<./figures/invalid_graph_1.png, id=251, 195.73125pt x 180.675pt>
+<./figures/invalid_graph_1.png, id=289, 195.73125pt x 180.675pt>
 File: ./figures/invalid_graph_1.png Graphic file (type png)
 <use ./figures/invalid_graph_1.png>
-Package pdftex.def Info: ./figures/invalid_graph_1.png  used on input line 65.
+Package pdftex.def Info: ./figures/invalid_graph_1.png  used on input line 64.
 (pdftex.def)             Requested size: 133.84483pt x 123.55486pt.
-<./figures/invalid_graph_2.png, id=253, 195.73125pt x 180.675pt>
+<./figures/invalid_graph_2.png, id=291, 195.73125pt x 180.675pt>
 File: ./figures/invalid_graph_2.png Graphic file (type png)
 <use ./figures/invalid_graph_2.png>
-Package pdftex.def Info: ./figures/invalid_graph_2.png  used on input line 70.
+Package pdftex.def Info: ./figures/invalid_graph_2.png  used on input line 69.
 (pdftex.def)             Requested size: 133.84483pt x 123.55486pt.
-<./figures/invalid_graph_3.png, id=254, 195.73125pt x 180.675pt>
+<./figures/invalid_graph_3.png, id=292, 195.73125pt x 180.675pt>
 File: ./figures/invalid_graph_3.png Graphic file (type png)
 <use ./figures/invalid_graph_3.png>
-Package pdftex.def Info: ./figures/invalid_graph_3.png  used on input line 75.
+Package pdftex.def Info: ./figures/invalid_graph_3.png  used on input line 74.
 (pdftex.def)             Requested size: 133.84483pt x 123.55486pt.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmss' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 
 
-[8{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
- <./figures/invalid_graph_1.png> <./figures/invalid_graph_2.png> <./figures/inv
-alid_graph_3.png>]
-<./figures/delegation_graph_sample.png, id=269, 325.215pt x 107.40125pt>
+[8 <./figures/invalid_graph_1.png> <./figures/invalid_graph_2.png> <./figures/i
+nvalid_graph_3.png>]
+<./figures/delegation_graph_sample.png, id=306, 325.215pt x 107.40125pt>
 File: ./figures/delegation_graph_sample.png Graphic file (type png)
 <use ./figures/delegation_graph_sample.png>
 Package pdftex.def Info: ./figures/delegation_graph_sample.png  used on input l
-ine 101.
+ine 104.
 (pdftex.def)             Requested size: 167.29967pt x 55.2508pt.
 
 
@@ -2334,13 +2338,13 @@ ine 101.
 
 [13]
 chapter 4.
-<./figures/small_cycle_graph.png, id=314, 636.3775pt x 313.17pt>
+<./figures/small_cycle_graph.png, id=355, 636.3775pt x 313.17pt>
 File: ./figures/small_cycle_graph.png Graphic file (type png)
 <use ./figures/small_cycle_graph.png>
 Package pdftex.def Info: ./figures/small_cycle_graph.png  used on input line 19
 .
 (pdftex.def)             Requested size: 188.21371pt x 92.61848pt.
-<./figures/small_cycle_graph_inverse_dict.png, id=315, 157.58875pt x 96.36pt>
+<./figures/small_cycle_graph_inverse_dict.png, id=356, 157.58875pt x 96.36pt>
 File: ./figures/small_cycle_graph_inverse_dict.png Graphic file (type png)
 <use ./figures/small_cycle_graph_inverse_dict.png>
 Package pdftex.def Info: ./figures/small_cycle_graph_inverse_dict.png  used on 
@@ -2351,33 +2355,23 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (74.25937pt too wide) in paragraph at lines 34--35
-\T1/pplx/m/n/10.95 (-20) The first ap-proach uses a ded-i-cated lin-ear sys-tem
- solver. We use SciPy's \T1/cmtt/m/n/10.95 scipy.sparse.linalg.spsolve
- []
-
-Package acronym Info: Label `acro:LS' newly defined as it shall be overridden
-although it is yet undefined on input line 40.
-
 
 [14
 
 
-]
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 Overfull \hbox (8.40617pt too wide) in paragraph at lines 46--47
 []\T1/pplx/m/n/10.95 (-20) The al-go-rithm first sets up the lin-ear pro-gram, 
 set-ting up an equa-tion $\OML/zplm/m/it/10.95 p[] \OT1/zplm/m/n/10.95 = [][] \
 OT1/pplx/m/n/10.95 (-20) 1 \OT1/zplm/m/n/10.95 +
  []
 
-Package acronym Info: Label `acro:LP' newly defined as it shall be overridden
-although it is yet undefined on input line 48.
 
 
 [15 <./figures/small_cycle_graph.png> <./figures/small_cycle_graph_inverse_dict
 .png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 65.
+put line 63.
 
 
 [16]
@@ -2387,121 +2381,121 @@ put line 65.
 [18]
 File: ./figures/small_cycle_graph.png Graphic file (type png)
 <use ./figures/small_cycle_graph.png>
-Package pdftex.def Info: ./figures/small_cycle_graph.png  used on input line 17
-4.
+Package pdftex.def Info: ./figures/small_cycle_graph.png  used on input line 16
+9.
 (pdftex.def)             Requested size: 167.29967pt x 82.3302pt.
 
+
+[19]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.211 \State
+l.206 \State
              // Initialize each node’s power to 1.0
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.212 \ForAll
+l.207 \ForAll
              {\(v \in \texttt{nodes}\)}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.213     \State
+l.208     \State
                  \(\texttt{powers}[v] \gets 1.0\)
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.214 \EndFor
+l.209 \EndFor
              
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.215 \Repeat
+l.210 \Repeat
              
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.216     \State
+l.211     \State
                  \(\texttt{prev\_powers} \gets \texttt{powers}.\texttt{copy}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.217     \State
+l.212     \State
                  \colorbox{yellow}{\(\texttt{total\_change} \gets \texttt{0}\)}
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.218     \ForAll
+l.213     \ForAll
                  {\(v \in \texttt{nodes}\)}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.219         \State
+l.214         \State
                      // For each incoming delegation \((u \to v)\), move \(w...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.220         \ForAll
+l.215         \ForAll
                      {\((u, w) \in \texttt{delegations}[v]\)}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.221             \State
+l.216             \State
                          \(\delta \gets w \times \texttt{prev\_powers}[u]\)
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.222             \State
+l.217             \State
                          \(\texttt{powers}[v] \;+\!=\; \delta\)
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.223             \State
+l.218             \State
                          \(\texttt{powers}[u] \;-\!=\; \delta\)
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.224             \State
+l.219             \State
                          \colorbox{yellow}{\(\texttt{total\_change} \;+\!=\;...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.225         \EndFor
+l.220         \EndFor
                      
-
-[19]
 
 [20]
 
 [21]
-<./figures/allowed_self_loop.png, id=431, 198.7425pt x 102.3825pt>
+<./figures/allowed_self_loop.png, id=466, 198.7425pt x 102.3825pt>
 File: ./figures/allowed_self_loop.png Graphic file (type png)
 <use ./figures/allowed_self_loop.png>
-Package pdftex.def Info: ./figures/allowed_self_loop.png  used on input line 28
-3.
+Package pdftex.def Info: ./figures/allowed_self_loop.png  used on input line 27
+8.
 (pdftex.def)             Requested size: 169.39119pt x 87.26454pt.
-<./figures/invalid_delegation_graph.png, id=432, 218.8175pt x 95.35625pt>
+<./figures/invalid_delegation_graph.png, id=467, 218.8175pt x 95.35625pt>
 File: ./figures/invalid_delegation_graph.png Graphic file (type png)
 <use ./figures/invalid_delegation_graph.png>
 Package pdftex.def Info: ./figures/invalid_delegation_graph.png  used on input 
-line 290.
+line 285.
 (pdftex.def)             Requested size: 188.21371pt x 82.02077pt.
 
 
@@ -2509,13 +2503,7 @@ line 290.
 
 [23 <./figures/allowed_self_loop.png> <./figures/invalid_delegation_graph.png>]
 chapter 5.
-
-Overfull \hbox (137.44536pt too wide) in paragraph at lines 15--16
-\T1/pplx/m/n/10.95 (-20) cially con-structed can be found in the An-nex. [][][]
-
- []
-
-<./figures/Thesis Evaluation Methodology Process.png, id=449, 2512.38625pt x 29
+<./figures/Thesis Evaluation Methodology Process.png, id=485, 2512.38625pt x 29
 1.0875pt>
 File: ./figures/Thesis Evaluation Methodology Process.png Graphic file (type pn
 g)
@@ -2531,36 +2519,36 @@ sed on input line 23.
 ]
 
 [25 <./figures/Thesis Evaluation Methodology Process.png>]
-<./figures/0-1000_random.png, id=461, 422.7795pt x 327.3831pt>
+<./figures/0-1000_random.png, id=498, 422.7795pt x 327.3831pt>
 File: ./figures/0-1000_random.png Graphic file (type png)
 <use ./figures/0-1000_random.png>
-Package pdftex.def Info: ./figures/0-1000_random.png  used on input line 47.
+Package pdftex.def Info: ./figures/0-1000_random.png  used on input line 49.
 (pdftex.def)             Requested size: 167.29967pt x 129.55219pt.
 
 
 [26 <./figures/0-1000_random.png>]
-<./figures/0-20_random.png, id=471, 429.2838pt x 327.3831pt>
+<./figures/0-20_random.png, id=507, 429.2838pt x 327.3831pt>
 File: ./figures/0-20_random.png Graphic file (type png)
 <use ./figures/0-20_random.png>
-Package pdftex.def Info: ./figures/0-20_random.png  used on input line 60.
+Package pdftex.def Info: ./figures/0-20_random.png  used on input line 62.
 (pdftex.def)             Requested size: 167.29967pt x 127.58397pt.
-<./figures/12_4_random.png, id=473, 800.9925pt x 800.9925pt>
+<./figures/12_4_random.png, id=509, 800.9925pt x 800.9925pt>
 File: ./figures/12_4_random.png Graphic file (type png)
 <use ./figures/12_4_random.png>
-Package pdftex.def Info: ./figures/12_4_random.png  used on input line 71.
+Package pdftex.def Info: ./figures/12_4_random.png  used on input line 73.
 (pdftex.def)             Requested size: 188.21371pt x 188.20882pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 71--72
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 73--74
  [][] 
  []
 
-<./figures/13_4_random.png, id=474, 706.64pt x 706.64pt>
+<./figures/13_4_random.png, id=510, 706.64pt x 706.64pt>
 File: ./figures/13_4_random.png Graphic file (type png)
 <use ./figures/13_4_random.png>
-Package pdftex.def Info: ./figures/13_4_random.png  used on input line 78.
+Package pdftex.def Info: ./figures/13_4_random.png  used on input line 80.
 (pdftex.def)             Requested size: 188.21371pt x 188.20757pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 78--79
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 80--81
  [][] 
  []
 
@@ -2568,99 +2556,99 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 78--79
 
 [27 <./figures/0-20_random.png>]
 
-Package nag Warning: figure with no \caption on input line 96.
+Package nag Warning: figure with no \caption on input line 98.
 
-<./figures/0-50000_random.png, id=483, 409.7709pt x 327.3831pt>
+<./figures/0-50000_random.png, id=519, 409.7709pt x 327.3831pt>
 File: ./figures/0-50000_random.png Graphic file (type png)
 <use ./figures/0-50000_random.png>
-Package pdftex.def Info: ./figures/0-50000_random.png  used on input line 102.
+Package pdftex.def Info: ./figures/0-50000_random.png  used on input line 104.
 (pdftex.def)             Requested size: 188.21371pt x 150.37325pt.
-<./figures/0-50000_random_loglog.png, id=484, 417.7206pt x 330.2739pt>
+<./figures/0-50000_random_loglog.png, id=520, 417.7206pt x 330.2739pt>
 File: ./figures/0-50000_random_loglog.png Graphic file (type png)
 <use ./figures/0-50000_random_loglog.png>
 Package pdftex.def Info: ./figures/0-50000_random_loglog.png  used on input lin
-e 109.
+e 111.
 (pdftex.def)             Requested size: 188.21371pt x 148.80833pt.
 
 
 [28 <./figures/12_4_random.png> <./figures/13_4_random.png>]
-<./figures/0-2000_dense.png, id=495, 406.8801pt x 327.3831pt>
+<./figures/0-2000_dense.png, id=531, 406.8801pt x 327.3831pt>
 File: ./figures/0-2000_dense.png Graphic file (type png)
 <use ./figures/0-2000_dense.png>
-Package pdftex.def Info: ./figures/0-2000_dense.png  used on input line 130.
+Package pdftex.def Info: ./figures/0-2000_dense.png  used on input line 132.
 (pdftex.def)             Requested size: 188.21371pt x 151.43729pt.
-<./figures/0-2000_dense_loglog.png, id=496, 417.7206pt x 330.2739pt>
+<./figures/0-2000_dense_loglog.png, id=532, 417.7206pt x 330.2739pt>
 File: ./figures/0-2000_dense_loglog.png Graphic file (type png)
 <use ./figures/0-2000_dense_loglog.png>
 Package pdftex.def Info: ./figures/0-2000_dense_loglog.png  used on input line 
-137.
+139.
 (pdftex.def)             Requested size: 188.21371pt x 148.80833pt.
 
 
 [29 <./figures/0-50000_random.png> <./figures/0-50000_random_loglog.png>]
-<./figures/0-5000_dense.png, id=505, 419.166pt x 327.3831pt>
+<./figures/0-5000_dense.png, id=542, 419.166pt x 327.3831pt>
 File: ./figures/0-5000_dense.png Graphic file (type png)
 <use ./figures/0-5000_dense.png>
-Package pdftex.def Info: ./figures/0-5000_dense.png  used on input line 157.
+Package pdftex.def Info: ./figures/0-5000_dense.png  used on input line 159.
 (pdftex.def)             Requested size: 188.21371pt x 147.00131pt.
-<./figures/0-5000_dense_loglog.png, id=506, 417.7206pt x 330.2739pt>
+<./figures/0-5000_dense_loglog.png, id=543, 417.7206pt x 330.2739pt>
 File: ./figures/0-5000_dense_loglog.png Graphic file (type png)
 <use ./figures/0-5000_dense_loglog.png>
 Package pdftex.def Info: ./figures/0-5000_dense_loglog.png  used on input line 
-164.
+166.
 (pdftex.def)             Requested size: 188.21371pt x 148.80833pt.
-<./figures/small_cycle_graph_2.png, id=508, 461.725pt x 195.73125pt>
+<./figures/small_cycle_graph_2.png, id=546, 461.725pt x 195.73125pt>
 File: ./figures/small_cycle_graph_2.png Graphic file (type png)
 <use ./figures/small_cycle_graph_2.png>
 Package pdftex.def Info: ./figures/small_cycle_graph_2.png  used on input line 
-179.
+181.
 (pdftex.def)             Requested size: 167.29967pt x 70.92014pt.
 
 
 [30 <./figures/0-2000_dense.png> <./figures/0-2000_dense_loglog.png>]
-<./figures/big_cycle_example.png, id=520, 455.7025pt x 264.99pt>
+<./figures/big_cycle_example.png, id=557, 455.7025pt x 264.99pt>
 File: ./figures/big_cycle_example.png Graphic file (type png)
 <use ./figures/big_cycle_example.png>
 Package pdftex.def Info: ./figures/big_cycle_example.png  used on input line 19
-0.
+2.
 (pdftex.def)             Requested size: 167.29967pt x 97.28459pt.
-<./figures/0-1000_cycle.png, id=521, 406.8801pt x 327.3831pt>
+<./figures/0-1000_cycle.png, id=558, 406.8801pt x 327.3831pt>
 File: ./figures/0-1000_cycle.png Graphic file (type png)
 <use ./figures/0-1000_cycle.png>
-Package pdftex.def Info: ./figures/0-1000_cycle.png  used on input line 199.
+Package pdftex.def Info: ./figures/0-1000_cycle.png  used on input line 201.
 (pdftex.def)             Requested size: 188.21371pt x 151.43729pt.
-<./figures/0-1000_cycle_loglog.png, id=522, 444.4605pt x 330.2739pt>
+<./figures/0-1000_cycle_loglog.png, id=559, 444.4605pt x 330.2739pt>
 File: ./figures/0-1000_cycle_loglog.png Graphic file (type png)
 <use ./figures/0-1000_cycle_loglog.png>
 Package pdftex.def Info: ./figures/0-1000_cycle_loglog.png  used on input line 
-206.
+208.
 (pdftex.def)             Requested size: 188.21371pt x 139.85806pt.
 
 
 [31 <./figures/0-5000_dense.png> <./figures/0-5000_dense_loglog.png> <./figures
 /small_cycle_graph_2.png>]
-<./figures/0-200000_cycle.png, id=534, 412.6617pt x 327.3831pt>
+<./figures/0-200000_cycle.png, id=571, 412.6617pt x 327.3831pt>
 File: ./figures/0-200000_cycle.png Graphic file (type png)
 <use ./figures/0-200000_cycle.png>
-Package pdftex.def Info: ./figures/0-200000_cycle.png  used on input line 220.
+Package pdftex.def Info: ./figures/0-200000_cycle.png  used on input line 222.
 (pdftex.def)             Requested size: 188.21371pt x 149.31921pt.
-<./figures/0-200000_cycle_loglog.png, id=535, 444.4605pt x 330.2739pt>
+<./figures/0-200000_cycle_loglog.png, id=572, 444.4605pt x 330.2739pt>
 File: ./figures/0-200000_cycle_loglog.png Graphic file (type png)
 <use ./figures/0-200000_cycle_loglog.png>
 Package pdftex.def Info: ./figures/0-200000_cycle_loglog.png  used on input lin
-e 227.
+e 229.
 (pdftex.def)             Requested size: 188.21371pt x 139.85806pt.
 
 
 [32 <./figures/big_cycle_example.png> <./figures/0-1000_cycle.png> <./figures/0
 -1000_cycle_loglog.png>]
-<./figures/0-200000_no_del.png, id=546, 412.6617pt x 327.3831pt>
+<./figures/0-200000_no_del.png, id=584, 412.6617pt x 327.3831pt>
 File: ./figures/0-200000_no_del.png Graphic file (type png)
 <use ./figures/0-200000_no_del.png>
 Package pdftex.def Info: ./figures/0-200000_no_del.png  used on input line 247.
 
 (pdftex.def)             Requested size: 188.21371pt x 149.31921pt.
-<./figures/0-200000_no_del_loglog.png, id=547, 423.5022pt x 330.2739pt>
+<./figures/0-200000_no_del_loglog.png, id=585, 423.5022pt x 330.2739pt>
 File: ./figures/0-200000_no_del_loglog.png Graphic file (type png)
 <use ./figures/0-200000_no_del_loglog.png>
 Package pdftex.def Info: ./figures/0-200000_no_del_loglog.png  used on input li
@@ -2668,16 +2656,21 @@ ne 254.
 (pdftex.def)             Requested size: 188.21371pt x 146.77739pt.
 
 
+LaTeX Warning: Citation 'wattsCollectiveDynamicsSmallworld1998a' on page 33 und
+efined on input line 272.
+
+
+
 [33 <./figures/0-200000_cycle.png> <./figures/0-200000_cycle_loglog.png>]
 
 [34 <./figures/0-200000_no_del.png> <./figures/0-200000_no_del_loglog.png>]
-<./figures/sw_graph_example_40n.png, id=562, 402.50375pt x 243.91125pt>
+<./figures/sw_graph_example_40n.png, id=603, 402.50375pt x 243.91125pt>
 File: ./figures/sw_graph_example_40n.png Graphic file (type png)
 <use ./figures/sw_graph_example_40n.png>
 Package pdftex.def Info: ./figures/sw_graph_example_40n.png  used on input line
  286.
 (pdftex.def)             Requested size: 167.29967pt x 101.3813pt.
-<./figures/0-5000_small_world.png, id=563, 455.301pt x 339.669pt>
+<./figures/0-5000_small_world.png, id=604, 455.301pt x 339.669pt>
 File: ./figures/0-5000_small_world.png Graphic file (type png)
 <use ./figures/0-5000_small_world.png>
 Package pdftex.def Info: ./figures/0-5000_small_world.png  used on input line 2
@@ -2688,7 +2681,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 295--296
  [][] 
  []
 
-<./figures/0-5000_small_world_loglog.png, id=564, 417.7206pt x 330.2739pt>
+<./figures/0-5000_small_world_loglog.png, id=605, 417.7206pt x 330.2739pt>
 File: ./figures/0-5000_small_world_loglog.png Graphic file (type png)
 <use ./figures/0-5000_small_world_loglog.png>
 Package pdftex.def Info: ./figures/0-5000_small_world_loglog.png  used on input
@@ -2701,8 +2694,9 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 302--303
 
 
 
-[35 <./figures/sw_graph_example_40n.png>]
-<./figures/rmat_graph_example_40n.png, id=579, 1085.05376pt x 526.96875pt>
+[35 <./figures/sw_graph_example_40n.png> <./figures/0-5000_small_world.png> <./
+figures/0-5000_small_world_loglog.png>]
+<./figures/rmat_graph_example_40n.png, id=620, 1085.05376pt x 526.96875pt>
 File: ./figures/rmat_graph_example_40n.png Graphic file (type png)
 <use ./figures/rmat_graph_example_40n.png>
 Package pdftex.def Info: ./figures/rmat_graph_example_40n.png  used on input li
@@ -2710,9 +2704,8 @@ ne 321.
 (pdftex.def)             Requested size: 167.29967pt x 81.2451pt.
 
 
-[36 <./figures/0-5000_small_world.png> <./figures/0-5000_small_world_loglog.png
-> <./figures/rmat_graph_example_40n.png>]
-<./figures/0-50000_rmat.png, id=594, 409.7709pt x 327.3831pt>
+[36 <./figures/rmat_graph_example_40n.png>]
+<./figures/0-50000_rmat.png, id=633, 409.7709pt x 327.3831pt>
 File: ./figures/0-50000_rmat.png Graphic file (type png)
 <use ./figures/0-50000_rmat.png>
 Package pdftex.def Info: ./figures/0-50000_rmat.png  used on input line 336.
@@ -2722,7 +2715,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 336--337
  [][] 
  []
 
-<./figures/0-50000_rmat_loglog.png, id=595, 417.7206pt x 330.2739pt>
+<./figures/0-50000_rmat_loglog.png, id=634, 417.7206pt x 330.2739pt>
 File: ./figures/0-50000_rmat_loglog.png Graphic file (type png)
 <use ./figures/0-50000_rmat_loglog.png>
 Package pdftex.def Info: ./figures/0-50000_rmat_loglog.png  used on input line 
@@ -2738,7 +2731,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 343--344
 [37]
 
 [38 <./figures/0-50000_rmat.png> <./figures/0-50000_rmat_loglog.png>]
-<./figures/bitcoinotc_dataset.png, id=621, 387.3672pt x 268.8444pt>
+<./figures/bitcoinotc_dataset.png, id=660, 387.3672pt x 268.8444pt>
 File: ./figures/bitcoinotc_dataset.png Graphic file (type png)
 <use ./figures/bitcoinotc_dataset.png>
 Package pdftex.def Info: ./figures/bitcoinotc_dataset.png  used on input line 3
@@ -2749,7 +2742,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 386--387
 [][] 
  []
 
-<./figures/epinions_dataset.png, id=622, 396.7623pt x 268.8444pt>
+<./figures/epinions_dataset.png, id=661, 396.7623pt x 268.8444pt>
 File: ./figures/epinions_dataset.png Graphic file (type png)
 <use ./figures/epinions_dataset.png>
 Package pdftex.def Info: ./figures/epinions_dataset.png  used on input line 391
@@ -2760,7 +2753,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 391--392
 [][] 
  []
 
-<./figures/slashdot_dataset.png, id=623, 390.258pt x 268.8444pt>
+<./figures/slashdot_dataset.png, id=662, 390.258pt x 268.8444pt>
 File: ./figures/slashdot_dataset.png Graphic file (type png)
 <use ./figures/slashdot_dataset.png>
 Package pdftex.def Info: ./figures/slashdot_dataset.png  used on input line 397
@@ -2771,7 +2764,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 397--398
  [][] 
  []
 
-<./figures/bitcoinotc_outdegree_distr.png, id=624, 411.939pt x 327.3831pt>
+<./figures/bitcoinotc_outdegree_distr.png, id=663, 411.939pt x 327.3831pt>
 File: ./figures/bitcoinotc_outdegree_distr.png Graphic file (type png)
 <use ./figures/bitcoinotc_outdegree_distr.png>
 Package pdftex.def Info: ./figures/bitcoinotc_outdegree_distr.png  used on inpu
@@ -2782,7 +2775,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 407--408
 [][] 
  []
 
-<./figures/epinions_outdegree_distr.png, id=625, 411.939pt x 327.3831pt>
+<./figures/epinions_outdegree_distr.png, id=664, 411.939pt x 327.3831pt>
 File: ./figures/epinions_outdegree_distr.png Graphic file (type png)
 <use ./figures/epinions_outdegree_distr.png>
 Package pdftex.def Info: ./figures/epinions_outdegree_distr.png  used on input 
@@ -2793,7 +2786,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 413--414
 [][] 
  []
 
-<./figures/slashdot_outdegree_distr.png, id=626, 411.939pt x 327.3831pt>
+<./figures/slashdot_outdegree_distr.png, id=665, 411.939pt x 327.3831pt>
 File: ./figures/slashdot_outdegree_distr.png Graphic file (type png)
 <use ./figures/slashdot_outdegree_distr.png>
 Package pdftex.def Info: ./figures/slashdot_outdegree_distr.png  used on input 
@@ -2804,7 +2797,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 420--421
  [][] 
  []
 
-<./figures/bitcoinotc_outdegree_distr_50.png, id=627, 419.166pt x 327.3831pt>
+<./figures/bitcoinotc_outdegree_distr_50.png, id=666, 419.166pt x 327.3831pt>
 File: ./figures/bitcoinotc_outdegree_distr_50.png Graphic file (type png)
 <use ./figures/bitcoinotc_outdegree_distr_50.png>
 Package pdftex.def Info: ./figures/bitcoinotc_outdegree_distr_50.png  used on i
@@ -2815,7 +2808,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 431--432
 [][] 
  []
 
-<./figures/epinions_outdegree_distr_50.png, id=628, 425.6703pt x 327.3831pt>
+<./figures/epinions_outdegree_distr_50.png, id=667, 425.6703pt x 327.3831pt>
 File: ./figures/epinions_outdegree_distr_50.png Graphic file (type png)
 <use ./figures/epinions_outdegree_distr_50.png>
 Package pdftex.def Info: ./figures/epinions_outdegree_distr_50.png  used on inp
@@ -2826,7 +2819,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 437--438
 [][] 
  []
 
-<./figures/slashdot_outdegree_distr_50.png, id=629, 425.6703pt x 327.3831pt>
+<./figures/slashdot_outdegree_distr_50.png, id=668, 425.6703pt x 327.3831pt>
 File: ./figures/slashdot_outdegree_distr_50.png Graphic file (type png)
 <use ./figures/slashdot_outdegree_distr_50.png>
 Package pdftex.def Info: ./figures/slashdot_outdegree_distr_50.png  used on inp
@@ -2837,7 +2830,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 444--445
  [][] 
  []
 
-<./figures/bitcoinotc_power_distr.png, id=630, 411.939pt x 327.3831pt>
+<./figures/bitcoinotc_power_distr.png, id=669, 411.939pt x 327.3831pt>
 File: ./figures/bitcoinotc_power_distr.png Graphic file (type png)
 <use ./figures/bitcoinotc_power_distr.png>
 Package pdftex.def Info: ./figures/bitcoinotc_power_distr.png  used on input li
@@ -2848,7 +2841,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 455--456
 [][] 
  []
 
-<./figures/epinions_power_distr.png, id=631, 411.939pt x 327.3831pt>
+<./figures/epinions_power_distr.png, id=670, 411.939pt x 327.3831pt>
 File: ./figures/epinions_power_distr.png Graphic file (type png)
 <use ./figures/epinions_power_distr.png>
 Package pdftex.def Info: ./figures/epinions_power_distr.png  used on input line
@@ -2859,7 +2852,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 461--462
 [][] 
  []
 
-<./figures/slashdot_power_distr.png, id=632, 417.7206pt x 327.3831pt>
+<./figures/slashdot_power_distr.png, id=671, 417.7206pt x 327.3831pt>
 File: ./figures/slashdot_power_distr.png Graphic file (type png)
 <use ./figures/slashdot_power_distr.png>
 Package pdftex.def Info: ./figures/slashdot_power_distr.png  used on input line
@@ -2901,42 +2894,26 @@ chapter 7.
 ]
 chapter without number
 
-LaTeX Warning: Hyper reference `acro:LS' on page 45 undefined on input line 67.
-
-
-
-LaTeX Warning: Hyper reference `acro:LS' on page 45 undefined on input line 67.
-
-
-
-LaTeX Warning: Hyper reference `acro:LP' on page 45 undefined on input line 68.
-
-
-
-LaTeX Warning: Hyper reference `acro:LP' on page 45 undefined on input line 68.
-
-
-
 
 [45
 
 
 ]
-Package tocbasic Info: character protrusion at lof deactivated on input line 72
+Package tocbasic Info: character protrusion at lof deactivated on input line 74
 .
- (./main.lof
-
-[46
-
-
-])
+ (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
 
 
+[46
+
+
+]
+
 [47]
-Package tocbasic Info: character protrusion at lot deactivated on input line 73
+Package tocbasic Info: character protrusion at lot deactivated on input line 75
 .
  (./main.lot)
 \tf@lot=\write9
@@ -2961,18 +2938,69 @@ Package microtype Info: Character `029' is missing
 
 [50]
 
+[51]
+\openout2 = `chapters/appendix.aux'.
+
+ (./chapters/appendix.tex
+chapter A.
+
+Overfull \hbox (8.37357pt too wide) in paragraph at lines 10--11
+\T1/pplx/m/n/10.95 (-20) Linear Sys-tems Solver: []$\T1/cmtt/m/n/10.95 https : 
+/ / github . com / davidholzwarth / bachelors-[]thesis / blob /
+ []
+
+
+Overfull \hbox (18.5547pt too wide) in paragraph at lines 12--13
+[]\T1/pplx/m/n/10.95 (-20) Linear Pro-gram-ming Solver: []$\T1/cmtt/m/n/10.95 h
+ttps : / / github . com / davidholzwarth / bachelors-[]thesis /
+ []
+
+
+Overfull \hbox (14.9356pt too wide) in paragraph at lines 14--15
+[]\T1/pplx/m/n/10.95 (-20) Iterative Solver: []$\T1/cmtt/m/n/10.95 https : / / 
+github . com / davidholzwarth / bachelors-[]thesis / blob / main /
+ []
+
+
+Overfull \hbox (54.03922pt too wide) in paragraph at lines 19--20
+\T1/pplx/m/n/10.95 (-20) Random Del-e-ga-tion Graph Gen-er-a-tor: []$\T1/cmtt/m
+/n/10.95 https : / / github . com / davidholzwarth / bachelors-[]thesis /
+ []
+
+
+Overfull \hbox (152.18996pt too wide) in paragraph at lines 21--22
+[]\T1/pplx/m/n/10.95 (-20) Watts-Strogatz Small World Graph Gen-er-a-tor: [][][
+] 
+ []
+
+
+Overfull \hbox (51.35005pt too wide) in paragraph at lines 23--24
+[]\T1/pplx/m/n/10.95 (-20) R-Mat Graph Gen-er-a-tor: [][][] 
+ []
+
+
+Overfull \hbox (6.33936pt too wide) in paragraph at lines 28--29
+[]$\T1/cmtt/m/n/10.95 https : / / github . com / davidholzwarth / bachelors-[]t
+hesis / blob / main / graph _ tools . py$[] 
+ []
+
+)
+
+[52
+
+
+
+]
+
+[53]
+
 Package nag Warning: 1 complaints in total.
 
-
-
-[51] (./main.aux)
+(./main.aux (./chapters/appendix.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2984,11 +3012,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57560 strings out of 473190
- 1253240 string characters out of 5715800
- 2332783 words of memory out of 5000000
- 79082 multiletter control sequences out of 15000+600000
- 653788 words of font info for 532 fonts, out of 8000000 for 9000
+ 57613 strings out of 473190
+ 1254425 string characters out of 5715800
+ 2333882 words of memory out of 5000000
+ 79114 multiletter control sequences out of 15000+600000
+ 653836 words of font info for 533 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,13n,107p,10899b,4026s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -3001,16 +3029,15 @@ texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texl
 ive/2025/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/cm-super/sfit1095.pfb></usr/local/texlive/2025/t
 exmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></usr/local/texlive/2025/tex
-mf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2025/texmf
--dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf-d
-ist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dis
-t/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts
-/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
-urw/palatino/uplri8a.pfb>
-Output written on main.pdf (58 pages, 1304771 bytes).
+mf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-d
+ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-dist/fon
+ts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type
+1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (61 pages, 1306040 bytes).
 PDF statistics:
- 1067 PDF objects out of 1200 (max. 8388607)
- 869 compressed objects within 9 object streams
- 234 named destinations out of 1000 (max. 500000)
- 123588 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 1171 PDF objects out of 1200 (max. 8388607)
+ 971 compressed objects within 10 object streams
+ 249 named destinations out of 1000 (max. 500000)
+ 123716 words of extra memory for PDF output out of 128383 (max. 10000000)
 

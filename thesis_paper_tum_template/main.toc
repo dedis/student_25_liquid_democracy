@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {2.1.3}Applications}{4}{subsection.2.1.3}%
 \contentsline {section}{\numberline {2.2}Fractional Delegation}{4}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Motivation}{4}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Existing Methods to Deal with Vote Concentration}{5}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.2}Existing Methods to Deal with Vote Concentration and Cyclic Delegation}{5}{subsection.2.2.2}%
 \contentsline {chapter}{\numberline {3}Design}{6}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Problem Statement}{6}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Implementing Liquid Democracy with Fractional Delegation}{7}{section.3.2}%
@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Closed Delegation Cycles}{8}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Resolving Delegations}{9}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Existence of a Unique Solution}{10}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Conservation of Power}{11}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.2}Conservation of Power}{12}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Resolving Delegations by Solving a System of Linear Equations}{13}{subsection.3.3.3}%
 \contentsline {chapter}{\numberline {4}Implementation}{14}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Linear Systems Solver}{14}{section.4.1}%
@@ -25,9 +25,9 @@
 \contentsline {section}{\numberline {4.3}Iterative Solver}{16}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Approach}{16}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Conservation of Power}{17}{subsection.4.3.2}%
-\contentsline {subsubsection}{\nonumberline Similarity to the Previous Approach}{18}{subsubsection*.14}%
-\contentsline {subsubsection}{\nonumberline Conservation of Power}{20}{subsubsection*.18}%
-\contentsline {subsubsection}{\nonumberline Termination}{20}{subsubsection*.20}%
+\contentsline {subsubsection}{\nonumberline Similarity to the Previous Approach}{18}{subsubsection*.12}%
+\contentsline {subsubsection}{\nonumberline Conservation of Power}{20}{subsubsection*.16}%
+\contentsline {subsubsection}{\nonumberline Termination}{20}{subsubsection*.18}%
 \contentsline {section}{\numberline {4.4}Robustness}{22}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Invalid delegations}{22}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Closed Delegation Cycles}{23}{subsection.4.4.2}%
@@ -38,13 +38,13 @@
 \contentsline {subsection}{\numberline {5.1.3}Measurement}{25}{subsection.5.1.3}%
 \contentsline {section}{\numberline {5.2}Synthetic Graphs}{26}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Small Graphs}{26}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Large Graphs}{28}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.2}Large Graphs}{27}{subsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.2.3}Dense Graphs}{29}{subsection.5.2.3}%
 \contentsline {subsection}{\numberline {5.2.4}Cycles Which Retain a Lot of their Power}{31}{subsection.5.2.4}%
 \contentsline {subsection}{\numberline {5.2.5}No Delegations}{33}{subsection.5.2.5}%
 \contentsline {section}{\numberline {5.3}Social Graphs}{33}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Small World Graphs}{34}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}R-Mat Graphs}{35}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.2}R-Mat Graphs}{36}{subsection.5.3.2}%
 \contentsline {section}{\numberline {5.4}Real-World Datasets}{37}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Bitcoin OTC Trust Network}{38}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Epinions}{39}{subsection.5.4.2}%
@@ -53,8 +53,24 @@
 \contentsline {section}{\numberline {5.5}Key Insights}{40}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Related Work}{42}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Conclusion and Further Research}{44}{chapter.7}%
-\contentsline {chapter}{\nonumberline Abbreviations}{45}{chapter*.43}%
-\contentsline {chapter}{\nonumberline List of Figures}{46}{chapter*.44}%
-\contentsline {chapter}{\nonumberline List of Tables}{48}{chapter*.45}%
-\contentsline {chapter}{\nonumberline Bibliography}{49}{chapter*.46}%
+\contentsline {chapter}{\nonumberline Abbreviations}{45}{chapter*.41}%
+\contentsline {chapter}{\nonumberline List of Figures}{46}{chapter*.42}%
+\contentsline {chapter}{\nonumberline List of Tables}{48}{chapter*.43}%
+\contentsline {chapter}{\nonumberline Bibliography}{49}{chapter*.44}%
+\contentsline {chapter}{\numberline {A}Appendix}{52}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Algorithms}{52}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Resolution Algorithms}{52}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Graph Generators}{52}{subsection.A.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Preprocessing}{52}{subsection.A.1.3}%
+\contentsline {section}{\numberline {A.2}Results}{52}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Small Graphs}{53}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Large Graphs}{53}{subsection.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Dense Graphs}{53}{subsection.A.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Cycles Which Retain a Lot of their Power}{53}{subsection.A.2.4}%
+\contentsline {subsection}{\numberline {A.2.5}No Delegations}{53}{subsection.A.2.5}%
+\contentsline {subsection}{\numberline {A.2.6}Small World Graphs}{53}{subsection.A.2.6}%
+\contentsline {subsection}{\numberline {A.2.7}R-Mat Graphs}{53}{subsection.A.2.7}%
+\contentsline {subsection}{\numberline {A.2.8}Bitcoin OTC Trust Network}{53}{subsection.A.2.8}%
+\contentsline {subsection}{\numberline {A.2.9}Epinions}{53}{subsection.A.2.9}%
+\contentsline {subsection}{\numberline {A.2.10}Slashdot Zoo}{53}{subsection.A.2.10}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

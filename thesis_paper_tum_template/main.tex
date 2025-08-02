@@ -45,6 +45,14 @@
 \tableofcontents{}
 \microtypesetup{protrusion=true}
 
+\begin{acronym}
+	\itemsep-.25\baselineskip
+	\acro{TUM}[TUM]{Technical University of Munich}
+	\acro{LS}{Linear Systems Solver}
+	\acro{LP}{Linear Programming Solver}
+	% TODO: add acronyms
+\end{acronym}
+
 \mainmatter{}
 
 %\input{chapters/01_introduction}
@@ -56,21 +64,16 @@
 \input{chapters/related_work}
 \input{chapters/conclusion}
 
-\appendix{}
-
 \microtypesetup{protrusion=false}
 
 \addchap{Abbreviations}
-\begin{acronym}
-	\itemsep-.25\baselineskip
-	\acro{TUM}[TUM]{Technical University of Munich}
-	\acro{LS}{Linear Systems Solver}
-	\acro{LP}{Linear Programming Solver}
-	% TODO: add acronyms
-\end{acronym}
+
+
+\appendix{}
 
 \listoffigures{}
 \listoftables{}
 \microtypesetup{protrusion=true}
 \printbibliography{}
+\include{chapters/appendix}
 \end{document}

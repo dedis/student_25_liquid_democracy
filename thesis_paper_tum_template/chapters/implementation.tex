@@ -6,11 +6,11 @@
 \label{chap:implementation}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-The design above allows for multiple implementations, which will be introduced in this section. This section will also discuss briefly the robustness of the implementations, meaning how they respond to invalid input graphs. This paper will cover three implementations, which were chosen as they promise efficiency and scalability.
+This design above allows for multiple implementations, which will be introduced in this section. This section will also discuss briefly the robustness of the implementations, meaning how they respond to invalid input graphs. This paper will cover three implementations, which were chosen as they promise efficiency and scalability.
 
-The implementations were coded in Python. Python is versatile, simple, and offers a large collection of helpful libraries like NetworkX, a library for working with graphs \cite{hagbergExploringNetworkStructure2008}. 
+The implementations were coded in Python. Python is versatile, simple, performant, and offers a large collection of helpful libraries like NetworkX, a library for working with graphs \cite{hagbergExploringNetworkStructure2008}. Links to the implementations can be found in the appendix at \cref{an:resolution_algorithms}
 
-The algorithms take as input python dictionaries ("dicts"), which map a key to a value \cite{pythonsoftwarefoundationPythonTutorialSection}. The delegation graph is represented in a "dict of dicts" format, where every key in the outer dict is a node, and the value is another dict, which has the node's delegates as keys, and the weight of the delegation as value. The algorithms use as input "inverse" delegation graphs, where the inner dictionaries represent a node's incoming rather than delegations. \Cref{fig:inverse_dict_example} shows an example of this. Considering that the standing power equations used in the system of linear equations list contain the incoming delegations for each node, this design choice improves efficiency as an algorithm can look up a node in the dictionary and immediately learn about all of its incoming delegations.
+The algorithms take as input python dictionaries ("dicts"), which map a key to a value \cite{pythonsoftwarefoundationPythonTutorialSection}. The delegation graph is represented in a "dict of dicts" format, where every key in the outer dict is a node, and the value is another dict, which has the node's delegates as keys, and the weight of the delegation as value. The algorithms use as input inverse dict-of-dicts, where the inner dictionaries represent a node's incoming rather than outdoing delegations. \Cref{fig:inverse_dict_example} shows an example of this. Considering that the standing power equations used in the system of linear equations list contain the incoming delegations for each node, this design choice improves efficiency as an algorithm can look up a node in the dictionary and immediately learn about all of its incoming delegations.
 
 \begin{figure}[t]
     \centering
@@ -31,27 +31,25 @@ The algorithms take as input python dictionaries ("dicts"), which map a key to a
 
 \section{Linear Systems Solver}
 
-The first approach uses a dedicated linear system solver. We use SciPy's \texttt{scipy.sparse.linalg.spsolve} solver, which is optimized for sparse matrices \cite{virtanenSciPy10Fundamental2020}. A sparse solver is better equipped to resolve delegations if we assume that realistically each delegator only delegates to a few delegates. Since each entry in matrix $W$ can be mapped to one unique edge $(u, v, p) \in E$, the matrix likely has relatively few non zero entries compared to its size.
+The first approach uses a dedicated linear system solver. We use SciPy's \texttt{scipy.sparse\-.linalg.spsolve} solver, which is optimized for sparse matrices \cite{virtanenSciPy10Fundamental2020}. A sparse solver is better equipped to resolve delegations, if we assume that realistically each delegator only delegates to a few delegates. Since each entry in matrix $W$ can be mapped to one unique edge $(u, v, p) \in E$, the matrix likely has relatively few non zero entries compared to its size.
  
- The implementation makes use of SciPy's Compressed Sparse Column (CSC) arrays, which builds matrixes using $(x,y)$ coordinates and their corresponding data, which unless explicitly set is 0. \cite{virtanenSciPy10Fundamental2020}
+ The implementation makes use of SciPy's Compressed Sparse Column (CSC) arrays, which builds matrixes using $(x,y)$ coordinates and their corresponding data, which unless explicitly set, is 0. \cite{virtanenSciPy10Fundamental2020}
 
 The solver solves the system of linear equations directly, using the SuperLU solver, meaning it will always solve the system of linear equations perfectly accurately, unlike the other implementations discussed below. \cite{liSuperLUUsersGuide1999} The solver's results are then cleaned, setting each node with outgoing edges', so each delegator's, power to zero, and returned.
 
-The implementation will be referred to as \ac{LS} throughout the paper.
+The implementation will be referred to as Linear Systems Solver (LS) throughout the paper.
 
 \section{Linear Programming Solver}
 
-Secondly, we use the Python library PuLP, which provides an interface to linear programming solvers \cite{osullivanPuLPLinearProgramming2011}. To resolve the delegation graphs, we use the "Coin-or branch and cut" (CBC) solver, since it is free and open-source \cite{johnforrestCoinorCbcRelease2024}. Given the academic context and the moderate size of our delegation graphs, CBC provides a balance between performance and accessibility. Moreover, since our model essentially solves a system of linear equations with a unique correct solution, the choice of solver has little influence on the outcome itself — even if CBC is not the most optimized solver for this class of problems. While commercial solvers may offer faster runtimes, CBC is sufficient for our use case and ensures reproducibility without licensing constraints.
+Secondly, we use the Python library PuLP, which provides an interface to linear programming solvers \cite{osullivanPuLPLinearProgramming2011}. To resolve the delegation graphs, we use the "Coin-or branch and cut" (CBC) solver, since it is free and open-source \cite{johnforrestCoinorCbcRelease2024}. Given the academic context and the moderate size of our delegation graphs, CBC provides a balance between performance and accessibility. Moreover, since our model solves a system of linear equations with a uniqu solution, the choice of solver has little influence on the outcome itself, even if CBC is not the most optimized solver for this class of problems. While commercial solvers may offer faster runtimes, CBC is sufficient for our use case and ensures reproducibility without licensing constraints.
 
-The algorithm first sets up the linear program, setting up an equation $p'_v = \sum_{(u, v, w) \in E} 1 + wp'_u$ for each node $v \in V$. This is then solved by the CBC solver, with the primal tolerance set to $5*10^{-3}$ to level the playing field compared to the iterative algorithm, which will be introduced in the next section. A tolerance of $5 * 10^{-3}$ assures that $\lvert p'_v -\sum_{(u, v, w) \in E} 1 + wp'_u \rvert \le 5*10^{-3}$, so the solutions will be correct when rounded to the second decimal place \cite{forrestCBCUserGuide2005}. Finally, the algorithm cleans the $p_v'$ values, setting any delegators power to 0. 
+The algorithm first sets up the linear program, setting up an equation $p'_v = \sum_{(u, v, w) \in E} 1 + wp'_u$ for each node $v \in V$. This is then solved by the CBC solver, with the primal tolerance set to $5*10^{-3}$ to level the playing field compared to the iterative algorithm, which will be introduced in the next section. A tolerance of $5 * 10^{-3}$ assures that $\lvert p'_v -\sum_{(u, v, w) \in E} 1 + wp'_u \rvert < 5*10^{-3}$, so the solutions will be correct when rounded to the second decimal place \cite{forrestCBCUserGuide2005}. Finally, the algorithm cleans the $p_v'$ values, setting any delegators power to 0. 
 
-The implementation will be referred to as \ac{LP} throughout the paper.
-
-\TODO{Add links to the implementations on GitHub}
+The implementation will be referred to as Linear Programing Solver (LP) throughout the paper.
 
 \section{Iterative Solver}
 
-The iterative solver aims to leverage the format of the input, and eliminate any necessary overhead. It is based on the Jacobi method of solving systems of linear equations, which solves the system by iteratively refining the solution \cite{burden2011numerical}, however we will prioritize an intuitive explanation of the procedure.
+The iterative solver aims to leverage the format of the input, and eliminate any unnecessary overhead. It is based on the Jacobi method of solving systems of linear equations, which solves the system by iteratively refining the solution \cite{burden2011numerical}, however we will prioritize an intuitive explanation of the procedure.
 
 \subsection{Approach}
 
@@ -84,13 +82,11 @@ Another valid approach would be a queue-approach, where the algorithm pops node 
 
 The following notation will be used throughout the next sections.
 
-$G = (V, E)$ is a well-formed delegation graph, with $V = D \dot\bigcup S$, where D is the set of delegators and S is the set of sinks.
-
 Let $p_v^{(i)}, i \in \mathbb{N}_0$ be \texttt{powers}[v] after the $i$-th iteration of the repeat-until loop, with $p_v^{(0)}$ being the initial power of a node before the first iteration has started. Using this notation, our termination condition for the repeat-until loop of \cref{alg:iterative_simple} is: $\forall v \in V: p_v^{(i-1)} = p_v^{(i)}$
 
 Let $P_D^{(i)} = \sum_{d \in D} p_d^{(i)}$ and $P_S^{(i)} = \sum_{s \in S} p_s^{(i)}$ be the sums of the power values all delegators and all sinks after each iteration.
 
-Let $\delta_{(u, v, w)}^{(i)} = w * p_v^{(i)}$ be the delta assigned in line 10 of \cref{alg:iterative_simple} during the $i$th iteration.
+Let $\delta_{(u, v, w)}^{(i)} = w * p_u^{(i)}$ be the delta assigned in line 10 of \cref{alg:iterative_simple} during the $i$th iteration.
 
 \subsection{Conservation of Power}
 
@@ -125,19 +121,18 @@ By the principles of induction, the assumption holds for any $i \in \mathbb{N}_0
 
 \subsubsection{Similarity to the Previous Approach}
 
-Observing the algorithm reveals that the same equations used in the previous approach to resolve delegations can be re-found here. The algorithm starts with a vector of ones, indicating an initial power of each node of one. Furthermore, each iteration, each node $u \in V$ gains power amounting to $\sum_{(u, v, w) \in E} \delta^{(i)}_{(u, v, w)}$. This can be rearranged as follows:
+Observing the algorithm reveals that the same equations used in the previous approach to resolve delegations can be re-found here. The algorithm starts with a vector of ones, indicating an initial power of each node of one. Furthermore, during each iteration, each node $v \in V$ gains power amounting to $\sum_{(u, v, w) \in E} \delta^{(i)}_{(u, v, w)}$. This can be rearranged as follows:
 
 \begin{align*}
 p_v^{(i)} &+= \sum_{(u, v, w) \in E} \delta^{(i)}_{(u, v, w)} \\
-&+= \sum_{(u, v, w) \in E} wp_v^{(i-1)}
+&+= \sum_{(u, v, w) \in E} wp_u^{(i-1)}
 \end{align*}
 
-Since power is conserved, any power node $u$ held from the previous iteration $i - 1$ is delegated away during iteration $i$, thus we can say, that
+Since power is conserved, if this node is a delegator, power amounting to $p_v^{(i-1)}$ will be delegated out of it. Nevertheless, each iteration the algorithm essentially solves: 
 
 \[
 p_v^{(i)} = \sum_{(u, v, w) \in E} wp_v^{(i-1)} \forall v \in V
 \]
-
 
 This is the same al the standing power assigned to all nodes in the previous approach. ($p'_v = 1 + \sum_{(u, v, w) \in E} wp'_u$). Thus, this algorithm solves the same problem as the system of linear equations introduced in the previous section. 
 
@@ -272,7 +267,7 @@ This section describes the different implementations behavior when a delegation 
 
 \subsection{Invalid delegations}
 
-On their own, neither of the three implementations will definitively cause an error when delegations are invalid. The iterative implementation is "dumb", in the sense that it moves around power as it finds them in the delegations. If a delegator delegates more than they are meant to, the algorithm behavior becomes undefined, since the delegators power may become negative, at which point the delta in power calculated from its power also becomes negative, which messes with the \texttt{total\_change} value in unpredictable ways. 
+On their own, neither of the three implementations will definitively cause an error when delegations are invalid. The iterative implementation is "dumb", in the sense that it moves around power as is instructed by the delegations. If a delegator delegates more than they are meant to, meaning the outgoing edge weights add up to a value greater than 1, the algorithm behavior becomes undefined, since the delegators power may become negative, at which point the delta in power calculated from its power also becomes negative, which messes with the \texttt{total\_change} value in unpredictable ways. 
 
 If a delegate delegates less than their vote, this causes less of an issue. As long as the delta calculated at $\delta \gets w \times \texttt{prev\_powers}[u]$ does not become negative, the algorithm's will still find the power correctly. A well-formed delegation graph is allowed to contain self-delegations as long as their weight is lower than 1, such as the delegation in \cref{subfig:permissible-self-delegation}. In this situation, power still leaves the node, but less slowly. When the iterative algorithm goes over the graph, not delegating enough weight has the same effect as such a self-delegation, since in the former situation  power gets subtracted and then re-added to the node, while in the latter it just remains untouched. Thus, the two graphs in \cref{fig:small-delegation-graphs} yield the same result, $B$ having a power of 2.
 
@@ -302,12 +297,12 @@ For the two implementations directly based on solving systems of linear equation
 & p_B = 1 + 0.1p_A
 \end{align*}
 
-As long as the delegations form a matrix that is singular, there will be a unique solution, so even with invalid delegations, the algorithm will find power values, however they most likely differ whom the power values that would be expected, and probably not conserve total power properly. 
+As long as the delegations form a matrix that is singular, there will be a unique solution, so even with invalid delegations, the algorithm will find power values, however they most likely differ whom the power values that would be expected, and probably will not conserve total power properly. 
 
 \subsection{Closed Delegation Cycles}
 
 If the delegations form a closed delegation cycle, the iterative algorithm will not terminate, since the algorithm will iterate any power that is in or enters the cycle around the cycle indefinitely. 
 
-For the other two algorithms however, such a cycle can be caught. The equations for the standing power of the nodes within the cycle are linearly dependent on each other, thus the matrix resulting from them is not singular, and hence don't have a single solution. Solvers of systems of linear equations catch this and throw an error. Similarly, the LP solver will find that the linear program is infeasible.
+For the other two algorithms however, such a cycle can be caught. The equations for the standing power of the nodes within the cycle are linearly dependent on each other, thus the matrix resulting from them is not singular, and hence doesn't have a single solution. Solvers of systems of linear equations catch this and throw an error. Similarly, the LP solver will find that the linear program is infeasible.
 
 What is worth mentioning however, is that since we allow fractional delegation, it suffices if just one node in a closed delegation cycle decides to delegate to a node outside of a delegation cycle (or turns into a sink), for the delegations to become resolvable again. The cycles that will be explored in \cref{subsec:cycles_draining} are example of such a situation. 
