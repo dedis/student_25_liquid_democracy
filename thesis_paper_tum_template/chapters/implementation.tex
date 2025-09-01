@@ -33,15 +33,15 @@ The algorithms take as input python dictionaries ("dicts"), which map a key to a
 
 The first approach uses a dedicated linear system solver. We use SciPy's \texttt{scipy.sparse\-.linalg.spsolve} solver, which is optimized for sparse matrices \cite{virtanenSciPy10Fundamental2020}. A sparse solver is better equipped to resolve delegations, if we assume that realistically each delegator only delegates to a few delegates. Since each entry in matrix $W$ can be mapped to one unique edge $(u, v, p) \in E$, the matrix likely has relatively few non zero entries compared to its size.
  
- The implementation makes use of SciPy's Compressed Sparse Column (CSC) arrays, which builds matrixes using $(x,y)$ coordinates and their corresponding data, which unless explicitly set, is 0. \cite{virtanenSciPy10Fundamental2020}
+ The implementation makes use of SciPy's Compressed Sparse Column (CSC) arrays, which builds matrixes using $(x,y)$ coordinates and their corresponding data, which unless explicitly set, is 0  \cite{virtanenSciPy10Fundamental2020}. 
 
-The solver solves the system of linear equations directly, using the SuperLU solver, meaning it will always solve the system of linear equations perfectly accurately, unlike the other implementations discussed below. \cite{liSuperLUUsersGuide1999} The solver's results are then cleaned, setting each node with outgoing edges', so each delegator's, power to zero, and returned.
+The solver solves the system of linear equations directly, using the SuperLU solver, meaning it will always solve the system of linear equations perfectly accurately, unlike the other implementations discussed below \cite{liSuperLUUsersGuide1999}.  The solver's results are then cleaned, setting each node with outgoing edges', so each delegator's, power to zero, and returned.
 
 The implementation will be referred to as Linear Systems Solver (LS) throughout the paper.
 
 \section{Linear Programming Solver}
 
-Secondly, we use the Python library PuLP, which provides an interface to linear programming solvers \cite{osullivanPuLPLinearProgramming2011}. To resolve the delegation graphs, we use the "Coin-or branch and cut" (CBC) solver, since it is free and open-source \cite{johnforrestCoinorCbcRelease2024}. Given the academic context and the moderate size of our delegation graphs, CBC provides a balance between performance and accessibility. Moreover, since our model solves a system of linear equations with a uniqu solution, the choice of solver has little influence on the outcome itself, even if CBC is not the most optimized solver for this class of problems. While commercial solvers may offer faster runtimes, CBC is sufficient for our use case and ensures reproducibility without licensing constraints.
+Secondly, we use the Python library PuLP, which provides an interface to linear programming solvers \cite{osullivanPuLPLinearProgramming2011}. To resolve the delegation graphs, we use the "Coin-or branch and cut" (CBC) solver, since it is free and open-source \cite{johnforrestCoinorCbcRelease2024}. Given the academic context and the moderate size of our delegation graphs, CBC provides a balance between performance and accessibility. Moreover, since our model solves a system of linear equations with a unique solution, the choice of solver has little influence on the outcome itself, even if CBC is not the most optimized solver for this class of problems. While commercial solvers may offer faster runtimes, CBC is sufficient for our use case and ensures reproducibility without licensing constraints.
 
 The algorithm first sets up the linear program, setting up an equation $p'_v = \sum_{(u, v, w) \in E} 1 + wp'_u$ for each node $v \in V$. This is then solved by the CBC solver, with the primal tolerance set to $5*10^{-3}$ to level the playing field compared to the iterative algorithm, which will be introduced in the next section. A tolerance of $5 * 10^{-3}$ assures that $\lvert p'_v -\sum_{(u, v, w) \in E} 1 + wp'_u \rvert < 5*10^{-3}$, so the solutions will be correct when rounded to the second decimal place \cite{forrestCBCUserGuide2005}. Finally, the algorithm cleans the $p_v'$ values, setting any delegators power to 0. 
 
@@ -134,7 +134,7 @@ Since power is conserved, if this node is a delegator, power amounting to $p_v^{
 p_v^{(i)} = \sum_{(u, v, w) \in E} wp_v^{(i-1)} \forall v \in V
 \]
 
-This is the same al the standing power assigned to all nodes in the previous approach. ($p'_v = 1 + \sum_{(u, v, w) \in E} wp'_u$). Thus, this algorithm solves the same problem as the system of linear equations introduced in the previous section. 
+This is the same as the standing power assigned to all nodes in the previous approach. ($p'_v = 1 + \sum_{(u, v, w) \in E} wp'_u$). Thus, this algorithm solves the same problem as the system of linear equations introduced in the previous section. 
 
 This section will show, that the algorithm does not necessarily terminate despite being input a well formed delegation graph. We then propose an amended algorithm.
 
@@ -297,7 +297,7 @@ For the two implementations directly based on solving systems of linear equation
 & p_B = 1 + 0.1p_A
 \end{align*}
 
-As long as the delegations form a matrix that is singular, there will be a unique solution, so even with invalid delegations, the algorithm will find power values, however they most likely differ whom the power values that would be expected, and probably will not conserve total power properly. 
+As long as the delegations form a matrix that is singular, there will be a unique solution, so even with invalid delegations, the algorithm will find power values, however they most likely differ from the power values that would be expected, and probably will not conserve total power properly. 
 
 \subsection{Closed Delegation Cycles}
 

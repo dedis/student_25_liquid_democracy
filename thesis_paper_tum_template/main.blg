@@ -1,20 +1,19 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'main.blg'
-[36] biber-darwin:340> INFO - === Sat Aug  2, 2025, 18:31:58
-[45] Biber.pm:420> INFO - Reading 'main.bcf'
-[86] Biber.pm:994> INFO - Found 31 citekeys in bib section 0
-[94] Biber.pm:4463> INFO - Processing section 0
-[100] Biber.pm:4654> INFO - Looking for bibtex file 'main.bib' for section 0
-[103] bibtex.pm:1713> INFO - LaTeX decoding ...
-[135] bibtex.pm:1519> INFO - Found BibTeX data source 'main.bib'
-[391] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[391] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[391] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[391] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[417] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[455] bbl.pm:779> INFO - Output to main.bbl
-[455] Biber.pm:131> WARN - ISBN '978-0-89871-568-2 978-1-61197-274-0' in entry 'chakrabartiRMATRecursiveModel2004' is invalid - run biber with '--validate_datamodel' for details.
-[455] Biber.pm:131> WARN - ISBN '978-3-540-20362-9 978-3-540-39718-2' in entry 'richardsonTrustManagementSemantic2003' is invalid - run biber with '--validate_datamodel' for details.
-[455] Biber.pm:131> WARN - legacy year field 'Last updated 17 Jan 2020' in entry 'nilsElectricvote2020' is not an integer - this will probably not sort properly.
-[455] Biber.pm:131> WARN - I didn't find a database entry for 'wattsCollectiveDynamicsSmallworld1998a' (section 0)
-[455] Biber.pm:133> INFO - WARNINGS: 4
+[31] biber-darwin:340> INFO - === Tue Aug  5, 2025, 19:04:34
+[39] Biber.pm:420> INFO - Reading 'main.bcf'
+[76] Biber.pm:994> INFO - Found 31 citekeys in bib section 0
+[83] Biber.pm:4463> INFO - Processing section 0
+[88] Biber.pm:4654> INFO - Looking for bibtex file 'main.bib' for section 0
+[91] bibtex.pm:1713> INFO - LaTeX decoding ...
+[116] bibtex.pm:1519> INFO - Found BibTeX data source 'main.bib'
+[359] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[359] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[359] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[359] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[381] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[412] bbl.pm:779> INFO - Output to main.bbl
+[412] Biber.pm:131> WARN - ISBN '978-0-89871-568-2 978-1-61197-274-0' in entry 'chakrabartiRMATRecursiveModel2004' is invalid - run biber with '--validate_datamodel' for details.
+[412] Biber.pm:131> WARN - ISBN '978-3-540-20362-9 978-3-540-39718-2' in entry 'richardsonTrustManagementSemantic2003' is invalid - run biber with '--validate_datamodel' for details.
+[412] Biber.pm:131> WARN - legacy year field 'Last updated 17 Jan 2020' in entry 'nilsElectricvote2020' is not an integer - this will probably not sort properly.
+[412] Biber.pm:133> INFO - WARNINGS: 3

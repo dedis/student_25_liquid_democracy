@@ -2155,6 +2155,50 @@
       \verb /Users/DavidHolzwarth/Zotero/storage/HAFDHMKR/Virtanen et al. - 2020 - SciPy 1.0 fundamental algorithms for scientific computing in Python.pdf
       \endverb
     \endentry
+    \entry{wattsCollectiveDynamicsSmallworld1998}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8749174d8ea73cb9cc7eda222618b353}{%
+           family={Watts},
+           familyi={W\bibinitperiod},
+           given={Duncan\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0115f77df78376c68429033349375fc}{%
+           family={Strogatz},
+           familyi={S\bibinitperiod},
+           given={Steven\bibnamedelima H.},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{61ec8115bb61a3bd19135c7c8b217c6a}
+      \strng{fullhash}{61ec8115bb61a3bd19135c7c8b217c6a}
+      \strng{fullhashraw}{61ec8115bb61a3bd19135c7c8b217c6a}
+      \strng{bibnamehash}{61ec8115bb61a3bd19135c7c8b217c6a}
+      \strng{authorbibnamehash}{61ec8115bb61a3bd19135c7c8b217c6a}
+      \strng{authornamehash}{61ec8115bb61a3bd19135c7c8b217c6a}
+      \strng{authorfullhash}{61ec8115bb61a3bd19135c7c8b217c6a}
+      \strng{authorfullhashraw}{61ec8115bb61a3bd19135c7c8b217c6a}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Networks of coupled dynamical systems have been used to model biological oscillators1,2,3,4, Josephson junction arrays5,6, excitable media7, neural networks8,9,10, spatial games11, genetic control networks12 and many other self-organizing systems. Ordinarily, the connection topology is assumed to be either completely regular or completely random. But many biological, technological and social networks lie somewhere between these two extremes. Here we explore simple models of networks that can be tuned through this middle ground: regular networks `rewired' to introduce increasing amounts of disorder. We find that these systems can be highly clustered, like regular lattices, yet have small characteristic path lengths, like random graphs. We call them `small-world' networks, by analogy with the small-world phenomenon13,14 (popularly known as six degrees of separation15). The neural network of the worm Caenorhabditis elegans, the power grid of the western United States, and the collaboration graph of film actors are shown to be small-world networks. Models of dynamical systems with small-world coupling display enhanced signal-propagation speed, computational power, and synchronizability. In particular, infectious diseases spread more easily in small-world networks than in regular lattices.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{month}{6}
+      \field{number}{6684}
+      \field{title}{Collective Dynamics of `Small-World' Networks}
+      \field{volume}{393}
+      \field{year}{1998}
+      \field{pages}{440\bibrangedash 442}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1038/30918
+      \endverb
+      \verb{file}
+      \verb /Users/DavidHolzwarth/Zotero/storage/ZAMLJ8NE/Watts und Strogatz - 1998 - Collective dynamics of ‘small-world’ networks.pdf
+      \endverb
+    \endentry
     \entry{zhouKanonymityLdiversityApproaches2011}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=847b802eb49a8d64e0694a5f417c19e7}{%
@@ -2204,7 +2248,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{wattsCollectiveDynamicsSmallworld1998a}
 \endrefsection
 \endinput
 

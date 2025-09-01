@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.12)  2 AUG 2025 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.12)  5 AUG 2025 19:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1915,42 +1915,6 @@ LaTeX Font Info:    Trying to load font information for T1+pplx on input line 3
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/t1pplx.fd
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
 ) (./main.aux
-
-LaTeX Warning: Label `subfig:bitcoinotc_outdegrees' multiply defined.
-
-
-LaTeX Warning: Label `subfig:bitcoinotc_outdegrees@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:bitcoinotc_outdegrees' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:bitcoinotc_outdegrees@cref' multiply defined.
-
-
-LaTeX Warning: Label `subfig:epinions_outdegrees' multiply defined.
-
-
-LaTeX Warning: Label `subfig:epinions_outdegrees@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:epinions_outdegrees' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:epinions_outdegrees@cref' multiply defined.
-
-
-LaTeX Warning: Label `subfig:slashdot_outdegrees' multiply defined.
-
-
-LaTeX Warning: Label `subfig:slashdot_outdegrees@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:slashdot_outdegrees' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:slashdot_outdegrees@cref' multiply defined.
-
 (./chapters/appendix.aux))
 \openout1 = `main.aux'.
 
@@ -2075,15 +2039,7 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
-(./main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                wattsCollectiveDynamicsSmallworld1998a
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+(./main.bbl)
 Package biblatex Info: Reference section=0 on input line 31.
 Package biblatex Info: Reference segment=0 on input line 31.
 \c@lstlisting=\count502
@@ -2301,17 +2257,17 @@ File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 
 [7]
-<./figures/invalid_graph_1.png, id=287, 195.73125pt x 180.675pt>
+<./figures/invalid_graph_1.png, id=286, 195.73125pt x 180.675pt>
 File: ./figures/invalid_graph_1.png Graphic file (type png)
 <use ./figures/invalid_graph_1.png>
 Package pdftex.def Info: ./figures/invalid_graph_1.png  used on input line 64.
 (pdftex.def)             Requested size: 133.84483pt x 123.55486pt.
-<./figures/invalid_graph_2.png, id=289, 195.73125pt x 180.675pt>
+<./figures/invalid_graph_2.png, id=288, 195.73125pt x 180.675pt>
 File: ./figures/invalid_graph_2.png Graphic file (type png)
 <use ./figures/invalid_graph_2.png>
 Package pdftex.def Info: ./figures/invalid_graph_2.png  used on input line 69.
 (pdftex.def)             Requested size: 133.84483pt x 123.55486pt.
-<./figures/invalid_graph_3.png, id=290, 195.73125pt x 180.675pt>
+<./figures/invalid_graph_3.png, id=289, 195.73125pt x 180.675pt>
 File: ./figures/invalid_graph_3.png Graphic file (type png)
 <use ./figures/invalid_graph_3.png>
 Package pdftex.def Info: ./figures/invalid_graph_3.png  used on input line 74.
@@ -2320,7 +2276,7 @@ Package pdftex.def Info: ./figures/invalid_graph_3.png  used on input line 74.
 
 [8 <./figures/invalid_graph_1.png> <./figures/invalid_graph_2.png> <./figures/i
 nvalid_graph_3.png>]
-<./figures/delegation_graph_sample.png, id=304, 325.215pt x 107.40125pt>
+<./figures/delegation_graph_sample.png, id=303, 325.215pt x 107.40125pt>
 File: ./figures/delegation_graph_sample.png Graphic file (type png)
 <use ./figures/delegation_graph_sample.png>
 Package pdftex.def Info: ./figures/delegation_graph_sample.png  used on input l
@@ -2338,13 +2294,13 @@ ine 104.
 
 [13]
 chapter 4.
-<./figures/small_cycle_graph.png, id=353, 636.3775pt x 313.17pt>
+<./figures/small_cycle_graph.png, id=352, 636.3775pt x 313.17pt>
 File: ./figures/small_cycle_graph.png Graphic file (type png)
 <use ./figures/small_cycle_graph.png>
 Package pdftex.def Info: ./figures/small_cycle_graph.png  used on input line 19
 .
 (pdftex.def)             Requested size: 188.21371pt x 92.61848pt.
-<./figures/small_cycle_graph_inverse_dict.png, id=354, 157.58875pt x 96.36pt>
+<./figures/small_cycle_graph_inverse_dict.png, id=353, 157.58875pt x 96.36pt>
 File: ./figures/small_cycle_graph_inverse_dict.png Graphic file (type png)
 <use ./figures/small_cycle_graph_inverse_dict.png>
 Package pdftex.def Info: ./figures/small_cycle_graph_inverse_dict.png  used on 
@@ -2485,13 +2441,13 @@ l.220         \EndFor
 [20]
 
 [21]
-<./figures/allowed_self_loop.png, id=464, 198.7425pt x 102.3825pt>
+<./figures/allowed_self_loop.png, id=463, 198.7425pt x 102.3825pt>
 File: ./figures/allowed_self_loop.png Graphic file (type png)
 <use ./figures/allowed_self_loop.png>
 Package pdftex.def Info: ./figures/allowed_self_loop.png  used on input line 27
 8.
 (pdftex.def)             Requested size: 169.39119pt x 87.26454pt.
-<./figures/invalid_delegation_graph.png, id=465, 218.8175pt x 95.35625pt>
+<./figures/invalid_delegation_graph.png, id=464, 218.8175pt x 95.35625pt>
 File: ./figures/invalid_delegation_graph.png Graphic file (type png)
 <use ./figures/invalid_delegation_graph.png>
 Package pdftex.def Info: ./figures/invalid_delegation_graph.png  used on input 
@@ -2656,21 +2612,16 @@ ne 256.
 (pdftex.def)             Requested size: 188.21371pt x 146.77739pt.
 
 
-LaTeX Warning: Citation 'wattsCollectiveDynamicsSmallworld1998a' on page 33 und
-efined on input line 274.
-
-
-
 [33 <./figures/0-200000_cycle.png> <./figures/0-200000_cycle_loglog.png>]
 
 [34 <./figures/0-200000_no_del.png> <./figures/0-200000_no_del_loglog.png>]
-<./figures/sw_graph_example_40n.png, id=602, 402.50375pt x 243.91125pt>
+<./figures/sw_graph_example_40n.png, id=605, 402.50375pt x 243.91125pt>
 File: ./figures/sw_graph_example_40n.png Graphic file (type png)
 <use ./figures/sw_graph_example_40n.png>
 Package pdftex.def Info: ./figures/sw_graph_example_40n.png  used on input line
  288.
 (pdftex.def)             Requested size: 167.29967pt x 101.3813pt.
-<./figures/0-5000_small_world.png, id=603, 455.301pt x 339.669pt>
+<./figures/0-5000_small_world.png, id=606, 455.301pt x 339.669pt>
 File: ./figures/0-5000_small_world.png Graphic file (type png)
 <use ./figures/0-5000_small_world.png>
 Package pdftex.def Info: ./figures/0-5000_small_world.png  used on input line 2
@@ -2681,7 +2632,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 297--298
  [][] 
  []
 
-<./figures/0-5000_small_world_loglog.png, id=604, 417.7206pt x 330.2739pt>
+<./figures/0-5000_small_world_loglog.png, id=607, 417.7206pt x 330.2739pt>
 File: ./figures/0-5000_small_world_loglog.png Graphic file (type png)
 <use ./figures/0-5000_small_world_loglog.png>
 Package pdftex.def Info: ./figures/0-5000_small_world_loglog.png  used on input
@@ -2696,7 +2647,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 304--305
 
 [35 <./figures/sw_graph_example_40n.png> <./figures/0-5000_small_world.png> <./
 figures/0-5000_small_world_loglog.png>]
-<./figures/rmat_graph_example_40n.png, id=619, 1085.05376pt x 526.96875pt>
+<./figures/rmat_graph_example_40n.png, id=621, 1085.05376pt x 526.96875pt>
 File: ./figures/rmat_graph_example_40n.png Graphic file (type png)
 <use ./figures/rmat_graph_example_40n.png>
 Package pdftex.def Info: ./figures/rmat_graph_example_40n.png  used on input li
@@ -2705,7 +2656,7 @@ ne 323.
 
 
 [36 <./figures/rmat_graph_example_40n.png>]
-<./figures/0-50000_rmat.png, id=632, 409.7709pt x 327.3831pt>
+<./figures/0-50000_rmat.png, id=634, 409.7709pt x 327.3831pt>
 File: ./figures/0-50000_rmat.png Graphic file (type png)
 <use ./figures/0-50000_rmat.png>
 Package pdftex.def Info: ./figures/0-50000_rmat.png  used on input line 338.
@@ -2715,7 +2666,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 338--339
  [][] 
  []
 
-<./figures/0-50000_rmat_loglog.png, id=633, 417.7206pt x 330.2739pt>
+<./figures/0-50000_rmat_loglog.png, id=635, 417.7206pt x 330.2739pt>
 File: ./figures/0-50000_rmat_loglog.png Graphic file (type png)
 <use ./figures/0-50000_rmat_loglog.png>
 Package pdftex.def Info: ./figures/0-50000_rmat_loglog.png  used on input line 
@@ -2731,7 +2682,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 345--346
 [37]
 
 [38 <./figures/0-50000_rmat.png> <./figures/0-50000_rmat_loglog.png>]
-<./figures/bitcoinotc_dataset.png, id=659, 387.3672pt x 268.8444pt>
+<./figures/bitcoinotc_dataset.png, id=661, 387.3672pt x 268.8444pt>
 File: ./figures/bitcoinotc_dataset.png Graphic file (type png)
 <use ./figures/bitcoinotc_dataset.png>
 Package pdftex.def Info: ./figures/bitcoinotc_dataset.png  used on input line 3
@@ -2742,7 +2693,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 386--387
 [][] 
  []
 
-<./figures/epinions_dataset.png, id=660, 396.7623pt x 268.8444pt>
+<./figures/epinions_dataset.png, id=662, 396.7623pt x 268.8444pt>
 File: ./figures/epinions_dataset.png Graphic file (type png)
 <use ./figures/epinions_dataset.png>
 Package pdftex.def Info: ./figures/epinions_dataset.png  used on input line 391
@@ -2753,7 +2704,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 391--392
 [][] 
  []
 
-<./figures/slashdot_dataset.png, id=661, 390.258pt x 268.8444pt>
+<./figures/slashdot_dataset.png, id=663, 390.258pt x 268.8444pt>
 File: ./figures/slashdot_dataset.png Graphic file (type png)
 <use ./figures/slashdot_dataset.png>
 Package pdftex.def Info: ./figures/slashdot_dataset.png  used on input line 397
@@ -2764,7 +2715,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 397--398
  [][] 
  []
 
-<./figures/bitcoinotc_outdegree_distr.png, id=662, 411.939pt x 327.3831pt>
+<./figures/bitcoinotc_outdegree_distr.png, id=664, 411.939pt x 327.3831pt>
 File: ./figures/bitcoinotc_outdegree_distr.png Graphic file (type png)
 <use ./figures/bitcoinotc_outdegree_distr.png>
 Package pdftex.def Info: ./figures/bitcoinotc_outdegree_distr.png  used on inpu
@@ -2775,7 +2726,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 407--408
 [][] 
  []
 
-<./figures/epinions_outdegree_distr.png, id=663, 411.939pt x 327.3831pt>
+<./figures/epinions_outdegree_distr.png, id=665, 411.939pt x 327.3831pt>
 File: ./figures/epinions_outdegree_distr.png Graphic file (type png)
 <use ./figures/epinions_outdegree_distr.png>
 Package pdftex.def Info: ./figures/epinions_outdegree_distr.png  used on input 
@@ -2786,7 +2737,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 413--414
 [][] 
  []
 
-<./figures/slashdot_outdegree_distr.png, id=664, 411.939pt x 327.3831pt>
+<./figures/slashdot_outdegree_distr.png, id=666, 411.939pt x 327.3831pt>
 File: ./figures/slashdot_outdegree_distr.png Graphic file (type png)
 <use ./figures/slashdot_outdegree_distr.png>
 Package pdftex.def Info: ./figures/slashdot_outdegree_distr.png  used on input 
@@ -2797,7 +2748,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 420--421
  [][] 
  []
 
-<./figures/bitcoinotc_outdegree_distr_50.png, id=665, 419.166pt x 327.3831pt>
+<./figures/bitcoinotc_outdegree_distr_50.png, id=667, 419.166pt x 327.3831pt>
 File: ./figures/bitcoinotc_outdegree_distr_50.png Graphic file (type png)
 <use ./figures/bitcoinotc_outdegree_distr_50.png>
 Package pdftex.def Info: ./figures/bitcoinotc_outdegree_distr_50.png  used on i
@@ -2808,58 +2759,58 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 431--432
 [][] 
  []
 
-<./figures/epinions_outdegree_distr_50.png, id=666, 425.6703pt x 327.3831pt>
+<./figures/epinions_outdegree_distr_50.png, id=668, 425.6703pt x 327.3831pt>
 File: ./figures/epinions_outdegree_distr_50.png Graphic file (type png)
 <use ./figures/epinions_outdegree_distr_50.png>
 Package pdftex.def Info: ./figures/epinions_outdegree_distr_50.png  used on inp
-ut line 437.
+ut line 436.
 (pdftex.def)             Requested size: 125.47794pt x 96.50224pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 437--438
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 436--437
 [][] 
  []
 
-<./figures/slashdot_outdegree_distr_50.png, id=667, 425.6703pt x 327.3831pt>
+<./figures/slashdot_outdegree_distr_50.png, id=669, 425.6703pt x 327.3831pt>
 File: ./figures/slashdot_outdegree_distr_50.png Graphic file (type png)
 <use ./figures/slashdot_outdegree_distr_50.png>
 Package pdftex.def Info: ./figures/slashdot_outdegree_distr_50.png  used on inp
-ut line 444.
+ut line 442.
 (pdftex.def)             Requested size: 125.47794pt x 96.50224pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 444--445
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 442--443
  [][] 
  []
 
-<./figures/bitcoinotc_power_distr.png, id=668, 411.939pt x 327.3831pt>
+<./figures/bitcoinotc_power_distr.png, id=670, 411.939pt x 327.3831pt>
 File: ./figures/bitcoinotc_power_distr.png Graphic file (type png)
 <use ./figures/bitcoinotc_power_distr.png>
 Package pdftex.def Info: ./figures/bitcoinotc_power_distr.png  used on input li
-ne 455.
+ne 452.
 (pdftex.def)             Requested size: 125.47794pt x 99.71931pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 455--456
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 452--453
 [][] 
  []
 
-<./figures/epinions_power_distr.png, id=669, 411.939pt x 327.3831pt>
+<./figures/epinions_power_distr.png, id=671, 411.939pt x 327.3831pt>
 File: ./figures/epinions_power_distr.png Graphic file (type png)
 <use ./figures/epinions_power_distr.png>
 Package pdftex.def Info: ./figures/epinions_power_distr.png  used on input line
- 461.
+ 458.
 (pdftex.def)             Requested size: 125.47794pt x 99.71931pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 461--462
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 458--459
 [][] 
  []
 
-<./figures/slashdot_power_distr.png, id=670, 417.7206pt x 327.3831pt>
+<./figures/slashdot_power_distr.png, id=672, 417.7206pt x 327.3831pt>
 File: ./figures/slashdot_power_distr.png Graphic file (type png)
 <use ./figures/slashdot_power_distr.png>
 Package pdftex.def Info: ./figures/slashdot_power_distr.png  used on input line
- 468.
+ 465.
 (pdftex.def)             Requested size: 125.47794pt x 98.34056pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 468--469
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 465--466
  [][] 
  []
 
@@ -3062,10 +3013,6 @@ Package nag Warning: 1 complaints in total.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -3073,10 +3020,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57604 strings out of 473190
- 1254318 string characters out of 5715800
- 2333958 words of memory out of 5000000
- 79113 multiletter control sequences out of 15000+600000
+ 57607 strings out of 473190
+ 1254567 string characters out of 5715800
+ 2333950 words of memory out of 5000000
+ 79115 multiletter control sequences out of 15000+600000
  652580 words of font info for 529 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,13n,107p,10899b,4026s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3094,10 +3041,10 @@ mf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-dist/f
 onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
 pe1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (61 pages, 1293619 bytes).
+Output written on main.pdf (61 pages, 1294011 bytes).
 PDF statistics:
- 1189 PDF objects out of 1200 (max. 8388607)
- 991 compressed objects within 10 object streams
- 248 named destinations out of 1000 (max. 500000)
+ 1192 PDF objects out of 1200 (max. 8388607)
+ 994 compressed objects within 10 object streams
+ 249 named destinations out of 1000 (max. 500000)
  121660 words of extra memory for PDF output out of 128383 (max. 10000000)
 

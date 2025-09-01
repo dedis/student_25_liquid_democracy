@@ -22,9 +22,9 @@ More precisely, we pose the following problem.
 \end{enumerate}
 \item \textbf{We want to find} the final voting power of each voter ("resolve the delegation graph") such that:
 \begin{enumerate}
-\item a voter's final voting power is zero if they choose to delegate and not vote directly 
-\item a voter's final voting power is equal to the amount of votes delegated to them, including their own initial vote and transitive delegations, otherwise
-\item power is conserved. The sum of the final power of all nodes must be equal to the amount of votes initially in the graph. This does not include power that is stuck as a result of cyclic delegation. What exactly this entails will be detailed in \cref{subsec:cdc}
+\item A voter's final voting power is zero if they choose to delegate and not vote directly.
+\item A voter's final voting power is equal to the amount of votes delegated to them, including their own initial vote and transitive delegations, otherwise.
+\item Power is conserved. The sum of the final power of all nodes must be equal to the amount of votes initially in the graph. This does not include power that is stuck as a result of cyclic delegation. What exactly this entails will be detailed in \cref{subsec:cdc}
 \end{enumerate}
 \end{enumerate}
 
@@ -77,7 +77,7 @@ We define a \textbf{closed delegation cycle} $C \subseteq V$ in a delegation gra
     \label{fig:closed-delegation-cycles}
 \end{figure}
 
-\Cref{fig:closed-delegation-cycles} shows exemplary closed delegation cycles. These cycles lead to contradictory situations, as power delegated within never reaches a sink. Some works discuss ways to handle power stuck in such cycles or mitigate the risk of such cycles appearing, but effectively it is lost. \cite{behrensCircularDelegationsMyth2015, brillInteractiveDemocracy2018} This means that none of the nodes in a closed cycle will vote, which is in line with the will of voters, who all wish to not vote themselves, instead delegate their power, letting their delegate(s) decide what to do with this power. 
+\Cref{fig:closed-delegation-cycles} shows exemplary closed delegation cycles. These cycles lead to contradictory situations, as power delegated within never reaches a sink. Some works discuss ways to handle power stuck in such cycles or mitigate the risk of such cycles appearing, but effectively it is lost \cite{behrensCircularDelegationsMyth2015, brillInteractiveDemocracy2018}. This means that none of the nodes in a closed cycle will vote, which is in line with the will of voters, who all wish to not vote themselves, instead delegate their power, letting their delegate(s) decide what to do with this power. 
 
 In practice, such cycles need to be addressed before resolving delegations in a preprocessing step, since our method of resolving delegation graphs introduced in \cref{sec:resolving_delegations} is not equipped to handle such cycles by itself. Our approach to this is to find all such cycles, and collapse them into an additional sink node in the graph. Any delegation toward nodes within the cycle is redirected into this added sink, thus ensuring the graph no longer has any closed delegation cycles.
 
