@@ -10,9 +10,9 @@ def prepare_graph(vertices, edges, sink_frac=0.2, seed=None):
     - Merges multiple (parallel) edges between the same nodes into a single edge, eliminating duplicates.
         Of the duplicate edges only one, random edge is kept.
     - Ensures that at least sinks % (default 20%) of nodes are sinks (outdegree 0)
-        Edges are removed randomely until this condition is met
+        Edges are removed randomly until this condition is met
     - Normalizes the edge weights for each node such that the sum of outgoing edge weights equals 1.
-    - Removes delegation cycles (terminal strongly connected components (SCCs))
+    - Removes closed delegation cycles (terminal strongly connected components (SCCs))
         A terminal SCC is a strongly connected component that has outgoing edges, but none of them to nodes outside of
         the SCC (so sinks are not terminal SCCS). If all such terminal SCCs are collapsed into a single 
         node called "lost". This process is repeated until no terminal SCCs remain.
@@ -22,7 +22,7 @@ def prepare_graph(vertices, edges, sink_frac=0.2, seed=None):
     vertices : iterable
         A list of the graph's vertices (nodes).
     edges : list of tuples
-        A list of edges where each edge is a tuple:
+        A list of edges where each edge is a tuple or triple:
         - (u, v, weight) 
         - (u, v) 
     sink_frac: float
@@ -48,7 +48,7 @@ def prepare_graph(vertices, edges, sink_frac=0.2, seed=None):
 
     # 2. Merge multiple edges into one. The duplicated edges are discarded.
     DG = nx.DiGraph()
-    DG.add_nodes_from(G.nodes())  # <-- Ensures even isolated nodes are included
+    DG.add_nodes_from(G.nodes())  
 
     for u, v, w in G.edges(data='weight'):
         if DG.has_edge(u, v):
@@ -101,12 +101,12 @@ def prepare_graph(vertices, edges, sink_frac=0.2, seed=None):
         # returns the amount of terminal SCCs that were collapsed
         return len(terminal_sccs)
 
-
     # Keep removing terminal SCCs until none are left
     amount_of_collapsed_sccs = collapse_all_terminal_sccs(DG)
 
     final_amount_of_nodes = len([n for n in DG.nodes() if n != "lost"])
 
+    # Log results
     logger, handler = logger_creator.create_logger(name_prefix="prepare_graph")
     logger.info(f"Initially {initial_amount_of_nodes} nodes, after collapsing terminal SCCs "
                 f"{final_amount_of_nodes} nodes remain. In total {amount_of_collapsed_sccs} terminal SCCs were collapsed.")
@@ -138,6 +138,25 @@ def nx_graph_to_dict(G: nx.DiGraph) -> dict:
         for src in G.nodes()
     }
 
+def dict_to_nx_graph(graph_dict: dict) -> nx.DiGraph:
+    """
+    Converts a dictionary representation of a graph to a NetworkX DiGraph.
+
+    Parameters:
+    - graph_dict (dict): A dictionary where keys are nodes and values are dictionaries 
+      of neighboring nodes and their weights.
+
+    Returns:
+    - networkx.DiGraph: A directed graph constructed from the input dictionary.
+    """
+
+    G = nx.DiGraph()
+
+    for node, neighbors in graph_dict.items():
+        for neighbor, weight in neighbors.items():
+            G.add_edge(node, neighbor, weight=weight)
+
+    return G
 
 def invert_graph(graph):
     """
@@ -160,24 +179,3 @@ def invert_graph(graph):
             inverted_graph[neighbor][node] = weight  
 
     return inverted_graph
-
-
-def dict_to_nx_graph(graph_dict: dict) -> nx.DiGraph:
-    """
-    Converts a dictionary representation of a graph to a NetworkX DiGraph.
-
-    Parameters:
-    - graph_dict (dict): A dictionary where keys are nodes and values are dictionaries 
-      of neighboring nodes and their weights.
-
-    Returns:
-    - networkx.DiGraph: A directed graph constructed from the input dictionary.
-    """
-
-    G = nx.DiGraph()
-
-    for node, neighbors in graph_dict.items():
-        for neighbor, weight in neighbors.items():
-            G.add_edge(node, neighbor, weight=weight)
-
-    return G
